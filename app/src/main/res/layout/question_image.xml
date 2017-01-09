@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="ict.sci.kidslearning.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/row1"
+
+
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/borno"
+            android:id="@+id/group1"
+            android:textSize="26sp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentLeft="true"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nirdeshona"
+            android:id="@+id/nirdeshona_id"
+            android:textSize="26sp"
+            android:onClick="showbox"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            />
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question"
+        android:id="@+id/question_id"
+        android:textSize="26sp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/row1"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rowmid"
+        android:layout_below="@+id/question_id"
+        android:layout_centerVertical="true"
+
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/letter_row1"
+            android:gravity="center_horizontal"
+            >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#bf360c"
+
+                android:padding="5dp"
+                android:id="@+id/x1"
+                />
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#bf360c"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:id="@+id/x2"
+                />
+        </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/lastrow"
+        android:layout_alignParentBottom="true"
+
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/previous"
+            android:id="@+id/prev_id"
+            android:onClick="back"
+            android:textSize="26sp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/next"
+            android:id="@+id/next_id"
+            android:textSize="26sp"
+            android:onClick="next"
+            android:layout_marginRight="2dp"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

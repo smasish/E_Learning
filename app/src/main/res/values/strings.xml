@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Kids_eLearning</string>
+
+    <string name="app_instructions">যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে উদাহরণ দিয়ে বুঝিয়ে দিন। যেমন, শিক্ষার্থীকে বলুন- “অ”- তে অজগর হয়, অনেক হয়, অলি হয়। এরকম "ও" দিয়ে একটি শব্দ বলতে বলুন অথবা "ই" দিয়ে একটি শব্দ বলতে বলুন। নিচের  পাঁচটি সাধারণ বর্ণ দিয়ে শব্দ বলতে বলুন।
+    শিক্ষার্থীকে উদাহরণ দিয়ে বুঝিয়ে দিন।
+    শিক্ষার্থীকে উদাহরণ দিয়ে বুঝিয়ে দিন।
+    শিক্ষার্থীকে উদাহরণ দিয়ে বুঝিয়ে দিন।
+    </string>
+
+
+
+
+
+    <string name="btn_text1st">1st</string>
+    <string name="nirdeshona"> নির্দেশনা</string>
+    <string name="borno"> </string>
+    <string name="question">যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে উদাহরণ দিয়ে বুঝিয়ে দিন। যেমন, শিক্ষার্থীকে বলুন- “অ”- তে অজগর হয়, অনেক হয়, অলি হয়। এরকম "ও" দিয়ে একটি শব্দ বলতে বলুন অথবা "ই" দিয়ে একটি শব্দ বলতে বলুন। নিচের  পাঁচটি সাধারণ বর্ণ দিয়ে শব্দ বলতে বলুন। </string>
+
+
+    <string name="question11"> ১.১	শিক্ষার্থী কি এলোমেলোভাবে সাজানো ১১টি বর্ণের সবগুলো চিনতে পারে?</string>
+    <string name="question12"> ১.২	শিক্ষার্থী কি এলোমেলোভাবে সাজানো ৩৯ টি ব্যঞ্জনবর্ণের সবগুলো চিনতে পারে? </string>
+    <string name="question13">১.৩ শিক্ষার্থী কি এমন কোনো শব্দের উদাহরণ দিতে পারে যা একটি সাধারণ বর্ণ দিয়ে শুরু হয়?  </string>
+    <string name="question21">২.১ শিক্ষার্থী শব্দ উচ্চারণের সময়ে ধ্বনিগত পার্থক্য বজায় রাখতে পারে কি? </string>
+    <string name="question22">২.২ শিক্ষার্থী কি শব্দের প্রথম বর্ণের বা শব্দাংশের ধ্বনির মিল বুঝতে পারে?</string>
+
+    <string name="question23">২.৩ শিক্ষার্থী কি শব্দের শেষ বর্ণের বা শব্দাংশের ধ্বনির মিল বুঝতে পারে?  </string>
+    <string name="question31">৩.১ ১ নং ছবির সেট মিল করতে পেরেছে   </string>
+    <string name="question32">৩.২ ২ নং ছবির সেট মিল করতে পেরেছে  </string>
+    <string name="question33">৩.৩ ৩ নং ছবির সেট মিল করতে পেরেছে   </string>
+
+
+    <string-array name="word_set">
+        <item name="set1"> শিক্ষার্থ </item>
+        <item name="set2"> শিক্ষার্থ </item>
+        <item name="set3"> শিক্ষার্থ </item>
+        <item name="set4"> শিক্ষার্থ </item>
+
+        <item name="set4">
+
+
+        </item>
+
+    </string-array>
+
+<string-array name="question_set">
+    <item name="set1">২.২ শিক্ষার্থী কি শব্দের প্রথম বর্ণের বা শব্দাংশের ধ্বনির মিল বুঝতে পারে? </item>
+    <item name="set2"> ১.১	শিক্ষার্থী কি এলোমেলোভাবে সাজানো ১১টি বর্ণের সবগুলো চিনতে পারে? </item>
+    <item name="set3">৩.৩ ৩ নং ছবির সেট মিল করতে পেরেছে  </item>
+    <item name="set4">২.১ শিক্ষার্থী শব্দ উচ্চারণের সময়ে ধ্বনিগত পার্থক্য বজায় রাখতে পারে কি? </item>
+    <item name="set5">৩.৩ ৩ নং ছবির সেট মিল করতে পেরেছে  </item>
+    <item name="set6">  </item>
+    <item name="set7"> </item>
+    <item name="set8"> </item>
+    <item name="set9">  </item>
+    <item name="set10"> </item>
+    <item name="set10"> </item>
+    <item name="set11">  </item>
+    <item name="set12"> </item>
+    <item name="set13"> </item>
+    <item name="set14">  </item>
+    <item name="set15"> </item>
+    <item name="set16"> </item>
+    <item name="set17">  </item>
+    <item name="set18"> </item>
+    <item name="set19"> </item>
+
+
+
+
+
+</string-array>
+
+    <string name="nombor">নম্বর প্রদান : এবার দেখুন ২৪টি বা তার বেশি পারলে নম্বরপত্রে “হ্যাঁ”-তে টিকচিহ্ন দিন,তার কম পারলে“না”- তে টিকচিহ্ন দিন। </string>
+
+    <!--next section for -->
+    <string name="question2">প্রশ্ন  ১.১ :  শিক্ষার্থী কি এলোমেলোভাবে সাজানো বর্ণগুলো থেকে ৫০টি বর্ণের সবগুলো চিনতে পারে?  </string>
+
+
+
+</resources>
