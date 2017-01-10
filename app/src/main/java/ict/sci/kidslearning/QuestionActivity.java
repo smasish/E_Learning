@@ -46,7 +46,7 @@ public class QuestionActivity extends AppCompatActivity {
         indexArray=0;
 
         question = (TextView)findViewById(R.id.question_id);
-        question_ind++;
+
 
         imb1 = (ImageButton)findViewById(R.id.x1);
         imb2 = (ImageButton)findViewById(R.id.x2);
@@ -66,13 +66,14 @@ public class QuestionActivity extends AppCompatActivity {
 
         indexArray = 6;
 
-        question.setText(""+getString(R.string.question12));
-
+        question.setText(""+getResources().getStringArray(R.array.instruction_set)[question_ind]);
+        question_ind++;
     }
 
     public void showbox(View v){
 
-        AlertMessage.showMessage(con,"","");
+        String instr = ""+getResources().getStringArray(R.array.instruction_set)[question_ind];
+        AlertMessage.showMessage(con,"Instruction",instr);
     }
 
     public void next(View v){

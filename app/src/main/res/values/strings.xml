@@ -70,6 +70,46 @@
 
 </string-array>
 
+    <string-array name="instruction_set">
+        <item name="set1"> যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে উদাহরণ দিয়ে বুঝিয়ে দিন। যেমন, শিক্ষার্থীকে
+            বলুন- “অ”- তে অজগর হয়, অনেক হয়, অলি হয়। এরকম "ও" দিয়ে একটি শব্দ বলতে বলুন অথবা "ই" দিয়ে
+            একটি শব্দ বলতে বলুন। নিচের  পাঁচটি সাধারণ বর্ণ দিয়ে শব্দ বলতে বলুন। ।
+        </item>
+        <item name="set2"> শিক্ষার্থীকে উদাহরণ দিয়ে বুঝিয়ে দিন। </item>
+        <item name="set3">  শিক্ষার্থীকে উদাহরণ দিয়ে বুঝিয়ে দিন। </item>
+        <item name="set6">    শিক্ষার্থীকে উদাহরণ দিয়ে বুঝিয়ে দিন </item>
+        <item name="set7"> </item>
+        <item name="set8"> </item>
+        <item name="set9">  </item>
+        <item name="set10">   শিক্ষার্থীকে উদাহরণ দিয়ে বুঝিয়ে দিন </item>
+        <item name="set10"> </item>
+        <item name="set11">  </item>
+        <item name="set12"> </item>
+        <item name="set13"> </item>
+        <item name="set14">  </item>
+        <item name="set15"> </item>
+        <item name="set16"> </item>
+        <item name="set17">  </item>
+        <item name="set18"> </item>
+        <item name="set19"> </item>
+        <item name="set6">  </item>
+        <item name="set7"> </item>
+        <item name="set8"> </item>
+        <item name="set9">  </item>
+        <item name="set10"> </item>
+        <item name="set10"> </item>
+        <item name="set11">  </item>
+        <item name="set12"> </item>
+        <item name="set13"> </item>
+        <item name="set14">  </item>
+        <item name="set15"> </item>
+        <item name="set16"> </item>
+        <item name="set17">  </item>
+        <item name="set18"> </item>
+        <item name="set19"> </item>
+    </string-array>
+
+
     <string name="nombor">নম্বর প্রদান : এবার দেখুন ২৪টি বা তার বেশি পারলে নম্বরপত্রে “হ্যাঁ”-তে টিকচিহ্ন দিন,তার কম পারলে“না”- তে টিকচিহ্ন দিন। </string>
 
     <!--next section for -->
