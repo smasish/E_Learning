@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical" >
+<!--  -->
+
+
+    <RelativeLayout
+        android:id="@+id/midid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/red"
+         android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/feedrowitem"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView01"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/address_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_below="@+id/feedrowitem"
+            android:text="address"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" >
+        </TextView>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
