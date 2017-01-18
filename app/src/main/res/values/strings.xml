@@ -69,6 +69,14 @@
         <item name="set5">ওল | ওড়না | এক </item>
 
     </string-array>
+    <string-array name="wordmeaning_last_letter">
+        <item name="set1">উঠান |	আতা	| তোতা </item>
+        <item name="set2"> মউ |	বউ | ইলিশ </item>
+        <item name="set3">আম |	ইট	| উট</item>
+        <item name="set4"> আলো | ভালো	| পাখি </item>
+        <item name="set5">ইতল |	বালিশ	| বিতল </item>
+
+    </string-array>
 
 <string-array name="question_set">
     <item name="set1">১.১	শিক্ষার্থী কি এলোমেলোভাবে সাজানো ১১টি বর্ণের সবগুলো চিনতে পারে? </item>

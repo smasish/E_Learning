@@ -21,6 +21,7 @@ public class WordListActivity extends Activity {
     Context context;
     ListView lv;
     StateAdapter adapter;
+    StateAdapter_last adapter_last;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,51 @@ public class WordListActivity extends Activity {
     }
 
 
+
+    public void back(View v){
+        adapter = new StateAdapter(this);
+
+        lv.setAdapter(adapter);
+    }
+
+    public void next(View v){
+
+        adapter_last = new StateAdapter_last(this);
+
+        lv.setAdapter(adapter_last);
+    }
+
+
+    private class StateAdapter_last extends ArrayAdapter<String> {
+        // StateListActivty context;
+        private final Context con;
+
+        public StateAdapter_last(final Context c) {
+            super(c, R.layout.wordmeaning_last, getResources().getStringArray(R.array.wordmeaning_last_letter));
+            con = c;
+            // TODO Auto-generated constructor stub
+        }
+
+        @Override
+        public View getView(final int position, final View convertView,
+                            final ViewGroup parent) {
+            View v = convertView;
+            if (v == null) {
+                final LayoutInflater vi = (LayoutInflater) con
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.wordmeaning_last, null);
+            }
+            final TextView textView = (TextView) v
+                    .findViewById(R.id.top_row);
+            textView.setText(""+getResources().getStringArray(R.array.wordmeaning_last_letter)[position]);
+
+//            final TextView textView2 = (TextView) v
+//                    .findViewById(R.id.bottom_row);
+//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+
+            return v;
+        }
+    }
 
 /*
 	 * first adapter for state
