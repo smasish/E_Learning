@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -19,7 +20,7 @@ public class WordListActivity extends Activity {
 
     Context context;
     ListView lv;
-    RadioAdapter adapter;
+    StateAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,25 +36,44 @@ public class WordListActivity extends Activity {
 
 
         ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.word_set, android.R.layout.simple_list_item_1);
-        lv.setAdapter(aa);
+       // lv.setAdapter(aa);
 
-        adapter = new RadioAdapter(this);
+        adapter = new StateAdapter(this);
 
+        lv.setAdapter(adapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(final AdapterView<?> parent,
+                                    final View view, final int position, final long id) {
+//				Toast.makeText(getApplicationContext(),
+//						String.valueOf(position), Toast.LENGTH_LONG).show();
+
+
+//				final Intent imageshow = new Intent(SecondActivity.this,
+//						GalleryActivity.class);
+
+
+
+            }
+        });
 
     }
 
 
 
-    private class RadioAdapter extends ArrayAdapter<InfoData> {
+/*
+	 * first adapter for state
+	 */
+
+    private class StateAdapter extends ArrayAdapter<String> {
         // StateListActivty context;
         private final Context con;
 
-        public RadioAdapter(final Context cont) {
-            //super(c, R.layout.imagerow, AllInfoData.getAllDataBytitle());
-            //super(cont, R.layout.imagerow, AllInfoData.getAllDataBytitle());
-
-            super(cont,R.layout.imagerow,AllInfoData.getAllData().size());
-            con = cont;
+        public StateAdapter(final Context c) {
+            super(c, R.layout.wordmeaning_1st, getResources().getStringArray(R.array.word_set));
+            con = c;
             // TODO Auto-generated constructor stub
         }
 
@@ -64,33 +84,15 @@ public class WordListActivity extends Activity {
             if (v == null) {
                 final LayoutInflater vi = (LayoutInflater) con
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.imagerow, null);
+                v = vi.inflate(R.layout.wordmeaning_1st, null);
             }
+            final TextView textView = (TextView) v
+                    .findViewById(R.id.top_row);
+            textView.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
 
-            Log.d("*******size******====", ""
-                    + AllInfoData.getAllDataBytitle().size());
-            if (position < AllInfoData.getAllDataBytitle().size()) {
-                final InfoData offer = AllInfoData.getData(position);
-
-                Log.d("*************====", "" + offer.getPage_title());
-
-                final TextView textView = (TextView) v
-                        .findViewById(R.id.feedrowitem);
-
-                final TextView text = (TextView) v
-                        .findViewById(R.id.address_id);
-
-
-
-				/*
-				 * if (offer.getBitmap() != null) {
-				 * offerLogo.setImageBitmap(offer.getBitmap()); }
-				 */
-
-                textView.setText(offer.getPage_title().toString().trim());
-
-                text.setText(offer.getDescription().toString().trim());
-            }
+//            final TextView textView2 = (TextView) v
+//                    .findViewById(R.id.bottom_row);
+//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
 
             return v;
         }

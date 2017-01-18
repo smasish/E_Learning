@@ -59,6 +59,17 @@
 
     </string-array>
 
+
+    <string-array name="wordmeaning_1st_letter">
+        <item name="set1"> আম |	আতা	| পড়ি </item>
+        <item name="set2"> উট |	ইট	| ইলিশ </item>
+        <item name="set3"> ঋতু |	ঋষি |	অলি </item>
+        <item name="set4"> উষা |	ঈগল	| ঈশান </item>
+
+        <item name="set5">ওল | ওড়না | এক </item>
+
+    </string-array>
+
 <string-array name="question_set">
     <item name="set1">১.১	শিক্ষার্থী কি এলোমেলোভাবে সাজানো ১১টি বর্ণের সবগুলো চিনতে পারে? </item>
     <item name="set2"> ১.১	শিক্ষার্থী কি এলোমেলোভাবে সাজানো ১১টি বর্ণের সবগুলো চিনতে পারে? </item>
