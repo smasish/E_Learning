@@ -29,7 +29,8 @@ public class QuestionActivity extends AppCompatActivity {
             R.drawable.a31,R.drawable.a32,R.drawable.a33,R.drawable.a34,R.drawable.a35,
             R.drawable.a36,R.drawable.a37,R.drawable.a38,R.drawable.a39,R.drawable.a40,
             R.drawable.a41,R.drawable.a42,R.drawable.a43,R.drawable.a44,R.drawable.a45,
-            R.drawable.a46,R.drawable.a47,R.drawable.a48,R.drawable.a49,R.drawable.a50
+            R.drawable.a46,R.drawable.a47,R.drawable.a48,R.drawable.a49,R.drawable.a50,
+            R.drawable.blank, R.drawable.blank, R.drawable.blank, R.drawable.blank
 
     };
 
