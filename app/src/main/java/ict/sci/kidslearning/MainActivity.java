@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void next(View v){
-       // Intent i = new Intent(MainActivity.this, HomeActivity.class);
-        Intent i = new Intent(MainActivity.this, WordListActivity.class);
+        Intent i = new Intent(MainActivity.this, HomeActivity.class);
+        //Intent i = new Intent(MainActivity.this, WordListActivity.class);
         startActivity(i);
     }
 

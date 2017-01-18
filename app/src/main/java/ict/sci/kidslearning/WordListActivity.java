@@ -23,6 +23,8 @@ public class WordListActivity extends Activity {
     StateAdapter adapter;
     StateAdapter_last adapter_last;
 
+    boolean flag_next = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -38,7 +40,7 @@ public class WordListActivity extends Activity {
 
         ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.word_set, android.R.layout.simple_list_item_1);
        // lv.setAdapter(aa);
-
+        flag_next = false;
         adapter = new StateAdapter(this);
 
         lv.setAdapter(adapter);
@@ -72,9 +74,13 @@ public class WordListActivity extends Activity {
 
     public void next(View v){
 
-        adapter_last = new StateAdapter_last(this);
-
-        lv.setAdapter(adapter_last);
+        if(flag_next){
+            Intent img = new Intent(WordListActivity.this, AboutActivity.class);
+            startActivity(img);
+        }else {
+            adapter_last = new StateAdapter_last(this);
+            lv.setAdapter(adapter_last);
+        }
     }
 
 
@@ -85,6 +91,7 @@ public class WordListActivity extends Activity {
         public StateAdapter_last(final Context c) {
             super(c, R.layout.wordmeaning_last, getResources().getStringArray(R.array.wordmeaning_last_letter));
             con = c;
+            flag_next = true;
             // TODO Auto-generated constructor stub
         }
 

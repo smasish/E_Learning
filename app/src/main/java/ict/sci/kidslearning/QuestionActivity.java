@@ -97,7 +97,8 @@ public class QuestionActivity extends AppCompatActivity {
             indexArray = i+6;
             Log.d("next-----"+i, "start===="+indexArray);
         }else {
-            Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
+           // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
+            Intent img = new Intent(QuestionActivity.this, WordListActivity.class);
             startActivity(img);
         }
 
