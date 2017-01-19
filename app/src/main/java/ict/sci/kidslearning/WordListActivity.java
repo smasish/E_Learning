@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class WordListActivity extends Activity {
 
@@ -53,7 +54,7 @@ public class WordListActivity extends Activity {
 //				Toast.makeText(getApplicationContext(),
 //						String.valueOf(position), Toast.LENGTH_LONG).show();
 
-
+                Toast.makeText(context,"Counted",Toast.LENGTH_LONG).show();
 //				final Intent imageshow = new Intent(SecondActivity.this,
 //						GalleryActivity.class);
 

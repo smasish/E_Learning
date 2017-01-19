@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -72,6 +73,15 @@ public class AboutActivity extends AppCompatActivity {
 		indexArray = 2;
 
 	}
+
+	public void leftimage(View v){
+		Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+	}
+
+	public void rightimage(View v){
+		Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+	}
+
 
 	public void showbox(View v){
 

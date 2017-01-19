@@ -74,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:background="#bf360c"
 
+                android:onClick="leftimage"
                 android:padding="5dp"
                 android:id="@+id/x1"
                 />
@@ -84,6 +85,7 @@
                 android:layout_height="wrap_content"
                 android:background="#bf360c"
                 android:layout_marginLeft="5dp"
+                android:onClick="rightimage"
                 android:padding="5dp"
                 android:id="@+id/x2"
                 />

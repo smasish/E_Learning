@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import ict.sci.kidslearning.utils.AlertMessage;
 
@@ -69,6 +70,32 @@ public class QuestionActivity extends AppCompatActivity {
 
         question.setText(""+getResources().getStringArray(R.array.instruction_set)[question_ind]);
         question_ind++;
+    }
+
+
+    public void oneone(View v){
+
+        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+    }
+    public void onetwo(View v){
+
+        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+    }
+    public void onethree(View v){
+
+        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+    }
+    public void twoone(View v){
+        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+
+    }
+    public void twotwo(View v){
+
+        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+    }
+    public void twothree(View v){
+
+        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
     }
 
     public void showbox(View v){
