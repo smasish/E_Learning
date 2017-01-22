@@ -33,9 +33,9 @@ public class CommentsDataSource  {
 	public Comment createComment(String school,String student,String clas,String roll) {
 		ContentValues values = new ContentValues();
 		values.put(MySQLiteHelper.COLUMN_SCHOOL, school);
-		values.put(MySQLiteHelper.COLUMN_SCHOOL, student);
-		values.put(MySQLiteHelper.COLUMN_SCHOOL, clas);
-		values.put(MySQLiteHelper.COLUMN_SCHOOL, roll);
+		values.put(MySQLiteHelper.COLUMN_student, student);
+		values.put(MySQLiteHelper.COLUMN_CLASS, clas);
+		values.put(MySQLiteHelper.COLUMN_ROLL, roll);
 		long insertId = database.insert(MySQLiteHelper.TABLE_COMMENTS, null,
 				values);
 		// To show how to query
