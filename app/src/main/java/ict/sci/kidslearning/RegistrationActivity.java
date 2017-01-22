@@ -64,7 +64,7 @@ public class RegistrationActivity extends AppCompatActivity {
         else {
 
             Comment comment = null;
-            datasource.createComment(str_school);
+            datasource.createComment(str_school,str_stud,str_class,str_roll);
             List<Comment> values = datasource.getAllComments();
 
             Log.d("====k===="+values.size(), "...id..>>" + values.get(0).getComment());

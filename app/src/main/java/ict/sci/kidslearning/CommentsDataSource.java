@@ -1,29 +1,3 @@
-/*
- * Copyright (c) 2010, Sony Ericsson Mobile Communication AB. All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification, 
- * are permitted provided that the following conditions are met:
- *
- *    * Redistributions of source code must retain the above copyright notice, this 
- *      list of conditions and the following disclaimer.
- *    * Redistributions in binary form must reproduce the above copyright notice,
- *      this list of conditions and the following disclaimer in the documentation
- *      and/or other materials provided with the distribution.
- *    * Neither the name of the Sony Ericsson Mobile Communication AB nor the names
- *      of its contributors may be used to endorse or promote products derived from
- *      this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
- * IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
- * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
- * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
- * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
- * OF THE POSSIBILITY OF SUCH DAMAGE.
- */
 
 package ict.sci.kidslearning;
 
@@ -42,7 +16,7 @@ public class CommentsDataSource  {
 	private SQLiteDatabase database;
 	private MySQLiteHelper dbHelper;
 	private String[] allColumns = { MySQLiteHelper.COLUMN_ID,
-			MySQLiteHelper.COLUMN_COMMENT };
+			MySQLiteHelper.COLUMN_SCHOOL,MySQLiteHelper.COLUMN_student,MySQLiteHelper.COLUMN_CLASS,MySQLiteHelper.COLUMN_ROLL };
 
 	public CommentsDataSource(Context context) {
 		dbHelper = new MySQLiteHelper(context);
@@ -56,9 +30,12 @@ public class CommentsDataSource  {
 		dbHelper.close();
 	}
 
-	public Comment createComment(String comment) {
+	public Comment createComment(String school,String student,String clas,String roll) {
 		ContentValues values = new ContentValues();
-		values.put(MySQLiteHelper.COLUMN_COMMENT, comment);
+		values.put(MySQLiteHelper.COLUMN_SCHOOL, school);
+		values.put(MySQLiteHelper.COLUMN_SCHOOL, student);
+		values.put(MySQLiteHelper.COLUMN_SCHOOL, clas);
+		values.put(MySQLiteHelper.COLUMN_SCHOOL, roll);
 		long insertId = database.insert(MySQLiteHelper.TABLE_COMMENTS, null,
 				values);
 		// To show how to query
@@ -94,7 +71,10 @@ public class CommentsDataSource  {
 	private Comment cursorToComment(Cursor cursor) {
 		Comment comment = new Comment();
 		comment.setId(cursor.getLong(0));
-		comment.setComment(cursor.getString(1));
+		comment.setSchool(cursor.getString(1));
+		comment.setStudent(cursor.getString(2));
+		comment.setClas(cursor.getString(3));
+		comment.setRoll(cursor.getString(4));
 		return comment;
 	}
 }
