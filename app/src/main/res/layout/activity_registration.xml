@@ -15,6 +15,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:textSize="20dp"
+
         android:textStyle="bold"
         android:textColor="@color/red"
     android:text="School Name:" />
@@ -23,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
+        android:id="@+id/school_id"
         android:textColor="@color/red"
         android:hint="School Name:" />
 
@@ -31,6 +33,7 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:textStyle="bold"
+
         android:textColor="@color/red"
         android:text="Student Name:" />
 
@@ -38,6 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
+        android:id="@+id/student_id"
         android:textColor="@color/red"
         android:hint="Student Name:" />
 
@@ -53,6 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
+        android:id="@+id/class_id"
         android:textColor="@color/red"
         android:hint="Class Name:" />
 
@@ -68,6 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
+        android:id="@+id/roll_id"
         android:textColor="@color/red"
         android:hint="Roll No:" />
 
