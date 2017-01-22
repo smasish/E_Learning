@@ -69,7 +69,6 @@ public class WordListActivity extends Activity {
 
     public void back(View v){
         adapter = new StateAdapter(this);
-
         lv.setAdapter(adapter);
     }
 
@@ -94,6 +93,8 @@ public class WordListActivity extends Activity {
             con = c;
             flag_next = true;
             // TODO Auto-generated constructor stub
+
+
         }
 
         @Override
