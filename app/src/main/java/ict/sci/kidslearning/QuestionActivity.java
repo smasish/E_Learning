@@ -36,7 +36,7 @@ public class QuestionActivity extends AppCompatActivity {
     };
 
     int indexArray=0,question_ind=0;
-
+    private CommentsDataSource datasource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +65,8 @@ public class QuestionActivity extends AppCompatActivity {
         imb5.setImageResource(imageArray[i+4]);
         imb6.setImageResource(imageArray[i+5]);
 
+        datasource = new CommentsDataSource(this);
+        datasource.open();
 
         indexArray = 6;
 
@@ -125,6 +127,10 @@ public class QuestionActivity extends AppCompatActivity {
             indexArray = i+6;
             Log.d("next-----"+i, "start===="+indexArray);
         }else {
+
+            String id = "" + datasource.getAllComments().get(0).getId();
+            datasource.updateOrderItems(id, "6");
+
            // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
             Intent img = new Intent(QuestionActivity.this, WordListActivity.class);
             startActivity(img);

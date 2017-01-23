@@ -96,6 +96,9 @@ public class AboutActivity extends AppCompatActivity {
 		Log.d("next-----", "start===="+indexArray);
 		// for(int i=indexArray;i<imageArray.length;i+=6){
 
+		String id = "" + datasource.getAllComments().get(0).getId();
+		datasource.updateOrderItems(id, "6");
+
 		int i = indexArray;
 
 		if(i<imageArray.length-2){

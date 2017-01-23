@@ -59,6 +59,15 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void g1b2(View v){
+        Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+        startActivity(i);
+    }
+    public void g1b3(View v){
+        Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+        startActivity(i);
+    }
+
 
 
 
