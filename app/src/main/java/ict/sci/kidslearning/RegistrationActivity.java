@@ -50,21 +50,21 @@ public class RegistrationActivity extends AppCompatActivity {
         str_class=class_name.getText().toString();
         str_roll=roll.getText().toString();
 
-        if(str_school.length()<2){
-            AlertMessage.showMessage(con, "Sorry", "Invalied school name.");
-        }else if(str_stud.length()<3){
-            AlertMessage.showMessage(con, "Sorry", "Invalied student name.");
-        }
-        else if(str_class.length()<1){
-            AlertMessage.showMessage(con, "Sorry", "Invalied class name.");
-        }
-        else if(str_roll.length()<3){
-            AlertMessage.showMessage(con, "Sorry", "Invalied roll no.");
-        }
-        else {
+//        if(str_school.length()<2){
+//            AlertMessage.showMessage(con, "Sorry", "Invalied school name.");
+//        }else if(str_stud.length()<3){
+//            AlertMessage.showMessage(con, "Sorry", "Invalied student name.");
+//        }
+//        else if(str_class.length()<1){
+//            AlertMessage.showMessage(con, "Sorry", "Invalied class name.");
+//        }
+//        else if(str_roll.length()<3){
+//            AlertMessage.showMessage(con, "Sorry", "Invalied roll no.");
+//        }
+//        else {
 
             Comment comment = null;
-            datasource.createComment(str_school,str_stud,str_class,str_roll);
+            datasource.createComment(str_school,str_stud,str_class,0,str_roll);
             List<Comment> values = datasource.getAllComments();
 
             Log.d("====k===="+values.size(), "...id..>>" + values.get(0).getComment());
@@ -72,7 +72,7 @@ public class RegistrationActivity extends AppCompatActivity {
             Intent i = new Intent(RegistrationActivity.this, HomeActivity.class);
             //Intent i = new Intent(MainActivity.this, WordListActivity.class);
             startActivity(i);
-        }
+ //       }
     }
 
 

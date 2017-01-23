@@ -17,6 +17,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 	public static final String COLUMN_CLASS = "class";
 	public static final String COLUMN_ROLL = "roll";
 
+	public static final String COLUMN_SCORE = "score";
+
 	private static final String DATABASE_NAME = "commments.db";
 	private static final int DATABASE_VERSION = 1;
 
@@ -26,7 +28,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 			+ " integer primary key autoincrement, " + COLUMN_SCHOOL
 			+ " text not null, " + COLUMN_student
 			+ " text not null, " + COLUMN_CLASS
-			+ " text not null, " + COLUMN_ROLL
+			+ " text not null, " + COLUMN_SCORE
+			+ " integer, " + COLUMN_ROLL
 			+ " text not null);";
 
 	public MySQLiteHelper(Context context) {

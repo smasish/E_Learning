@@ -26,7 +26,7 @@
         android:textSize="20dp"
         android:id="@+id/school_id"
         android:textColor="@color/red"
-        android:hint="School Name:" />
+        android:hint="School Name" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
         android:textSize="20dp"
         android:id="@+id/student_id"
         android:textColor="@color/red"
-        android:hint="Student Name:" />
+        android:hint="Student Name" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
         android:textSize="20dp"
         android:id="@+id/class_id"
         android:textColor="@color/red"
-        android:hint="Class Name:" />
+        android:hint="Class Name" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
         android:textSize="20dp"
         android:id="@+id/roll_id"
         android:textColor="@color/red"
-        android:hint="Roll No:" />
+        android:hint="Roll No" />
 
     <Button
         android:layout_width="wrap_content"

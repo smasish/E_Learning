@@ -16,7 +16,8 @@ public class CommentsDataSource  {
 	private SQLiteDatabase database;
 	private MySQLiteHelper dbHelper;
 	private String[] allColumns = { MySQLiteHelper.COLUMN_ID,
-			MySQLiteHelper.COLUMN_SCHOOL,MySQLiteHelper.COLUMN_student,MySQLiteHelper.COLUMN_CLASS,MySQLiteHelper.COLUMN_ROLL };
+			MySQLiteHelper.COLUMN_SCHOOL,MySQLiteHelper.COLUMN_student,MySQLiteHelper.COLUMN_CLASS,
+			""+MySQLiteHelper.COLUMN_SCORE, MySQLiteHelper.COLUMN_ROLL };
 
 	public CommentsDataSource(Context context) {
 		dbHelper = new MySQLiteHelper(context);
@@ -30,12 +31,14 @@ public class CommentsDataSource  {
 		dbHelper.close();
 	}
 
-	public Comment createComment(String school,String student,String clas,String roll) {
+	public Comment createComment(String school,String student,String clas,int score,String roll) {
 		ContentValues values = new ContentValues();
 		values.put(MySQLiteHelper.COLUMN_SCHOOL, school);
 		values.put(MySQLiteHelper.COLUMN_student, student);
 		values.put(MySQLiteHelper.COLUMN_CLASS, clas);
+		values.put(MySQLiteHelper.COLUMN_ROLL, score);
 		values.put(MySQLiteHelper.COLUMN_ROLL, roll);
+
 		long insertId = database.insert(MySQLiteHelper.TABLE_COMMENTS, null,
 				values);
 		// To show how to query
@@ -74,7 +77,8 @@ public class CommentsDataSource  {
 		comment.setSchool(cursor.getString(1));
 		comment.setStudent(cursor.getString(2));
 		comment.setClas(cursor.getString(3));
-		comment.setRoll(cursor.getString(4));
+		comment.setScore(cursor.getInt(4));
+		comment.setRoll(cursor.getString(5));
 		return comment;
 	}
 }

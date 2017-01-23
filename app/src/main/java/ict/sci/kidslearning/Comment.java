@@ -10,6 +10,7 @@ public class Comment  {
 	private String comment;
 	private String stud;
 	private String clas;
+	private int score;
 	private String roll;
 
 
@@ -45,6 +46,14 @@ public class Comment  {
 
 	public void setClas(String clas) {
 		this.clas = clas;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
 	}
 
 	public String getRoll() {
