@@ -67,7 +67,7 @@ public class RegistrationActivity extends AppCompatActivity {
             datasource.createComment(str_school,str_stud,str_class,0,str_roll);
             List<Comment> values = datasource.getAllComments();
 
-            Log.d("====k===="+values.size(), "...id..>>" + values.get(0).getComment());
+            Log.d("====k===="+values.get(0).getScore(), "...id..>>" + values.get(0).getComment());
 
             Intent i = new Intent(RegistrationActivity.this, HomeActivity.class);
             //Intent i = new Intent(MainActivity.this, WordListActivity.class);

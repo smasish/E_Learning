@@ -25,6 +25,9 @@ public class WordListActivity extends Activity {
     StateAdapter_last adapter_last;
 
     boolean flag_next = false;
+    private CommentsDataSource datasource;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,9 @@ public class WordListActivity extends Activity {
         context = this;
 
         lv = (ListView) findViewById(R.id.listView1);
+
+        datasource = new CommentsDataSource(this);
+        datasource.open();
 
 
         ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.word_set, android.R.layout.simple_list_item_1);
@@ -75,6 +81,11 @@ public class WordListActivity extends Activity {
     public void next(View v){
 
         if(flag_next){
+
+            String id = "" + datasource.getAllComments().get(0).getId();
+            datasource.updateOrderItems(id, "6");
+
+
             Intent img = new Intent(WordListActivity.this, AboutActivity.class);
             startActivity(img);
         }else {

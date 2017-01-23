@@ -46,7 +46,7 @@ public class AboutActivity extends AppCompatActivity {
 	};
 
 	int indexArray=0;
-
+	private CommentsDataSource datasource;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +68,11 @@ public class AboutActivity extends AppCompatActivity {
 		imb1.setImageResource(imageArray[i]);
 		imb2.setImageResource(imageArray[i+1]);
 
+		datasource = new CommentsDataSource(this);
+		datasource.open();
+		String id = "" + datasource.getAllComments().get(0).getScore();
 
-
+		Log.d("next-----", "start===="+id);
 		indexArray = 2;
 
 	}
