@@ -40,8 +40,6 @@ public class HomeActivity extends AppCompatActivity {
         categories.add("2017");
 
 
-
-
         // Creating adapter for spinner
         dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
         year.setAdapter(dataAdapter);

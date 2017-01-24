@@ -23,8 +23,9 @@ public class WordListActivity extends Activity {
     ListView lv;
     StateAdapter adapter;
     StateAdapter_last adapter_last;
+    StateAdapter_single adapter_single;
 
-    boolean flag_next = false;
+    int flag_next = 0;
     private CommentsDataSource datasource;
 
 
@@ -47,7 +48,7 @@ public class WordListActivity extends Activity {
 
         ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.word_set, android.R.layout.simple_list_item_1);
        // lv.setAdapter(aa);
-        flag_next = false;
+        flag_next = 0;
         adapter = new StateAdapter(this);
 
         lv.setAdapter(adapter);
@@ -80,7 +81,7 @@ public class WordListActivity extends Activity {
 
     public void next(View v){
 
-        if(flag_next){
+        if(flag_next==2){
 
             String id = "" + datasource.getAllComments().get(0).getId();
             datasource.updateOrderItems(id, "6");
@@ -88,12 +89,52 @@ public class WordListActivity extends Activity {
 
             Intent img = new Intent(WordListActivity.this, AboutActivity.class);
             startActivity(img);
-        }else {
+        }else if(flag_next==0){
+
+            adapter_single = new StateAdapter_single(this);
+            lv.setAdapter(adapter_single);
+        }
+        else if(flag_next == 1) {
             adapter_last = new StateAdapter_last(this);
             lv.setAdapter(adapter_last);
         }
     }
 
+
+
+    private class StateAdapter_single extends ArrayAdapter<String> {
+        // StateListActivty context;
+        private final Context con;
+
+        public StateAdapter_single(final Context c) {
+            super(c, R.layout.word_singleletter, getResources().getStringArray(R.array.single_letter));
+            con = c;
+            flag_next = 1;
+            // TODO Auto-generated constructor stub
+
+
+        }
+
+        @Override
+        public View getView(final int position, final View convertView,
+                            final ViewGroup parent) {
+            View v = convertView;
+            if (v == null) {
+                final LayoutInflater vi = (LayoutInflater) con
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.word_singleletter, null);
+            }
+            final TextView textView = (TextView) v
+                    .findViewById(R.id.single_letter);
+            textView.setText(""+getResources().getStringArray(R.array.single_letter)[position]);
+
+//            final TextView textView2 = (TextView) v
+//                    .findViewById(R.id.bottom_row);
+//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+
+            return v;
+        }
+    }
 
     private class StateAdapter_last extends ArrayAdapter<String> {
         // StateListActivty context;
@@ -102,7 +143,7 @@ public class WordListActivity extends Activity {
         public StateAdapter_last(final Context c) {
             super(c, R.layout.wordmeaning_last, getResources().getStringArray(R.array.wordmeaning_last_letter));
             con = c;
-            flag_next = true;
+            flag_next = 2;
             // TODO Auto-generated constructor stub
 
 

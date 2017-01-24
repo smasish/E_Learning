@@ -60,6 +60,16 @@
     </string-array>
 
 
+    <string-array name="single_letter">
+        <item name="set1">আ	  | আতা,আদা, আম,আলু ইত্যাদি </item>
+        <item name="set2"> ই	| ইলিশ,ইঁদুর,ইট ইত্যাদি </item>
+        <item name="set3">উ	  | উট, উঠান, উনুন, উড়াল ইত্যাদি</item>
+        <item name="set4">এ	  | এক, এত,এদিক, এলাচ, একতারা ইত্যাদি</item>
+        <item name="set5">ও	  | ওড়না,ওল, ওঝা, ওষুধ  ইত্যাদি </item>
+
+    </string-array>
+
+
     <string-array name="wordmeaning_1st_letter">
         <item name="set1"> আম |	আতা	| পড়ি </item>
         <item name="set2"> উট |	ইট	| ইলিশ </item>
