@@ -74,6 +74,14 @@ public class WordListActivity extends Activity {
 
 
 
+
+
+    public void single_toggle(View v){
+
+        Toast.makeText(context,"Wrong",Toast.LENGTH_LONG).show();
+
+    }
+
     public void back(View v){
         adapter = new StateAdapter(this);
         lv.setAdapter(adapter);

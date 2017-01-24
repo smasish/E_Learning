@@ -38,8 +38,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/toggle_button"
             android:layout_alignParentRight="true"
-            android:textOn="Right"
-            android:textOff="Wrong"
+            android:textOff="Right"
+            android:onClick="single_toggle"
+            android:textOn="Wrong"
             android:focusable="false"
             />
 
