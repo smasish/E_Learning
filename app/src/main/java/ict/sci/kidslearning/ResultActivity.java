@@ -71,7 +71,6 @@ public class ResultActivity extends Activity {
 
 
 
-
 	public void data(View v){
 
 		Log.d("Login e------", "start====");

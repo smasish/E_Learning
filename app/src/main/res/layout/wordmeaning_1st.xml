@@ -40,7 +40,7 @@
             android:textOff="Right"
             android:onClick="single_toggle"
             android:textOn="Wrong"
-            android:focusable="false"
+            android:focusable="true"
             />
 
 
