@@ -39,7 +39,7 @@ public class ResultActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.login);
+		setContentView(R.layout.result_list);
 		con = this;
 		user=(EditText)findViewById(R.id.user);
 		pass=(EditText)findViewById(R.id.password);
