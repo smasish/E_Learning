@@ -129,13 +129,13 @@ public final class SharedPreferencesHelper {
 		editor.commit();
 	}
 
-	public static String getMobile(final Context ctx) {
+	public static String getClass(final Context ctx) {
 		return ctx.getSharedPreferences(
 				SharedPreferencesHelper.PREFS_FILE_NAME, Context.MODE_PRIVATE)
 				.getString(SharedPreferencesHelper.MOBILE, "");
 	}
 
-	public static void setMobile(final Context ctx, final String pass) {
+	public static void setClass(final Context ctx, final String pass) {
 		final SharedPreferences prefs = ctx.getSharedPreferences(
 				SharedPreferencesHelper.PREFS_FILE_NAME, Context.MODE_PRIVATE);
 		final Editor editor = prefs.edit();

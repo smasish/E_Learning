@@ -12,6 +12,7 @@ import android.widget.EditText;
 import java.util.List;
 
 import ict.sci.kidslearning.utils.AlertMessage;
+import ict.sci.kidslearning.utils.SharedPreferencesHelper;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -37,11 +38,20 @@ public class RegistrationActivity extends AppCompatActivity {
         roll = (EditText) findViewById(R.id.roll_id);
 
 
+        if(SharedPreferencesHelper.getName(con).length()>2){
+            school.setText(""+SharedPreferencesHelper.getName(con));
+            class_name.setText(""+SharedPreferencesHelper.getClass(con));
+        }
 
 
     }
 
 
+
+    public void result(View v){
+
+
+    }
 
     public void next(View v){
 
@@ -68,6 +78,9 @@ public class RegistrationActivity extends AppCompatActivity {
             List<Comment> values = datasource.getAllComments();
 
             Log.d("====k===="+values.get(0).getScore(), "...id..>>" + values.get(0).getComment());
+
+        SharedPreferencesHelper.setName(con,str_school);
+        SharedPreferencesHelper.setClass(con,str_class);
 
             Intent i = new Intent(RegistrationActivity.this, HomeActivity.class);
             //Intent i = new Intent(MainActivity.this, WordListActivity.class);
