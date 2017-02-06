@@ -62,21 +62,23 @@ int  flag_next = 0;
 			img2.setBackgroundResource(R.drawable.math);
 			img3.setBackgroundResource(R.drawable.play_football);
 
-			flag_next = 1;
+			//flag_next = 1;
 
 		}else if(flag_next==2){
 
 			img1.setBackgroundResource(R.drawable.fall);
 			img2.setBackgroundResource(R.drawable.paki);
 			img3.setBackgroundResource(R.drawable.paki_fall);
-			flag_next =0;
+			//flag_next =0;
 		}
 		else if(flag_next == 1) {
 			img1.setBackgroundResource(R.drawable.ful);
 			img2.setBackgroundResource(R.drawable.mala);
 			img3.setBackgroundResource(R.drawable.mala_golay);
-			flag_next =2;
+			//flag_next =2;
 		}
+		if(flag_next>0)
+			flag_next--;
 	}
 
 	public void next(View v){
@@ -86,21 +88,25 @@ int  flag_next = 0;
 			img2.setBackgroundResource(R.drawable.math);
 			img3.setBackgroundResource(R.drawable.play_football);
 
-			flag_next = 1;
+			//flag_next = 1;
 
 		}else if(flag_next==2){
 
 			img1.setBackgroundResource(R.drawable.fall);
 			img2.setBackgroundResource(R.drawable.paki);
 			img3.setBackgroundResource(R.drawable.paki_fall);
-			flag_next =0;
+			//flag_next =3;
 		}
 		else if(flag_next == 1) {
 			img1.setBackgroundResource(R.drawable.ful);
 			img2.setBackgroundResource(R.drawable.mala);
 			img3.setBackgroundResource(R.drawable.mala_golay);
-			flag_next =2;
+			//flag_next =2;
 		}
+		else{
+			this.finish();
+		}
+		flag_next++;
 	}
 
 	public void single_toggle(View v){
