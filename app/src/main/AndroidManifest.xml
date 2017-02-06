@@ -35,6 +35,8 @@
         <activity android:name=".QuestionActivity" android:screenOrientation="landscape"/>
         <activity android:name=".WordListActivity" android:screenOrientation="landscape"/>
 
+        <activity android:name=".DragingActivity" android:screenOrientation="landscape"/>
+
 
     </application>
 

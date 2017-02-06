@@ -2,6 +2,7 @@ package ict.sci.kidslearning;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.MotionEvent;
@@ -21,7 +22,7 @@ public class DragingActivity extends Activity implements OnTouchListener, OnDrag
 
 	private ImageView img1,img2,img3;
 	private Context con;
-
+int  flag_next = 0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,7 @@ public class DragingActivity extends Activity implements OnTouchListener, OnDrag
 		setContentView(R.layout.activity_drag);
 
 		con = this;
-
+		flag_next = 0;
 		//set ontouch listener for box views
 //		findViewById(R.id.box_view1).setOnTouchListener(this);
 //		findViewById(R.id.box_view2).setOnTouchListener(this);
@@ -50,6 +51,53 @@ public class DragingActivity extends Activity implements OnTouchListener, OnDrag
 //		findViewById(R.id.right_view).setOnDragListener(this);
 	}
 
+
+	public void back(View v){
+		if(flag_next==0){
+			img1.setBackgroundResource(R.drawable.a1);
+			img2.setBackgroundResource(R.drawable.a2);
+			img3.setBackgroundResource(R.drawable.a3);
+
+			flag_next = 1;
+
+		}else if(flag_next==2){
+
+			img1.setBackgroundResource(R.drawable.a7);
+			img2.setBackgroundResource(R.drawable.a8);
+			img3.setBackgroundResource(R.drawable.a9);
+			flag_next =0;
+		}
+		else if(flag_next == 1) {
+			img1.setBackgroundResource(R.drawable.a4);
+			img2.setBackgroundResource(R.drawable.a5);
+			img3.setBackgroundResource(R.drawable.a6);
+			flag_next =2;
+		}
+	}
+
+	public void next(View v){
+
+		if(flag_next==0){
+			img1.setBackgroundResource(R.drawable.a1);
+			img2.setBackgroundResource(R.drawable.a2);
+			img3.setBackgroundResource(R.drawable.a3);
+
+			flag_next = 1;
+
+		}else if(flag_next==2){
+
+			img1.setBackgroundResource(R.drawable.a7);
+			img2.setBackgroundResource(R.drawable.a8);
+			img3.setBackgroundResource(R.drawable.a9);
+			flag_next =0;
+		}
+		else if(flag_next == 1) {
+			img1.setBackgroundResource(R.drawable.a4);
+			img2.setBackgroundResource(R.drawable.a5);
+			img3.setBackgroundResource(R.drawable.a6);
+			flag_next =2;
+		}
+	}
 
 	public void single_toggle(View v){
 
