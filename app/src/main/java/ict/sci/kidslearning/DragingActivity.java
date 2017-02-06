@@ -46,6 +46,10 @@ int  flag_next = 0;
 		img3 = (ImageView)findViewById(R.id.box_view3);
 		img3.setOnTouchListener(this);
 
+		img1.setBackgroundResource(R.drawable.ball);
+		img2.setBackgroundResource(R.drawable.math);
+		img3.setBackgroundResource(R.drawable.play_football);
+
 		//set ondrag listener for right and left parent views
 		findViewById(R.id.left_view).setOnDragListener(this);
 //		findViewById(R.id.right_view).setOnDragListener(this);
@@ -54,23 +58,23 @@ int  flag_next = 0;
 
 	public void back(View v){
 		if(flag_next==0){
-			img1.setBackgroundResource(R.drawable.a1);
-			img2.setBackgroundResource(R.drawable.a2);
-			img3.setBackgroundResource(R.drawable.a3);
+			img1.setBackgroundResource(R.drawable.ball);
+			img2.setBackgroundResource(R.drawable.math);
+			img3.setBackgroundResource(R.drawable.play_football);
 
 			flag_next = 1;
 
 		}else if(flag_next==2){
 
-			img1.setBackgroundResource(R.drawable.a7);
-			img2.setBackgroundResource(R.drawable.a8);
-			img3.setBackgroundResource(R.drawable.a9);
+			img1.setBackgroundResource(R.drawable.fall);
+			img2.setBackgroundResource(R.drawable.paki);
+			img3.setBackgroundResource(R.drawable.paki_fall);
 			flag_next =0;
 		}
 		else if(flag_next == 1) {
-			img1.setBackgroundResource(R.drawable.a4);
-			img2.setBackgroundResource(R.drawable.a5);
-			img3.setBackgroundResource(R.drawable.a6);
+			img1.setBackgroundResource(R.drawable.ful);
+			img2.setBackgroundResource(R.drawable.mala);
+			img3.setBackgroundResource(R.drawable.mala_golay);
 			flag_next =2;
 		}
 	}
@@ -78,23 +82,23 @@ int  flag_next = 0;
 	public void next(View v){
 
 		if(flag_next==0){
-			img1.setBackgroundResource(R.drawable.a1);
-			img2.setBackgroundResource(R.drawable.a2);
-			img3.setBackgroundResource(R.drawable.a3);
+			img1.setBackgroundResource(R.drawable.ball);
+			img2.setBackgroundResource(R.drawable.math);
+			img3.setBackgroundResource(R.drawable.play_football);
 
 			flag_next = 1;
 
 		}else if(flag_next==2){
 
-			img1.setBackgroundResource(R.drawable.a7);
-			img2.setBackgroundResource(R.drawable.a8);
-			img3.setBackgroundResource(R.drawable.a9);
+			img1.setBackgroundResource(R.drawable.fall);
+			img2.setBackgroundResource(R.drawable.paki);
+			img3.setBackgroundResource(R.drawable.paki_fall);
 			flag_next =0;
 		}
 		else if(flag_next == 1) {
-			img1.setBackgroundResource(R.drawable.a4);
-			img2.setBackgroundResource(R.drawable.a5);
-			img3.setBackgroundResource(R.drawable.a6);
+			img1.setBackgroundResource(R.drawable.ful);
+			img2.setBackgroundResource(R.drawable.mala);
+			img3.setBackgroundResource(R.drawable.mala_golay);
 			flag_next =2;
 		}
 	}
