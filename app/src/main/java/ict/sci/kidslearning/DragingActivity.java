@@ -13,7 +13,10 @@ import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import ict.sci.kidslearning.utils.AlertMessage;
 //import com.javapapers.android.drag_drop.R;
 
 
@@ -23,6 +26,8 @@ public class DragingActivity extends Activity implements OnTouchListener, OnDrag
 	private ImageView img1,img2,img3;
 	private Context con;
 int  flag_next = 0;
+	private TextView question;
+	int indexArray=0,question_ind=0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,14 @@ int  flag_next = 0;
 
 		con = this;
 		flag_next = 0;
+
+		indexArray=0;
+		question_ind = 13;
+
+		question = (TextView)findViewById(R.id.question_id);
+
+		question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
+		//question_ind++;
 		//set ontouch listener for box views
 //		findViewById(R.id.box_view1).setOnTouchListener(this);
 //		findViewById(R.id.box_view2).setOnTouchListener(this);
@@ -56,7 +69,19 @@ int  flag_next = 0;
 	}
 
 
+	public void showbox(View v){
+
+		String instr = ""+getResources().getStringArray(R.array.instruction_set)[question_ind];
+		AlertMessage.showMessage(con,"Instruction",instr);
+	}
+
+
 	public void back(View v){
+
+		if(question_ind>0)
+			question_ind--;
+		question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
+
 		if(flag_next==0){
 			img1.setBackgroundResource(R.drawable.ball);
 			img2.setBackgroundResource(R.drawable.math);
@@ -82,6 +107,10 @@ int  flag_next = 0;
 	}
 
 	public void next(View v){
+
+		question_ind++;
+		question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
+
 
 		if(flag_next==0){
 			img1.setBackgroundResource(R.drawable.ball);

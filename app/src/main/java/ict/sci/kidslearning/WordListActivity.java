@@ -17,9 +17,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import ict.sci.kidslearning.utils.AlertMessage;
+
 public class WordListActivity extends Activity {
 
-    Context context;
+    Context con;
     ListView lv;
     StateAdapter adapter;
     Adapter_spelling spell_adapter;
@@ -28,8 +30,8 @@ public class WordListActivity extends Activity {
 
     int flag_next = 0;
     private CommentsDataSource datasource;
-
-
+    private TextView question;
+    int indexArray=0,question_ind=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,17 @@ public class WordListActivity extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.word_list);
-        context = this;
+        con = this;
+
+
+
+        indexArray=0;
+        question_ind = 9;
+
+        question = (TextView)findViewById(R.id.question_id);
+
+        question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
+        //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
 
@@ -65,7 +77,7 @@ public class WordListActivity extends Activity {
 //				Toast.makeText(getApplicationContext(),
 //						String.valueOf(position), Toast.LENGTH_LONG).show();
 
-                Toast.makeText(context,"Counted",Toast.LENGTH_LONG).show();
+                Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
 //				final Intent imageshow = new Intent(SecondActivity.this,
 //						GalleryActivity.class);
 
@@ -77,25 +89,63 @@ public class WordListActivity extends Activity {
     }
 
 
+    public void showbox(View v){
 
+        String instr = ""+getResources().getStringArray(R.array.instruction_set)[question_ind];
+        AlertMessage.showMessage(con,"Instruction",instr);
+    }
 
 
     public void single_toggle(View v){
 
-        Toast.makeText(context,"Wrong",Toast.LENGTH_LONG).show();
+        Toast.makeText(con,"Wrong",Toast.LENGTH_LONG).show();
 
     }
 
     public void back(View v){
-        adapter = new StateAdapter(this);
-        lv.setAdapter(adapter);
 
+        if(question_ind>0)
+            question_ind--;
+        question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
+
+        if(flag_next==3){
+            String id = "" + datasource.getAllComments().get(0).getId();
+            datasource.updateOrderItems(id, "6");
+
+
+            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
+            Intent img = new Intent(WordListActivity.this, QuestionActivity.class);
+            startActivity(img);
+        }
+        if(flag_next==2){
+            adapter_last = new StateAdapter_last(this);
+            lv.setAdapter(adapter_last);
+
+        }else if(flag_next==0){
+
+            spell_adapter  = new Adapter_spelling(this);
+            lv.setAdapter(spell_adapter);
+            // adapter_single = new StateAdapter_single(this);
+
+            // lv.setAdapter(adapter_single);
+        }
+        else if(flag_next == 1) {
+            adapter = new StateAdapter(this);
+            lv.setAdapter(adapter);
+
+        }
+        if(flag_next>0)
         flag_next--;
+
+
     }
 
     public void next(View v){
 
         Log.d("=k===", "...id..>>"+flag_next );
+        question_ind++;
+        question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
+
         if(flag_next==3){
             String id = "" + datasource.getAllComments().get(0).getId();
             datasource.updateOrderItems(id, "6");

@@ -19,6 +19,7 @@ public class QuestionActivity extends AppCompatActivity {
     private ImageButton imb1,imb2,imb3,imb4,imb5,imb6;
 
     private TextView question;
+    int indexArray=0,question_ind=0;
 
     private int[] imageArray = {
             R.drawable.a1, R.drawable.a2,R.drawable.a3,R.drawable.a4,R.drawable.a5,
@@ -35,7 +36,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     };
 
-    int indexArray=0,question_ind=0;
+
     private CommentsDataSource datasource;
 
     @Override
@@ -70,7 +71,7 @@ public class QuestionActivity extends AppCompatActivity {
 
         indexArray = 6;
 
-        question.setText(""+getResources().getStringArray(R.array.instruction_set)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
         question_ind++;
     }
 
@@ -143,8 +144,10 @@ public class QuestionActivity extends AppCompatActivity {
         Log.d("back-----", "start===="+indexArray);
         int i = indexArray;
 
+        if(question_ind>0)
+            question_ind--;
         question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
-        question_ind--;
+
 
         //for(int i = indexArray;i>6;i-=6) {
         if(i>5){
