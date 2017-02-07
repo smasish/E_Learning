@@ -22,6 +22,7 @@ public class WordListActivity extends Activity {
     Context context;
     ListView lv;
     StateAdapter adapter;
+    Adapter_spelling spell_adapter;
     StateAdapter_last adapter_last;
     StateAdapter_single adapter_single;
 
@@ -49,9 +50,12 @@ public class WordListActivity extends Activity {
         ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.word_set, android.R.layout.simple_list_item_1);
        // lv.setAdapter(aa);
         flag_next = 0;
-        adapter = new StateAdapter(this);
+       // adapter = new StateAdapter(this);
+       // lv.setAdapter(adapter);
 
-        lv.setAdapter(adapter);
+
+        adapter_single = new StateAdapter_single(this);
+        lv.setAdapter(adapter_single);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -85,27 +89,40 @@ public class WordListActivity extends Activity {
     public void back(View v){
         adapter = new StateAdapter(this);
         lv.setAdapter(adapter);
+
+        flag_next--;
     }
 
     public void next(View v){
 
-        if(flag_next==2){
-
+        Log.d("=k===", "...id..>>"+flag_next );
+        if(flag_next==3){
             String id = "" + datasource.getAllComments().get(0).getId();
             datasource.updateOrderItems(id, "6");
 
 
-            Intent img = new Intent(WordListActivity.this, AboutActivity.class);
+           // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
+            Intent img = new Intent(WordListActivity.this, DragingActivity.class);
             startActivity(img);
-        }else if(flag_next==0){
-
-            adapter_single = new StateAdapter_single(this);
-            lv.setAdapter(adapter_single);
         }
-        else if(flag_next == 1) {
+        if(flag_next==2){
             adapter_last = new StateAdapter_last(this);
             lv.setAdapter(adapter_last);
+
+        }else if(flag_next==0){
+
+            spell_adapter  = new Adapter_spelling(this);
+            lv.setAdapter(spell_adapter);
+           // adapter_single = new StateAdapter_single(this);
+
+           // lv.setAdapter(adapter_single);
         }
+        else if(flag_next == 1) {
+            adapter = new StateAdapter(this);
+            lv.setAdapter(adapter);
+
+        }
+        flag_next++;
     }
 
 
@@ -117,7 +134,7 @@ public class WordListActivity extends Activity {
         public StateAdapter_single(final Context c) {
             super(c, R.layout.word_singleletter, getResources().getStringArray(R.array.single_letter));
             con = c;
-            flag_next = 1;
+            //flag_next = 1;
             // TODO Auto-generated constructor stub
 
 
@@ -143,6 +160,41 @@ public class WordListActivity extends Activity {
             return v;
         }
     }
+
+    private class Adapter_spelling extends ArrayAdapter<String> {
+        // StateListActivty context;
+        private final Context con;
+
+        public Adapter_spelling(final Context c) {
+            super(c, R.layout.spelling_sound, getResources().getStringArray(R.array.spelling_sound));
+            con = c;
+            //flag_next = 1;
+            // TODO Auto-generated constructor stub
+
+
+        }
+
+        @Override
+        public View getView(final int position, final View convertView,
+                            final ViewGroup parent) {
+            View v = convertView;
+            if (v == null) {
+                final LayoutInflater vi = (LayoutInflater) con
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.spelling_sound, null);
+            }
+            final TextView textView = (TextView) v
+                    .findViewById(R.id.single_letter);
+            textView.setText(""+getResources().getStringArray(R.array.spelling_sound)[position]);
+
+//            final TextView textView2 = (TextView) v
+//                    .findViewById(R.id.bottom_row);
+//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+
+            return v;
+        }
+    }
+
 
     private class StateAdapter_last extends ArrayAdapter<String> {
         // StateListActivty context;

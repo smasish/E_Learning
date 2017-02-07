@@ -28,8 +28,8 @@ public class SplashActivity extends Activity {
             @Override
             public void run() {
                 /* start the activity */
-              //  startActivity(new Intent(context, MainActivity.class));
-                startActivity(new Intent(context, DragingActivity.class));
+                startActivity(new Intent(context, MainActivity.class));
+             //   startActivity(new Intent(context, DragingActivity.class));
                 //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 overridePendingTransition(0,0);
                 finish();

@@ -79,6 +79,17 @@
         <item name="set5">ওল | ওড়না | এক </item>
 
     </string-array>
+
+    <string-array name="spelling_sound">
+        <item name="set1"> ভুল উচ্চারণ  |	শুদ্ধ উচ্চারণ</item>
+        <item name="set2"> অতি	| ওতি </item>
+        <item name="set3">অদ্য | 	ওদ্দো</item>
+        <item name="set4"> অন্য | 	ওন্নো </item>
+        <item name="set5">অতীত | 	ওতিত্ </item>
+        <item name="set5">অভিধান | 	ওভিধান</item>
+
+    </string-array>
+
     <string-array name="wordmeaning_last_letter">
         <item name="set1">উঠান |	আতা	| তোতা </item>
         <item name="set2"> মউ |	বউ | ইলিশ </item>
