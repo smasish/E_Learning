@@ -37,6 +37,9 @@
 
         <activity android:name=".DragingActivity" android:screenOrientation="landscape"/>
 
+        <activity android:name=".QuestionActivity_g1b2" android:screenOrientation="landscape"/>
+
+
 
     </application>
 

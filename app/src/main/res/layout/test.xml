@@ -109,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/t1"
                 android:id="@+id/btn2"
-                android:onClick="g1b1"
+                android:onClick="g1b2"
 
                 />
             <Button
