@@ -124,7 +124,55 @@
   </item>
 
 
+    </string-array>
 
+    <string-array name="g1q2_2">
+        <item name="set1">গাছ	| আতা	| গান</item>
+        <item name="set2">মাছ |	মাটি	| ইলিশ</item>
+        <item name="set3">ডাল	| নদী	| ডাব</item>
+        <item name="set4"> বাঘ | 	হরিণ	 | বাগান </item>
+        <item name="set5"> পাতা	| জবা	| পাখা</item>
+
+    </string-array>
+
+    <string-array name="g1q2_3">
+        <item name="set1"> গাছ	| মাছ |	মামা</item>
+        <item name="set1">পানি	| নদী	| নানি </item>
+        <item name="set1">হাসি|	গাজর |	খাসি </item>
+        <item name="set1"> ডাল | 	জাল |	জগ</item>
+        <item name="set1">কলা | 	পাখি |	মুলা </item>
+
+    </string-array>
+    <string-array name="g1q2_4">
+        <item name="set1">জেলে	|  ছেলে</item>
+        <item name="set1"> বেলা	|  ভেলা </item>
+        <item name="set1"> ডাল	| ঢাল</item>
+        <item name="set1">ধান	| দান </item>
+        <item name="set1">ফুল	|পুল </item>
+
+    </string-array>
+
+    <string-array name="g1q2_5">
+        <item name="set1">আজ	| কাল </item>
+        <item name="set1"> দেশ	|  বিদেশ </item>
+        <item name="set1"> ছোট	| বড় </item>
+        <item name="set1">দিন	| রাত </item>
+        <item name="set1">সকাল	| বিকাল </item>
+
+    </string-array>
+    <string-array name="g1q2_6">
+        <item name="set1"> শেফালী	 | একটি ফুলের নাম/মেয়ের  নাম</item>
+        <item name="set1"> খুশি	| আনন্দ,ফুর্তি </item>
+        <item name="set1"> জেলে	 | যে মাছ ধরে </item>
+        <item name="set1"> রাখাল	 |  যে গরু চড়ায়</item>
+        <item name="set1"> চাষী	 | যে কৃষি কাজ করে/কৃষক</item>
+    </string-array>
+    <string-array name="g1q2_7">
+        <item name="set1">আকাশ	| নদী	| গরু	| ফসল </item>
+        <item name="set1">নৌকা	|      দেশ	| বাঘ	| গাছ</item>
+        <item name="set1">জাল	| বাগান	| ছুটি	|ফুল </item>
+        <item name="set1">ডাল	| পাতা	| বাঁশি	| মাছ </item>
+        <item name="set1">বাবা	| মধু	| ফল	| পড়ি  </item>
     </string-array>
 
     <string-array name="instruction_set_q1_2">

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical" >
+<!--  -->
+
+
+    <RelativeLayout
+        android:id="@+id/midid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+         android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/top_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView01"
+            android:layout_marginTop="10dp"
+            android:background="@color/red"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggle_button"
+            android:layout_alignParentRight="true"
+            android:textOff="Right"
+            android:onClick="single_toggle"
+            android:textOn="Wrong"
+            android:focusable="true"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

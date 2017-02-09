@@ -24,6 +24,9 @@ public class WordListActivity_G1q2 extends Activity {
     StateAdapter adapter;
     Adapter_spelling spell_adapter;
     StateAdapter_last adapter_last;
+    StateAdapter_Oposite adapter_oposite;
+    StateAdapter_Wordmeaning adapter_wordmeaning;
+    StateAdapter_Sentence adapter_sentence;
     StateAdapter_single adapter_single;
 
     int flag_next = 0;
@@ -106,7 +109,7 @@ public class WordListActivity_G1q2 extends Activity {
             question_ind--;
         question.setText(""+getResources().getStringArray(R.array.question_set_q1_2)[question_ind]);
 
-        if(flag_next==3){
+        if(flag_next==6){
             String id = "" + datasource.getAllComments().get(0).getId();
             datasource.updateOrderItems(id, "6");
 
@@ -115,7 +118,22 @@ public class WordListActivity_G1q2 extends Activity {
             Intent img = new Intent(WordListActivity_G1q2.this, QuestionActivity.class);
             startActivity(img);
         }
-        if(flag_next==2){
+        else if(flag_next==5){
+            adapter_sentence = new StateAdapter_Sentence(this);
+            lv.setAdapter(adapter_sentence);
+
+        }
+        else if(flag_next==4){
+            adapter_wordmeaning = new StateAdapter_Wordmeaning(this);
+            lv.setAdapter(adapter_wordmeaning);
+
+        }
+        else if(flag_next==3){
+            adapter_oposite = new StateAdapter_Oposite(this);
+            lv.setAdapter(adapter_oposite);
+
+        }
+        else if(flag_next==2){
             adapter_last = new StateAdapter_last(this);
             lv.setAdapter(adapter_last);
 
@@ -144,7 +162,7 @@ public class WordListActivity_G1q2 extends Activity {
         question_ind++;
         question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
 
-        if(flag_next==3){
+        if(flag_next==6){
             String id = "" + datasource.getAllComments().get(0).getId();
             datasource.updateOrderItems(id, "6");
 
@@ -153,7 +171,22 @@ public class WordListActivity_G1q2 extends Activity {
             Intent img = new Intent(WordListActivity_G1q2.this, DragingActivity.class);
             startActivity(img);
         }
-        if(flag_next==2){
+        else if(flag_next==5){
+            adapter_sentence = new StateAdapter_Sentence(this);
+            lv.setAdapter(adapter_sentence);
+
+        }
+        else if(flag_next==4){
+            adapter_wordmeaning = new StateAdapter_Wordmeaning(this);
+            lv.setAdapter(adapter_wordmeaning);
+
+        }
+        else if(flag_next==3){
+            adapter_oposite = new StateAdapter_Oposite(this);
+            lv.setAdapter(adapter_oposite);
+
+        }
+        else if(flag_next==2){
             adapter_last = new StateAdapter_last(this);
             lv.setAdapter(adapter_last);
 
@@ -214,7 +247,7 @@ public class WordListActivity_G1q2 extends Activity {
         private final Context con;
 
         public Adapter_spelling(final Context c) {
-            super(c, R.layout.spelling_sound, getResources().getStringArray(R.array.spelling_sound));
+            super(c, R.layout.spelling_sound, getResources().getStringArray(R.array.g1q2_2));
             con = c;
             //flag_next = 1;
             // TODO Auto-generated constructor stub
@@ -233,7 +266,110 @@ public class WordListActivity_G1q2 extends Activity {
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.single_letter);
-            textView.setText(""+getResources().getStringArray(R.array.spelling_sound)[position]);
+            textView.setText(""+getResources().getStringArray(R.array.g1q2_2)[position]);
+
+//            final TextView textView2 = (TextView) v
+//                    .findViewById(R.id.bottom_row);
+//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+
+            return v;
+        }
+    }
+
+
+    private class StateAdapter_Oposite extends ArrayAdapter<String> {
+        // StateListActivty context;
+        private final Context con;
+
+        public StateAdapter_Oposite(final Context c) {
+            super(c, R.layout.word_oposite, getResources().getStringArray(R.array.g1q2_5));
+            con = c;
+           // flag_next = 2;
+            // TODO Auto-generated constructor stub
+
+
+        }
+
+        @Override
+        public View getView(final int position, final View convertView,
+                            final ViewGroup parent) {
+            View v = convertView;
+            if (v == null) {
+                final LayoutInflater vi = (LayoutInflater) con
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.word_oposite, null);
+            }
+            final TextView textView = (TextView) v
+                    .findViewById(R.id.top_row);
+            textView.setText(""+getResources().getStringArray(R.array.g1q2_5)[position]);
+
+//            final TextView textView2 = (TextView) v
+//                    .findViewById(R.id.bottom_row);
+//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+
+            return v;
+        }
+    }
+
+    private class StateAdapter_Wordmeaning extends ArrayAdapter<String> {
+        // StateListActivty context;
+        private final Context con;
+
+        public StateAdapter_Wordmeaning(final Context c) {
+            super(c, R.layout.word_oposite, getResources().getStringArray(R.array.g1q2_6));
+            con = c;
+            // flag_next = 2;
+            // TODO Auto-generated constructor stub
+
+
+        }
+
+        @Override
+        public View getView(final int position, final View convertView,
+                            final ViewGroup parent) {
+            View v = convertView;
+            if (v == null) {
+                final LayoutInflater vi = (LayoutInflater) con
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.word_oposite, null);
+            }
+            final TextView textView = (TextView) v
+                    .findViewById(R.id.top_row);
+            textView.setText(""+getResources().getStringArray(R.array.g1q2_6)[position]);
+
+//            final TextView textView2 = (TextView) v
+//                    .findViewById(R.id.bottom_row);
+//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+
+            return v;
+        }
+    }
+
+    private class StateAdapter_Sentence extends ArrayAdapter<String> {
+        // StateListActivty context;
+        private final Context con;
+
+        public StateAdapter_Sentence(final Context c) {
+            super(c, R.layout.word_oposite, getResources().getStringArray(R.array.g1q2_7));
+            con = c;
+            // flag_next = 2;
+            // TODO Auto-generated constructor stub
+
+
+        }
+
+        @Override
+        public View getView(final int position, final View convertView,
+                            final ViewGroup parent) {
+            View v = convertView;
+            if (v == null) {
+                final LayoutInflater vi = (LayoutInflater) con
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.word_oposite, null);
+            }
+            final TextView textView = (TextView) v
+                    .findViewById(R.id.top_row);
+            textView.setText(""+getResources().getStringArray(R.array.g1q2_7)[position]);
 
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);
@@ -249,9 +385,9 @@ public class WordListActivity_G1q2 extends Activity {
         private final Context con;
 
         public StateAdapter_last(final Context c) {
-            super(c, R.layout.wordmeaning_last, getResources().getStringArray(R.array.wordmeaning_last_letter));
+            super(c, R.layout.wordmeaning_last, getResources().getStringArray(R.array.g1q2_4));
             con = c;
-            flag_next = 2;
+          //  flag_next = 2;
             // TODO Auto-generated constructor stub
 
 
@@ -268,7 +404,7 @@ public class WordListActivity_G1q2 extends Activity {
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.top_row);
-            textView.setText(""+getResources().getStringArray(R.array.wordmeaning_last_letter)[position]);
+            textView.setText(""+getResources().getStringArray(R.array.g1q2_4)[position]);
 
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);
@@ -287,7 +423,7 @@ public class WordListActivity_G1q2 extends Activity {
         private final Context con;
 
         public StateAdapter(final Context c) {
-            super(c, R.layout.wordmeaning_1st, getResources().getStringArray(R.array.word_set));
+            super(c, R.layout.wordmeaning_1st, getResources().getStringArray(R.array.g1q2_3));
             con = c;
             // TODO Auto-generated constructor stub
         }
@@ -303,7 +439,7 @@ public class WordListActivity_G1q2 extends Activity {
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.top_row);
-            textView.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+            textView.setText(""+getResources().getStringArray(R.array.g1q2_3)[position]);
 
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);
