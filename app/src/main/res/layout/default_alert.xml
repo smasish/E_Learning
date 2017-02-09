@@ -78,7 +78,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/t1"
+            android:background="@drawable/ok"
             android:id="@+id/okay" />
 
     </LinearLayout>

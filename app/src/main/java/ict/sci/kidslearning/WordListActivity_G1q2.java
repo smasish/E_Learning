@@ -89,7 +89,7 @@ public class WordListActivity_G1q2 extends Activity {
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instruction_set)[question_ind];
+        String instr = ""+getResources().getStringArray(R.array.instruction_set_q1_2)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 
@@ -104,7 +104,7 @@ public class WordListActivity_G1q2 extends Activity {
 
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.question_set_q1_2)[question_ind]);
 
         if(flag_next==3){
             String id = "" + datasource.getAllComments().get(0).getId();
