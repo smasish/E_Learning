@@ -110,13 +110,15 @@ public class WordListActivity_G1q2 extends Activity {
         question.setText(""+getResources().getStringArray(R.array.question_set_q1_2)[question_ind]);
 
         if(flag_next==6){
-            String id = "" + datasource.getAllComments().get(0).getId();
-            datasource.updateOrderItems(id, "6");
+//            String id = "" + datasource.getAllComments().get(0).getId();
+//            datasource.updateOrderItems(id, "6");
+//
+//
+//            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
+//            Intent img = new Intent(WordListActivity_G1q2.this, QuestionActivity.class);
+//            startActivity(img);
 
-
-            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity_G1q2.this, QuestionActivity.class);
-            startActivity(img);
+            this.finish();
         }
         else if(flag_next==5){
             adapter_sentence = new StateAdapter_Sentence(this);
@@ -160,16 +162,18 @@ public class WordListActivity_G1q2 extends Activity {
 
         Log.d("=k===", "...id..>>"+flag_next );
         question_ind++;
-        question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.question_set_q1_2)[question_ind]);
 
         if(flag_next==6){
             String id = "" + datasource.getAllComments().get(0).getId();
             datasource.updateOrderItems(id, "6");
+//
+//
+//           // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
+//            Intent img = new Intent(WordListActivity_G1q2.this, DragingActivity.class);
+//            startActivity(img);
 
-
-           // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity_G1q2.this, DragingActivity.class);
-            startActivity(img);
+            this.finish();
         }
         else if(flag_next==5){
             adapter_sentence = new StateAdapter_Sentence(this);
