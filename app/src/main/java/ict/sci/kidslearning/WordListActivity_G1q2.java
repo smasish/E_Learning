@@ -152,7 +152,13 @@ public class WordListActivity_G1q2 extends Activity {
             lv.setAdapter(adapter);
 
         }
-        if(flag_next>0)
+        else if(flag_next == -1) {
+            Intent img = new Intent(WordListActivity_G1q2.this, QuestionActivity_g1b2.class);
+            startActivity(img);
+
+
+        }
+        if(flag_next>-1)
         flag_next--;
 
 
