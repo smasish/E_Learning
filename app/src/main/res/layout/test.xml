@@ -118,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/t1"
                 android:id="@+id/btn3"
-                android:onClick="g1b1"
+                android:onClick="g1b3"
 
                 />
         </LinearLayout>
