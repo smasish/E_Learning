@@ -260,4 +260,20 @@
 
 
 
+    <string-array name="g1q3_1">
+        <item name="set1">    হাসি | 	কান্না
+
+
+
+
+ </item>
+        <item name="set1">   প্রিয় |	অপ্রিয় </item>
+        <item name="set1">  অসুস্থ | 	সুস্থ </item>
+        <item name="set1">    কঠিন	| নরম </item>
+        <item name="set1">    নবীন	| প্রবীণ </item>
+
+    </string-array>
+
+
+
 </resources>
