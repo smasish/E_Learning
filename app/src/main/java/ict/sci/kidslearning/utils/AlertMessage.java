@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import ict.sci.kidslearning.R;
 
+
 public class AlertMessage {
 	public static int width;
 	public static int height;
@@ -35,6 +36,7 @@ public class AlertMessage {
 		alertDialog.setContentView(promptView);
 		alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 		alertDialog.show();
+
 
 
 		final TextView header = (TextView) promptView.findViewById(R.id.headers);
