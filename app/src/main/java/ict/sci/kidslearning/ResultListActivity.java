@@ -21,9 +21,7 @@ public class ResultListActivity extends Activity {
 
     Context con;
     ListView lv;
-    StateAdapter adapter;
-    Adapter_spelling spell_adapter;
-    StateAdapter_last adapter_last;
+
     StateAdapter_single adapter_single;
 
     int flag_next = 0;
@@ -38,17 +36,15 @@ public class ResultListActivity extends Activity {
         // getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.word_list);
+        setContentView(R.layout.result_list);
         con = this;
 
 
 
         indexArray=0;
-        question_ind = 9;
+        question_ind = 1;
 
-        question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -115,25 +111,7 @@ public class ResultListActivity extends Activity {
             Intent img = new Intent(ResultListActivity.this, QuestionActivity.class);
             startActivity(img);
         }
-        if(flag_next==2){
-            adapter_last = new StateAdapter_last(this);
-            lv.setAdapter(adapter_last);
 
-        }else if(flag_next==0){
-
-            spell_adapter  = new Adapter_spelling(this);
-            lv.setAdapter(spell_adapter);
-            // adapter_single = new StateAdapter_single(this);
-
-            // lv.setAdapter(adapter_single);
-        }
-        else if(flag_next == 1) {
-            adapter = new StateAdapter(this);
-            lv.setAdapter(adapter);
-
-        }
-        if(flag_next>0)
-        flag_next--;
 
 
     }
@@ -153,24 +131,7 @@ public class ResultListActivity extends Activity {
             Intent img = new Intent(ResultListActivity.this, DragingActivity.class);
             startActivity(img);
         }
-        if(flag_next==2){
-            adapter_last = new StateAdapter_last(this);
-            lv.setAdapter(adapter_last);
 
-        }else if(flag_next==0){
-
-            spell_adapter  = new Adapter_spelling(this);
-            lv.setAdapter(spell_adapter);
-           // adapter_single = new StateAdapter_single(this);
-
-           // lv.setAdapter(adapter_single);
-        }
-        else if(flag_next == 1) {
-            adapter = new StateAdapter(this);
-            lv.setAdapter(adapter);
-
-        }
-        flag_next++;
     }
 
 
@@ -180,7 +141,7 @@ public class ResultListActivity extends Activity {
         private final Context con;
 
         public StateAdapter_single(final Context c) {
-            super(c, R.layout.word_singleletter, getResources().getStringArray(R.array.single_letter));
+            super(c, R.layout.result_llist_individual, getResources().getStringArray(R.array.single_letter));
             con = c;
             //flag_next = 1;
             // TODO Auto-generated constructor stub
@@ -195,10 +156,10 @@ public class ResultListActivity extends Activity {
             if (v == null) {
                 final LayoutInflater vi = (LayoutInflater) con
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.word_singleletter, null);
+                v = vi.inflate(R.layout.result_llist_individual, null);
             }
             final TextView textView = (TextView) v
-                    .findViewById(R.id.single_letter);
+                    .findViewById(R.id.phonetic_id);
             textView.setText(""+getResources().getStringArray(R.array.single_letter)[position]);
 
 //            final TextView textView2 = (TextView) v
@@ -209,107 +170,5 @@ public class ResultListActivity extends Activity {
         }
     }
 
-    private class Adapter_spelling extends ArrayAdapter<String> {
-        // StateListActivty context;
-        private final Context con;
 
-        public Adapter_spelling(final Context c) {
-            super(c, R.layout.spelling_sound, getResources().getStringArray(R.array.spelling_sound));
-            con = c;
-            //flag_next = 1;
-            // TODO Auto-generated constructor stub
-
-
-        }
-
-        @Override
-        public View getView(final int position, final View convertView,
-                            final ViewGroup parent) {
-            View v = convertView;
-            if (v == null) {
-                final LayoutInflater vi = (LayoutInflater) con
-                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.spelling_sound, null);
-            }
-            final TextView textView = (TextView) v
-                    .findViewById(R.id.single_letter);
-            textView.setText(""+getResources().getStringArray(R.array.spelling_sound)[position]);
-
-//            final TextView textView2 = (TextView) v
-//                    .findViewById(R.id.bottom_row);
-//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
-
-            return v;
-        }
-    }
-
-
-    private class StateAdapter_last extends ArrayAdapter<String> {
-        // StateListActivty context;
-        private final Context con;
-
-        public StateAdapter_last(final Context c) {
-            super(c, R.layout.wordmeaning_last, getResources().getStringArray(R.array.wordmeaning_last_letter));
-            con = c;
-            flag_next = 2;
-            // TODO Auto-generated constructor stub
-
-
-        }
-
-        @Override
-        public View getView(final int position, final View convertView,
-                            final ViewGroup parent) {
-            View v = convertView;
-            if (v == null) {
-                final LayoutInflater vi = (LayoutInflater) con
-                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.wordmeaning_last, null);
-            }
-            final TextView textView = (TextView) v
-                    .findViewById(R.id.top_row);
-            textView.setText(""+getResources().getStringArray(R.array.wordmeaning_last_letter)[position]);
-
-//            final TextView textView2 = (TextView) v
-//                    .findViewById(R.id.bottom_row);
-//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
-
-            return v;
-        }
-    }
-
-/*
-	 * first adapter for state
-	 */
-
-    private class StateAdapter extends ArrayAdapter<String> {
-        // StateListActivty context;
-        private final Context con;
-
-        public StateAdapter(final Context c) {
-            super(c, R.layout.wordmeaning_1st, getResources().getStringArray(R.array.word_set));
-            con = c;
-            // TODO Auto-generated constructor stub
-        }
-
-        @Override
-        public View getView(final int position, final View convertView,
-                            final ViewGroup parent) {
-            View v = convertView;
-            if (v == null) {
-                final LayoutInflater vi = (LayoutInflater) con
-                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.wordmeaning_1st, null);
-            }
-            final TextView textView = (TextView) v
-                    .findViewById(R.id.top_row);
-            textView.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
-
-//            final TextView textView2 = (TextView) v
-//                    .findViewById(R.id.bottom_row);
-//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
-
-            return v;
-        }
-    }
 }

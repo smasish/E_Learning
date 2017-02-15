@@ -29,20 +29,9 @@
             />
 
 
-
-
-
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/question"
-        android:id="@+id/question_id"
-        android:textSize="26sp"
-        android:layout_marginLeft="5dp"
-        android:layout_below="@+id/row1"
-        />
+
 
 
     <ListView android:id="@+id/listView1" android:layout_width="fill_parent"

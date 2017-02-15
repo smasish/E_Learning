@@ -40,7 +40,8 @@
         <activity android:name=".QuestionActivity_g1b2" android:screenOrientation="landscape"/>
         <activity android:name=".WordListActivity_G1q2" android:screenOrientation="landscape"/>
         <activity android:name=".WordListActivity_G1q3" android:screenOrientation="landscape"/>
-
+        <activity android:name=".ResultActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".ResultListActivity" android:screenOrientation="landscape"/>
 
 
     </application>

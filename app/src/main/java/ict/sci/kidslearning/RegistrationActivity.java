@@ -51,7 +51,7 @@ public class RegistrationActivity extends AppCompatActivity {
     public void result(View v){
 
 
-        Intent i = new Intent(RegistrationActivity.this, WordListActivity.class);
+        Intent i = new Intent(RegistrationActivity.this, ResultListActivity.class);
         startActivity(i);
     }
 
