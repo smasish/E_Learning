@@ -13,6 +13,9 @@ public class Comment  {
 	private int score;
 	private String roll;
 
+	private String _phone;
+	private String _letter;
+	private String _vocabulary;
 
 
 
@@ -32,7 +35,7 @@ public class Comment  {
 		this.comment = comment;
 	}
 
-	public String getSchool() {
+	public String getStudent() {
 		return stud;
 	}
 
@@ -47,6 +50,31 @@ public class Comment  {
 	public void setClas(String clas) {
 		this.clas = clas;
 	}
+
+	public String getPhone() {
+		return _phone;
+	}
+
+	public void setPhone(String clas) {
+		this._phone = clas;
+	}
+
+	public String getLetter() {
+		return _letter;
+	}
+
+	public void setLetter(String clas) {
+		this._letter = clas;
+	}
+
+	public String get_vocabulary() {
+		return _vocabulary;
+	}
+
+	public void set_vocabulary(String clas) {
+		this._vocabulary = clas;
+	}
+
 
 	public int getScore() {
 		return score;

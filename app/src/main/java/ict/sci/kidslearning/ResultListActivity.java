@@ -136,16 +136,16 @@ public class ResultListActivity extends Activity {
 
 
 
-    private class StateAdapter_single extends ArrayAdapter<String> {
+    private class StateAdapter_single extends ArrayAdapter<Comment> {
         // StateListActivty context;
         private final Context con;
 
         public StateAdapter_single(final Context c) {
-            super(c, R.layout.result_llist_individual, getResources().getStringArray(R.array.single_letter));
+            super(c, R.layout.result_llist_individual, datasource.getAllComments());
             con = c;
             //flag_next = 1;
             // TODO Auto-generated constructor stub
-
+            Log.d("=ssize===", "...id..>>"+datasource.getAllComments().size() );
 
         }
 
@@ -160,7 +160,33 @@ public class ResultListActivity extends Activity {
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.phonetic_id);
-            textView.setText(""+getResources().getStringArray(R.array.single_letter)[position]);
+
+            String id = "" + datasource.getAllComments().get(position).getPhone();
+
+            Log.d("=id phone===", "...id..>>"+id );
+
+            textView.setText(""+id);
+
+            final TextView letter = (TextView) v
+                    .findViewById(R.id.letter_id);
+
+            String leter = "" + datasource.getAllComments().get(position).getLetter();
+
+            letter.setText(""+leter);
+
+
+            final TextView voca = (TextView) v
+                    .findViewById(R.id.vocab_id);
+
+            String vocab = "" + datasource.getAllComments().get(position).get_vocabulary();
+            voca.setText(""+vocab);
+
+            final TextView name_tx = (TextView) v
+                    .findViewById(R.id.name_id);
+
+            String name = "" + datasource.getAllComments().get(position).getStudent();
+            name_tx.setText(""+name);
+
 
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);
