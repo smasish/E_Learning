@@ -51,24 +51,24 @@ public class HomeActivity extends AppCompatActivity {
         // Creating adapter for spinner
         dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
         year.setAdapter(dataAdapter);
-
-        year.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(final AdapterView<?> parent,
-                                    final View view, final int position, final long id) {
-//				Toast.makeText(getApplicationContext(),
-//						String.valueOf(position), Toast.LENGTH_LONG).show();
-
-                year_flag = position;
-                Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
-//				final Intent imageshow = new Intent(SecondActivity.this,
-//						GalleryActivity.class);
-
-
-
-            }
-        });
+        year_flag = year.getSelectedItemPosition();
+//        year.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//
+//            @Override
+//            public void onItemClick(final AdapterView<?> parent,
+//                                    final View view, final int position, final long id) {
+////				Toast.makeText(getApplicationContext(),
+////						String.valueOf(position), Toast.LENGTH_LONG).show();
+//
+//                year_flag = position;
+//                Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+////				final Intent imageshow = new Intent(SecondActivity.this,
+////						GalleryActivity.class);
+//
+//
+//
+//            }
+//        });
 
 
         gone1 = (Button)findViewById(R.id.button3);
@@ -79,26 +79,31 @@ public class HomeActivity extends AppCompatActivity {
 
 
     public void g1b1(View v){
+        year_flag = year.getSelectedItemPosition();
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
             Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
 
         }
         else{
             Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
         }
     }
 
     public void g1b2(View v){
         Intent i = new Intent(HomeActivity.this, QuestionActivity_g1b2.class);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         startActivity(i);
     }
 
     public void g1b3(View v){
         Intent i = new Intent(HomeActivity.this, WordListActivity_G1q3.class);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         startActivity(i);
     }
 
