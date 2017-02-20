@@ -32,7 +32,7 @@ public class WordListActivity extends Activity {
     private CommentsDataSource datasource;
     private TextView question;
     int indexArray=0,question_ind=0;
-
+int counter =20;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -47,6 +47,7 @@ public class WordListActivity extends Activity {
 
         indexArray=0;
         question_ind = 9;
+        counter =20;
 
         question = (TextView)findViewById(R.id.question_id);
 
@@ -99,6 +100,7 @@ public class WordListActivity extends Activity {
     public void single_toggle(View v){
 
         Toast.makeText(con,"Wrong",Toast.LENGTH_LONG).show();
+        counter--;
 
     }
 
@@ -148,7 +150,13 @@ public class WordListActivity extends Activity {
 
         if(flag_next==3){
             String id = "" + datasource.getAllComments().get(0).getId();
-            datasource.updateOrderItems(id, "6");
+
+            if(counter>=24)
+                datasource.updatevocabulary(id, "Mastery");
+            else  if(counter>=16)
+                datasource.updatevocabulary(id, "Developed");
+            else
+                datasource.updatevocabulary(id, "Need Improvement");
 
 
            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);

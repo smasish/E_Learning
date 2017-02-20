@@ -68,7 +68,38 @@ public class CommentsDataSource  {
 			database.update(MySQLiteHelper.TABLE_COMMENTS, values, MySQLiteHelper.COLUMN_ID + " = " + orderId, null);
 		} else {
 			ContentValues values = new ContentValues();
-			values.put(MySQLiteHelper.COLUMN_SCORE, score);
+			values.put(MySQLiteHelper.COLUMN_LEVEL2, score);
+
+			long insertId = database.insert(MySQLiteHelper.TABLE_COMMENTS, null,
+					values);
+			Log.d("...//....", "..."+values);
+
+			database.update(MySQLiteHelper.TABLE_COMMENTS, values, MySQLiteHelper.COLUMN_ID + " = " + orderId, null);
+			// To show how to query
+			cursor = database.query(MySQLiteHelper.TABLE_COMMENTS,
+					allColumns, MySQLiteHelper.COLUMN_ID + " = " + orderId, null,
+					null, null, null);
+			cursor.moveToFirst();
+			//database.insert(MySQLiteHelper.TABLE_COMMENTS, null, values);
+		}
+
+	}
+
+	public void updatevocabulary(String orderId, String score) {
+		Cursor cursor = database.rawQuery("SELECT COUNT(1) FROM comments WHERE _id = "
+				+ orderId , null);
+		cursor.moveToFirst();
+		String count = cursor.getString(0);
+		Log.d("...//update...."+score+"..", "..."+count);
+		if (Integer.valueOf(count) > 0) {
+			Log.d("...//update....", "..."+count);
+			ContentValues values = new ContentValues();
+			values.put(MySQLiteHelper.COLUMN_LEVEL3, score);
+
+			database.update(MySQLiteHelper.TABLE_COMMENTS, values, MySQLiteHelper.COLUMN_ID + " = " + orderId, null);
+		} else {
+			ContentValues values = new ContentValues();
+			values.put(MySQLiteHelper.COLUMN_LEVEL3, score);
 
 			long insertId = database.insert(MySQLiteHelper.TABLE_COMMENTS, null,
 					values);
