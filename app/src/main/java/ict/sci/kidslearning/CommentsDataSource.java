@@ -63,7 +63,7 @@ public class CommentsDataSource  {
 		if (Integer.valueOf(count) > 0) {
 			Log.d("...//update....", "..."+count);
 			ContentValues values = new ContentValues();
-			values.put(MySQLiteHelper.COLUMN_SCORE, score);
+			values.put(MySQLiteHelper.COLUMN_LEVEL2, score);
 
 			database.update(MySQLiteHelper.TABLE_COMMENTS, values, MySQLiteHelper.COLUMN_ID + " = " + orderId, null);
 		} else {

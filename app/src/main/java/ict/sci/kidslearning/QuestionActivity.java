@@ -21,6 +21,8 @@ public class QuestionActivity extends AppCompatActivity {
     private TextView question;
     int indexArray=0,question_ind=0;
 
+    int counter=11, lettersor=0;
+
     private int[] imageArray = {
             R.drawable.a1, R.drawable.a2,R.drawable.a3,R.drawable.a4,R.drawable.a5,
             R.drawable.a6,R.drawable.a7,R.drawable.a8,R.drawable.a9,R.drawable.a10,
@@ -51,6 +53,8 @@ public class QuestionActivity extends AppCompatActivity {
         question = (TextView)findViewById(R.id.question_id);
 
 
+        counter =11;
+
         imb1 = (ImageButton)findViewById(R.id.x1);
         imb2 = (ImageButton)findViewById(R.id.x2);
         imb3 = (ImageButton)findViewById(R.id.x3);
@@ -77,28 +81,37 @@ public class QuestionActivity extends AppCompatActivity {
 
 
     public void oneone(View v){
-
-        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+        counter--;
+        Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
     }
     public void onetwo(View v){
 
-        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+
+        counter--;
+        Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
+
     }
     public void onethree(View v){
 
-        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+
+        counter--;
+        Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
     }
     public void twoone(View v){
-        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+
+        counter--;
+        Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
 
     }
     public void twotwo(View v){
 
-        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+        Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
+        counter--;
     }
     public void twothree(View v){
 
-        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+        Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
+        counter--;
     }
 
     public void showbox(View v){
@@ -117,6 +130,13 @@ public class QuestionActivity extends AppCompatActivity {
         question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
         question_ind++;
 
+        if(question_ind == 3){
+            lettersor = counter;
+
+            counter = 39;
+        }
+
+
         if(i<imageArray.length-6){
             imb1.setImageResource(imageArray[i]);
             imb2.setImageResource(imageArray[i+1]);
@@ -130,7 +150,13 @@ public class QuestionActivity extends AppCompatActivity {
         }else {
 
             String id = "" + datasource.getAllComments().get(0).getId();
-            datasource.updateOrderItems(id, "6");
+
+            if(lettersor>=7 && counter >=23)
+                datasource.updateOrderItems(id, "Mastery");
+            else if(lettersor>=5 && counter >=16)
+                datasource.updateOrderItems(id, "Developed");
+            else
+                datasource.updateOrderItems(id, "Need Improvement");
 
            // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
             Intent img = new Intent(QuestionActivity.this, WordListActivity.class);
