@@ -52,24 +52,24 @@
             android:layout_height="wrap_content"
             android:text="G1"
             android:id="@+id/group1"
-            android:textSize="26sp"
+            android:textSize="28sp"
             android:layout_marginLeft="50dp"
            android:layout_alignParentLeft="true"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="G1"
+            android:text="G2"
             android:id="@+id/group2"
             android:layout_centerHorizontal="true"
-            android:textSize="26sp"
+            android:textSize="28sp"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="G1"
+            android:text="G3"
             android:id="@+id/group3"
-            android:textSize="26sp"
+            android:textSize="28sp"
             android:layout_marginRight="50dp"
             android:layout_alignParentRight="true"
             />
