@@ -161,6 +161,7 @@ public class QuestionActivity extends AppCompatActivity {
            // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
             Intent img = new Intent(QuestionActivity.this, WordListActivity.class);
             startActivity(img);
+            this.finish();
         }
 
     }

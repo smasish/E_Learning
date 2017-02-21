@@ -162,6 +162,7 @@ int counter =20;
            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
             Intent img = new Intent(WordListActivity.this, DragingActivity.class);
             startActivity(img);
+            this.finish();
         }
         if(flag_next==2){
             adapter_last = new StateAdapter_last(this);

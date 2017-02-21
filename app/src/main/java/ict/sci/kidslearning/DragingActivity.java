@@ -82,6 +82,9 @@ int  flag_next = 0;
 			question_ind--;
 		question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
 
+		if(flag_next>0)
+			flag_next--;
+
 		if(flag_next==0){
 			img1.setBackgroundResource(R.drawable.ball);
 			img2.setBackgroundResource(R.drawable.math);
@@ -102,15 +105,18 @@ int  flag_next = 0;
 			img3.setBackgroundResource(R.drawable.mala_golay);
 			//flag_next =2;
 		}
-		if(flag_next>0)
-			flag_next--;
+		//if(flag_next>0)
+		//	flag_next--;
 	}
 
 	public void next(View v){
 
+		if(question_ind<15)
 		question_ind++;
 		question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
 
+		if(flag_next<3)
+		flag_next++;
 
 		if(flag_next==0){
 			img1.setBackgroundResource(R.drawable.ball);
@@ -135,7 +141,7 @@ int  flag_next = 0;
 		else{
 			this.finish();
 		}
-		flag_next++;
+
 	}
 
 	public void single_toggle(View v){
