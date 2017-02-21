@@ -29,7 +29,7 @@
             android:layout_marginTop="10dp"
             android:background="@color/red"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textStyle="bold" >
         </TextView>
 
@@ -46,10 +46,10 @@
             android:gravity="center_vertical|center_horizontal"
             android:text="TextView01"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="1dp"
             android:background="@color/red"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textStyle="bold" >
         </TextView>
 
@@ -64,7 +64,7 @@
             android:layout_marginLeft="5dp"
             android:background="@color/red"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textStyle="bold" >
         </TextView>
         </LinearLayout>
@@ -81,7 +81,7 @@
             android:layout_marginLeft="5dp"
             android:background="@color/red"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="22sp"
 
             android:textStyle="bold" >
         </TextView>
@@ -97,7 +97,7 @@
             android:layout_marginTop="10dp"
             android:background="@color/red"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="22sp"
 
             android:textStyle="bold" >
         </TextView>
@@ -113,7 +113,7 @@
             android:layout_marginLeft="5dp"
             android:background="@color/red"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:textStyle="bold" >
         </TextView>
 

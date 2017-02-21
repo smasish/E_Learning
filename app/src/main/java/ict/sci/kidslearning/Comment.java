@@ -85,7 +85,7 @@ public class Comment  {
 	}
 
 	public String getRoll() {
-		return comment;
+		return roll;
 	}
 
 	public void setRoll(String rol) {

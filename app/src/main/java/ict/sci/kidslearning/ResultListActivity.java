@@ -3,6 +3,7 @@ package ict.sci.kidslearning;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -162,7 +163,9 @@ public class ResultListActivity extends Activity {
                     .findViewById(R.id.phonetic_id);
 
             String id = "" + datasource.getAllComments().get(position).getPhone();
-
+            if(id.equalsIgnoreCase("Mastery")){
+                textView.setTextColor(Color.GREEN);
+            }
             Log.d("=id phone===", "...id..>>"+id );
 
             textView.setText(""+id);
@@ -172,6 +175,9 @@ public class ResultListActivity extends Activity {
 
             String leter = "" + datasource.getAllComments().get(position).getLetter();
 
+            if(leter.equalsIgnoreCase("Mastery")){
+                letter.setTextColor(Color.GREEN);
+            }
             letter.setText(""+leter);
 
 
@@ -179,13 +185,28 @@ public class ResultListActivity extends Activity {
                     .findViewById(R.id.vocab_id);
 
             String vocab = "" + datasource.getAllComments().get(position).get_vocabulary();
+            if(vocab.equalsIgnoreCase("Mastery")){
+                voca.setTextColor(Color.GREEN);
+            }
             voca.setText(""+vocab);
 
             final TextView name_tx = (TextView) v
                     .findViewById(R.id.name_id);
 
             String name = "" + datasource.getAllComments().get(position).getStudent();
-            name_tx.setText(""+name);
+            name_tx.setText("Name: "+name);
+
+            final TextView class_tx = (TextView) v
+                    .findViewById(R.id.grade_id);
+
+            String class_t = "" + datasource.getAllComments().get(position).getClas();
+            class_tx.setText("Grade: "+class_t);
+
+            final TextView roll_tx = (TextView) v
+                    .findViewById(R.id.roll_id);
+
+            String roll_t = "" + datasource.getAllComments().get(position).getRoll();
+            roll_tx.setText("Roll No: "+roll_t);
 
 
 //            final TextView textView2 = (TextView) v

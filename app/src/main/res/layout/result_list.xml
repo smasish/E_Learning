@@ -36,8 +36,8 @@
 
     <ListView android:id="@+id/listView1" android:layout_width="fill_parent"
         android:layout_below="@+id/row1"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
 
         android:layout_height="wrap_content" />
 
