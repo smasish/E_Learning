@@ -148,8 +148,10 @@ public class QuestionActivity extends AppCompatActivity {
             indexArray = i+6;
             Log.d("next-----"+i, "start===="+indexArray);
         }else {
+            Log.d("size]]]]]]>>>----"+datasource.getAllComments().size(), "start====");
 
-            String id = "" + datasource.getAllComments().get(0).getId();
+            int arr= datasource.getAllComments().size()-1;
+            String id = "" + datasource.getAllComments().get(arr).getId();
 
             if(lettersor>=7 && counter >=23)
                 datasource.updateOrderItems(id, "Mastery");

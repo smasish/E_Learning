@@ -144,7 +144,7 @@ int counter =20;
 
     public void next(View v){
 
-        Log.d("=k===", "...id..>>"+flag_next );
+        Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
         question_ind++;
         question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
 
