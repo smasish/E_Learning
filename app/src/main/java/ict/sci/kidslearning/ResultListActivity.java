@@ -72,7 +72,7 @@ public class ResultListActivity extends Activity {
 //				Toast.makeText(getApplicationContext(),
 //						String.valueOf(position), Toast.LENGTH_LONG).show();
 
-                Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+                Toast.makeText(con,"Coming soon.",Toast.LENGTH_LONG).show();
 //				final Intent imageshow = new Intent(SecondActivity.this,
 //						GalleryActivity.class);
 
@@ -166,6 +166,9 @@ public class ResultListActivity extends Activity {
             if(id.equalsIgnoreCase("Mastery")){
                 textView.setTextColor(Color.GREEN);
             }
+           else if(id.equalsIgnoreCase("Developed")){
+                textView.setTextColor(Color.YELLOW);
+            }
             Log.d("=id phone===", "...id..>>"+id );
 
             textView.setText(""+id);
@@ -177,6 +180,9 @@ public class ResultListActivity extends Activity {
 
             if(leter.equalsIgnoreCase("Mastery")){
                 letter.setTextColor(Color.GREEN);
+            }
+            else if(leter.equalsIgnoreCase("Developed")){
+                letter.setTextColor(Color.YELLOW);
             }
             letter.setText(""+leter);
 
