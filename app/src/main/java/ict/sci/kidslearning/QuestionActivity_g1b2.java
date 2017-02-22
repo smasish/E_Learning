@@ -48,7 +48,7 @@ public class QuestionActivity_g1b2 extends AppCompatActivity {
 
         con = this;
         indexArray=0;
-        counter =11;
+        counter =50;
         question = (TextView)findViewById(R.id.question_id);
 
 
@@ -122,6 +122,12 @@ public class QuestionActivity_g1b2 extends AppCompatActivity {
         int i = indexArray;
         question.setText(""+getResources().getStringArray(R.array.question_set_q1_2)[question_ind]);
         question_ind++;
+//        if(question_ind == 3){
+//            lettersor = counter;
+//
+//            counter = 39;
+//        }
+
 
         if(i<imageArray.length-6){
             imb1.setImageResource(imageArray[i]);
@@ -142,9 +148,9 @@ public class QuestionActivity_g1b2 extends AppCompatActivity {
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("lettersor-----"+lettersor, "counter===="+counter);
 
-            if(lettersor>=7 && counter >=23)
+            if( counter >=30)
                 datasource.updateOrderItems(id, "Mastery");
-            else if(lettersor>=5 && counter >=16)
+            else if(counter >=20)
                 datasource.updateOrderItems(id, "Developed");
             else
                 datasource.updateOrderItems(id, "Need Improvement");
@@ -152,6 +158,7 @@ public class QuestionActivity_g1b2 extends AppCompatActivity {
            // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
             Intent img = new Intent(QuestionActivity_g1b2.this, WordListActivity_G1q2.class);
             startActivity(img);
+            this.finish();
         }
 
     }
