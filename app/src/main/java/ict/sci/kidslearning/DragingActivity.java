@@ -28,6 +28,9 @@ public class DragingActivity extends Activity implements OnTouchListener, OnDrag
 int  flag_next = 0;
 	private TextView question;
 	int indexArray=0,question_ind=0;
+	private CommentsDataSource datasource;
+	int counter =3;
+	boolean flag = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +42,9 @@ int  flag_next = 0;
 
 		indexArray=0;
 		question_ind = 13;
-
+		counter =3;
 		question = (TextView)findViewById(R.id.question_id);
-
+		flag = false;
 		question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
 		//question_ind++;
 		//set ontouch listener for box views
@@ -62,6 +65,9 @@ int  flag_next = 0;
 		img1.setBackgroundResource(R.drawable.ball);
 		img2.setBackgroundResource(R.drawable.math);
 		img3.setBackgroundResource(R.drawable.play_football);
+
+		datasource = new CommentsDataSource(this);
+		datasource.open();
 
 		//set ondrag listener for right and left parent views
 		findViewById(R.id.left_view).setOnDragListener(this);
@@ -139,6 +145,16 @@ int  flag_next = 0;
 			//flag_next =2;
 		}
 		else{
+
+			int arr= datasource.getAllComments().size()-1;
+			String id = "" + datasource.getAllComments().get(arr).getId();
+
+			if(flag)
+				datasource.updatePhonetics(id, "Mastery");
+//			else
+//				datasource.updatePhonetics(id, "Developed");
+			else
+				datasource.updatePhonetics(id, "Need Improvement");
 			this.finish();
 		}
 
@@ -146,6 +162,7 @@ int  flag_next = 0;
 
 	public void single_toggle(View v){
 
+		flag = true;
 		Toast.makeText(con,"Wrong",Toast.LENGTH_LONG).show();
 
 	}

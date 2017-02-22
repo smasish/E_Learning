@@ -19,6 +19,8 @@ public class QuestionActivity_g1b2 extends AppCompatActivity {
 
     private TextView question;
     int indexArray=0,question_ind=0;
+    int counter=11, lettersor=0;
+
 
     private int[] imageArray = {
             R.drawable.a1, R.drawable.a2,R.drawable.a3,R.drawable.a4,R.drawable.a5,
@@ -46,7 +48,7 @@ public class QuestionActivity_g1b2 extends AppCompatActivity {
 
         con = this;
         indexArray=0;
-
+        counter =11;
         question = (TextView)findViewById(R.id.question_id);
 
 
@@ -76,28 +78,33 @@ public class QuestionActivity_g1b2 extends AppCompatActivity {
 
 
     public void oneone(View v){
-
-        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+        counter--;
+        Toast.makeText(con,"Counted "+counter,Toast.LENGTH_LONG).show();
     }
     public void onetwo(View v){
 
-        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+        counter--;
+        Toast.makeText(con,"Counted "+counter,Toast.LENGTH_LONG).show();
     }
     public void onethree(View v){
 
-        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+        counter--;
+        Toast.makeText(con,"Counted "+counter,Toast.LENGTH_LONG).show();
     }
     public void twoone(View v){
-        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+        counter--;
+        Toast.makeText(con,"Counted "+counter,Toast.LENGTH_LONG).show();
 
     }
     public void twotwo(View v){
 
-        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+        counter--;
+        Toast.makeText(con,"Counted "+counter,Toast.LENGTH_LONG).show();
     }
     public void twothree(View v){
 
-        Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
+        counter--;
+        Toast.makeText(con,"Counted "+counter,Toast.LENGTH_LONG).show();
     }
 
     public void showbox(View v){
@@ -128,8 +135,19 @@ public class QuestionActivity_g1b2 extends AppCompatActivity {
             Log.d("next-----"+i, "start===="+indexArray);
         }else {
 
-            String id = "" + datasource.getAllComments().get(0).getId();
-            datasource.updateOrderItems(id, "6");
+           // String id = "" + datasource.getAllComments().get(0).getId();
+           // datasource.updateOrderItems(id, "6");
+
+            int arr= datasource.getAllComments().size()-1;
+            String id = "" + datasource.getAllComments().get(arr).getId();
+            Log.d("lettersor-----"+lettersor, "counter===="+counter);
+
+            if(lettersor>=7 && counter >=23)
+                datasource.updateOrderItems(id, "Mastery");
+            else if(lettersor>=5 && counter >=16)
+                datasource.updateOrderItems(id, "Developed");
+            else
+                datasource.updateOrderItems(id, "Need Improvement");
 
            // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
             Intent img = new Intent(QuestionActivity_g1b2.this, WordListActivity_G1q2.class);

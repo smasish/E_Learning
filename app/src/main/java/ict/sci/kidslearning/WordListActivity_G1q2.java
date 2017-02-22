@@ -33,6 +33,7 @@ public class WordListActivity_G1q2 extends Activity {
     private CommentsDataSource datasource;
     private TextView question;
     int indexArray=0,question_ind=0;
+    int counter =20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class WordListActivity_G1q2 extends Activity {
         setContentView(R.layout.word_list_g1q2);
         con = this;
 
-
+     counter =20;
 
         indexArray=0;
         question_ind = 9;
@@ -99,6 +100,7 @@ public class WordListActivity_G1q2 extends Activity {
 
     public void single_toggle(View v){
 
+        counter--;
         Toast.makeText(con,"Wrong",Toast.LENGTH_LONG).show();
 
     }
@@ -171,8 +173,19 @@ public class WordListActivity_G1q2 extends Activity {
         question.setText(""+getResources().getStringArray(R.array.question_set_q1_2)[question_ind]);
 
         if(flag_next==6){
-            String id = "" + datasource.getAllComments().get(0).getId();
-            datasource.updateOrderItems(id, "6");
+//            String id = "" + datasource.getAllComments().get(0).getId();
+//            datasource.updateOrderItems(id, "6");
+
+            int arr= datasource.getAllComments().size()-1;
+            String id = "" + datasource.getAllComments().get(arr).getId();
+            Log.d("lettersor-----"+counter, "counter===="+counter);
+
+            if(counter>=16)
+                datasource.updatevocabulary(id, "Mastery");
+            else  if(counter>=10)
+                datasource.updatevocabulary(id, "Developed");
+            else
+                datasource.updatevocabulary(id, "Need Improvement");
 //
 //
 //           // Intent img = new Intent(WordListActivity.this, AboutActivity.class);

@@ -4,14 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
+    android:background="@color/button_default"
     tools:context="ict.sci.kidslearning.MainActivity">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:id="@+id/row1"
-
-
         android:layout_height="wrap_content">
 
 
@@ -26,16 +25,64 @@
             android:layout_alignParentLeft="true"
             />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/row2"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/group1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_title0"
+                android:id="@+id/name"
+                android:textSize="26sp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_title1"
+                android:id="@+id/phone"
+                android:textSize="26sp"
+                android:layout_marginLeft="95dp"
+                android:layout_alignParentLeft="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_title2"
+                android:id="@+id/voca"
+                android:textSize="26sp"
+                android:layout_marginLeft="35dp"
+                android:layout_alignParentLeft="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_title3"
+                android:id="@+id/phonetics"
+                android:textSize="26sp"
+                android:layout_marginLeft="25dp"
+                android:layout_alignParentLeft="true"
+                />
+
+    </LinearLayout>
 
 
 
-    </RelativeLayout>
 
 
 
 
     <ListView android:id="@+id/listView1" android:layout_width="fill_parent"
-        android:layout_below="@+id/row1"
+        android:layout_below="@+id/row2"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:dividerHeight="10.0px"
@@ -43,6 +90,5 @@
         android:layout_height="wrap_content" />
 
 
-
-
+    </RelativeLayout>
 </RelativeLayout>

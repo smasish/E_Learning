@@ -138,8 +138,6 @@ int counter =20;
         }
         if(flag_next>0)
         flag_next--;
-
-
     }
 
     public void next(View v){
@@ -149,14 +147,18 @@ int counter =20;
         question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
 
         if(flag_next==3){
-            String id = "" + datasource.getAllComments().get(0).getId();
+          //  String id = "" + datasource.getAllComments().get(0).getId();
 
-            if(counter>=24)
+            int arr= datasource.getAllComments().size()-1;
+            String id = "" + datasource.getAllComments().get(arr).getId();
+            Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
+            if(counter>=16)
                 datasource.updatevocabulary(id, "Mastery");
-            else  if(counter>=16)
+            else  if(counter>=10)
                 datasource.updatevocabulary(id, "Developed");
             else
                 datasource.updatevocabulary(id, "Need Improvement");
+
 
 
            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
