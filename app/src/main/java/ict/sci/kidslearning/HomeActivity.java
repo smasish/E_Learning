@@ -96,9 +96,16 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void g1b2(View v){
-        Intent i = new Intent(HomeActivity.this, QuestionActivity_g1b2.class);
-        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-        startActivity(i);
+        if(year_flag == 1) {
+            Intent i = new Intent(HomeActivity.this, QuestionActivity_g1b2.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+        }
+        else if(year_flag == 2){
+            Intent i = new Intent(HomeActivity.this, QuestionActivity2016_1.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+        }
     }
 
     public void g1b3(View v){
