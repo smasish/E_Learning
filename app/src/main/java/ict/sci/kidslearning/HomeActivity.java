@@ -102,7 +102,7 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(i);
         }
         else if(year_flag == 2){
-            Intent i = new Intent(HomeActivity.this, QuestionActivity2016_1.class);
+            Intent i = new Intent(HomeActivity.this, QuestionActivity2016_2.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
         }
