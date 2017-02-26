@@ -88,8 +88,8 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(i);
 
         }
-        else{
-            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+        else if(year_flag == 2){
+            Intent i = new Intent(HomeActivity.this, QuestionActivity2016_1.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
         }

@@ -43,6 +43,7 @@
         <activity android:name=".ResultActivity" android:screenOrientation="landscape"/>
         <activity android:name=".ResultListActivity" android:screenOrientation="landscape"/>
 
+        <activity android:name=".QuestionActivity2016_1" android:screenOrientation="landscape"/>
 
     </application>
 
