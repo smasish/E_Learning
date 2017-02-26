@@ -29,11 +29,7 @@ public class QuestionActivity2016_1 extends AppCompatActivity {
             R.drawable.a16,R.drawable.a17,R.drawable.a18,R.drawable.a19,R.drawable.a20,
             R.drawable.a21,R.drawable.a22,R.drawable.a23,R.drawable.a24,R.drawable.a25,
             R.drawable.a26,R.drawable.a27,R.drawable.a28,R.drawable.a29,R.drawable.a30,
-            R.drawable.a31,R.drawable.a32,R.drawable.a33,R.drawable.a34,R.drawable.a35,
-            R.drawable.a36,R.drawable.a37,R.drawable.a38,R.drawable.a39,R.drawable.a40,
-            R.drawable.a41,R.drawable.a42,R.drawable.a43,R.drawable.a44,R.drawable.a45,
-            R.drawable.a46,R.drawable.a47,R.drawable.a48,R.drawable.a49,R.drawable.a50,
-            R.drawable.blank, R.drawable.blank, R.drawable.blank, R.drawable.blank
+            R.drawable.blank, R.drawable.blank, R.drawable.blank, R.drawable.blank, R.drawable.blank
 
     };
 
@@ -74,7 +70,7 @@ public class QuestionActivity2016_1 extends AppCompatActivity {
 
         indexArray = 6;
 
-        question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         question_ind++;
     }
 
@@ -115,7 +111,7 @@ public class QuestionActivity2016_1 extends AppCompatActivity {
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instruction_set)[question_ind];
+        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 
@@ -126,13 +122,13 @@ public class QuestionActivity2016_1 extends AppCompatActivity {
 
 
         int i = indexArray;
-        question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         question_ind++;
 
         if(question_ind == 3){
             lettersor = counter;
 
-            counter = 39;
+            counter = 25;
         }
 
 
@@ -153,9 +149,9 @@ public class QuestionActivity2016_1 extends AppCompatActivity {
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("lettersor-----"+lettersor, "counter===="+counter);
 
-            if(lettersor>=7 && counter >=23)
+            if(lettersor>=7 && counter >=13)
                 datasource.updateOrderItems(id, "Mastery");
-            else if(lettersor>=5 && counter >=16)
+            else if(lettersor>=5 && counter >=10)
                 datasource.updateOrderItems(id, "Developed");
             else
                 datasource.updateOrderItems(id, "Need Improvement");
@@ -175,7 +171,7 @@ public class QuestionActivity2016_1 extends AppCompatActivity {
 
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
 
         //for(int i = indexArray;i>6;i-=6) {
