@@ -81,12 +81,22 @@
         </RelativeLayout>
 
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Page"
+        android:id="@+id/button2"
+        android:onClick="next"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:id="@+id/row3"
-        android:layout_below="@+id/row2"
-        android:layout_marginTop="30dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -230,14 +240,5 @@ android:layout_toRightOf="@+id/g1"
         </LinearLayout>
 
     </RelativeLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next Page"
-        android:id="@+id/button2"
-        android:onClick="next"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
