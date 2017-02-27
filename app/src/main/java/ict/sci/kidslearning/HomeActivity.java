@@ -113,10 +113,16 @@ public class HomeActivity extends AppCompatActivity {
     public void g1b3(View v){
         year_flag = year.getSelectedItemPosition();
         Log.d("=year===", "..year..>>"+year_flag );
-
+        if(year_flag == 1) {
         Intent i = new Intent(HomeActivity.this, WordListActivity_G1q3.class);
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         startActivity(i);
+        }
+        else if(year_flag == 2){
+            Intent i = new Intent(HomeActivity.this, QuestionActivity2016_2.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+        }
     }
 
 

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,10 @@ public class WordListActivity2016_2 extends Activity {
     private TextView question;
     int indexArray=0,question_ind=0;
 int counter =20;
+
+    private int[] imageArray = {
+            R.drawable.ducks, R.drawable.nouka, R.drawable.alu, R.drawable.mula, R.drawable.horin,
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -191,7 +196,7 @@ int counter =20;
         private final Context con;
 
         public StateAdapter_single(final Context c) {
-            super(c, R.layout.word_singleletter, getResources().getStringArray(R.array.single_letter));
+            super(c, R.layout.imagerow_list, getResources().getStringArray(R.array.single_letter_2016_2));
             con = c;
             //flag_next = 1;
             // TODO Auto-generated constructor stub
@@ -206,11 +211,16 @@ int counter =20;
             if (v == null) {
                 final LayoutInflater vi = (LayoutInflater) con
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.word_singleletter, null);
+                v = vi.inflate(R.layout.imagerow_list, null);
             }
             final TextView textView = (TextView) v
-                    .findViewById(R.id.single_letter);
-            textView.setText(""+getResources().getStringArray(R.array.single_letter)[position]);
+                    .findViewById(R.id.top_row);
+            textView.setText(""+getResources().getStringArray(R.array.single_letter_2016_2)[position]);
+
+            final ImageView img = (ImageView) v
+                    .findViewById(R.id.img_id);
+            img.setImageResource(imageArray[position]);
+            //img.setImageResource(""+getResources().getStringArray(R.array.single_letter)[position]);
 
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);

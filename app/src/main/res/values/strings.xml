@@ -389,4 +389,13 @@
 
     </string-array>
 
+    <string-array name="single_letter_2016_2">
+        <item name="set1">--------স</item>
+        <item name="set1">-------- লু </item>
+        <item name="set1">--------কা </item>
+        <item name="set1">--------লা </item>
+        <item name="set1">--------রিণ  </item>
+
+    </string-array>
+
 </resources>
