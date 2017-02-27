@@ -36,6 +36,11 @@ int counter =20;
     private int[] imageArray = {
             R.drawable.ducks, R.drawable.nouka, R.drawable.alu, R.drawable.mula, R.drawable.horin,
     };
+
+    private int[] imageArray2 = {
+            R.drawable.dabkai, R.drawable.maskini, R.drawable.fishing, R.drawable.noukaychori, R.drawable.basibajai,
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub

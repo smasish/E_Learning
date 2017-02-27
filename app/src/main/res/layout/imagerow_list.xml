@@ -32,8 +32,6 @@
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical|center_horizontal"
             android:text="TextView01"
-
-
             android:layout_marginTop="10dp"
             android:background="@color/red"
             android:textColor="@color/white"
