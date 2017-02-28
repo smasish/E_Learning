@@ -47,7 +47,7 @@
         <activity android:name=".QuestionActivity2016_2" android:screenOrientation="landscape"/>
         <activity android:name=".WordListActivity2016_2" android:screenOrientation="landscape"/>
         <activity android:name=".QuestionActivity2016_3" android:screenOrientation="landscape"/>
-
+        <activity android:name=".WordListActivity2016_3" android:screenOrientation="landscape"/>
 
     </application>
 
