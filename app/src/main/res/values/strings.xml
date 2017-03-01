@@ -427,5 +427,14 @@
 
     </string-array>
 
+    <string-array name="single_letter_2016_3">
+        <item name="set1"> নপুর</item>
+        <item name="set1">দরজ </item>
+        <item name="set1">গোলাপ </item>
+        <item name="set1">কষক </item>
+        <item name="set1"> নকা</item>
+
+    </string-array>
+
 
 </resources>

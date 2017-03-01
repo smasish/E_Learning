@@ -125,6 +125,55 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
+    public void g2b1(View v){
+        year_flag = year.getSelectedItemPosition();
+        Log.d("=year===", "..year..>>"+year_flag );
+
+        if(year_flag == 1){
+            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+
+        }
+        else if(year_flag == 2){
+            Intent i = new Intent(HomeActivity.this, QuestionActivity2016_1.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+        }
+    }
+    public void g2b2(View v){
+        year_flag = year.getSelectedItemPosition();
+        Log.d("=year===", "..year..>>"+year_flag );
+
+        if(year_flag == 1){
+            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+
+        }
+        else if(year_flag == 2){
+            Intent i = new Intent(HomeActivity.this, QuestionActivity2016_1.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+        }
+    }
+    public void g2b3(View v){
+        year_flag = year.getSelectedItemPosition();
+        Log.d("=year===", "..year..>>"+year_flag );
+
+        if(year_flag == 1){
+            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+
+        }
+        else if(year_flag == 2){
+            Intent i = new Intent(HomeActivity.this, QuestionActivity2016_1.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+        }
+    }
+
 
     public void next(View v){
         Intent i = new Intent(HomeActivity.this, AboutActivity.class);

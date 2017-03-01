@@ -164,7 +164,7 @@ android:layout_toRightOf="@+id/g1"
                 android:text="@string/btn_text1st"
                 android:textSize="@dimen/btn_text_size"
                 android:textColor="@color/white"
-
+                android:onClick="g2b1"
                 />
             <Button
                 android:layout_weight="1"
@@ -176,6 +176,7 @@ android:layout_toRightOf="@+id/g1"
                 android:textColor="@color/white"
                 android:layout_marginLeft="2dp"
                 android:id="@+id/btn5"
+                android:onClick="g2b2"
                 />
             <Button
                 android:layout_weight="1"
@@ -187,6 +188,7 @@ android:layout_toRightOf="@+id/g1"
                 android:textColor="@color/white"
                 android:layout_marginLeft="2dp"
                 android:id="@+id/btn6"
+                android:onClick="g2b3"
                 />
 
         </LinearLayout>

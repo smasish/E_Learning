@@ -205,7 +205,7 @@ int counter =20;
         private final Context con;
 
         public StateAdapter_single(final Context c) {
-            super(c, R.layout.imagerow_list, getResources().getStringArray(R.array.single_letter_2016_2));
+            super(c, R.layout.imagerow_list, getResources().getStringArray(R.array.single_letter_2016_3));
             con = c;
             //flag_next = 1;
             // TODO Auto-generated constructor stub
@@ -224,11 +224,11 @@ int counter =20;
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.top_row);
-            textView.setText(""+getResources().getStringArray(R.array.single_letter_2016_2)[position]);
+            textView.setText(""+getResources().getStringArray(R.array.single_letter_2016_3)[position]);
 
             final ImageView img = (ImageView) v
                     .findViewById(R.id.img_id);
-            img.setImageResource(imageArray[position]);
+            img.setImageResource(karArray[position]);
             //img.setImageResource(""+getResources().getStringArray(R.array.single_letter)[position]);
 
 //            final TextView textView2 = (TextView) v
@@ -261,6 +261,8 @@ int counter =20;
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 v = vi.inflate(R.layout.spelling_sound, null);
             }
+
+
             final TextView textView = (TextView) v
                     .findViewById(R.id.single_letter);
             textView.setText(""+getResources().getStringArray(R.array.spelling_sound)[position]);
