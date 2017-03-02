@@ -212,7 +212,7 @@ android:layout_toRightOf="@+id/g1"
                 android:text="@string/btn_text1st"
                 android:textSize="@dimen/btn_text_size"
                 android:textColor="@color/white"
-
+                android:onClick="g3b1"
                 />
             <Button
                 android:layout_weight="1"

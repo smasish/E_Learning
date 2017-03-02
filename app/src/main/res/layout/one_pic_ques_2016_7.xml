@@ -82,7 +82,7 @@
     >
 
 <TextView
-    android:layout_width="220dp"
+    android:layout_width="300dp"
     android:layout_height="match_parent"
     android:id="@+id/des_id"
     android:layout_marginBottom="90dp"
@@ -95,8 +95,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/kumir"
-
+                android:background="@drawable/jolpori"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="65dp"
                 android:padding="5dp"
