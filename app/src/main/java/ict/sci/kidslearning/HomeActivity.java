@@ -182,13 +182,24 @@ public class HomeActivity extends AppCompatActivity {
             Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
-
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_7.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
         }
+    }
+
+    public void g3b2(View v){
+
+
+
+
+    }
+
+    public void g3b3(View v){
+
+
     }
 
     public void next(View v){

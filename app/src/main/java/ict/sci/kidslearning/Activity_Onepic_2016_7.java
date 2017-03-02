@@ -3,6 +3,7 @@ package ict.sci.kidslearning;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
@@ -26,9 +27,20 @@ public class Activity_Onepic_2016_7 extends Activity {
 
         story = (TextView)findViewById(R.id.des_id);
 
-        story.setText(R.string.story_2016_5);
+        story.setText(R.string.story_2016_7);
 
 
     }
+
+
+    public void next(View v){
+
+    }
+
+    public void back(View v){
+
+    }
+
+
 
 }

@@ -224,7 +224,7 @@ android:layout_toRightOf="@+id/g1"
                 android:textColor="@color/white"
                 android:layout_marginLeft="2dp"
                 android:id="@+id/btn8"
-
+                android:onClick="g3b2"
 
                 />
             <Button
@@ -237,6 +237,7 @@ android:layout_toRightOf="@+id/g1"
                 android:textColor="@color/white"
                 android:layout_marginLeft="2dp"
                 android:id="@+id/btn9"
+                android:onClick="g3b3"
                 />
 
         </LinearLayout>
