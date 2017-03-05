@@ -145,6 +145,9 @@ public class QuestionActivity2016_1 extends AppCompatActivity {
         }else {
            // Log.d("size]]]]]]>>>----"+datasource.getAllComments().size(), "start====");
 
+
+
+
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("lettersor-----"+lettersor, "counter===="+counter);

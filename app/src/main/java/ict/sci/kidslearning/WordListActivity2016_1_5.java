@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 import ict.sci.kidslearning.utils.AlertMessage;
 
-public class WordListActivity2016_1 extends Activity {
+public class WordListActivity2016_1_5 extends Activity {
 
     Context con;
     ListView lv;
@@ -44,7 +44,7 @@ int counter =20;
 
 
         indexArray=0;
-        question_ind = 7;
+        question_ind = 11;
         counter =20;
 
         question = (TextView)findViewById(R.id.question_id);
@@ -114,7 +114,7 @@ int counter =20;
 
 
             // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_1.this, QuestionActivity.class);
+            Intent img = new Intent(WordListActivity2016_1_5.this, QuestionActivity.class);
             startActivity(img);
         }
         if(flag_next==2){
@@ -160,8 +160,8 @@ int counter =20;
 
 
            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_1.this, ImageWordActivity16_1.class);
-            startActivity(img);
+          //  Intent img = new Intent(WordListActivity2016_1.this, DragingActivity.class);
+         //   startActivity(img);
             this.finish();
         }
         if(flag_next==2){

@@ -87,6 +87,8 @@ public class RegistrationActivity extends AppCompatActivity {
             Intent i = new Intent(RegistrationActivity.this, HomeActivity.class);
             //Intent i = new Intent(MainActivity.this, WordListActivity.class);
             startActivity(i);
+            this.finish();
+
  //       }
     }
 
