@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, RegistrationActivity.class);
         //Intent i = new Intent(MainActivity.this, WordListActivity.class);
         startActivity(i);
+        this.finish();
     }
 
 

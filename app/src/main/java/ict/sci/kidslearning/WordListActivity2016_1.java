@@ -168,6 +168,7 @@ int counter =20;
             adapter_last = new StateAdapter_last(this);
             lv.setAdapter(adapter_last);
 
+
         }else if(flag_next==0){
 
             spell_adapter  = new Adapter_spelling(this);
