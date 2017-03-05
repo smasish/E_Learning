@@ -33,6 +33,7 @@ public class WordListActivity extends Activity {
     private TextView question;
     int indexArray=0,question_ind=0;
 int counter =20;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -158,6 +159,8 @@ int counter =20;
                 datasource.updatevocabulary(id, "Developed");
             else
                 datasource.updatevocabulary(id, "Need Improvement");
+
+
 
 
 

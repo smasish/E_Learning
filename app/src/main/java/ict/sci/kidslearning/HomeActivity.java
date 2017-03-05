@@ -190,15 +190,42 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
+    /////////  need to change activity
+
     public void g3b2(View v){
 
+        year_flag = year.getSelectedItemPosition();
+        Log.d("=year===", "..year..>>"+year_flag );
 
-
+        if(year_flag == 1){
+            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+        }
+        else if(year_flag == 2){
+            Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_7.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+        }
 
     }
 
+    /////////  need to change activity
     public void g3b3(View v){
 
+        year_flag = year.getSelectedItemPosition();
+        Log.d("=year===", "..year..>>"+year_flag );
+
+        if(year_flag == 1){
+            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+        }
+        else if(year_flag == 2){
+            Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_7.class);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startActivity(i);
+        }
 
     }
 

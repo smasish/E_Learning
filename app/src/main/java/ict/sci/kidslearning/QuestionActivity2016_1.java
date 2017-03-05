@@ -157,7 +157,7 @@ public class QuestionActivity2016_1 extends AppCompatActivity {
                 datasource.updateOrderItems(id, "Need Improvement");
 
            // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
-            Intent img = new Intent(QuestionActivity2016_1.this, WordListActivity.class);
+            Intent img = new Intent(QuestionActivity2016_1.this, WordListActivity2016_1.class);
             startActivity(img);
             this.finish();
         }

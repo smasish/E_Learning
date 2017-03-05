@@ -160,8 +160,8 @@ int counter =20;
 
 
            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_1.this, DragingActivity.class);
-            startActivity(img);
+          //  Intent img = new Intent(WordListActivity2016_1.this, DragingActivity.class);
+         //   startActivity(img);
             this.finish();
         }
         if(flag_next==2){
