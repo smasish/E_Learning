@@ -56,7 +56,7 @@
 
         <activity android:name=".Activity_Onepic_2016_7" android:screenOrientation="landscape"/>
         <activity android:name=".Activity_Onepic_2016_8" android:screenOrientation="landscape"/>
-
+        <activity android:name=".Activity_Onepic_2016_9" android:screenOrientation="landscape"/>
 
         <activity android:name=".ImageWordActivity16_1" android:screenOrientation="landscape"/>
 

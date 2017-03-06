@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
-public class Activity_Onepic_2016_8 extends Activity {
+public class Activity_Onepic_2016_9 extends Activity {
 
     Context context;
 
@@ -20,14 +20,14 @@ public class Activity_Onepic_2016_8 extends Activity {
         // getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.one_pic_ques_2016_8);
+        setContentView(R.layout.one_pic_ques_2016_9);
         context = this;
         //getActionBar().setBackgroundDrawable((getResources().getDrawable(R.drawable.actionbar)));
 
 
         story = (TextView)findViewById(R.id.des_id);
 
-        story.setText(R.string.story_2016_8);
+        story.setText(R.string.story_2016_9);
 
 
     }
