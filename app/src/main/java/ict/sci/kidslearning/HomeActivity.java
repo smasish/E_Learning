@@ -203,7 +203,7 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(i);
         }
         else if(year_flag == 2){
-            Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_7.class);
+            Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_8.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
         }

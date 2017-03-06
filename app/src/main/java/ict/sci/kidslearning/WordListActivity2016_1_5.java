@@ -113,6 +113,8 @@ int counter =20;
             datasource.updateOrderItems(id, "6");
 
 
+
+
             // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
             Intent img = new Intent(WordListActivity2016_1_5.this, QuestionActivity.class);
             startActivity(img);
