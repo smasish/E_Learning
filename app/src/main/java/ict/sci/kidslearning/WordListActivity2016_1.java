@@ -144,7 +144,7 @@ int counter =20;
         question_ind++;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
-        if(flag_next==3){
+        if(flag_next==1){
           //  String id = "" + datasource.getAllComments().get(0).getId();
 
             int arr= datasource.getAllComments().size()-1;
@@ -164,12 +164,13 @@ int counter =20;
             startActivity(img);
             this.finish();
         }
-        if(flag_next==2){
-            adapter_last = new StateAdapter_last(this);
-            lv.setAdapter(adapter_last);
-
-
-        }else if(flag_next==0){
+//        if(flag_next==2){
+//            adapter_last = new StateAdapter_last(this);
+//            lv.setAdapter(adapter_last);
+//
+//
+//        }
+        else if(flag_next==0){
 
             spell_adapter  = new Adapter_spelling(this);
             lv.setAdapter(spell_adapter);
@@ -177,11 +178,11 @@ int counter =20;
 
            // lv.setAdapter(adapter_single);
         }
-        else if(flag_next == 1) {
-            adapter = new StateAdapter(this);
-            lv.setAdapter(adapter);
-
-        }
+//        else if(flag_next == 1) {
+//            adapter = new StateAdapter(this);
+//            lv.setAdapter(adapter);
+//
+//        }
         flag_next++;
     }
 
@@ -192,7 +193,7 @@ int counter =20;
         private final Context con;
 
         public StateAdapter_single(final Context c) {
-            super(c, R.layout.word_singleletter, getResources().getStringArray(R.array.single_letter));
+            super(c, R.layout.word_singleletter, getResources().getStringArray(R.array.word2016_g1b1));
             con = c;
             //flag_next = 1;
             // TODO Auto-generated constructor stub
@@ -211,7 +212,7 @@ int counter =20;
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.single_letter);
-            textView.setText(""+getResources().getStringArray(R.array.single_letter)[position]);
+            textView.setText(""+getResources().getStringArray(R.array.word2016_g1b1)[position]);
 
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);

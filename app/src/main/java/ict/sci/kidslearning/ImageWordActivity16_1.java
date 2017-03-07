@@ -17,14 +17,21 @@ public class ImageWordActivity16_1 extends AppCompatActivity {
 	private Context con;
 	private ImageButton imb1,imb2 ; // ,imb3,imb4,imb5,imb6;
 
+//	private int[] imageArray = {
+//			R.drawable.img1, R.drawable.img2,R.drawable.img3,R.drawable.img4,R.drawable.img5,
+//			R.drawable.img6,R.drawable.img7,R.drawable.img8,R.drawable.img9,R.drawable.img10,
+//			R.drawable.img11,R.drawable.img12,R.drawable.img13,R.drawable.img14,R.drawable.img15,
+//			R.drawable.img16,R.drawable.img17,R.drawable.img18,R.drawable.img19,R.drawable.img20,
+//			R.drawable.img20,R.drawable.a22,R.drawable.a23,R.drawable.a24,R.drawable.a25
+//
+//	};
+
 	private int[] imageArray = {
 			R.drawable.img1, R.drawable.img2,R.drawable.img3,R.drawable.img4,R.drawable.img5,
-			R.drawable.img6,R.drawable.img7,R.drawable.img8,R.drawable.img9,R.drawable.img10,
-			R.drawable.img11,R.drawable.img12,R.drawable.img13,R.drawable.img14,R.drawable.img15,
-			R.drawable.img16,R.drawable.img17,R.drawable.img18,R.drawable.img19,R.drawable.img20,
-			R.drawable.img20,R.drawable.a22,R.drawable.a23,R.drawable.a24,R.drawable.a25
+			R.drawable.img6,R.drawable.img7,R.drawable.img8,R.drawable.img9,R.drawable.img10
 
 	};
+
 
 	int indexArray=0;
 	private CommentsDataSource datasource;

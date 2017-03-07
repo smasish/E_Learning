@@ -30,14 +30,18 @@ public class Activity_Onepic_2016_9 extends Activity {
         story.setText(R.string.story_2016_9);
 
 
+
     }
 
 
     public void next(View v){
 
+
+
     }
 
     public void back(View v){
+
 
     }
 
