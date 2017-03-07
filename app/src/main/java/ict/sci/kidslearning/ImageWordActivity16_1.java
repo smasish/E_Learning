@@ -89,7 +89,7 @@ public class ImageWordActivity16_1 extends AppCompatActivity {
 
 		int i = indexArray;
 
-		if(i<imageArray.length-2){
+		if(i<=imageArray.length-2){
 			imb1.setImageResource(imageArray[i]);
 			imb2.setImageResource(imageArray[i+1]);
 
@@ -98,6 +98,7 @@ public class ImageWordActivity16_1 extends AppCompatActivity {
 		}else{
 			Intent img = new Intent(ImageWordActivity16_1.this, WordListActivity2016_1_5.class);
 			   startActivity(img);
+			this.finish();
 		}
 
 	}
