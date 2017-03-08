@@ -5,14 +5,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
+import ict.sci.kidslearning.utils.AlertMessage;
+
 public class Activity_Onepic_2016_5 extends Activity {
 
-    Context context;
+    private Context con;
 
     private TextView story;
+    int indexArray=0,question_ind=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +27,7 @@ public class Activity_Onepic_2016_5 extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.one_picture_question);
-        context = this;
+        con = this;
         //getActionBar().setBackgroundDrawable((getResources().getDrawable(R.drawable.actionbar)));
 
 
@@ -30,6 +35,21 @@ public class Activity_Onepic_2016_5 extends Activity {
 
         story.setText(R.string.story_2016_5);
 
+        question_ind=0;
+        
+    }
+
+    public void showbox(View v){
+
+        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
+        AlertMessage.showMessage(con,"Instruction",instr);
+    }
+
+    public void back(View v){
+
+    }
+
+    public void next(View v){
 
     }
 

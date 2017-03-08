@@ -34,7 +34,7 @@ public class WordListActivity2016_2_43 extends Activity {
 int counter =20;
 
     private int[] imageArray = {
-            R.drawable.img8, R.drawable.tv, R.drawable.chair, R.drawable.mas, R.drawable.train,
+            R.drawable.dab, R.drawable.tv, R.drawable.chair, R.drawable.mas, R.drawable.train,
     };
 
     private int[] imageArray2 = {
@@ -48,7 +48,7 @@ int counter =20;
         // getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.word_list_2016_1);
+        setContentView(R.layout.word_list_2016_2_43);
         con = this;
 
 
@@ -201,7 +201,7 @@ int counter =20;
         private final Context con;
 
         public StateAdapter_single(final Context c) {
-            super(c, R.layout.imagerow_list, getResources().getStringArray(R.array.single_letter_2016_2));
+            super(c, R.layout.imagerow_word_sent, getResources().getStringArray(R.array.single_letter_2016_2));
             con = c;
             //flag_next = 1;
             // TODO Auto-generated constructor stub
@@ -216,7 +216,7 @@ int counter =20;
             if (v == null) {
                 final LayoutInflater vi = (LayoutInflater) con
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.imagerow_list, null);
+                v = vi.inflate(R.layout.imagerow_word_sent, null);
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.top_row);
