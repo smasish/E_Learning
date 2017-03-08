@@ -50,6 +50,7 @@
         <activity android:name=".WordListActivity2016_1" android:screenOrientation="landscape"/>
         <activity android:name=".WordListActivity2016_1_5" android:screenOrientation="landscape"/>
         <activity android:name=".WordListActivity2016_2" android:screenOrientation="landscape"/>
+        <activity android:name=".WordListActivity2016_2_43" android:screenOrientation="landscape"/>
         <activity android:name=".WordListActivity2016_3" android:screenOrientation="landscape"/>
 
         <activity android:name=".Activity_Onepic_2016_5" android:screenOrientation="landscape"/>

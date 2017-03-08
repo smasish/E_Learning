@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import ict.sci.kidslearning.utils.AlertMessage;
 
-public class WordListActivity2016_2 extends Activity {
+public class WordListActivity2016_2_43 extends Activity {
 
     Context con;
     ListView lv;
@@ -34,7 +34,7 @@ public class WordListActivity2016_2 extends Activity {
 int counter =20;
 
     private int[] imageArray = {
-            R.drawable.ducks, R.drawable.nouka, R.drawable.alu, R.drawable.mula, R.drawable.horin,
+            R.drawable.img8, R.drawable.tv, R.drawable.chair, R.drawable.mas, R.drawable.train,
     };
 
     private int[] imageArray2 = {
@@ -124,7 +124,7 @@ int counter =20;
 
 
             // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_2.this, QuestionActivity.class);
+            Intent img = new Intent(WordListActivity2016_2_43.this, QuestionActivity.class);
             startActivity(img);
         }
         if(flag_next==2){
@@ -170,7 +170,7 @@ int counter =20;
 
 
            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_2.this, WordListActivity2016_2_43.class);
+            Intent img = new Intent(WordListActivity2016_2_43.this, DragingActivity.class);
             startActivity(img);
             this.finish();
         }
