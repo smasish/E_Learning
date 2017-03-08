@@ -75,6 +75,7 @@ public class QuestionActivity2016_2 extends AppCompatActivity {
     }
 
 
+
     public void oneone(View v){
         counter--;
         Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();

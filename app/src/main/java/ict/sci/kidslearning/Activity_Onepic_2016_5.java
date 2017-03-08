@@ -36,7 +36,7 @@ public class Activity_Onepic_2016_5 extends Activity {
         story.setText(R.string.story_2016_5);
 
         question_ind=0;
-        
+
     }
 
     public void showbox(View v){

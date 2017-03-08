@@ -275,7 +275,7 @@ int counter =20;
         private final Context con;
 
         public StateAdapter_last(final Context c) {
-            super(c, R.layout.wordmeaning_last, getResources().getStringArray(R.array.wordmeaning_last_letter));
+            super(c, R.layout.wordmeaning_last, getResources().getStringArray(R.array.word2016_1_43));
             con = c;
             flag_next = 2;
             // TODO Auto-generated constructor stub
@@ -294,7 +294,7 @@ int counter =20;
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.top_row);
-            textView.setText(""+getResources().getStringArray(R.array.wordmeaning_last_letter)[position]);
+            textView.setText(""+getResources().getStringArray(R.array.word2016_1_43)[position]);
 
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);
