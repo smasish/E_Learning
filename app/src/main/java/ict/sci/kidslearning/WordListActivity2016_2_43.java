@@ -264,9 +264,12 @@ int counter =20;
                 v = vi.inflate(R.layout.spelling_sound, null);
             }
             final TextView textView = (TextView) v
-                    .findViewById(R.id.single_letter);
+                    .findViewById(R.id.top_row2);
             textView.setText(""+getResources().getStringArray(R.array.spelling_sound)[position]);
 
+            final ImageView img = (ImageView) v
+                    .findViewById(R.id.img_id);
+            img.setImageResource(imageArray2[position]);
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);
 //            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
@@ -281,7 +284,7 @@ int counter =20;
         private final Context con;
 
         public StateAdapter_last(final Context c) {
-            super(c, R.layout.wordmeaning_last, getResources().getStringArray(R.array.word2016_2_43));
+            super(c, R.layout.image_word2016_2, getResources().getStringArray(R.array.word2016_2_43));
             con = c;
            // flag_next = 2;
             // TODO Auto-generated constructor stub
@@ -296,11 +299,16 @@ int counter =20;
             if (v == null) {
                 final LayoutInflater vi = (LayoutInflater) con
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.wordmeaning_last, null);
+                v = vi.inflate(R.layout.image_word2016_2, null);
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.top_row);
             textView.setText(""+getResources().getStringArray(R.array.word2016_2_43)[position]);
+            final ImageView img = (ImageView) v
+                    .findViewById(R.id.img_id);
+            img.setImageResource(imageArray2[position]);
+
+
 
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);
