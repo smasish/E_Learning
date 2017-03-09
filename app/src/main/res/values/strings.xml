@@ -366,7 +366,7 @@
 
     </string-array>
 
-    <string-array name="word2016_1_43">
+    <string-array name="word2016_2_43">
     <item name=""> ---------- খাই</item>
         <item name="">---------- কিনি </item>
         <item name="">---------- ধরি </item>
@@ -406,6 +406,8 @@
 
     </string-array>
 
+    <string name="word_option">  শিক্ষার্থী ছবি দেখে নাম /শব্দ বলতে পারে কি?  </string>
+    <string name="sentence_option"> শিক্ষার্থী নাম/শব্দ দিয়ে বাক্য বলতে পারে কি? </string>
     <string-array name="single_letter_2016_2">
         <item name="set1">--------স</item>
         <item name="set1">--------কা </item>
