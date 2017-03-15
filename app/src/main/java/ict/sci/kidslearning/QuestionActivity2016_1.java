@@ -29,7 +29,8 @@ public class QuestionActivity2016_1 extends AppCompatActivity {
             R.drawable.a16,R.drawable.a17,R.drawable.a18,R.drawable.a19,R.drawable.a20,
             R.drawable.a21,R.drawable.a22,R.drawable.a23,R.drawable.a24,R.drawable.a25,
             R.drawable.a26,R.drawable.a27,R.drawable.a28,R.drawable.a29,R.drawable.a30,
-            R.drawable.blank, R.drawable.blank, R.drawable.blank, R.drawable.blank, R.drawable.blank
+            R.drawable.a31,R.drawable.a32,R.drawable.a33,R.drawable.a34,R.drawable.a35,
+            R.drawable.a36, R.drawable.blank, R.drawable.blank, R.drawable.blank, R.drawable.blank, R.drawable.blank
 
     };
 
@@ -132,7 +133,7 @@ public class QuestionActivity2016_1 extends AppCompatActivity {
         }
 
 
-        if(i<imageArray.length-6){
+        if(i<=imageArray.length-6){
             imb1.setImageResource(imageArray[i]);
             imb2.setImageResource(imageArray[i+1]);
             imb3.setImageResource(imageArray[i+2]);

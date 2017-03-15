@@ -31,7 +31,7 @@ public class WordListActivity2016_7_12 extends Activity {
     private CommentsDataSource datasource;
     private TextView question;
     int indexArray=0,question_ind=0;
-int counter =20;
+    int counter =20;
 
     private int[] imageArray = {
             R.drawable.dab, R.drawable.tv, R.drawable.chair, R.drawable.mas, R.drawable.train,

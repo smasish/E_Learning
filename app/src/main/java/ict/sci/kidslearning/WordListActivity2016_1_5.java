@@ -104,49 +104,43 @@ int counter =20;
 
     public void back(View v){
 
+        if(flag_next>=0)
+            flag_next--;
         if(question_ind>0)
             question_ind--;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
-        if(flag_next==3){
+        if(flag_next<0){
             String id = "" + datasource.getAllComments().get(0).getId();
             datasource.updateOrderItems(id, "6");
 
 
-
-
             // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_1_5.this, QuestionActivity.class);
+            Intent img = new Intent(WordListActivity2016_1_5.this, ImageWordActivity16_1.class);
             startActivity(img);
+            this.finish();
         }
-        if(flag_next==2){
-            adapter_last = new StateAdapter_last(this);
-            lv.setAdapter(adapter_last);
 
-        }else if(flag_next==0){
+        if(flag_next==0){
 
-            spell_adapter  = new Adapter_spelling(this);
-            lv.setAdapter(spell_adapter);
-            // adapter_single = new StateAdapter_single(this);
-
-            // lv.setAdapter(adapter_single);
+            adapter_single = new StateAdapter_single(this);
+            lv.setAdapter(adapter_single);
         }
         else if(flag_next == 1) {
             adapter = new StateAdapter(this);
             lv.setAdapter(adapter);
 
         }
-        if(flag_next>0)
-        flag_next--;
+
     }
 
     public void next(View v){
-
+        flag_next++;
         Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
         question_ind++;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
-        if(flag_next==3){
+        if(flag_next==2){
           //  String id = "" + datasource.getAllComments().get(0).getId();
 
             int arr= datasource.getAllComments().size()-1;
@@ -166,24 +160,17 @@ int counter =20;
          //   startActivity(img);
             this.finish();
         }
-        if(flag_next==2){
-            adapter_last = new StateAdapter_last(this);
-            lv.setAdapter(adapter_last);
+       if(flag_next==0){
 
-        }else if(flag_next==0){
-
-            spell_adapter  = new Adapter_spelling(this);
-            lv.setAdapter(spell_adapter);
-           // adapter_single = new StateAdapter_single(this);
-
-           // lv.setAdapter(adapter_single);
+           adapter_single = new StateAdapter_single(this);
+           lv.setAdapter(adapter_single);
         }
         else if(flag_next == 1) {
             adapter = new StateAdapter(this);
             lv.setAdapter(adapter);
 
         }
-        flag_next++;
+
     }
 
 
@@ -300,7 +287,7 @@ int counter =20;
         private final Context con;
 
         public StateAdapter(final Context c) {
-            super(c, R.layout.wordmeaning_1st, getResources().getStringArray(R.array.word_set));
+            super(c, R.layout.wordmeaning_1st, getResources().getStringArray(R.array.single_letter_2016_1_6));
             con = c;
             // TODO Auto-generated constructor stub
         }
@@ -316,7 +303,7 @@ int counter =20;
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.top_row);
-            textView.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+            textView.setText(""+getResources().getStringArray(R.array.single_letter_2016_1_6)[position]);
 
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);

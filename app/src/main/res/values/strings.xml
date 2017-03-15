@@ -366,6 +366,15 @@
 
     </string-array>
 
+    <string-array name="single_letter_2016_1_6">
+        <item name="set1">ছাতা	| খাতা	| থালা</item>
+        <item name="set1"> মউ	| বউ	| যাও</item>
+        <item name="set1">ময়না	| গয়না	| তবলা </item>
+        <item name="set1"> এলো	| মেলো	| হাওয়া</item>
+        <item name="set1">বিতল	| বালিশ	| চিতল  </item>
+
+    </string-array>
+
     <string-array name="word2016_2_43">
     <item name=""> ---------- খাই</item>
         <item name="">---------- কিনি </item>
