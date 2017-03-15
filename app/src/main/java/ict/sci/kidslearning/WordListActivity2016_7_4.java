@@ -158,7 +158,7 @@ public class WordListActivity2016_7_4 extends Activity {
         question_ind++;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
-        if(flag_next==1){
+       // if(flag_next==1){
           //  String id = "" + datasource.getAllComments().get(0).getId();
 
             int arr= datasource.getAllComments().size()-1;
@@ -174,27 +174,12 @@ public class WordListActivity2016_7_4 extends Activity {
             Log.d("=k=size==", ".flaginnggggggg." +flag_next);
 
            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_7_4.this, Activity_Onepic_2016_7_4.class);
-            startActivity(img);
+         //   Intent img = new Intent(WordListActivity2016_7_4.this, Activity_Onepic_2016_7_4.class);
+         //   startActivity(img);
             this.finish();
-        }
-//        if(flag_next==1){
-//            adapter_last = new StateAdapter_last(this);
-//            lv.setAdapter(adapter_last);
-//
-//        }else if(flag_next==0){
-//
-//            spell_adapter  = new Adapter_spelling(this);
-//            lv.setAdapter(spell_adapter);
-//           // adapter_single = new StateAdapter_single(this);
-//
-//           // lv.setAdapter(adapter_single);
-//        }
-//        else if(flag_next == 1) {
-//            adapter = new StateAdapter(this);
-//            lv.setAdapter(adapter);
-//
-//        }
+   //     }
+
+
 
     }
 
