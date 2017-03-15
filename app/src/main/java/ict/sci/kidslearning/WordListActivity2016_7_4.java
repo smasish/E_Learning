@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import ict.sci.kidslearning.utils.AlertMessage;
 
-public class WordListActivity2016_7_12 extends Activity {
+public class WordListActivity2016_7_4 extends Activity {
 
     Context con;
     ListView lv;
@@ -72,7 +72,7 @@ public class WordListActivity2016_7_12 extends Activity {
 
         ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.word_set, android.R.layout.simple_list_item_1);
        // lv.setAdapter(aa);
-        flag_next = 0;
+        flag_next = 1;
        // adapter = new StateAdapter(this);
        // lv.setAdapter(adapter);
 
@@ -126,7 +126,7 @@ public class WordListActivity2016_7_12 extends Activity {
 
 
             // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_7_12.this, QuestionActivity.class);
+            Intent img = new Intent(WordListActivity2016_7_4.this, QuestionActivity.class);
             startActivity(img);
         }
         if(flag_next==2){
@@ -174,7 +174,7 @@ public class WordListActivity2016_7_12 extends Activity {
             Log.d("=k=size==", ".flaginnggggggg." +flag_next);
 
            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_7_12.this, Activity_Onepic_2016_7_4.class);
+            Intent img = new Intent(WordListActivity2016_7_4.this, Activity_Onepic_2016_7_4.class);
             startActivity(img);
             this.finish();
         }
@@ -205,7 +205,7 @@ public class WordListActivity2016_7_12 extends Activity {
         private final Context con;
 
         public StateAdapter_single(final Context c) {
-            super(c, R.layout.word_sent_16_7, getResources().getStringArray(R.array.single_letter_2016_2));
+            super(c, R.layout.word_sent_16_7_4, getResources().getStringArray(R.array.word_list_2016_7_4));
             con = c;
             //flag_next = 1;
             // TODO Auto-generated constructor stub
@@ -218,22 +218,19 @@ public class WordListActivity2016_7_12 extends Activity {
             if (v == null) {
                 final LayoutInflater vi = (LayoutInflater) con
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.word_sent_16_7, null);
+                v = vi.inflate(R.layout.word_sent_16_7_4, null);
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.top_row);
            // textView.setText(""+getResources().getStringArray(R.array.single_letter_2016_2)[position]);
 
-            textView.setText(""+getResources().getString(R.string.word_option1));
-            final TextView textView2 = (TextView) v
-                    .findViewById(R.id.top_row2);
+            textView.setText(""+getResources().getStringArray(R.array.word_list_2016_7_4)[position]);
 
-            textView2.setText(""+getResources().getString(R.string.sentence_option1));
 
 
             final TextView left = (TextView) v
                     .findViewById(R.id.left1);
-            left.setText(""+getResources().getStringArray(R.array.pic_list_2016_7)[position]);
+            left.setText(""+getResources().getStringArray(R.array.word_list_2016_7_5)[position]);
             //img.setImageResource(""+getResources().getStringArray(R.array.single_letter)[position]);
 
 //            final TextView textView2 = (TextView) v

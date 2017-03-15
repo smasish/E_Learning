@@ -44,7 +44,7 @@ int counter =20;
 
 
         indexArray=0;
-        question_ind = 11;
+        question_ind = 12;
         counter =20;
 
         question = (TextView)findViewById(R.id.question_id);

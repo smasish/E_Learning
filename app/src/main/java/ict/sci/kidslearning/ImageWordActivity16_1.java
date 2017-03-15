@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import ict.sci.kidslearning.utils.AlertMessage;
@@ -16,7 +17,7 @@ public class ImageWordActivity16_1 extends AppCompatActivity {
 
 	private Context con;
 	private ImageButton imb1,imb2 ; // ,imb3,imb4,imb5,imb6;
-
+	private TextView question;
 //	private int[] imageArray = {
 //			R.drawable.img1, R.drawable.img2,R.drawable.img3,R.drawable.img4,R.drawable.img5,
 //			R.drawable.img6,R.drawable.img7,R.drawable.img8,R.drawable.img9,R.drawable.img10,
@@ -33,7 +34,9 @@ public class ImageWordActivity16_1 extends AppCompatActivity {
 	};
 
 
-	int indexArray=0;
+
+	int indexArray=0,question_ind=0;
+	int counter =20;
 	private CommentsDataSource datasource;
 
 	@Override
@@ -47,6 +50,14 @@ public class ImageWordActivity16_1 extends AppCompatActivity {
 
 		con = this;
 		indexArray=0;
+
+		indexArray=0;
+		question_ind = 8;
+		counter =20;
+
+		question = (TextView)findViewById(R.id.question_id);
+
+		question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
 		imb1 = (ImageButton)findViewById(R.id.x1);
 		imb2 = (ImageButton)findViewById(R.id.x2);
@@ -76,13 +87,17 @@ public class ImageWordActivity16_1 extends AppCompatActivity {
 
 	public void showbox(View v){
 
-		AlertMessage.showMessage(con,"Title",""+getString(R.string.question12));
+		String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
+		AlertMessage.showMessage(con,"Instruction",instr);
 	}
 
 	public void next(View v){
 
 		Log.d("next-----", "start===="+indexArray);
 		// for(int i=indexArray;i<imageArray.length;i+=6){
+
+		question_ind++;
+		question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
 		String id = "" + datasource.getAllComments().get(0).getId();
 		datasource.updateOrderItems(id, "66");
@@ -107,6 +122,11 @@ public class ImageWordActivity16_1 extends AppCompatActivity {
 
 		Log.d("back-----", "start===="+indexArray);
 		int i = indexArray;
+
+		if(question_ind>0)
+			question_ind--;
+		question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+
 		//for(int i = indexArray;i>6;i-=6) {
 		if(i>=2){
 			imb1.setImageResource(imageArray[i-2]);
