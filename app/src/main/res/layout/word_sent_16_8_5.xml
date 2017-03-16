@@ -47,7 +47,6 @@
             android:textColor="@color/white"
             android:textSize="28sp"
             android:paddingLeft="10dp"
-
             android:textStyle="bold" >
         </TextView>
 

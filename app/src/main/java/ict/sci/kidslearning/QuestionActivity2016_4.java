@@ -70,7 +70,7 @@ public class QuestionActivity2016_4 extends AppCompatActivity {
 
         indexArray = 6;
 
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.question_set_2016_4)[question_ind]);
         question_ind++;
     }
 
@@ -111,7 +111,7 @@ public class QuestionActivity2016_4 extends AppCompatActivity {
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
+        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_4)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 
@@ -122,7 +122,7 @@ public class QuestionActivity2016_4 extends AppCompatActivity {
 
 
         int i = indexArray;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.question_set_2016_4)[question_ind]);
         question_ind++;
 
         if(question_ind == 3){

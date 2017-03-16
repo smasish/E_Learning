@@ -20,7 +20,7 @@ import ict.sci.kidslearning.utils.AlertMessage;
 
 public class WordListActivity2016_8 extends Activity {
 
-    Context con;
+
     ListView lv;
     StateAdapter adapter;
     Adapter_spelling spell_adapter;
@@ -29,6 +29,7 @@ public class WordListActivity2016_8 extends Activity {
 
     int flag_next = 0;
     private CommentsDataSource datasource;
+    Context con;
     private TextView question;
     int indexArray=0,question_ind=0;
     int counter =20;
@@ -56,12 +57,12 @@ public class WordListActivity2016_8 extends Activity {
 
 
         indexArray=0;
-        question_ind = 7;
+        question_ind = 0;
         counter =20;
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -102,7 +103,7 @@ public class WordListActivity2016_8 extends Activity {
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
+        String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 
