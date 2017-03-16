@@ -513,10 +513,31 @@
         <item name="set1"> ৬. সোনার ডিম পেলে তারা কি করবে ? (প্রয়োগ মূলক) </item>
 
     </string-array>
+
     <string-array name="word_list_2016_7_5">
         <item name="set1">হলুদ গাঁদা ফুল </item>
         <item name="set1"> পানিফল পাওয়ার জন্য</item>
         <item name="set1"> আনন্দে বাড়ী ফিরে আসবে / বাজারে বিক্রি করবে / ইত্যাদি  [ শিশুরা চিন্তা করে যদি সঠিক উত্তর দেয় তাহলে সঠিক বলে ধরে নিতে হবে ]</item>
+
+    </string-array>
+
+
+    <string-array name="word_list_2016_8">
+        <item name="set1"> ৪. ১ : শিক্ষার্থী অধিকাংশ শব্দ শুদ্ধ উচ্চারণে পড়তে পারে</item>
+        <item name="set1"> ৪. ২ : শিক্ষার্থী স্বাভাবিক গতিতে (বানান না করে) সরবে পড়তে পারে</item>
+        <item name="set1">৪. ৩ : শিক্ষার্থী যতিচিহ্ন বজায় রেখে কণ্ঠস্বরের ওঠানামা করে পড়তে পারে  </item>
+
+    </string-array>
+
+    <string-array name="word_list_2016_8_left">
+        <item name="set1"> ৫.১. জন্মদিনে কে কে উপহার আনতে পারলো না ? </item>
+        <item name="set1"> ৫.২. শেয়ালের মুখে কেন চুড়ি পড়িয়ে দিলো ?  </item>
+        <item name="set1"> ৫.৩. লোভের কারণে শেয়ালের কি পরিনতি হলো ? </item>
+    </string-array>
+    <string-array name="word_list_2016_8_right">
+        <item name="set1">হাঁস ও মুরগী</item>
+        <item name="set1">খেতে পারবে না।  </item>
+        <item name="set1"> খাওয়া থেকে বঞ্চিত হলো / খেতে পারলো না </item>
 
     </string-array>
 

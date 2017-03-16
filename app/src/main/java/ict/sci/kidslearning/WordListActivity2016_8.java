@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import ict.sci.kidslearning.utils.AlertMessage;
 
-public class WordListActivity2016_7_4 extends Activity {
+public class WordListActivity2016_8 extends Activity {
 
     Context con;
     ListView lv;
@@ -72,7 +72,7 @@ public class WordListActivity2016_7_4 extends Activity {
 
         ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.word_set, android.R.layout.simple_list_item_1);
        // lv.setAdapter(aa);
-        flag_next = 1;
+        flag_next = 0;
        // adapter = new StateAdapter(this);
        // lv.setAdapter(adapter);
 
@@ -126,7 +126,7 @@ public class WordListActivity2016_7_4 extends Activity {
 
 
             // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_7_4.this, QuestionActivity.class);
+            Intent img = new Intent(WordListActivity2016_8.this, QuestionActivity.class);
             startActivity(img);
         }
         if(flag_next==2){
@@ -154,11 +154,17 @@ public class WordListActivity2016_7_4 extends Activity {
 
         flag_next++;
 
+
         Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
         question_ind++;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
-       // if(flag_next==1){
+        if(flag_next == 1) {
+            adapter = new StateAdapter(this);
+            lv.setAdapter(adapter);
+
+        }
+        else if(flag_next==2){
           //  String id = "" + datasource.getAllComments().get(0).getId();
 
             int arr= datasource.getAllComments().size()-1;
@@ -177,7 +183,7 @@ public class WordListActivity2016_7_4 extends Activity {
          //   Intent img = new Intent(WordListActivity2016_7_4.this, Activity_Onepic_2016_7_4.class);
          //   startActivity(img);
             this.finish();
-   //     }
+        }
 
 
 
@@ -190,7 +196,7 @@ public class WordListActivity2016_7_4 extends Activity {
         private final Context con;
 
         public StateAdapter_single(final Context c) {
-            super(c, R.layout.word_sent_16_7_4, getResources().getStringArray(R.array.word_list_2016_7_4));
+            super(c, R.layout.word_sent_16_8, getResources().getStringArray(R.array.word_list_2016_8));
             con = c;
             //flag_next = 1;
             // TODO Auto-generated constructor stub
@@ -203,21 +209,14 @@ public class WordListActivity2016_7_4 extends Activity {
             if (v == null) {
                 final LayoutInflater vi = (LayoutInflater) con
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.word_sent_16_7_4, null);
+                v = vi.inflate(R.layout.word_sent_16_8, null);
             }
-            final TextView textView = (TextView) v
-                    .findViewById(R.id.top_row);
-           // textView.setText(""+getResources().getStringArray(R.array.single_letter_2016_2)[position]);
-
-           // textView.setText(""+getResources().getStringArray(R.array.word_list_2016_7_4)[position]);
-            textView.setText(""+getResources().getStringArray(R.array.word_list_2016_7_5)[position]);
-
 
 
             final TextView left = (TextView) v
                     .findViewById(R.id.left1);
             //left.setText(""+getResources().getStringArray(R.array.word_list_2016_7_5)[position]);
-            left.setText(""+getResources().getStringArray(R.array.word_list_2016_7_4)[position]);
+            left.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[position]);
             //img.setImageResource(""+getResources().getStringArray(R.array.single_letter)[position]);
 
 //            final TextView textView2 = (TextView) v
@@ -315,7 +314,7 @@ public class WordListActivity2016_7_4 extends Activity {
         private final Context con;
 
         public StateAdapter(final Context c) {
-            super(c, R.layout.wordmeaning_1st, getResources().getStringArray(R.array.word_set));
+            super(c, R.layout.word_sent_16_8_5, getResources().getStringArray(R.array.word_list_2016_8_left));
             con = c;
             // TODO Auto-generated constructor stub
         }
@@ -327,15 +326,15 @@ public class WordListActivity2016_7_4 extends Activity {
             if (v == null) {
                 final LayoutInflater vi = (LayoutInflater) con
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.wordmeaning_1st, null);
+                v = vi.inflate(R.layout.word_sent_16_8_5, null);
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.top_row);
-            textView.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+            textView.setText(""+getResources().getStringArray(R.array.word_list_2016_8_right)[position]);
 
-//            final TextView textView2 = (TextView) v
-//                    .findViewById(R.id.bottom_row);
-//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+            final TextView textView2 = (TextView) v
+                    .findViewById(R.id.left1);
+            textView2.setText(""+getResources().getStringArray(R.array.word_list_2016_8_left)[position]);
 
             return v;
         }

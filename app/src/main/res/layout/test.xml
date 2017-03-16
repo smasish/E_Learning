@@ -118,11 +118,12 @@
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttoncolor"
+                android:textColor="@color/white"
                 android:id="@+id/btn1"
                 android:text="@string/first"
                 android:textSize="@dimen/btn_text_size"
                 android:onClick="g1b1"
-                android:textColor="@color/white"
+
 
                 />
             <Button
