@@ -23,12 +23,12 @@ public class QuestionActivity2016_4 extends AppCompatActivity {
     int counter=11, lettersor=0;
 
     private int[] imageArray = {
-            R.drawable.a1, R.drawable.a2,R.drawable.a3,R.drawable.a4,R.drawable.a5,
+
             R.drawable.a6,R.drawable.a7,R.drawable.a8,R.drawable.a9,R.drawable.a10,
-            R.drawable.a11, R.drawable.blank,R.drawable.a12,R.drawable.a13,R.drawable.a14,R.drawable.a15,
+            R.drawable.a11, R.drawable.a12,R.drawable.a13,R.drawable.a14,R.drawable.a15,
+            R.drawable.a1, R.drawable.a2,R.drawable.a3,R.drawable.a4,R.drawable.a5,
             R.drawable.a16,R.drawable.a17,R.drawable.a18,R.drawable.a19,R.drawable.a20,
             R.drawable.a21,R.drawable.a22,R.drawable.a23,R.drawable.a24,R.drawable.a25,
-            R.drawable.a26,R.drawable.a27,R.drawable.a28,R.drawable.a29,R.drawable.a30,
             R.drawable.blank, R.drawable.blank, R.drawable.blank, R.drawable.blank, R.drawable.blank
 
     };
@@ -48,7 +48,7 @@ public class QuestionActivity2016_4 extends AppCompatActivity {
         question = (TextView)findViewById(R.id.question_id);
 
 
-        counter =11;
+        counter =25;
 
         imb1 = (ImageButton)findViewById(R.id.x1);
         imb2 = (ImageButton)findViewById(R.id.x2);
@@ -132,7 +132,7 @@ public class QuestionActivity2016_4 extends AppCompatActivity {
         }
 
 
-        if(i<imageArray.length-6){
+        if(i<=imageArray.length-6){
             imb1.setImageResource(imageArray[i]);
             imb2.setImageResource(imageArray[i+1]);
             imb3.setImageResource(imageArray[i+2]);
@@ -152,15 +152,15 @@ public class QuestionActivity2016_4 extends AppCompatActivity {
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("lettersor-----"+lettersor, "counter===="+counter);
 
-            if(lettersor>=7 && counter >=13)
+            if( counter >=16)
                 datasource.updateOrderItems(id, "Mastery");
-            else if(lettersor>=5 && counter >=10)
+            else if( counter >=10)
                 datasource.updateOrderItems(id, "Developed");
             else
                 datasource.updateOrderItems(id, "Need Improvement");
 
            // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
-            Intent img = new Intent(QuestionActivity2016_4.this, WordListActivity2016_1.class);
+            Intent img = new Intent(QuestionActivity2016_4.this, WordListActivity2016_4.class);
             startActivity(img);
             this.finish();
         }
@@ -174,7 +174,7 @@ public class QuestionActivity2016_4 extends AppCompatActivity {
 
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.question_set_2016_4)[question_ind]);
 
 
         //for(int i = indexArray;i>6;i-=6) {
