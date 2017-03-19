@@ -37,11 +37,11 @@ public class Activity_Onepic_2016_6 extends Activity {
 
         indexArray=0;
         question_ind = 0;
-        counter =20;
+        counter =6;
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.word_list_2016_6)[question_ind]);
 
         story = (TextView)findViewById(R.id.des_id);
 
@@ -53,7 +53,7 @@ public class Activity_Onepic_2016_6 extends Activity {
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
+        String instr = ""+getResources().getStringArray(R.array.instructions_16_6)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 

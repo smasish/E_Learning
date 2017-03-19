@@ -57,12 +57,12 @@ public class WordListActivity2016_6 extends Activity {
 
 
         indexArray=0;
-        question_ind = 0;
+        question_ind = 1;
         counter =20;
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.word_list_2016_6)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -158,7 +158,7 @@ public class WordListActivity2016_6 extends Activity {
 
         Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
         question_ind++;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.question_set_2016_6)[question_ind]);
 
         if(flag_next == 1) {
             adapter = new StateAdapter(this);

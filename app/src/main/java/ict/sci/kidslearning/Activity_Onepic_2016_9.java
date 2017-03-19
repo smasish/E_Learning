@@ -12,6 +12,9 @@ public class Activity_Onepic_2016_9 extends Activity {
     Context context;
 
     private TextView story;
+    private TextView question;
+    int indexArray=0,question_ind=0;
+    int counter =20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,13 @@ public class Activity_Onepic_2016_9 extends Activity {
         story.setText(R.string.story_2016_9);
 
 
+        indexArray=0;
+        question_ind = 1;
+        counter =20;
+
+        question = (TextView)findViewById(R.id.question_id);
+
+        question.setText(""+getResources().getStringArray(R.array.word_list_2016_6)[question_ind]);
 
     }
 
