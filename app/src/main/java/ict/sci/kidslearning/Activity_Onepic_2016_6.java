@@ -10,13 +10,15 @@ import android.widget.TextView;
 
 import ict.sci.kidslearning.utils.AlertMessage;
 
-public class Activity_Onepic_2016_4 extends Activity {
+public class Activity_Onepic_2016_6 extends Activity {
 
-    private Context con;
+
 
     private TextView story;
-    int indexArray=0,question_ind=0;
+    Context con;
     private TextView question;
+    int indexArray=0,question_ind=0;
+    int counter =20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,39 +27,48 @@ public class Activity_Onepic_2016_4 extends Activity {
         // getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.one_story_question);
-        con = this;
+        setContentView(R.layout.one_pic_ques_2016_6);
+
         //getActionBar().setBackgroundDrawable((getResources().getDrawable(R.drawable.actionbar)));
 
+        con = this;
 
-        story = (TextView)findViewById(R.id.des_id);
 
-        story.setText(R.string.story_2016_4);
 
-        question_ind=7;
+        indexArray=0;
+        question_ind = 0;
+        counter =20;
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_4)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+
+        story = (TextView)findViewById(R.id.des_id);
+
+        story.setText(R.string.story_2016_6);
+
+
 
     }
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_4)[question_ind];
+        String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 
-    public void back(View v){
-        this.finish();
-
-    }
-
     public void next(View v){
-        Intent i = new Intent(Activity_Onepic_2016_4.this, WordListActivity2016_4_4.class);
+
+        Intent i = new Intent(Activity_Onepic_2016_6.this, WordListActivity2016_6.class);
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         startActivity(i);
         this.finish();
     }
+
+    public void back(View v){
+
+    }
+
+
 
 }
