@@ -54,7 +54,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="G1"
+            android:text="@string/grade1"
             android:background="@drawable/buttoncolor"
             android:textColor="@color/white"
             android:id="@+id/group1"
@@ -65,7 +65,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="G2"
+            android:text="@string/grade2"
             android:background="@drawable/buttoncolor"
             android:textColor="@color/white"
             android:id="@+id/group2"
@@ -75,7 +75,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="G3"
+            android:text="@string/grade3"
             android:background="@drawable/buttoncolor"
             android:textColor="@color/white"
             android:id="@+id/group3"
@@ -90,10 +90,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next Page"
+        android:text="@string/next"
         android:background="@drawable/buttoncolor"
         android:textColor="@color/white"
         android:id="@+id/button2"
+        android:textSize="28sp"
         android:onClick="next"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
