@@ -2,14 +2,17 @@ package ict.sci.kidslearning;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
+import ict.sci.kidslearning.utils.AlertMessage;
+
 public class Activity_Onepic_2016_9 extends Activity {
 
-    Context context;
+    Context con;
 
     private TextView story;
     private TextView question;
@@ -24,7 +27,7 @@ public class Activity_Onepic_2016_9 extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.one_pic_ques_2016_9);
-        context = this;
+        con = this;
         //getActionBar().setBackgroundDrawable((getResources().getDrawable(R.drawable.actionbar)));
 
 
@@ -44,14 +47,22 @@ public class Activity_Onepic_2016_9 extends Activity {
     }
 
 
+    public void showbox(View v){
+
+        String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
+        AlertMessage.showMessage(con,"Instruction",instr);
+    }
+
     public void next(View v){
 
-
-
+        Intent i = new Intent(Activity_Onepic_2016_9.this, WordListActivity2016_9.class);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        startActivity(i);
+        this.finish();
     }
 
     public void back(View v){
-
+        this.finish();
 
     }
 
