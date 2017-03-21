@@ -601,6 +601,21 @@
 
     </string-array>
 
+    <string-array name="word_list_2016_5_left">
+        <item name="set1"> ৫.১ গল্পে পশুদের সর্দার কে ? </item>
+        <item name="set1">৫.২  বনের কেউ অন্যায় করলে কি হয়?  </item>
+        <item name="set1"> ৫.৩ বনে সবাই মিলেমিশে থাকে কেন? </item>
+
+    </string-array>
+
+    <string-array name="word_list_2016_5_right">
+        <item name="set1"> বুড়ো শেয়াল/ শেয়ালবি</item>
+        <item name="set1">  শাসন করা হয় / শাস্তি পায়</item>
+        <item name="set1">পদ থেকে বাচার জন্য/ শান্তি রক্ষার জন্য/ সবাই ভালো তাই (গল্প সংশ্লিষ্টযেকোনো উত্তর) </item>
+    </string-array>
+
+
+
     <string-array name="word_list_2016_6">
         <item name="set1"> ৪.১	 শিক্ষার্থী অধিকাংশ শব্দ শুদ্ধ উচ্চারণে পড়তে পারে কি?</item>
         <item name="set1"> ৪.২	শিক্ষার্থী স্বাভাবিক গতিতে (বানান না করে) সরবে পড়তে পারে কি?</item>

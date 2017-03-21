@@ -267,12 +267,12 @@ public class WordListActivity2016_5_3 extends Activity {
 
 
             final TextView textView = (TextView) v
-                    .findViewById(R.id.top_row2);
+                    .findViewById(R.id.single_letter);
             textView.setText(""+getResources().getStringArray(R.array.spelling_sound)[position]);
 
-            final ImageView img = (ImageView) v
-                    .findViewById(R.id.img_id);
-            img.setImageResource(imageArray2[position]);
+//            final ImageView img = (ImageView) v
+//                    .findViewById(R.id.img_id);
+//            img.setImageResource(imageArray2[position]);
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);
 //            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
