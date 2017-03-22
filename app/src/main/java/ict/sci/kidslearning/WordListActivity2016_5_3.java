@@ -163,6 +163,7 @@ public class WordListActivity2016_5_3 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
+
             if(counter>=16)
                 datasource.updatevocabulary(id, "Mastery");
             else  if(counter>=10)
