@@ -4,14 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
 import ict.sci.kidslearning.utils.AlertMessage;
 
-public class Activity_Onepic_2016_5 extends Activity {
+public class Activity_Onepic_2016_5_5 extends Activity {
 
     private Context con;
 
@@ -28,14 +27,14 @@ public class Activity_Onepic_2016_5 extends Activity {
         // getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.one_pic_ques16_5);
+        setContentView(R.layout.one_pic_ques16_5_5);
         con = this;
         //getActionBar().setBackgroundDrawable((getResources().getDrawable(R.drawable.actionbar)));
 
 
-      //  story = (TextView)findViewById(R.id.des_id);
+        story = (TextView)findViewById(R.id.des_id);
 
-      //  story.setText(R.string.story_2016_5);
+        story.setText(R.string.story_2016_5);
 
         question_ind=0;
 
@@ -57,7 +56,7 @@ public class Activity_Onepic_2016_5 extends Activity {
 
     public void next(View v){
 
-        Intent i = new Intent(Activity_Onepic_2016_5.this, WordListActivity2016_5_31.class);
+        Intent i = new Intent(Activity_Onepic_2016_5_5.this, WordListActivity2016_5_5.class);
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         startActivity(i);
         this.finish();

@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import ict.sci.kidslearning.utils.AlertMessage;
 
-public class WordListActivity2016_5_3 extends Activity {
+public class WordListActivity2016_5_31 extends Activity {
 
     Context con;
     ListView lv;
@@ -33,12 +33,12 @@ public class WordListActivity2016_5_3 extends Activity {
     int indexArray=0,question_ind=0;
     int counter =20;
 
-    private int[] imageArray2 = {
+    private int[] imageArray = {
             R.drawable.dab, R.drawable.tv, R.drawable.chair, R.drawable.mas, R.drawable.train,
     };
 
-    private int[] imageArray = {
-            R.drawable.dabkai, R.drawable.maskini, R.drawable.fishing, R.drawable.noukaychori, R.drawable.basibajai,
+    private int[] imageArray2 = {
+            R.drawable.boi, R.drawable.football, R.drawable.chair, R.drawable.pen, R.drawable.kuthar,
     };
 
 
@@ -77,8 +77,8 @@ public class WordListActivity2016_5_3 extends Activity {
        // lv.setAdapter(adapter);
 
 
-        spell_adapter  = new Adapter_spelling(this);
-        lv.setAdapter(spell_adapter);
+        adapter_single = new StateAdapter_single(this);
+        lv.setAdapter(adapter_single);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -91,6 +91,7 @@ public class WordListActivity2016_5_3 extends Activity {
                 Toast.makeText(con,"Counted",Toast.LENGTH_LONG).show();
 //				final Intent imageshow = new Intent(SecondActivity.this,
 //						GalleryActivity.class);
+
 
 
             }
@@ -125,7 +126,7 @@ public class WordListActivity2016_5_3 extends Activity {
 
 
             // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_5_3.this, QuestionActivity.class);
+            Intent img = new Intent(WordListActivity2016_5_31.this, QuestionActivity.class);
             startActivity(img);
         }
         if(flag_next==2){
@@ -157,7 +158,7 @@ public class WordListActivity2016_5_3 extends Activity {
         question_ind++;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
-        if(flag_next==1){
+        if(flag_next==2){
           //  String id = "" + datasource.getAllComments().get(0).getId();
 
             int arr= datasource.getAllComments().size()-1;
@@ -173,15 +174,16 @@ public class WordListActivity2016_5_3 extends Activity {
             Log.d("=k=size==", ".flaginnggggggg." +flag_next);
 
            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_5_3.this, WordListActivity2016_5_5.class);
+            Intent img = new Intent(WordListActivity2016_5_31.this, Activity_Onepic_2016_5_5.class);
             startActivity(img);
             this.finish();
         }
-//        if(flag_next==1){
-//            adapter_last = new StateAdapter_last(this);
-//            lv.setAdapter(adapter_last);
-//
-//        }else if(flag_next==0){
+        if(flag_next==1){
+            adapter_last = new StateAdapter_last(this);
+            lv.setAdapter(adapter_last);
+
+        }
+      //  else if(flag_next==0){
 //
 //            spell_adapter  = new Adapter_spelling(this);
 //            lv.setAdapter(spell_adapter);
@@ -223,16 +225,16 @@ public class WordListActivity2016_5_3 extends Activity {
                     .findViewById(R.id.top_row);
            // textView.setText(""+getResources().getStringArray(R.array.single_letter_2016_2)[position]);
 
-            textView.setText(""+getResources().getString(R.string.word_option1));
+            textView.setText(""+getResources().getString(R.string.word_option_16_5));
             final TextView textView2 = (TextView) v
                     .findViewById(R.id.top_row2);
 
-            textView2.setText(""+getResources().getString(R.string.sentence_option1));
+            textView2.setText(""+getResources().getString(R.string.sentence_option_16_5));
 
 
             final TextView left = (TextView) v
                     .findViewById(R.id.left1);
-            left.setText(""+getResources().getStringArray(R.array.pic_list_2016_7)[position]);
+            left.setText(""+getResources().getStringArray(R.array.pic_list_2016_5)[position]);
             //img.setImageResource(""+getResources().getStringArray(R.array.single_letter)[position]);
 
 //            final TextView textView2 = (TextView) v
@@ -267,12 +269,12 @@ public class WordListActivity2016_5_3 extends Activity {
 
 
             final TextView textView = (TextView) v
-                    .findViewById(R.id.single_letter);
+                    .findViewById(R.id.top_row2);
             textView.setText(""+getResources().getStringArray(R.array.spelling_sound)[position]);
 
-//            final ImageView img = (ImageView) v
-//                    .findViewById(R.id.img_id);
-//            img.setImageResource(imageArray2[position]);
+            final ImageView img = (ImageView) v
+                    .findViewById(R.id.img_id);
+            img.setImageResource(imageArray2[position]);
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);
 //            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
@@ -306,7 +308,7 @@ public class WordListActivity2016_5_3 extends Activity {
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.top_row);
-            textView.setText(""+getResources().getStringArray(R.array.word2016_2_43)[position]);
+            textView.setText(""+getResources().getString(R.string.sentence_16_5));
             final ImageView img = (ImageView) v
                     .findViewById(R.id.img_id);
             img.setImageResource(imageArray2[position]);
