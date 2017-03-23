@@ -41,10 +41,10 @@ public class HomeActivity extends AppCompatActivity {
         year = (Spinner)findViewById(R.id.spinner);
 
         categories = new ArrayList<String>();
-        categories.add("Select Car");
-        categories.add("2015");
-        categories.add("2016");
-        categories.add("2017");
+        categories.add(" বছর  নির্বাচন করুন");
+        categories.add("২০১৫");
+        categories.add("২০১৬");
+        categories.add("২০১৭");
 
 
 
