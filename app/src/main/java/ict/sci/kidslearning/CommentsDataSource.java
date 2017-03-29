@@ -17,7 +17,8 @@ public class CommentsDataSource  {
 	private SQLiteDatabase database;
 	private MySQLiteHelper dbHelper;
 	private String[] allColumns = { MySQLiteHelper.COLUMN_ID,
-			MySQLiteHelper.COLUMN_SCHOOL,MySQLiteHelper.COLUMN_student,MySQLiteHelper.COLUMN_CLASS,MySQLiteHelper.COLUMN_LEVEL1,MySQLiteHelper.COLUMN_LEVEL2,MySQLiteHelper.COLUMN_LEVEL3,
+			MySQLiteHelper.COLUMN_SCHOOL,MySQLiteHelper.COLUMN_student,MySQLiteHelper.COLUMN_CLASS,MySQLiteHelper.COLUMN_DATE,
+			MySQLiteHelper.COLUMN_LEVEL1,MySQLiteHelper.COLUMN_LEVEL2,MySQLiteHelper.COLUMN_LEVEL3,
 			""+MySQLiteHelper.COLUMN_SCORE, MySQLiteHelper.COLUMN_ROLL };
 
 	public CommentsDataSource(Context context) {
@@ -32,11 +33,12 @@ public class CommentsDataSource  {
 		dbHelper.close();
 	}
 
-	public Comment createComment(String school,String student,String clas,String phonet,String letter,String vocabulary,int score,String roll) {
+	public Comment createComment(String school,String student,String clas,String dat,String phonet,String letter,String vocabulary,int score,String roll) {
 		ContentValues values = new ContentValues();
 		values.put(MySQLiteHelper.COLUMN_SCHOOL, school);
 		values.put(MySQLiteHelper.COLUMN_student, student);
 		values.put(MySQLiteHelper.COLUMN_CLASS, clas);
+		values.put(MySQLiteHelper.COLUMN_DATE, dat);
 		values.put(MySQLiteHelper.COLUMN_LEVEL1, phonet);
 		values.put(MySQLiteHelper.COLUMN_LEVEL2, letter);
 		values.put(MySQLiteHelper.COLUMN_LEVEL3, vocabulary);
@@ -176,11 +178,12 @@ public class CommentsDataSource  {
 		comment.setSchool(cursor.getString(1));
 		comment.setStudent(cursor.getString(2));
 		comment.setClas(cursor.getString(3));
-		comment.setPhone(cursor.getString(4));
-		comment.setLetter(cursor.getString(5));
-		comment.set_vocabulary(cursor.getString(6));
-		comment.setScore(cursor.getInt(7));
-		comment.setRoll(cursor.getString(8));
+		comment.setDat(cursor.getString(4));
+		comment.setPhone(cursor.getString(5));
+		comment.setLetter(cursor.getString(6));
+		comment.set_vocabulary(cursor.getString(7));
+		comment.setScore(cursor.getInt(8));
+		comment.setRoll(cursor.getString(9));
 		return comment;
 	}
 }

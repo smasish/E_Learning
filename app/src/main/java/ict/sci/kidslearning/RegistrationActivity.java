@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 
+import java.util.Calendar;
 import java.util.List;
 
 import ict.sci.kidslearning.utils.AlertMessage;
@@ -18,7 +19,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private CommentsDataSource datasource;
     private EditText school,student,class_name,roll;
-
+    private int mYear, mMonth, mDay, mHour, mMinute,ampm;
     String str_school="",str_stud="",str_class="",str_roll="";
     private Context con;
 
@@ -75,8 +76,17 @@ public class RegistrationActivity extends AppCompatActivity {
 //        }
 //        else {
 
-            Comment comment = null;
-            datasource.createComment(str_school,str_stud,str_class,"Developed","Need Improvement","Developed",0,str_roll);
+        final Calendar c = Calendar.getInstance();
+        mYear = c.get(Calendar.YEAR);
+        mMonth = c.get(Calendar.MONTH);
+        mDay = c.get(Calendar.DAY_OF_MONTH);
+        int mon = mMonth+1;
+        String dat = mDay+"-"+mon+"-"+mYear;
+
+        Log.d("=year==="+dat, "..year..>>"+mYear+"---day: "+mDay );
+
+        Comment comment = null;
+            datasource.createComment(str_school,str_stud,str_class,dat,"Developed","Need Improvement","Developed",0,str_roll);
             List<Comment> values = datasource.getAllComments();
 
             Log.d("====k===="+values.get(0).getScore(), "...id..>>" + values.get(0).getComment());

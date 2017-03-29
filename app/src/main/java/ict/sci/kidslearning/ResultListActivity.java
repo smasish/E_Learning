@@ -159,6 +159,11 @@ public class ResultListActivity extends Activity {
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 v = vi.inflate(R.layout.result_llist_individual, null);
             }
+            final TextView dat = (TextView) v
+                    .findViewById(R.id.dat_id);
+            String dates = "" + datasource.getAllComments().get(position).getDat();
+            dat.setText(dates);
+
             final TextView textView = (TextView) v
                     .findViewById(R.id.phonetic_id);
 

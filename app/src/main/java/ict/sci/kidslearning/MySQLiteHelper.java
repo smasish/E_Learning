@@ -12,6 +12,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 	public static final String TABLE_COMMENTS = "comments";
 	public static final String COLUMN_ID = "_id";
 	public static final String COLUMN_SCHOOL = "school";
+	public static final String COLUMN_DATE = "date";
 
 	public static final String COLUMN_student = "student";
 	public static final String COLUMN_CLASS = "class";
@@ -32,6 +33,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 			+ " integer primary key autoincrement, " + COLUMN_SCHOOL
 			+ " text not null, " + COLUMN_student
 			+ " text not null, " + COLUMN_CLASS
+			+ " text not null, " + COLUMN_DATE
 			+ " text not null, " + COLUMN_LEVEL1
 			+ " text not null, " + COLUMN_LEVEL2
 			+ " text not null, " + COLUMN_LEVEL3
