@@ -78,6 +78,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
+
+
     public void g1b1(View v){
         year_flag = year.getSelectedItemPosition();
         Log.d("=year===", "..year..>>"+year_flag );
@@ -230,8 +232,12 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void next(View v){
-        Intent i = new Intent(HomeActivity.this, AboutActivity.class);
-        startActivity(i);
+//        Intent i = new Intent(HomeActivity.this, AboutActivity.class);
+//        startActivity(i);
+
+            Intent i = new Intent(HomeActivity.this, ResultListActivity.class);
+            startActivity(i);
+       // }
     }
 
 
