@@ -47,9 +47,12 @@
             android:layout_height="wrap_content"
             android:id="@+id/toggle_button"
             android:layout_alignParentRight="true"
-            android:textOff="Right"
+            android:background="@drawable/buttoncolor"
+            android:textColor="@color/white"
+            android:textOff="@string/right"
+            android:layout_marginLeft="10dp"
             android:onClick="single_toggle"
-            android:textOn="Wrong"
+            android:textOn="@string/wrong"
             android:focusable="true"
             />
 
