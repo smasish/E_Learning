@@ -116,38 +116,25 @@ public class WordListActivity2016_7_4 extends Activity {
 
     public void back(View v){
 
+        if(flag_next>0)
+            flag_next--;
         if(question_ind>0)
             question_ind--;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
-        if(flag_next==3){
-            String id = "" + datasource.getAllComments().get(0).getId();
-            datasource.updateOrderItems(id, "6");
+        if(flag_next==0){
+//            String id = "" + datasource.getAllComments().get(0).getId();
+//            datasource.updateOrderItems(id, "6");
 
 
             // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_7_4.this, QuestionActivity.class);
+            Intent img = new Intent(WordListActivity2016_7_4.this, Activity_Onepic_2016_7_4.class);
             startActivity(img);
+            this.finish();
         }
-        if(flag_next==2){
-            adapter_last = new StateAdapter_last(this);
-            lv.setAdapter(adapter_last);
 
-        }else if(flag_next==0){
 
-            spell_adapter  = new Adapter_spelling(this);
-            lv.setAdapter(spell_adapter);
-            // adapter_single = new StateAdapter_single(this);
 
-            // lv.setAdapter(adapter_single);
-        }
-        else if(flag_next == 1) {
-            adapter = new StateAdapter(this);
-            lv.setAdapter(adapter);
-
-        }
-        if(flag_next>0)
-        flag_next--;
     }
 
     public void next(View v){
