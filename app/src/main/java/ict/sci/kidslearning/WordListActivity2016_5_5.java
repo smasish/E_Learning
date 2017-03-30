@@ -122,8 +122,8 @@ public class WordListActivity2016_5_5 extends Activity {
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
 
-            String id = "" + datasource.getAllComments().get(0).getId();
-            datasource.updateOrderItems(id, "6");
+//            String id = "" + datasource.getAllComments().get(0).getId();
+//            datasource.updateOrderItems(id, "6");
 
 
             // Intent img = new Intent(WordListActivity.this, AboutActivity.class);

@@ -18,7 +18,7 @@ public class Activity_Onepic_2016_6 extends Activity {
     Context con;
     private TextView question;
     int indexArray=0,question_ind=0;
-    int counter =20;
+    int counter =5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +32,6 @@ public class Activity_Onepic_2016_6 extends Activity {
         //getActionBar().setBackgroundDrawable((getResources().getDrawable(R.drawable.actionbar)));
 
         con = this;
-
-
 
         indexArray=0;
         question_ind = 0;
@@ -67,6 +65,7 @@ public class Activity_Onepic_2016_6 extends Activity {
 
     public void back(View v){
 
+        this.finish();
     }
 
 

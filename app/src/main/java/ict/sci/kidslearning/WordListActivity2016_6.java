@@ -73,7 +73,7 @@ public class WordListActivity2016_6 extends Activity {
 
         ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.word_set, android.R.layout.simple_list_item_1);
        // lv.setAdapter(aa);
-        flag_next = 0;
+        flag_next = 1;
        // adapter = new StateAdapter(this);
        // lv.setAdapter(adapter);
 
@@ -117,38 +117,29 @@ public class WordListActivity2016_6 extends Activity {
 
     public void back(View v){
 
+        if(flag_next>0)
+            flag_next--;
         if(question_ind>0)
             question_ind--;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
-        if(flag_next==3){
-            String id = "" + datasource.getAllComments().get(0).getId();
-            datasource.updateOrderItems(id, "6");
+        if(flag_next==0){
+//            String id = "" + datasource.getAllComments().get(0).getId();
+//            datasource.updateOrderItems(id, "6");
 
 
             // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2016_6.this, QuestionActivity.class);
+            Intent img = new Intent(WordListActivity2016_6.this, Activity_Onepic_2016_6.class);
             startActivity(img);
+            this.finish();
         }
-        if(flag_next==2){
-            adapter_last = new StateAdapter_last(this);
-            lv.setAdapter(adapter_last);
 
-        }else if(flag_next==0){
-
-            spell_adapter  = new Adapter_spelling(this);
-            lv.setAdapter(spell_adapter);
-            // adapter_single = new StateAdapter_single(this);
-
-            // lv.setAdapter(adapter_single);
-        }
         else if(flag_next == 1) {
-            adapter = new StateAdapter(this);
-            lv.setAdapter(adapter);
+            adapter_single = new StateAdapter_single(this);
+            lv.setAdapter(adapter_single);
 
         }
-        if(flag_next>0)
-        flag_next--;
+
     }
 
     public void next(View v){
@@ -160,12 +151,12 @@ public class WordListActivity2016_6 extends Activity {
         question_ind++;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_6)[question_ind]);
 
-        if(flag_next == 1) {
+        if(flag_next == 2) {
             adapter = new StateAdapter(this);
             lv.setAdapter(adapter);
 
         }
-        else if(flag_next==2){
+        else if(flag_next==3){
           //  String id = "" + datasource.getAllComments().get(0).getId();
 
             int arr= datasource.getAllComments().size()-1;

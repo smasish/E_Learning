@@ -63,6 +63,8 @@ public class Activity_Onepic_2016_5_5 extends Activity {
     }
 
     public void back(View v){
+        Intent img = new Intent(Activity_Onepic_2016_5_5.this, WordListActivity2016_5_31.class);
+        startActivity(img);
         this.finish();
 
     }

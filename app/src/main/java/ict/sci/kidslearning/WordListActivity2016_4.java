@@ -104,7 +104,7 @@ int counter =20;
 
     public void back(View v){
 
-        Intent img = new Intent(WordListActivity2016_4.this, QuestionActivity2016_1.class);
+        Intent img = new Intent(WordListActivity2016_4.this, QuestionActivity2016_4.class);
         startActivity(img);
         this.finish();
 
