@@ -608,6 +608,26 @@
 
     </string-array>
 
+    <string-array name="word_list_2016_3_3">
+        <item name="set1">রাস্তা </item>
+        <item name="set1">আম্মা </item>
+        <item name="set1">যুদ্ধ </item>
+        <item name="set1"> আব্বা </item>
+        <item name="set1"> সপ্তম</item>
+        <item name="set1">স্কুল </item>
+    </string-array>
+
+    <string-array name="word_list_2016_3_3right">
+        <item name="set1">স্ত</item>
+        <item name="set1"> ম্ম</item>
+        <item name="set1">দ্ধ </item>
+        <item name="set1"> ব্ব</item>
+        <item name="set1">ট্ট </item>
+        <item name="set1">স্ক  </item>
+
+    </string-array>
+
+
     <string-array name="word_list_2016_3">
         <item name="set1"> ৫.১ গল্পে পাখি দুইটির নাম কি ? </item>
         <item name="set1"> ৫.২ ঘুঘু আর পায়রা কাঠবিড়ালির কাছে পেয়ারা চাইল কেন ? </item>
