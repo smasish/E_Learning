@@ -10,6 +10,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import ict.sci.kidslearning.utils.AlertMessage;
 
 
@@ -33,11 +35,15 @@ public class ImageWordActivity16_1 extends AppCompatActivity {
 
 	};
 
-
+	private String[] imglist = {
+			"তালা","থালা","গাড়ি","ঘড়ি","ডাল","ঢাল","ঢাক","ডাব","জগ","ঝড়"
+	};
 
 	int indexArray=0,question_ind=0;
 	int counter =20;
 	private CommentsDataSource datasource;
+
+	private TextView title1,title2;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +61,13 @@ public class ImageWordActivity16_1 extends AppCompatActivity {
 		question_ind = 8;
 		counter =20;
 
+		title1 = (TextView)findViewById(R.id.t1);
+
+		title2 = (TextView)findViewById(R.id.t2);
+
+
+
+
 		question = (TextView)findViewById(R.id.question_id);
 
 		question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
@@ -66,6 +79,9 @@ public class ImageWordActivity16_1 extends AppCompatActivity {
 		int i = indexArray;
 		imb1.setImageResource(imageArray[i]);
 		imb2.setImageResource(imageArray[i+1]);
+
+		title1.setText(""+imglist[i]);
+		title2.setText(""+imglist[i+1]);
 
 		datasource = new CommentsDataSource(this);
 		datasource.open();
@@ -110,6 +126,9 @@ public class ImageWordActivity16_1 extends AppCompatActivity {
 
 			indexArray = i+2;
 			Log.d("next-----", "start===="+indexArray);
+
+			title1.setText(""+imglist[i]);
+			title2.setText(""+imglist[i+1]);
 		}else{
 			Intent img = new Intent(ImageWordActivity16_1.this, WordListActivity2016_1_5.class);
 			   startActivity(img);
