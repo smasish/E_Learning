@@ -75,37 +75,43 @@ public class QuestionActivity2016_3 extends AppCompatActivity {
 
 
     public void oneone(View v){
-        counter--;
+        if(counter>1)
+            counter--;
         Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
     }
     public void onetwo(View v){
 
 
-        counter--;
+        if(counter>1)
+            counter--;
         Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
 
     }
     public void onethree(View v){
 
 
-        counter--;
+        if(counter>1)
+            counter--;
         Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
     }
     public void twoone(View v){
 
-        counter--;
+        if(counter>1)
+            counter--;
         Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
 
     }
     public void twotwo(View v){
 
         Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
-        counter--;
+        if(counter>1)
+            counter--;
     }
     public void twothree(View v){
 
         Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
-        counter--;
+        if(counter>1)
+            counter--;
     }
 
     public void showbox(View v){
