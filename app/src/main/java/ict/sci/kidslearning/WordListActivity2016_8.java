@@ -111,7 +111,8 @@ public class WordListActivity2016_8 extends Activity {
     public void single_toggle(View v){
 
         Toast.makeText(con,"Wrong",Toast.LENGTH_LONG).show();
-        counter--;
+        if(counter>1)
+            counter--;
 
     }
 
@@ -158,9 +159,9 @@ public class WordListActivity2016_8 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=16)
+            if(counter>=5)
                 datasource.updatevocabulary(id, "Mastery");
-            else  if(counter>=10)
+            else  if(counter>=4)
                 datasource.updatevocabulary(id, "Developed");
             else
                 datasource.updatevocabulary(id, "Need Improvement");

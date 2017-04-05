@@ -17,7 +17,7 @@ public class Activity_Onepic_2016_9 extends Activity {
     private TextView story;
     private TextView question;
     int indexArray=0,question_ind=0;
-    int counter =20;
+    int counter =3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class Activity_Onepic_2016_9 extends Activity {
 
         indexArray=0;
         question_ind = 1;
-        counter =20;
+        counter =3;
 
         question = (TextView)findViewById(R.id.question_id);
 

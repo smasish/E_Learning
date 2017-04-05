@@ -42,9 +42,10 @@ public class HomeActivity extends AppCompatActivity {
 
         categories = new ArrayList<String>();
         categories.add(" বছর  নির্বাচন করুন");
-        categories.add("২০১৫");
-        categories.add("২০১৬");
+      //  categories.add("২০১৫");
         categories.add("২০১৭");
+        categories.add("২০১৬");
+
 
 
 
@@ -85,9 +86,9 @@ public class HomeActivity extends AppCompatActivity {
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
-            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
-            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-            startActivity(i);
+//            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+//            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+//            startActivity(i);
 
         }
         else if(year_flag == 2){
@@ -101,9 +102,9 @@ public class HomeActivity extends AppCompatActivity {
         year_flag = year.getSelectedItemPosition();
         Log.d("=year===", "..year..>>"+year_flag );
         if(year_flag == 1) {
-            Intent i = new Intent(HomeActivity.this, QuestionActivity_g1b2.class);
-            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-            startActivity(i);
+//            Intent i = new Intent(HomeActivity.this, QuestionActivity_g1b2.class);
+//            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+//            startActivity(i);
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, QuestionActivity2016_2.class);
@@ -116,9 +117,9 @@ public class HomeActivity extends AppCompatActivity {
         year_flag = year.getSelectedItemPosition();
         Log.d("=year===", "..year..>>"+year_flag );
         if(year_flag == 1) {
-        Intent i = new Intent(HomeActivity.this, WordListActivity_G1q3.class);
-        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-        startActivity(i);
+//        Intent i = new Intent(HomeActivity.this, WordListActivity_G1q3.class);
+//        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+//        startActivity(i);
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, QuestionActivity2016_3.class);
@@ -132,9 +133,9 @@ public class HomeActivity extends AppCompatActivity {
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
-            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
-            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-            startActivity(i);
+//            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+//            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+//            startActivity(i);
 
         }
         else if(year_flag == 2){
@@ -148,9 +149,9 @@ public class HomeActivity extends AppCompatActivity {
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
-            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
-            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-            startActivity(i);
+//            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+//            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+//            startActivity(i);
 
         }
         else if(year_flag == 2){
@@ -164,9 +165,9 @@ public class HomeActivity extends AppCompatActivity {
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
-            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
-            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-            startActivity(i);
+//            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+//            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+//            startActivity(i);
 
         }
         else if(year_flag == 2){
@@ -181,9 +182,9 @@ public class HomeActivity extends AppCompatActivity {
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
-            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
-            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-            startActivity(i);
+//            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+//            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+//            startActivity(i);
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_7.class);
@@ -200,9 +201,9 @@ public class HomeActivity extends AppCompatActivity {
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
-            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
-            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-            startActivity(i);
+//            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+//            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+//            startActivity(i);
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_8.class);
@@ -219,9 +220,9 @@ public class HomeActivity extends AppCompatActivity {
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
-            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
-            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-            startActivity(i);
+//            Intent i = new Intent(HomeActivity.this, QuestionActivity.class);
+//            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+//            startActivity(i);
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_9.class);
