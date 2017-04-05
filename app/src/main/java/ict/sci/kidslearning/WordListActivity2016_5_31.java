@@ -31,7 +31,7 @@ public class WordListActivity2016_5_31 extends Activity {
     private CommentsDataSource datasource;
     private TextView question;
     int indexArray=0,question_ind=0;
-    int counter =20;
+    int counter =15;
 
     private int[] imageArray = {
             R.drawable.dab, R.drawable.tv, R.drawable.chair, R.drawable.mas, R.drawable.train,
@@ -57,7 +57,7 @@ public class WordListActivity2016_5_31 extends Activity {
 
         indexArray=0;
         question_ind = 7;
-        counter =20;
+        counter =15;
 
         question = (TextView)findViewById(R.id.question_id);
 
@@ -110,8 +110,8 @@ public class WordListActivity2016_5_31 extends Activity {
     public void single_toggle(View v){
 
         Toast.makeText(con,"Wrong",Toast.LENGTH_LONG).show();
-        counter--;
-
+        if(counter>0)
+            counter--;
     }
 
     public void back(View v){
@@ -155,9 +155,9 @@ public class WordListActivity2016_5_31 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=16)
+            if(counter>=9)
                 datasource.updatevocabulary(id, "Mastery");
-            else  if(counter>=10)
+            else  if(counter>=6)
                 datasource.updatevocabulary(id, "Developed");
             else
                 datasource.updatevocabulary(id, "Need Improvement");

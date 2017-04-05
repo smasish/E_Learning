@@ -18,7 +18,7 @@ public class Activity_Onepic_2016_5_5 extends Activity {
 
     private TextView question;
     int indexArray=0,question_ind=0;
-    int counter =3;
+    int counter =6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class Activity_Onepic_2016_5_5 extends Activity {
 
         indexArray=0;
 
-        counter =3;
+        counter =6;
 
         question = (TextView)findViewById(R.id.question_id);
 
@@ -60,6 +60,8 @@ public class Activity_Onepic_2016_5_5 extends Activity {
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         startActivity(i);
         this.finish();
+
+
     }
 
     public void back(View v){
