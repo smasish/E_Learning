@@ -15,7 +15,7 @@ public class Activity_Onepic_2016_9 extends Activity {
     Context con;
 
     private TextView story;
-    private TextView question;
+    private TextView question,group;
     int indexArray=0,question_ind=0;
     int counter =3;
 
@@ -30,6 +30,8 @@ public class Activity_Onepic_2016_9 extends Activity {
         con = this;
         //getActionBar().setBackgroundDrawable((getResources().getDrawable(R.drawable.actionbar)));
 
+        group = (TextView)findViewById(R.id.group1);
+        group.setText("সাবলীলতা");
 
         story = (TextView)findViewById(R.id.des_id);
 

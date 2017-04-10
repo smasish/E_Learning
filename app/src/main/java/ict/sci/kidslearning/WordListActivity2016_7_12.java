@@ -29,7 +29,7 @@ public class WordListActivity2016_7_12 extends Activity {
 
     int flag_next = 0;
     private CommentsDataSource datasource;
-    private TextView question;
+    private TextView question,group;
     int indexArray=0,question_ind=0;
     int counter =5;
 
@@ -75,6 +75,9 @@ public class WordListActivity2016_7_12 extends Activity {
         flag_next = 1;
        // adapter = new StateAdapter(this);
        // lv.setAdapter(adapter);
+
+        group = (TextView)findViewById(R.id.group1);
+        group.setText("সাবলীলতা");
 
 
         adapter_single = new StateAdapter_single(this);
@@ -136,6 +139,7 @@ public class WordListActivity2016_7_12 extends Activity {
         }
 
         else if(flag_next == 1) {
+            group.setText("সাবলীলতা");
             adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
 
@@ -153,6 +157,7 @@ public class WordListActivity2016_7_12 extends Activity {
 
         if(flag_next==2){
           //  String id = "" + datasource.getAllComments().get(0).getId();
+            group.setText("বোধগম্যতা");
 
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();

@@ -14,7 +14,7 @@ public class Activity_Onepic_2016_8 extends Activity {
 
 
 
-    private TextView story;
+    private TextView story,group;
     Context con;
     private TextView question;
     int indexArray=0,question_ind=0;
@@ -38,6 +38,10 @@ public class Activity_Onepic_2016_8 extends Activity {
         indexArray=0;
         question_ind = 0;
         counter =6;
+
+        group = (TextView)findViewById(R.id.group1);
+        group.setText("সাবলীলতা");
+
 
         question = (TextView)findViewById(R.id.question_id);
 

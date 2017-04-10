@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class Activity_Onepic_2016_7 extends Activity {
 
     Context con;
-    private TextView question;
+    private TextView question,group;
     int indexArray=0,question_ind=0;
     int counter =20;
   //  private TextView story;
@@ -31,6 +31,9 @@ public class Activity_Onepic_2016_7 extends Activity {
         indexArray=0;
         question_ind = 0;
         counter =6;
+        group = (TextView)findViewById(R.id.group1);
+        group.setText("সাবলীলতা");
+
         question = (TextView)findViewById(R.id.question_id);
 
         question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
