@@ -17,7 +17,7 @@ public class QuestionActivity2016_2 extends AppCompatActivity {
     private Context con;
     private ImageButton imb1,imb2,imb3,imb4,imb5,imb6;
 
-    private TextView question;
+    private TextView question,group;
     int indexArray=0,question_ind=0;
 
     int counter=11, lettersor=0;
@@ -44,6 +44,9 @@ public class QuestionActivity2016_2 extends AppCompatActivity {
 
         con = this;
         indexArray=0;
+
+        group = (TextView)findViewById(R.id.group1);
+        group.setText("বর্ণজ্ঞান");
 
         question = (TextView)findViewById(R.id.question_id);
 

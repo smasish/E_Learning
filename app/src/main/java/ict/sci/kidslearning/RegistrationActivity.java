@@ -64,15 +64,15 @@ public class RegistrationActivity extends AppCompatActivity {
         str_roll=roll.getText().toString();
 
 //        if(str_school.length()<2){
-//            AlertMessage.showMessage(con, "Sorry", "Invalied school name.");
+//            AlertMessage.showMessage(con, "Sorry", "Wrong school name.");
 //        }else if(str_stud.length()<3){
-//            AlertMessage.showMessage(con, "Sorry", "Invalied student name.");
+//            AlertMessage.showMessage(con, "Sorry", "Wrong student name.");
 //        }
 //        else if(str_class.length()<1){
-//            AlertMessage.showMessage(con, "Sorry", "Invalied class name.");
+//            AlertMessage.showMessage(con, "Sorry", "Wrong class name.");
 //        }
-//        else if(str_roll.length()<3){
-//            AlertMessage.showMessage(con, "Sorry", "Invalied roll no.");
+//        else if(str_roll.length()<2 && str_roll.length()>3){
+//            AlertMessage.showMessage(con, "Sorry", "Wrong roll no.");
 //        }
 //        else {
 
@@ -99,8 +99,8 @@ public class RegistrationActivity extends AppCompatActivity {
             startActivity(i);
             this.finish();
 
- //       }
-    }
+        }
+ //   }
 
 
 }

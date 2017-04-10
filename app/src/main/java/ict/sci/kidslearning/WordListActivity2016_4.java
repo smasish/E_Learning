@@ -28,7 +28,7 @@ public class WordListActivity2016_4 extends Activity {
 
     int flag_next = 0;
     private CommentsDataSource datasource;
-    private TextView question;
+    private TextView question,group;
     int indexArray=0,question_ind=0;
 int counter =20;
     @Override
@@ -46,6 +46,10 @@ int counter =20;
         indexArray=0;
         question_ind = 5;
         counter =20;
+
+        group = (TextView)findViewById(R.id.group1);
+        group.setText("সাবলীলতা");
+
 
         question = (TextView)findViewById(R.id.question_id);
 
