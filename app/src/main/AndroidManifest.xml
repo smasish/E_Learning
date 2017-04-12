@@ -82,6 +82,11 @@
         <activity android:name=".ImageWordActivity16_1" android:screenOrientation="landscape"/>
 
 
+
+        <activity android:name=".WordListActivity2017_1" android:screenOrientation="landscape"/>
+
+        <activity android:name=".QuestionActivity2017_1" android:screenOrientation="landscape"/>
+
     </application>
 
 </manifest>

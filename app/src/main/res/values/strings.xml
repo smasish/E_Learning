@@ -784,5 +784,14 @@
         </string>
 
 
+    <string-array name="word_list_2017_1">
+        <item name="set1"> ও	| ঔ</item>
+        <item name="set1"> এ	| ঐ</item>
+        <item name="set1"> উ |	ঊ</item>
+        <item name="set1">ই	| ঈ </item>
+        <item name="set1"> ঋ	| এ</item>
+    </string-array>
+
+
 
 </resources>
