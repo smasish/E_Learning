@@ -790,8 +790,27 @@
         <item name="set1"> উ |	ঊ</item>
         <item name="set1">ই	| ঈ </item>
         <item name="set1"> ঋ	| এ</item>
+
     </string-array>
 
+    <string-array name="word_list_2017_1_3">
+        <item name="set1">শব্দ	  |  বর্ণ</item>
+        <item name="set1">জগ | জ-গ</item>
+        <item name="set1">চক  |চ-ক</item>
+        <item name="set1"> ইট | ই-ট</item>
+        <item name="set1"> খই | খ-ই</item>
+        <item name="set1">এক  |এ-ক</item>
 
+    </string-array>
+
+    <string-array name="word_list_2017_1_21">
+        <item name="set1">ছাতা </item>
+        <item name="set1"> ঘোড়া</item>
+        <item name="set1">ডিম </item>
+        <item name="set1"> ফুল</item>
+        <item name="set1"> বেলুন</item>
+        <item name="set1"> </item>
+
+    </string-array>
 
 </resources>
