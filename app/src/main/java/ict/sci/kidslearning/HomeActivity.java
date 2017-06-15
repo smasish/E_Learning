@@ -74,11 +74,7 @@ public class HomeActivity extends AppCompatActivity {
 
         gone1 = (Button)findViewById(R.id.button3);
 
-
-
     }
-
-
 
 
     public void g1b1(View v){

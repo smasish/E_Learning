@@ -8,7 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -23,6 +25,36 @@ public class RegistrationActivity extends AppCompatActivity {
     String str_school="",str_stud="",str_class="",str_roll="";
     private Context con;
 
+    private Spinner school_code;
+
+    String code[] = { "নির্বাচন করুন",
+            "55495217003",
+            "55495217005",
+            "55499422007",
+            "55499433008",
+            "55499439003",
+            "55499444009",
+            "55499450002",
+            "55499450007",
+            "55495228005",
+            "55495238017",
+            "55495238014",
+            "55495247001",
+            "55495257003",
+            "55495257008",
+            "55495276006",
+            "55495299009",
+            "55499455001",
+            "55499499012",
+            "55499499014",
+            "55495285001",
+    };
+
+    List<String> categories;
+    ArrayAdapter<String> dataAdapter;
+
+    int code_flag = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,14 +65,22 @@ public class RegistrationActivity extends AppCompatActivity {
         datasource = new CommentsDataSource(this);
         datasource.open();
 
-        school = (EditText) findViewById(R.id.school_id);
+      //  school = (EditText) findViewById(R.id.school_id);
         student = (EditText) findViewById(R.id.student_id);
         class_name = (EditText) findViewById(R.id.class_id);
         roll = (EditText) findViewById(R.id.roll_id);
 
+        school_code = (Spinner)findViewById(R.id.school_id);
+      //  categories = new ArrayList<String>();
+
+
+        dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, code);
+        school_code.setAdapter(dataAdapter);
+        code_flag = school_code.getSelectedItemPosition();
+
 
         if(SharedPreferencesHelper.getName(con).length()>2){
-            school.setText(""+SharedPreferencesHelper.getName(con));
+           // school.setText(""+SharedPreferencesHelper.getName(con));
             class_name.setText(""+SharedPreferencesHelper.getClass(con));
         }
 
