@@ -890,6 +890,40 @@
 
     </string-array>
 
+    <string-array name="word_list_2017_3_12">
+        <item name="set1"> উচ্চ | চ্চ </item>
+        <item name="set1">চৌদ্দ  | চ্দ </item>
+        <item name="set1"> বন্ধ | ব্ধ</item>
+        <item name="set1"> ক্লাস | ক্লা</item>
+        <item name="set1"> সপ্তাহ | প্তা</item>
+
+    </string-array>
+
+    <string-array name="word_list_2017_3_13">
+        <item name="set1"> সপ্তাহ</item>
+        <item name="set1"> গাছ</item>
+        <item name="set1">ঘড়ি </item>
+        <item name="set1">ফুল </item>
+        <item name="set1">   ঢোল</item>
+        <item name="set1"> ময়ূর</item>
+    </string-array>
+
+
+    <string name="story_2017_3">
+        মিনি দুধ খায়। ভাত খায়। মাছের কাঁটা চিবিয়ে খায়। ছোট্ট মেয়ে নিতু দেখে আর হাসে। মিনি লেজ নাড়ে। মিঁউ মিঁউ করে। নিতুদের বাড়িতে কোন ইঁদুর নেই। নিতু মিনিকে খুব ভালোবাসে।
+        </string>
+
+    <string-array name="word_list_2017_3_left">
+        <item name="set1"> ২.১ মিনি কী কী খায় ? </item>
+        <item name="set1"> ২.২ গল্পে মিনি কে ? </item>
+        <item name="set1"> ২.৩ নিতুর বাড়িতে ইঁদুর নেই কেন ?</item>
+
+    </string-array>
+    <string-array name="word_list_2017_3_right">
+        <item name="set1">  দুধ/ভাত/মাছের কাঁটা </item>
+        <item name="set1">  বিড়াল</item>
+        <item name="set1">মিনির জন্য/ মিনি ইঁদুর তাড়ায় </item>
+    </string-array>
 
     <string-array name="ssss">
         <item name="set1"> </item>
@@ -899,5 +933,7 @@
         <item name="set1"> </item>
 
     </string-array>
+
+
 
 </resources>
