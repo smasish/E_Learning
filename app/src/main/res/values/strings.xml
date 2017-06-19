@@ -826,12 +826,78 @@
 
     </string-array>
 
+
+
     <string-array name="word_list_2017_1_23">
         <item name="set1"> চাকা | 	চা | 	চাচা, চাচি, চাল, চালা, চামুচ </item>
         <item name="set1"> কাক	 | কা | 	কাকা, কাকি, কাঁচি,কাজ, কাঠ </item>
         <item name="set1"> পানি	| পা	 | পাতা, পাখি, পাকা, পাই, পাল </item>
         <item name="set1"> তাল	| তা | 	তালা, তালি, তালু, তার, তামা </item>
         <item name="set1"> ডাল	| ডা | 	ডালা, ডালি, ডাব, ডানা, ডালিম</item>
+    </string-array>
+
+
+
+
+    <string-array name="word_list_2017_2_12">
+        <item name="set1">বর্ণের সঙ্গে কার-চিহ্ন যুক্ত করে পড়ি </item>
+        <item name="set1"> বা</item>
+        <item name="set1"> কি</item>
+        <item name="set1">ফু </item>
+        <item name="set1">  তে </item>
+        <item name="set1"> গৃ</item>
+
+    </string-array>
+
+    <string-array name="word_list_2017_2_13">
+        <item name="set1"> বা |	বা	| বাবা	</item>
+
+        <item name="set1">চি	 | নি	| চিনি		 </item>
+        <item name="set1"> বে	| লা | 	বেলা	</item>
+        <item name="set1"> ঘৃ	| ণা |	ঘৃণা	</item>
+        <item name="set1"> মুু	| ড়ি |	মুুড়ি	</item>
+
+
+    </string-array>
+
+    <string-array name="word_list_2017_2_21">
+
+        <item name="set1"> চোখ</item>
+        <item name="set1">পাতা </item>
+        <item name="set1"> তালা</item>
+        <item name="set1">ময়ূর </item>
+        <item name="set1">আপেল </item>
+
+
+    </string-array>
+
+    <string-array name="word_list_2017_2_22">
+        <item name="set1"> ঘড়ি</item>
+        <item name="set1">চুল </item>
+        <item name="set1"> খবর</item>
+        <item name="set1"> তবলা</item>
+        <item name="set1">আকাশ  </item>
+
+
+    </string-array>
+
+    <string-array name="word_list_2017_2_23">
+        <item name="set1"> আমার--------------।</item>
+        <item name="set1"> ----------------খাই।</item>
+        <item name="set1"> --------------বাজাই।</item>
+        <item name="set1"> ----------------পড়ি।</item>
+        <item name="set1"> ---------------ডাকে।</item>
+
+    </string-array>
+
+
+    <string-array name="ssss">
+        <item name="set1"> </item>
+        <item name="set1"> </item>
+        <item name="set1"> </item>
+        <item name="set1"> </item>
+        <item name="set1"> </item>
+
     </string-array>
 
 </resources>

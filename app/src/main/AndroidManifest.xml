@@ -80,12 +80,15 @@
         <activity android:name=".Activity_Onepic_2016_9" android:screenOrientation="landscape"/>
 
         <activity android:name=".ImageWordActivity16_1" android:screenOrientation="landscape"/>
+        <activity android:name=".ImageWordActivity17_2" android:screenOrientation="landscape"/>
 
-
+        <activity android:name=".ImgWordListAct2017_2" android:screenOrientation="landscape"/>
 
         <activity android:name=".WordListActivity2017_1" android:screenOrientation="landscape"/>
+        <activity android:name=".WordListActivity2017_2" android:screenOrientation="landscape"/>
 
         <activity android:name=".QuestionActivity2017_1" android:screenOrientation="landscape"/>
+        <activity android:name=".QuestionActivity2017_2" android:screenOrientation="landscape"/>
 
     </application>
 

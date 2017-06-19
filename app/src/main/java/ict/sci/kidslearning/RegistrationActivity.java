@@ -98,7 +98,8 @@ public class RegistrationActivity extends AppCompatActivity {
 
     public void next(View v){
 
-        str_school=school.getText().toString();
+      //  str_school=school.getText().toString();
+        str_school = code[code_flag];
         str_stud=student.getText().toString();
         str_class=class_name.getText().toString();
         str_roll=roll.getText().toString();
