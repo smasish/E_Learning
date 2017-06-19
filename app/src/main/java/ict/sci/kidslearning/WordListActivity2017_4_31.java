@@ -18,9 +18,9 @@ import android.widget.Toast;
 
 import ict.sci.kidslearning.utils.AlertMessage;
 
-public class WordListActivity2017_3 extends Activity {
+public class WordListActivity2017_4_31 extends Activity {
 
-    Context con;
+
     ListView lv;
     StateAdapter adapter;
     Adapter_spelling spell_adapter;
@@ -29,13 +29,19 @@ public class WordListActivity2017_3 extends Activity {
 
     int flag_next = 0;
     private CommentsDataSource datasource;
+    Context con;
     private TextView question;
     int indexArray=0,question_ind=0;
-int counter =20;
+    int counter =20;
 
-    private int[] karArray = {
-            R.drawable.nupur, R.drawable.door, R.drawable.farmar, R.drawable.boat, R.drawable.horin,R.drawable.horin
+    private int[] imageArray = {
+            R.drawable.dab, R.drawable.tv, R.drawable.chair, R.drawable.mas, R.drawable.train,
     };
+
+    private int[] imageArray2 = {
+            R.drawable.dabkai, R.drawable.maskini, R.drawable.fishing, R.drawable.noukaychori, R.drawable.basibajai,
+    };
+
 
 
     @Override
@@ -45,18 +51,18 @@ int counter =20;
         // getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.word_list_2016_1);
+        setContentView(R.layout.word_list_2016_2_43);
         con = this;
 
 
 
         indexArray=0;
-        question_ind = 7;
-        counter =20;
+        question_ind = 0;
+        counter =3;
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -67,7 +73,7 @@ int counter =20;
 
         ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.word_set, android.R.layout.simple_list_item_1);
        // lv.setAdapter(aa);
-        flag_next = 0;
+        flag_next = 1;
        // adapter = new StateAdapter(this);
        // lv.setAdapter(adapter);
 
@@ -97,7 +103,7 @@ int counter =20;
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
+        String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 
@@ -111,51 +117,34 @@ int counter =20;
 
     public void back(View v){
 
-        Intent img = new Intent(WordListActivity2017_3.this, QuestionActivity2016_1.class);
-        startActivity(img);
-        this.finish();
-
+        if(flag_next>0)
+            flag_next--;
         if(question_ind>0)
             question_ind--;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
-//        if(flag_next==3){
-//            String id = "" + datasource.getAllComments().get(0).getId();
-//            datasource.updateOrderItems(id, "6");
-//
-//
-//            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-//            Intent img = new Intent(WordListActivity2016_1.this, QuestionActivity.class);
-//            startActivity(img);
-//        }
-//        if(flag_next==2){
-//            adapter_last = new StateAdapter_last(this);
-//            lv.setAdapter(adapter_last);
-//
-//        }else if(flag_next==0){
-//
-//            spell_adapter  = new Adapter_spelling(this);
-//            lv.setAdapter(spell_adapter);
-//            // adapter_single = new StateAdapter_single(this);
-//
-//            // lv.setAdapter(adapter_single);
-//        }
-//        else if(flag_next == 1) {
-//            adapter = new StateAdapter(this);
-//            lv.setAdapter(adapter);
-//
-//        }
-//        if(flag_next>0)
-//        flag_next--;
+
+      if(flag_next==0){
+            Intent img = new Intent(WordListActivity2017_4_31.this, Activity_Onepic_2016_3.class);
+            startActivity(img);
+            this.finish();
+
+        }
+
+
     }
 
     public void next(View v){
+
         flag_next++;
+
+
         Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
         question_ind++;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
-        if(flag_next==2){
+
+      if(flag_next==2){
           //  String id = "" + datasource.getAllComments().get(0).getId();
 
             int arr= datasource.getAllComments().size()-1;
@@ -168,32 +157,15 @@ int counter =20;
             else
                 datasource.updatevocabulary(id, "Need Improvement");
 
-
+            Log.d("=k=size==", ".flaginnggggggg." +flag_next);
 
            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2017_3.this, Activity_Onepic_2017_3.class);
-            startActivity(img);
+         //   Intent img = new Intent(WordListActivity2016_7_4.this, Activity_Onepic_2016_7_4.class);
+         //   startActivity(img);
             this.finish();
-       }
-//        if(flag_next==2){
-//            adapter_last = new StateAdapter_last(this);
-//            lv.setAdapter(adapter_last);
-//
-//
-//        }
-//        else if(flag_next==0){
-//
-//            spell_adapter  = new Adapter_spelling(this);
-//            lv.setAdapter(spell_adapter);
-//           // adapter_single = new StateAdapter_single(this);
-//
-//           // lv.setAdapter(adapter_single);
-//        }
-        else if(flag_next == 1) {
-            adapter_last = new StateAdapter_last(this);
-            lv.setAdapter(adapter_last);
-
         }
+
+
 
     }
 
@@ -204,12 +176,10 @@ int counter =20;
         private final Context con;
 
         public StateAdapter_single(final Context c) {
-            super(c, R.layout.word_singleletter, getResources().getStringArray(R.array.word_list_2017_3_12));
+            super(c, R.layout.story_pic_ques17_4, getResources().getStringArray(R.array.pic_word_2017_4));
             con = c;
             //flag_next = 1;
             // TODO Auto-generated constructor stub
-
-
         }
 
         @Override
@@ -219,15 +189,26 @@ int counter =20;
             if (v == null) {
                 final LayoutInflater vi = (LayoutInflater) con
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.word_singleletter, null);
+                v = vi.inflate(R.layout.story_pic_ques17_4, null);
             }
-            final TextView textView = (TextView) v
-                    .findViewById(R.id.single_letter);
-            textView.setText(""+getResources().getStringArray(R.array.word_list_2017_3_12)[position]);
 
-//            final TextView textView2 = (TextView) v
-//                    .findViewById(R.id.bottom_row);
-//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+
+            final TextView left = (TextView) v
+                    .findViewById(R.id.wordlist_id);
+            //left.setText(""+getResources().getStringArray(R.array.word_list_2016_7_5)[position]);
+            left.setText(""+getResources().getStringArray(R.array.pic_word_2017_4)[position]);
+            //img.setImageResource(""+getResources().getStringArray(R.array.single_letter)[position]);
+
+            final TextView textView2 = (TextView) v
+                    .findViewById(R.id.left1);
+            textView2.setText("৩.১ শিক্ষার্থী ছবিতে কি কি আছে বলতে  পারে " );
+
+            final TextView textView3 = (TextView) v
+                    .findViewById(R.id.top_row);
+            textView3.setText("৩.২ উল্লিখিত শব্দের অর্থ / ধারণা নিজের ভাষায় বলতে পারবে " );
+            final TextView textView4 = (TextView) v
+                    .findViewById(R.id.top_row_right);
+            textView4.setText(" ৩.২  চিহ্নিত শব্দ দিয়ে বাক্য বলতে পারে " );
 
             return v;
         }
@@ -243,7 +224,6 @@ int counter =20;
             //flag_next = 1;
             // TODO Auto-generated constructor stub
 
-
         }
 
         @Override
@@ -255,10 +235,15 @@ int counter =20;
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 v = vi.inflate(R.layout.spelling_sound, null);
             }
+
+
             final TextView textView = (TextView) v
-                    .findViewById(R.id.single_letter);
+                    .findViewById(R.id.top_row2);
             textView.setText(""+getResources().getStringArray(R.array.spelling_sound)[position]);
 
+            final ImageView img = (ImageView) v
+                    .findViewById(R.id.img_id);
+            img.setImageResource(imageArray2[position]);
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);
 //            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
@@ -273,9 +258,9 @@ int counter =20;
         private final Context con;
 
         public StateAdapter_last(final Context c) {
-            super(c, R.layout.imagerow_list, getResources().getStringArray(R.array.word_list_2017_3_13));
+            super(c, R.layout.image_word2016_2, getResources().getStringArray(R.array.word2016_2_43));
             con = c;
-            //flag_next = 1;
+           // flag_next = 2;
             // TODO Auto-generated constructor stub
 
 
@@ -288,16 +273,16 @@ int counter =20;
             if (v == null) {
                 final LayoutInflater vi = (LayoutInflater) con
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.imagerow_list, null);
+                v = vi.inflate(R.layout.image_word2016_2, null);
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.top_row);
-            textView.setText(""+getResources().getStringArray(R.array.word_list_2017_3_13)[position]);
-
+            textView.setText(""+getResources().getStringArray(R.array.word2016_2_43)[position]);
             final ImageView img = (ImageView) v
                     .findViewById(R.id.img_id);
-            img.setImageResource(karArray[position]);
-            //img.setImageResource(""+getResources().getStringArray(R.array.single_letter)[position]);
+            img.setImageResource(imageArray2[position]);
+
+
 
 //            final TextView textView2 = (TextView) v
 //                    .findViewById(R.id.bottom_row);
@@ -316,7 +301,7 @@ int counter =20;
         private final Context con;
 
         public StateAdapter(final Context c) {
-            super(c, R.layout.wordmeaning_1st, getResources().getStringArray(R.array.word_list_2017_2_13));
+            super(c, R.layout.word_sent_16_8_5, getResources().getStringArray(R.array.word_list_2016_8_left));
             con = c;
             // TODO Auto-generated constructor stub
         }
@@ -328,21 +313,17 @@ int counter =20;
             if (v == null) {
                 final LayoutInflater vi = (LayoutInflater) con
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.wordmeaning_1st, null);
+                v = vi.inflate(R.layout.word_sent_16_8_5, null);
             }
             final TextView textView = (TextView) v
                     .findViewById(R.id.top_row);
-            textView.setText(""+getResources().getStringArray(R.array.word_list_2017_2_13)[position]);
+            textView.setText(""+getResources().getStringArray(R.array.word_list_2016_8_right)[position]);
 
-//            final TextView textView2 = (TextView) v
-//                    .findViewById(R.id.bottom_row);
-//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+            final TextView textView2 = (TextView) v
+                    .findViewById(R.id.left1);
+            textView2.setText(""+getResources().getStringArray(R.array.word_list_2016_8_left)[position]);
 
             return v;
         }
     }
-
-
-
-
 }

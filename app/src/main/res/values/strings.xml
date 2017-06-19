@@ -904,7 +904,7 @@
         <item name="set1"> গাছ</item>
         <item name="set1">ঘড়ি </item>
         <item name="set1">ফুল </item>
-        <item name="set1">   ঢোল</item>
+        <item name="set1">  ঢোল</item>
         <item name="set1"> ময়ূর</item>
     </string-array>
 
@@ -924,6 +924,48 @@
         <item name="set1">  বিড়াল</item>
         <item name="set1">মিনির জন্য/ মিনি ইঁদুর তাড়ায় </item>
     </string-array>
+
+    <string-array name="word_list_2017_4_21">
+        <item name="set1"> ল	| ফ</item>
+        <item name="set1"> ব	| ক</item>
+        <item name="set1"> ল	| ব</item>
+        <item name="set1">ল	 | ক	| ম </item>
+        <item name="set1"> ল	| ঈ	| গ</item>
+
+    </string-array>
+
+    <string-array name="word_list_2017_4_22">
+        <item name="set1">ক ল | ি ,    ী ,   া ,   ু , ে </item>
+        <item name="set1">ম য়ে | ি ,    ী ,   া ,   ু , ে</item>
+        <item name="set1"> ড ম | ি ,    ী ,   া ,   ু , ে</item>
+        <item name="set1">ন দ | ি ,    ী ,   া ,   ু , ে</item>
+        <item name="set1"> ফ ল | ি ,    ী ,   া ,   ু , ে</item>
+
+    </string-array>
+
+    <string-array name="word_list_2017_4_23">
+        <item name="set1"> যুক্তবর্ণ   | শব্দ </item>
+        <item name="set1">ন্দ | আনন্দ </item>
+        <item name="set1"> ান্ডা   | ঠান্ডা</item>
+        <item name="set1"> য্য  | সূয্যি </item>
+        <item name="set1"> চ্ছ  | ইচ্ছা </item>
+        <item name="set1"> ন্ন  | রান্না</item>
+
+    </string-array>
+
+
+
+    <string-array name="pic_word_2017_4">
+        <item name="set1"> কাশফুল/ফুল  </item>
+        <item name="set1">  মেয়ে</item>
+        <item name="set1"> নৌকা</item>
+        <item name="set1"> নদী</item>
+        <item name="set1"> গাছ/তালগাছ</item>
+        <item name="set1"> ঝুড়ি</item>
+        <item name="set1"> অন্যান্য </item>
+
+    </string-array>
+
 
     <string-array name="ssss">
         <item name="set1"> </item>
