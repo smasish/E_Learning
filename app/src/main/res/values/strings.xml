@@ -967,6 +967,46 @@
     </string-array>
 
 
+    <string-array name="word_list_2017_5_31">
+        <item name="set1">শান্ত </item>
+        <item name="set1"> উষ্ণ</item>
+        <item name="set1">”ঞ্চল </item>
+        <item name="set1">দুগ্ধ </item>
+        <item name="set1">  জ্ঞান</item>
+
+    </string-array>
+
+    <string-array name="word_list_2017_5_32">
+        <item name="set1">  পেঁপে</item>
+        <item name="set1"> বেলী/
+            বেলীফুল /ফুল </item>
+        <item name="set1"> আনারস</item>
+        <item name="set1">  ট্রেন/  রেলগাড়ী</item>
+        <item name="set1"> আঙ্গুল</item>
+
+    </string-array>
+    <string-array name="word_list_2017_5_32_right">
+        <item name="set1"> আমি  পেঁপে খাই। </item>
+        <item name="set1">  বেলী একটি ফুলের নাম।</item>
+        <item name="set1"> আনারস একটি রসালো ফল।</item>
+        <item name="set1"> আমি ট্রেনে মামা বাড়ী যাব।</item>
+        <item name="set1">আমার আঙ্গুল পরিস্কার। </item>
+
+    </string-array>
+
+        <string name="story_2017_5">
+       রাজকন্যা ও পরি \n
+
+এক ছিল রাজা। রাজার ছিল কুসুম নামের এক রাজকন্যা। সে সব সময় একা থাকতো । তার  কোন বন্ধু ছিল না। তাই তার মনে খুব দু:খ। একদিন সে পুকুর পাড়ে কাঁদতে লাগলো। হঠাৎ এক পরি তার সামনে এলো। পরিকে দেখে রাজকন্যা খুশি হলো। পরী বলল, আজ থেকে আমিই তোমার বন্ধু। আমি আকাশে থাকি। আমি তোমার সাথে রোজ দেখা করব,  খেলব। আমরা খুব মজা করব। কুসুম খুব খুশি হলো।
+        </string>
+
+    <string-array name="word_list_2017_5">
+        <item name="set1"> ৫.১	রাজকন্যার নাম কী ছিল ?</item>
+        <item name="set1"> ৫.২	রাজকন্যার মনে দু:খ কেন ?</item>
+        <item name="set1">৫.৩	তুমি রাজকন্যা হলে পরিকে দেখে কী করতে ?  </item>
+
+    </string-array>
+
     <string-array name="ssss">
         <item name="set1"> </item>
         <item name="set1"> </item>
