@@ -83,6 +83,8 @@
         <activity android:name=".Activity_Onepic_2017_4" android:screenOrientation="landscape"/>
         <activity android:name=".Activity_Onepic_2017_5" android:screenOrientation="landscape"/>
         <activity android:name=".Activity_Onepic_2017_6" android:screenOrientation="landscape"/>
+        <activity android:name=".Activity_Onepic_2017_7" android:screenOrientation="landscape"/>
+        <activity android:name=".Activity_Onepic_2017_7_5" android:screenOrientation="landscape"/>
 
         <activity android:name=".ImageWordActivity16_1" android:screenOrientation="landscape"/>
         <activity android:name=".ImageWordActivity17_2" android:screenOrientation="landscape"/>
@@ -99,6 +101,9 @@
         <activity android:name=".WordListActivity2017_3_21" android:screenOrientation="landscape"/>
         <activity android:name=".WordListActivity2017_4_31" android:screenOrientation="landscape"/>
         <activity android:name=".WordListActivity2017_5_51" android:screenOrientation="landscape"/>
+        <activity android:name=".WordListActivity2017_7_5" android:screenOrientation="landscape"/>
+        <activity android:name=".WordListActivity2017_7_31" android:screenOrientation="landscape"/>
+
 
         <activity android:name=".QuestionActivity2017_1" android:screenOrientation="landscape"/>
         <activity android:name=".QuestionActivity2017_2" android:screenOrientation="landscape"/>
