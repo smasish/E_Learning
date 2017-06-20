@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Activity_Onepic_2017_7 extends Activity {
@@ -16,6 +17,8 @@ public class Activity_Onepic_2017_7 extends Activity {
     int counter =20;
   //  private TextView story;
 
+    private ImageButton img;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -23,9 +26,12 @@ public class Activity_Onepic_2017_7 extends Activity {
         // getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.one_pic_ques_2016_7);
+        setContentView(R.layout.one_pic_ques_2017_7);
         con = this;
 
+        img = (ImageButton)findViewById(R.id.x1);
+
+        img.setImageResource(R.drawable.story7);
 
 
         indexArray=0;

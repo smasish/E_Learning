@@ -34,7 +34,7 @@ public class WordListActivity2017_3 extends Activity {
 int counter =20;
 
     private int[] karArray = {
-            R.drawable.nupur, R.drawable.door, R.drawable.farmar, R.drawable.boat, R.drawable.horin,R.drawable.horin
+            R.drawable.tree, R.drawable.gori, R.drawable.ful, R.drawable.dul, R.drawable.moyur
     };
 
 

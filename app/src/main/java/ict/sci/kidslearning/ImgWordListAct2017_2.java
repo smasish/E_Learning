@@ -34,11 +34,11 @@ public class ImgWordListAct2017_2 extends Activity {
 int counter =20;
 
     private int[] imageArray = {
-            R.drawable.ducks, R.drawable.nouka, R.drawable.alu, R.drawable.mula, R.drawable.horin,
+            R.drawable.chosma, R.drawable.dab_kai, R.drawable.dul_bajai, R.drawable.boi_pori, R.drawable.bang,
     };
 
     private int[] karArray = {
-            R.drawable.nupur, R.drawable.door, R.drawable.farmar, R.drawable.boat, R.drawable.horin,
+            R.drawable.chuk, R.drawable.pata, R.drawable.tala, R.drawable.moyur, R.drawable.apel,
     };
 
     private int[] imageArray2 = {
@@ -309,7 +309,7 @@ int counter =20;
 
             final ImageView img = (ImageView) v
                     .findViewById(R.id.img_id);
-            img.setImageResource(karArray[position]);
+            img.setImageResource(imageArray[position]);
             //img.setImageResource(""+getResources().getStringArray(R.array.single_letter)[position]);
 
 //            final TextView textView2 = (TextView) v
