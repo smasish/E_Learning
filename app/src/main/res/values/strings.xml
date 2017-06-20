@@ -781,6 +781,33 @@
 
         </string>
 
+    <string-array name="word_list_2017_21">
+        <item name="set1"> ছাতা |   ছা </item>
+        <item name="set1">ঘোড়া  | ঘো </item>
+        <item name="set1"> ডিম |  ডি </item>
+        <item name="set1">ফুল |  ফু </item>
+        <item name="set1"> বেলুন  |  বে </item>
+
+    </string-array>
+
+    <string-array name="word_list_2017_22">
+    <item name="set1"> বাড়ি	| গাড়ি	 | ছবি</item>
+    <item name="set1">কথা 	| বই	| মাথা </item>
+    <item name="set1">  খেলা	| চাই	 | মেলা </item>
+    <item name="set1"> ডাব	| গাব	| মই</item>
+    <item name="set1"> ফুল	| পাতা	| ছাতা</item>
+
+</string-array>
+
+
+    <string-array name="word_list_2017_23">
+        <item name="set1"> শব্দ	|প্রথম ধ্বনি	 | প্রথম ধ্বনির মিলযুক্ত অন্যান্য শব্দ</item>
+        <item name="set1"> চাকা 	| চা |	চাচা, চাচি, চাল, চালা, চামুচ</item>
+        <item name="set1"> কাক	| কা |	কাকা, কাকি, কাঁচি,কাজ, কাঠ </item>
+        <item name="set1"> পানি	| পা |	পাতা, পাখি, পাকা, পাই, পাল</item>
+        <item name="set1"> তাল	| তা |	তালা, তালি, তালু, তার, তামা </item>
+        <item name="set1"> ডাল	| ডা |	ডালা, ডালি, ডাব, ডানা, ডালিম </item>
+    </string-array>
 
     <string-array name="word_list_2017_1">
         <item name="set1"> ও	| ঔ</item>

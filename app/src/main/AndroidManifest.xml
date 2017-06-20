@@ -94,6 +94,7 @@
         <activity android:name=".ImgWordListAct2017_2" android:screenOrientation="landscape"/>
 
         <activity android:name=".WordListActivity2017_1" android:screenOrientation="landscape"/>
+        <activity android:name=".WordListActivity2017_1_13" android:screenOrientation="landscape"/>
         <activity android:name=".WordListActivity2017_2" android:screenOrientation="landscape"/>
         <activity android:name=".WordListActivity2017_3" android:screenOrientation="landscape"/>
         <activity android:name=".WordListActivity2017_4" android:screenOrientation="landscape"/>

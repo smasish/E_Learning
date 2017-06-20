@@ -25,7 +25,10 @@ public class WordListActivity2017_1 extends Activity {
     StateAdapter adapter;
     Adapter_spelling spell_adapter;
     StateAdapter_last adapter_last;
+    StateAdapter_image  stateAdapter_image;
     StateAdapter_single adapter_single;
+    StateAdapter_dhoni stateAdapter_dhoni;
+    StateAdapter_shobdo stateAdapter_shobdo;
 
     int flag_next = 0;
     private CommentsDataSource datasource;
@@ -35,7 +38,7 @@ public class WordListActivity2017_1 extends Activity {
     int counter =9;
 
     private int[] imageArray = {
-            R.drawable.dab, R.drawable.tv, R.drawable.chair, R.drawable.mas, R.drawable.train,
+            R.drawable.chata, R.drawable.gura, R.drawable.dim, R.drawable.ful3, R.drawable.belun,
     };
 
     private int[] imageArray2 = {
@@ -76,13 +79,16 @@ public class WordListActivity2017_1 extends Activity {
 
         ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.word_set, android.R.layout.simple_list_item_1);
        // lv.setAdapter(aa);
-        flag_next = 1;
+        flag_next = 0;
        // adapter = new StateAdapter(this);
        // lv.setAdapter(adapter);
 
 
-        adapter_single = new StateAdapter_single(this);
-        lv.setAdapter(adapter_single);
+        stateAdapter_image = new StateAdapter_image(this);
+        lv.setAdapter(stateAdapter_image);
+
+   //     adapter_single = new StateAdapter_single(this);
+  //      lv.setAdapter(adapter_single);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -144,41 +150,100 @@ public class WordListActivity2017_1 extends Activity {
         flag_next++;
 
 
-        Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
-        question_ind++;
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
+        if(flag_next == 1) {
+            group.setText("সাবলীলতা");
+            adapter_single = new StateAdapter_single(this);
+                  lv.setAdapter(adapter_single);
+        }
 
-          //  String id = "" + datasource.getAllComments().get(0).getId();
+        else if(flag_next == 2) {
+            group.setText("সাবলীলতা");
+            stateAdapter_dhoni = new  StateAdapter_dhoni(this);
+            lv.setAdapter(stateAdapter_dhoni);
+        }
+        else if(flag_next == 3) {
+            group.setText("সাবলীলতা");
+            stateAdapter_shobdo = new StateAdapter_shobdo(this);
+            lv.setAdapter(stateAdapter_shobdo);
+        }
 
-            int arr= datasource.getAllComments().size()-1;
+
+        else if(flag_next == 4) {
+            Log.d("=k=size==" + datasource.getAllComments().size(), "...id..>>" + flag_next);
+            question_ind++;
+            question.setText("" + getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
+
+            //  String id = "" + datasource.getAllComments().get(0).getId();
+
+            int arr = datasource.getAllComments().size() - 1;
             String id = "" + datasource.getAllComments().get(arr).getId();
-            Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=5)
+            Log.d("=k=size==" + datasource.getAllComments().size(), "..");
+            if (counter >= 5)
                 datasource.updatevocabulary(id, "Mastery");
-            else  if(counter>=4)
+            else if (counter >= 4)
                 datasource.updatevocabulary(id, "Developed");
             else
                 datasource.updatevocabulary(id, "Need Improvement");
 
-            Log.d("=k=size==", ".flaginnggggggg." +flag_next);
+            Log.d("=k=size==", ".flaginnggggggg." + flag_next);
 
-           // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
+            // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
             Intent img = new Intent(WordListActivity2017_1.this, QuestionActivity2017_1.class);
             startActivity(img);
             this.finish();
 
-
+        }
 
 
     }
 
 
-
-    private class StateAdapter_single extends ArrayAdapter<String> {
+    private class StateAdapter_image extends ArrayAdapter<String> {
         // StateListActivty context;
         private final Context con;
 
-        public StateAdapter_single(final Context c) {
+        public StateAdapter_image(final Context c) {
+            super(c, R.layout.imagerow_list, getResources().getStringArray(R.array.word_list_2017_21));
+            con = c;
+            //flag_next = 1;
+            // TODO Auto-generated constructor stub
+
+
+        }
+
+        @Override
+        public View getView(final int position, final View convertView,
+                            final ViewGroup parent) {
+            View v = convertView;
+            if (v == null) {
+                final LayoutInflater vi = (LayoutInflater) con
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.imagerow_list, null);
+            }
+            final TextView textView = (TextView) v
+                    .findViewById(R.id.top_row);
+            textView.setText(""+getResources().getStringArray(R.array.word_list_2017_21)[position]);
+
+            final ImageView img = (ImageView) v
+                    .findViewById(R.id.img_id);
+            img.setImageResource(imageArray[position]);
+            //img.setImageResource(""+getResources().getStringArray(R.array.single_letter)[position]);
+
+//            final TextView textView2 = (TextView) v
+//                    .findViewById(R.id.bottom_row);
+//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+
+            return v;
+        }
+    }
+
+
+
+    private class StateAdapter_shobdo extends ArrayAdapter<String> {
+        // StateListActivty context;
+        private final Context con;
+
+        public StateAdapter_shobdo(final Context c) {
             super(c, R.layout.word_sent_17_1, getResources().getStringArray(R.array.word_list_2017_1));
             con = c;
             //flag_next = 1;
@@ -200,6 +265,79 @@ public class WordListActivity2017_1 extends Activity {
                     .findViewById(R.id.left1);
             //left.setText(""+getResources().getStringArray(R.array.word_list_2016_7_5)[position]);
             left.setText(""+getResources().getStringArray(R.array.word_list_2017_1)[position]);
+            //img.setImageResource(""+getResources().getStringArray(R.array.single_letter)[position]);
+
+//            final TextView textView2 = (TextView) v
+//                    .findViewById(R.id.bottom_row);
+//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+
+            return v;
+        }
+    }
+
+    private class StateAdapter_dhoni extends ArrayAdapter<String> {
+        // StateListActivty context;
+        private final Context con;
+
+        public StateAdapter_dhoni(final Context c) {
+            super(c, R.layout.word_sent_17_1, getResources().getStringArray(R.array.word_list_2017_23));
+            con = c;
+            //flag_next = 1;
+            // TODO Auto-generated constructor stub
+        }
+
+        @Override
+        public View getView(final int position, final View convertView,
+                            final ViewGroup parent) {
+            View v = convertView;
+            if (v == null) {
+                final LayoutInflater vi = (LayoutInflater) con
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.word_sent_17_1, null);
+            }
+
+
+            final TextView left = (TextView) v
+                    .findViewById(R.id.left1);
+            //left.setText(""+getResources().getStringArray(R.array.word_list_2016_7_5)[position]);
+            left.setText(""+getResources().getStringArray(R.array.word_list_2017_23)[position]);
+            //img.setImageResource(""+getResources().getStringArray(R.array.single_letter)[position]);
+
+//            final TextView textView2 = (TextView) v
+//                    .findViewById(R.id.bottom_row);
+//            textView2.setText(""+getResources().getStringArray(R.array.wordmeaning_1st_letter)[position]);
+
+            return v;
+        }
+    }
+
+
+    private class StateAdapter_single extends ArrayAdapter<String> {
+        // StateListActivty context;
+        private final Context con;
+
+        public StateAdapter_single(final Context c) {
+            super(c, R.layout.word_sent_17_1, getResources().getStringArray(R.array.word_list_2017_22));
+            con = c;
+            //flag_next = 1;
+            // TODO Auto-generated constructor stub
+        }
+
+        @Override
+        public View getView(final int position, final View convertView,
+                            final ViewGroup parent) {
+            View v = convertView;
+            if (v == null) {
+                final LayoutInflater vi = (LayoutInflater) con
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.word_sent_17_1, null);
+            }
+
+
+            final TextView left = (TextView) v
+                    .findViewById(R.id.left1);
+            //left.setText(""+getResources().getStringArray(R.array.word_list_2016_7_5)[position]);
+            left.setText(""+getResources().getStringArray(R.array.word_list_2017_22)[position]);
             //img.setImageResource(""+getResources().getStringArray(R.array.single_letter)[position]);
 
 //            final TextView textView2 = (TextView) v
