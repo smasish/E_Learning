@@ -196,6 +196,8 @@ public class QuestionActivity2017_2 extends AppCompatActivity {
             indexArray = i-6;
             Log.d("back-----"+i, "start===="+indexArray);
 
+        }else{
+            this.finish();
         }
 
     }

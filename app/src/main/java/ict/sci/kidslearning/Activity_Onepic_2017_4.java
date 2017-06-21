@@ -72,7 +72,9 @@ public class Activity_Onepic_2017_4 extends Activity {
     }
 
     public void back(View v){
-
+        Intent i = new Intent(Activity_Onepic_2017_4.this, WordListActivity2017_4.class);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        startActivity(i);
         this.finish();
     }
 
