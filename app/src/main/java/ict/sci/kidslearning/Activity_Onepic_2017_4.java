@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import ict.sci.kidslearning.utils.AlertMessage;
@@ -19,6 +20,9 @@ public class Activity_Onepic_2017_4 extends Activity {
     private TextView question;
     int indexArray=0,question_ind=0;
     int counter =20;
+    private ImageButton img;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +31,15 @@ public class Activity_Onepic_2017_4 extends Activity {
         // getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.one_pic_ques_2016_3);
+        setContentView(R.layout.one_pic_ques_2016_7);
 
         //getActionBar().setBackgroundDrawable((getResources().getDrawable(R.drawable.actionbar)));
 
         con = this;
 
+        img = (ImageButton)findViewById(R.id.x1);
 
+        img.setImageResource(R.drawable.story_17_4);
 
         indexArray=0;
         question_ind = 0;
@@ -43,9 +49,9 @@ public class Activity_Onepic_2017_4 extends Activity {
 
         question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
 
-        story = (TextView)findViewById(R.id.des_id);
+ //       story = (TextView)findViewById(R.id.des_id);
 
-        story.setText("");
+//        story.setText("");
 
 
 

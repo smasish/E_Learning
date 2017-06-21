@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import ict.sci.kidslearning.utils.AlertMessage;
@@ -18,6 +19,7 @@ public class Activity_Onepic_2017_9 extends Activity {
     private TextView question,group;
     int indexArray=0,question_ind=0;
     int counter =3;
+    private ImageButton img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,11 @@ public class Activity_Onepic_2017_9 extends Activity {
         setContentView(R.layout.one_pic_ques_2016_9);
         con = this;
         //getActionBar().setBackgroundDrawable((getResources().getDrawable(R.drawable.actionbar)));
+
+        img = (ImageButton)findViewById(R.id.x1);
+
+        img.setImageResource(R.drawable.story_17_9);
+
 
         group = (TextView)findViewById(R.id.group1);
         group.setText("সাবলীলতা");

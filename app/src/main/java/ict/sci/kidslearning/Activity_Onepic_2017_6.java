@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import ict.sci.kidslearning.utils.AlertMessage;
@@ -19,6 +20,7 @@ public class Activity_Onepic_2017_6 extends Activity {
     private TextView question;
     int indexArray=0,question_ind=0;
     int counter =20;
+    private ImageButton img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,9 @@ public class Activity_Onepic_2017_6 extends Activity {
 
         con = this;
 
+        img = (ImageButton)findViewById(R.id.x1);
+
+        img.setImageResource(R.drawable.story_17_6);
 
 
         indexArray=0;
