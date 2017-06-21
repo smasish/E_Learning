@@ -84,6 +84,7 @@
         android:textSize="20dp"
         android:id="@+id/roll_id"
         android:textColor="@color/red"
+        android:inputType="number"
         android:hint="রোল নং ঃ" />
 
     <Button

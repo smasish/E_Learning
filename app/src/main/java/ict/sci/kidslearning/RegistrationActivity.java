@@ -96,7 +96,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
         school_code = (Spinner)findViewById(R.id.school_id);
       //  categories = new ArrayList<String>();
-
+        code_flag = 0;
 
         dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, code);
         school_code.setAdapter(dataAdapter);
@@ -123,23 +123,25 @@ public class RegistrationActivity extends AppCompatActivity {
     public void next(View v){
 
       //  str_school=school.getText().toString();
+        code_flag = school_code.getSelectedItemPosition();
+
         str_school = code[code_flag];
         str_stud=student.getText().toString();
         str_class=class_name.getText().toString();
         str_roll=roll.getText().toString();
 
-//        if(str_school.length()<2){
-//            AlertMessage.showMessage(con, "Sorry", "Wrong school name.");
-//        }else if(str_stud.length()<3){
-//            AlertMessage.showMessage(con, "Sorry", "Wrong student name.");
-//        }
-//        else if(str_class.length()<1){
-//            AlertMessage.showMessage(con, "Sorry", "Wrong class name.");
-//        }
-//        else if(str_roll.length()<2 && str_roll.length()>3){
-//            AlertMessage.showMessage(con, "Sorry", "Wrong roll no.");
-//        }
-//        else {
+        if(code_flag == 0){
+            AlertMessage.showMessage(con, "Sorry", "Wrong school name.");
+        }else if(str_stud.length()<3){
+            AlertMessage.showMessage(con, "Sorry", "Wrong student name.");
+        }
+        else if(str_class.length()<1){
+            AlertMessage.showMessage(con, "Sorry", "Wrong class name.");
+        }
+        else if(str_roll.length()<2 && str_roll.length()>3){
+            AlertMessage.showMessage(con, "Sorry", "Wrong roll no.");
+        }
+        else {
 
         final Calendar c = Calendar.getInstance();
         mYear = c.get(Calendar.YEAR);
@@ -148,10 +150,10 @@ public class RegistrationActivity extends AppCompatActivity {
         int mon = mMonth+1;
         String dat = mDay+"-"+mon+"-"+mYear;
 
-        Log.d("=year==="+dat, "..year..>>"+mYear+"---day: "+mDay );
+        Log.d("=str_school==="+str_school, "..year..>>"+mYear+"---day: "+mDay );
 
         Comment comment = null;
-            datasource.createComment(str_school,str_stud,str_class,dat,"Developed","Need Improvement","Developed",0,str_roll);
+            datasource.createComment(str_school,str_stud,str_class,dat,"Developed","Need \nImprovement","Developed",0,str_roll);
             List<Comment> values = datasource.getAllComments();
 
             Log.d("====k===="+values.get(0).getScore(), "...id..>>" + values.get(0).getComment());
@@ -165,7 +167,7 @@ public class RegistrationActivity extends AppCompatActivity {
             this.finish();
 
         }
- //   }
+    }
 
 
 }

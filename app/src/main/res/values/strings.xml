@@ -27,9 +27,14 @@
     </string>
 
     <string name="btn_title0">Name &amp; Roll</string>
-    <string name="btn_title1">Letters</string>
-    <string name="btn_title2">Vocabulary</string>
-    <string name="btn_title3">Phonetics</string>
+    <!--<string name="btn_title1">Letters</string>-->
+    <!--<string name="btn_title2">Vocabulary</string>-->
+    <!--<string name="btn_title3">Phonetics</string>-->
+
+    <string name="btn_title1"> প্রথম অংশ </string>
+    <string name="btn_title2">দ্বিতীয়  অংশ </string>
+    <string name="btn_title3">তৃতীয় অংশ </string>
+
     <string name="btn_title4">Date</string>
 
     <string name="btn_res">Result List</string>

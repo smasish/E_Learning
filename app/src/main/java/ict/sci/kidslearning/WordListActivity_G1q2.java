@@ -185,7 +185,7 @@ public class WordListActivity_G1q2 extends Activity {
             else  if(counter>=10)
                 datasource.updatevocabulary(id, "Developed");
             else
-                datasource.updatevocabulary(id, "Need Improvement");
+                datasource.updatevocabulary(id, "Need \nImprovement");
 //
 //
 //           // Intent img = new Intent(WordListActivity.this, AboutActivity.class);

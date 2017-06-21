@@ -169,7 +169,7 @@ public class WordListActivity2016_5_3 extends Activity {
             else  if(counter>=10)
                 datasource.updatevocabulary(id, "Developed");
             else
-                datasource.updatevocabulary(id, "Need Improvement");
+                datasource.updatevocabulary(id, "Need \nImprovement");
 
             Log.d("=k=size==", ".flaginnggggggg." +flag_next);
 

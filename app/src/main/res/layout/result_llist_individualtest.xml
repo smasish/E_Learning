@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    <!--  -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/name_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView01"
+            android:layout_marginTop="10dp"
+
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" >
+        </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/grade_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView01"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="1dp"
+            android:textColor="@color/black"
+
+            android:textSize="22sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/roll_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView01"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" >
+        </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/dat_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView01"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/phonetic_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView01"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/letter_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView01"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/vocab_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="TextView01"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" >
+        </TextView>
+
+    </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+

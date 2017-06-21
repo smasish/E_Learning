@@ -142,7 +142,7 @@ public class ResultListActivity extends Activity {
         private final Context con;
 
         public StateAdapter_single(final Context c) {
-            super(c, R.layout.result_llist_individual, datasource.getAllComments());
+            super(c, R.layout.result_llist_individualtest, datasource.getAllComments());
             con = c;
             //flag_next = 1;
             // TODO Auto-generated constructor stub
@@ -157,7 +157,7 @@ public class ResultListActivity extends Activity {
             if (v == null) {
                 final LayoutInflater vi = (LayoutInflater) con
                         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                v = vi.inflate(R.layout.result_llist_individual, null);
+                v = vi.inflate(R.layout.result_llist_individualtest, null);
             }
             final TextView dat = (TextView) v
                     .findViewById(R.id.dat_id);
@@ -206,6 +206,7 @@ public class ResultListActivity extends Activity {
 
             String name = "" + datasource.getAllComments().get(position).getStudent();
             name_tx.setText("Name: "+name);
+            Log.d("=nameeeeee==="+name, "---------." );
 
             final TextView class_tx = (TextView) v
                     .findViewById(R.id.grade_id);
