@@ -72,7 +72,7 @@ public class WordListActivity2017_7_31 extends Activity {
 
         ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.word_set, android.R.layout.simple_list_item_1);
        // lv.setAdapter(aa);
-        flag_next = 0;
+        flag_next = 1;
        // adapter = new StateAdapter(this);
        // lv.setAdapter(adapter);
 
@@ -155,7 +155,7 @@ public class WordListActivity2017_7_31 extends Activity {
         question_ind++;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
-        if(flag_next==2){
+        if(flag_next==3){
           //  String id = "" + datasource.getAllComments().get(0).getId();
             group.setText("বোধগম্যতা");
 
@@ -188,7 +188,7 @@ public class WordListActivity2017_7_31 extends Activity {
 //
 //           // lv.setAdapter(adapter_single);
 //        }
-        else if(flag_next == 1) {
+        else if(flag_next == 2) {
             adapter = new StateAdapter(this);
             lv.setAdapter(adapter);
 

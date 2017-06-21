@@ -95,7 +95,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/jolpori"
+
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="65dp"
                 android:padding="5dp"

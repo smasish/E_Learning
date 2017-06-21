@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Activity_Onepic_2017_7_5 extends Activity {
@@ -16,6 +17,8 @@ public class Activity_Onepic_2017_7_5 extends Activity {
     private TextView question;
     int indexArray=0,question_ind=0;
     int counter =5;
+    private ImageButton img;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,9 @@ public class Activity_Onepic_2017_7_5 extends Activity {
         context = this;
         //getActionBar().setBackgroundDrawable((getResources().getDrawable(R.drawable.actionbar)));
 
+        img = (ImageButton)findViewById(R.id.x1);
+
+        img.setImageResource(R.drawable.story_burushiyal);
 
         story = (TextView)findViewById(R.id.des_id);
 
@@ -51,7 +57,7 @@ public class Activity_Onepic_2017_7_5 extends Activity {
 
     public void back(View v){
 
-        Intent i = new Intent(Activity_Onepic_2017_7_5.this, WordListActivity2016_7_12.class);
+        Intent i = new Intent(Activity_Onepic_2017_7_5.this, WordListActivity2017_7_31.class);
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         startActivity(i);
         this.finish();
