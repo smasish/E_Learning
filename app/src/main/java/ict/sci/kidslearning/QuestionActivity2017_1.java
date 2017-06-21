@@ -194,6 +194,10 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
             indexArray = i-6;
             Log.d("back-----"+i, "start===="+indexArray);
 
+        }else{
+            Intent img = new Intent(QuestionActivity2017_1.this, WordListActivity2017_1.class);
+            startActivity(img);
+            this.finish();
         }
 
     }

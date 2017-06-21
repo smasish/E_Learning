@@ -79,7 +79,7 @@ public class WordListActivity2017_1 extends Activity {
 
         ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.word_set, android.R.layout.simple_list_item_1);
        // lv.setAdapter(aa);
-        flag_next = 0;
+        flag_next = 1;
        // adapter = new StateAdapter(this);
        // lv.setAdapter(adapter);
 
@@ -135,30 +135,29 @@ public class WordListActivity2017_1 extends Activity {
 
         if(flag_next == 1) {
             group.setText("সাবলীলতা");
-            adapter_single = new StateAdapter_single(this);
-            lv.setAdapter(adapter_single);
+
+            stateAdapter_image = new StateAdapter_image(this);
+            lv.setAdapter(stateAdapter_image);
         }
 
         else if(flag_next == 2) {
             group.setText("সাবলীলতা");
-            stateAdapter_dhoni = new  StateAdapter_dhoni(this);
-            lv.setAdapter(stateAdapter_dhoni);
+            adapter_single = new StateAdapter_single(this);
+            lv.setAdapter(adapter_single);
         }
         else if(flag_next == 3) {
             group.setText("সাবলীলতা");
-            stateAdapter_shobdo = new StateAdapter_shobdo(this);
-            lv.setAdapter(stateAdapter_shobdo);
+            stateAdapter_dhoni = new  StateAdapter_dhoni(this);
+            lv.setAdapter(stateAdapter_dhoni);
         }
 
         else if(flag_next == 0) {
-
-            stateAdapter_image = new StateAdapter_image(this);
-            lv.setAdapter(stateAdapter_image);
+          //  Intent img = new Intent(WordListActivity2017_1.this, HomeActivity.class);
+         //   startActivity(img);
+           this.finish();
 
         }
-        else{
-            this.finish();
-        }
+
     }
 
     public void next(View v){
@@ -166,25 +165,25 @@ public class WordListActivity2017_1 extends Activity {
         flag_next++;
 
 
-        if(flag_next == 1) {
+        if(flag_next == 2) {
             group.setText("সাবলীলতা");
             adapter_single = new StateAdapter_single(this);
                   lv.setAdapter(adapter_single);
         }
 
-        else if(flag_next == 2) {
+        else if(flag_next == 3) {
             group.setText("সাবলীলতা");
             stateAdapter_dhoni = new  StateAdapter_dhoni(this);
             lv.setAdapter(stateAdapter_dhoni);
         }
-        else if(flag_next == 3) {
+        else if(flag_next == 4) {
             group.setText("সাবলীলতা");
             stateAdapter_shobdo = new StateAdapter_shobdo(this);
             lv.setAdapter(stateAdapter_shobdo);
         }
 
 
-        else if(flag_next == 4) {
+        else if(flag_next == 5) {
             Log.d("=k=size==" + datasource.getAllComments().size(), "...id..>>" + flag_next);
             question_ind++;
             question.setText("" + getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);

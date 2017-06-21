@@ -125,7 +125,7 @@ public class WordListActivity2017_1_13 extends Activity {
         //    lv.setAdapter(adapter);
         }
         else if(flag_next == 0) {
-            Intent img = new Intent(WordListActivity2017_1_13.this, Activity_Onepic_2016_9.class);
+            Intent img = new Intent(WordListActivity2017_1_13.this, QuestionActivity2017_1.class);
             startActivity(img);
             this.finish();
         }
