@@ -5,6 +5,9 @@
     <string name="right"> সঠিক  </string>
     <string name="wrong"> ভুল </string>
 
+    <string name="nextpage">পরবর্তী  পাতা</string>
+    <string name="savenextpage">জমা করুন এবং \Nপরবর্তী  পাতায় যান</string>
+
     <string name="first"> প্রথম </string>
     <string name="second"> দ্বিতীয় </string>
     <string name="third"> তৃতীয় </string>
