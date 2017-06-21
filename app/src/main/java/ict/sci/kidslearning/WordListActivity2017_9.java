@@ -129,11 +129,12 @@ public class WordListActivity2017_9 extends Activity {
 
         if(flag_next == 1) {
             group.setText("সাবলীলতা");
-            adapter = new StateAdapter(this);
-            lv.setAdapter(adapter);
+            adapter_single = new StateAdapter_single(this);
+            lv.setAdapter(adapter_single);
         }
+
         else if(flag_next == 0) {
-            Intent img = new Intent(WordListActivity2017_9.this, Activity_Onepic_2016_9.class);
+            Intent img = new Intent(WordListActivity2017_9.this, Activity_Onepic_2017_9.class);
             startActivity(img);
             this.finish();
         }

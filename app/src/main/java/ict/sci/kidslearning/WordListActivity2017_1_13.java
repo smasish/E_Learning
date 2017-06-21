@@ -35,8 +35,6 @@ public class WordListActivity2017_1_13 extends Activity {
     int counter =9;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub

@@ -133,7 +133,7 @@ public class WordListActivity2017_7_31 extends Activity {
 
 
             // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
-            Intent img = new Intent(WordListActivity2017_7_31.this, Activity_Onepic_2016_7.class);
+            Intent img = new Intent(WordListActivity2017_7_31.this, Activity_Onepic_2017_7.class);
             startActivity(img);
             this.finish();
         }

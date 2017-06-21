@@ -135,12 +135,28 @@ public class WordListActivity2017_1 extends Activity {
 
         if(flag_next == 1) {
             group.setText("সাবলীলতা");
-            adapter = new StateAdapter(this);
-            lv.setAdapter(adapter);
+            adapter_single = new StateAdapter_single(this);
+            lv.setAdapter(adapter_single);
         }
+
+        else if(flag_next == 2) {
+            group.setText("সাবলীলতা");
+            stateAdapter_dhoni = new  StateAdapter_dhoni(this);
+            lv.setAdapter(stateAdapter_dhoni);
+        }
+        else if(flag_next == 3) {
+            group.setText("সাবলীলতা");
+            stateAdapter_shobdo = new StateAdapter_shobdo(this);
+            lv.setAdapter(stateAdapter_shobdo);
+        }
+
         else if(flag_next == 0) {
-            Intent img = new Intent(WordListActivity2017_1.this, Activity_Onepic_2016_9.class);
-            startActivity(img);
+
+            stateAdapter_image = new StateAdapter_image(this);
+            lv.setAdapter(stateAdapter_image);
+
+        }
+        else{
             this.finish();
         }
     }

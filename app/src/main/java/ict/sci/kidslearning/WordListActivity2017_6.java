@@ -125,7 +125,7 @@ public class WordListActivity2017_6 extends Activity {
 
 
       if(flag_next==0){
-            Intent img = new Intent(WordListActivity2017_6.this, Activity_Onepic_2016_3.class);
+            Intent img = new Intent(WordListActivity2017_6.this, Activity_Onepic_2017_6.class);
             startActivity(img);
             this.finish();
 

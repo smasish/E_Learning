@@ -132,15 +132,15 @@ public class WordListActivity2017_8 extends Activity {
 
 
       if(flag_next==0){
-            Intent img = new Intent(WordListActivity2017_8.this, Activity_Onepic_2016_8.class);
+            Intent img = new Intent(WordListActivity2017_8.this, Activity_Onepic_2017_8.class);
             startActivity(img);
             this.finish();
 
         }
         else if(flag_next == 1) {
           group.setText("সাবলীলতা");
-            adapter_single = new StateAdapter_single(this);
-            lv.setAdapter(adapter_single);
+          adapter_second = new StateAdapter_second(this);
+          lv.setAdapter(adapter_second);
 
         }
 
