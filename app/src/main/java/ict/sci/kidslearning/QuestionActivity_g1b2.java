@@ -158,7 +158,7 @@ public class QuestionActivity_g1b2 extends AppCompatActivity {
             else if(counter >=20)
                 datasource.updateOrderItems(id, "Developed");
             else
-                datasource.updateOrderItems(id, "Need Improvement");
+                datasource.updateOrderItems(id, "Need \nImprovement");
 
            // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
             Intent img = new Intent(QuestionActivity_g1b2.this, WordListActivity_G1q2.class);

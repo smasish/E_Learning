@@ -165,7 +165,7 @@ public class QuestionActivity2017_3 extends AppCompatActivity {
             else if(lettersor>=5 && counter >=10)
                 datasource.updateOrderItems(id, "Developed");
             else
-                datasource.updateOrderItems(id, "Need Improvement");
+                datasource.updateOrderItems(id, "Need \nImprovement");
 
            // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
             Intent img = new Intent(QuestionActivity2017_3.this, WordListActivity2017_3.class);

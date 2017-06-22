@@ -162,7 +162,7 @@ public class QuestionActivity2016_3 extends AppCompatActivity {
             else if( counter >=12)
                 datasource.updateOrderItems(id, "Developed");
             else
-                datasource.updateOrderItems(id, "Need Improvement");
+                datasource.updateOrderItems(id, "Need \nImprovement");
 
            // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
             Intent img = new Intent(QuestionActivity2016_3.this, WordListActivity2016_3.class);
