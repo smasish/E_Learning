@@ -61,7 +61,7 @@ public class WordListActivity2017_8 extends Activity {
 
         indexArray=0;
         question_ind = 0;
-        counter =3;
+        counter =6;
 
         group = (TextView)findViewById(R.id.group1);
         group.setText("সাবলীলতা");
@@ -167,12 +167,12 @@ public class WordListActivity2017_8 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=5)
+            if(counter>=4)
                 datasource.updatevocabulary(id, "Mastery");
-            else  if(counter>=4)
+            else  if(counter>=3)
                 datasource.updatevocabulary(id, "Developed");
             else
-                datasource.updatevocabulary(id, "Need Improvement");
+                datasource.updatevocabulary(id, "Need \nImprovement");
 
             Log.d("=k=size==", ".flaginnggggggg." +flag_next);
 

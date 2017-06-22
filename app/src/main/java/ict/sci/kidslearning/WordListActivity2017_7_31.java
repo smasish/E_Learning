@@ -57,7 +57,7 @@ public class WordListActivity2017_7_31 extends Activity {
 
         indexArray=0;
         question_ind = 7;
-        counter =10;
+        counter =30;
 
         question = (TextView)findViewById(R.id.question_id);
 
@@ -162,9 +162,9 @@ public class WordListActivity2017_7_31 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=6)
+            if(counter>=18)
                 datasource.updatevocabulary(id, "Mastery");
-            else  if(counter>=4)
+            else  if(counter>=12)
                 datasource.updatevocabulary(id, "Developed");
             else
                 datasource.updatevocabulary(id, "Need \nImprovement");

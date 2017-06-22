@@ -19,7 +19,7 @@ public class Activity_Onepic_2017_3 extends Activity {
     Context con;
     private TextView question;
     int indexArray=0,question_ind=0;
-    int counter =20;
+    int counter =3;
     private ImageButton img;
 
     @Override
@@ -41,7 +41,7 @@ public class Activity_Onepic_2017_3 extends Activity {
 
         indexArray=0;
         question_ind = 0;
-        counter =6;
+        counter =3;
 
         question = (TextView)findViewById(R.id.question_id);
 

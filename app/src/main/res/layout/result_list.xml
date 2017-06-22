@@ -53,7 +53,7 @@
                 android:text="@string/btn_title4"
                 android:id="@+id/dat"
                 android:textSize="26sp"
-                android:layout_marginLeft="95dp"
+                android:layout_marginLeft="120dp"
                 android:layout_alignParentLeft="true"
                 />
 

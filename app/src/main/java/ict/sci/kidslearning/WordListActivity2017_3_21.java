@@ -32,7 +32,7 @@ public class WordListActivity2017_3_21 extends Activity {
     Context con;
     private TextView question;
     int indexArray=0,question_ind=0;
-    int counter =20;
+    int counter =3;
 
     private int[] imageArray = {
             R.drawable.dab, R.drawable.tv, R.drawable.chair, R.drawable.mas, R.drawable.train,
@@ -150,9 +150,9 @@ public class WordListActivity2017_3_21 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=16)
+            if(counter>=2)
                 datasource.updatevocabulary(id, "Mastery");
-            else  if(counter>=10)
+            else  if(counter>=1)
                 datasource.updatevocabulary(id, "Developed");
             else
                 datasource.updatevocabulary(id, "Need \nImprovement");

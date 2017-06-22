@@ -47,7 +47,7 @@ public class Activity_Onepic_2017_9 extends Activity {
 
         indexArray=0;
         question_ind = 1;
-        counter =3;
+        counter =6;
 
         question = (TextView)findViewById(R.id.question_id);
 
