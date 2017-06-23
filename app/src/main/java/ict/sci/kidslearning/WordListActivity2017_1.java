@@ -64,11 +64,13 @@ public class WordListActivity2017_1 extends Activity {
         counter =9;
 
         group = (TextView)findViewById(R.id.group1);
-        group.setText("সাবলীলতা");
+
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
+       // question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
+        group.setText("ধ্বনিসচেতনতা ");
+        question.setText("২.১ শিক্ষার্থী কি ছবি দেখে ছবির নাম ও  প্রথম ধ্বনি বলতে পারে ?");
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -131,22 +133,25 @@ public class WordListActivity2017_1 extends Activity {
             flag_next--;
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
+       // question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
 
         if(flag_next == 1) {
-            group.setText("সাবলীলতা");
+            group.setText("ধ্বনিসচেতনতা ");
+            question.setText("২.১ শিক্ষার্থী কি ছবি দেখে ছবির নাম ও  প্রথম ধ্বনি বলতে পারে ?");
 
             stateAdapter_image = new StateAdapter_image(this);
             lv.setAdapter(stateAdapter_image);
         }
 
         else if(flag_next == 2) {
-            group.setText("সাবলীলতা");
+            group.setText("ধ্বনিসচেতনতা ");
+            question.setText("শিক্ষার্থী কি শব্দের শেষ বর্ণের বা শব্দাংশের ধ্বনির মিল বুঝতে পারে ?");
             adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
         }
         else if(flag_next == 3) {
-            group.setText("সাবলীলতা");
+            group.setText("ধ্বনিসচেতনতা ");
+            question.setText("২.৩ শিক্ষার্থী কি একটি শব্দের প্রথম বর্ণের বা শব্দাংশের ধ্বনির অনুরূপ, আরেকটি শব্দ বলতে পারে?");
             stateAdapter_dhoni = new  StateAdapter_dhoni(this);
             lv.setAdapter(stateAdapter_dhoni);
         }
@@ -166,18 +171,21 @@ public class WordListActivity2017_1 extends Activity {
 
 
         if(flag_next == 2) {
-            group.setText("সাবলীলতা");
+            group.setText("ধ্বনিসচেতনতা ");
+            question.setText("শিক্ষার্থী কি শব্দের শেষ বর্ণের বা শব্দাংশের ধ্বনির মিল বুঝতে পারে ?");
             adapter_single = new StateAdapter_single(this);
                   lv.setAdapter(adapter_single);
         }
 
         else if(flag_next == 3) {
-            group.setText("সাবলীলতা");
+            group.setText("ধ্বনিসচেতনতা ");
+            question.setText("২.৩ শিক্ষার্থী কি একটি শব্দের প্রথম বর্ণের বা শব্দাংশের ধ্বনির অনুরূপ, আরেকটি শব্দ বলতে পারে?");
             stateAdapter_dhoni = new  StateAdapter_dhoni(this);
             lv.setAdapter(stateAdapter_dhoni);
         }
         else if(flag_next == 4) {
-            group.setText("সাবলীলতা");
+            group.setText("বর্ণজ্ঞান");
+            question.setText("১.১ শিক্ষার্থী কি নির্দিষ্ট বর্ণের পরের বর্ণটি পড়তে পারে  ?");
             stateAdapter_shobdo = new StateAdapter_shobdo(this);
             lv.setAdapter(stateAdapter_shobdo);
         }

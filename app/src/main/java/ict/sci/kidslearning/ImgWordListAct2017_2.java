@@ -62,10 +62,14 @@ int counter =20;
         counter =20;
 
         group = (TextView)findViewById(R.id.group1);
-        group.setText("বর্ণজ্ঞান");
+
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_3)[question_ind]);
+
+        group.setText("শব্দভাণ্ডার  ");
+        question.setText("২.১ শিক্ষার্থী কি ছবি দেখে নাম /শব্দ বলতে পারে ?");
+
+   //     question.setText(""+getResources().getStringArray(R.array.question_set_2016_3)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -129,6 +133,8 @@ int counter =20;
 
 
         if(flag_next == 2) {
+            group.setText("শব্দভাণ্ডার  ");
+            question.setText("২.২ শিক্ষার্থী পাঠে ও সমমানের বইয়ে ব্যবহৃত শব্দ শুদ্ধভাবে পড়তে পারে ?");
             adapter = new StateAdapter(this);
             lv.setAdapter(adapter);
 
@@ -141,7 +147,8 @@ int counter =20;
             // lv.setAdapter(adapter_single);
         }
         else if(flag_next == 1) {
-
+            group.setText("শব্দভাণ্ডার  ");
+            question.setText("২.১ শিক্ষার্থী কি ছবি দেখে নাম /শব্দ বলতে পারে ?");
             adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
 
@@ -154,7 +161,7 @@ int counter =20;
         flag_next++;
         Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
         question_ind++;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_3)[question_ind]);
+     //   question.setText(""+getResources().getStringArray(R.array.question_set_2016_3)[question_ind]);
 
         if(flag_next==4){
           //  String id = "" + datasource.getAllComments().get(0).getId();
@@ -176,14 +183,19 @@ int counter =20;
             this.finish();
         }
         if(flag_next==3){
-            group = (TextView)findViewById(R.id.group1);
-            group.setText("বর্ণজ্ঞান");
+          //  group = (TextView)findViewById(R.id.group1);
+            group.setText("শব্দভাণ্ডার  ");
+            question.setText("২.৩ শিক্ষার্থী কি ছবি দেখে ছবি সংশ্লিষ্ট শব্দ দিয়ে বাক্য বলতে পারে ?");
+
                     adapter_last = new StateAdapter_last(this);
             lv.setAdapter(adapter_last);
 
         }
 
         else if(flag_next == 2) {
+
+            group.setText("শব্দভাণ্ডার  ");
+            question.setText("২.২ শিক্ষার্থী পাঠে ও সমমানের বইয়ে ব্যবহৃত শব্দ শুদ্ধভাবে পড়তে পারে ?");
             adapter = new StateAdapter(this);
             lv.setAdapter(adapter);
 

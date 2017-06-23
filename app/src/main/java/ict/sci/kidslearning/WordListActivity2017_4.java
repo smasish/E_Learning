@@ -38,7 +38,7 @@ int counter =20;
     private int[] karArray = {
             R.drawable.nupur, R.drawable.door, R.drawable.farmar, R.drawable.boat, R.drawable.horin,R.drawable.horin
     };
-
+    private TextView group;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +60,10 @@ int counter =20;
 
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         //question_ind++;
+        group = (TextView)findViewById(R.id.group1);
+
+        group.setText("বর্ণজ্ঞান");
+        question.setText("২.১ শিক্ষার্থী কি এলোমেলো বর্ণ সাজিয়ে সঠিক শব্দ স্পষ্ট ও শুদ্ধ উচ্চারণে পড়তে পারে ?  ");
 
         lv = (ListView) findViewById(R.id.listView1);
 
@@ -122,14 +126,19 @@ int counter =20;
 
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+   //     question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
        if(flag_next == 1) {
-            adapter_single = new StateAdapter_single(this);
+           group.setText("বর্ণজ্ঞান");
+           question.setText("২.১ শিক্ষার্থী কি এলোমেলো বর্ণ সাজিয়ে সঠিক শব্দ স্পষ্ট ও শুদ্ধ উচ্চারণে পড়তে পারে ?  ");
+
+           adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
 
         }
         else if(flag_next == 2) {
+           group.setText("বর্ণজ্ঞান");
+           question.setText("২.২ শিক্ষার্থী কি নিচের কারচিহ্ন যুক্ত করে শব্দ পড়তে পারে ?  ");
             adapter_last = new StateAdapter_last(this);
             lv.setAdapter(adapter_last);
 
@@ -168,13 +177,16 @@ int counter =20;
             this.finish();
        }
         else if(flag_next==3){
+            group.setText("বর্ণজ্ঞান");
+            question.setText("২.৩  শিক্ষার্থী  নিচের যুক্তবর্ণ দিয়ে তৈরি শব্দগুলো শুদ্ধ  উচ্চারণে পড়তে পারে কি?  ");
             adapter_second = new StateAdapter_second(this);
             lv.setAdapter(adapter_second);
-
-
         }
 
         else if(flag_next == 2) {
+
+            group.setText("বর্ণজ্ঞান");
+            question.setText("২.২ শিক্ষার্থী কি নিচের কারচিহ্ন যুক্ত করে শব্দ পড়তে পারে ?  ");
             adapter_last = new StateAdapter_last(this);
             lv.setAdapter(adapter_last);
 

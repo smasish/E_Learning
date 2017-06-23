@@ -38,11 +38,15 @@ public class Activity_Onepic_2017_7 extends Activity {
         question_ind = 0;
         counter =6;
         group = (TextView)findViewById(R.id.group1);
-        group.setText("সাবলীলতা");
+
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+        group.setText("শব্দভা-ার");
+        question.setText("উপকরণের ছবি থেকে নীচের প্রশ্নের উত্তর দিতে পারে কি? ");
+
+
+    //    question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
 
     //    story = (TextView)findViewById(R.id.des_id);
 

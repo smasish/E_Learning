@@ -57,6 +57,8 @@
             android:textColor="@color/white"
             android:id="@+id/group1"
             android:textSize="28sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_marginLeft="50dp"
            android:layout_alignParentLeft="true"
             />
@@ -68,6 +70,8 @@
             android:textColor="@color/white"
             android:id="@+id/group2"
             android:layout_centerHorizontal="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:textSize="28sp"
             />
         <Button
@@ -77,6 +81,8 @@
             android:background="@drawable/buttoncolor"
             android:textColor="@color/white"
             android:id="@+id/group3"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:textSize="28sp"
             android:layout_marginRight="50dp"
             android:layout_alignParentRight="true"
@@ -94,6 +100,8 @@
         android:id="@+id/button2"
         android:textSize="28sp"
         android:onClick="next"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 

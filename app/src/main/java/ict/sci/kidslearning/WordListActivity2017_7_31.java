@@ -61,7 +61,9 @@ public class WordListActivity2017_7_31 extends Activity {
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+
+
+     //   question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -77,8 +79,9 @@ public class WordListActivity2017_7_31 extends Activity {
        // lv.setAdapter(adapter);
 
         group = (TextView)findViewById(R.id.group1);
-        group.setText("সাবলীলতা");
 
+        group.setText("শব্দভাণ্ডার  ");
+        question.setText("উপকরণের ছবি থেকে নীচের প্রশ্নের উত্তর দিতে পারে কি? ");
 
         adapter_single = new StateAdapter_single(this);
         lv.setAdapter(adapter_single);
@@ -139,7 +142,8 @@ public class WordListActivity2017_7_31 extends Activity {
         }
 
         else if(flag_next == 1) {
-            group.setText("সাবলীলতা");
+            group.setText("শব্দভাণ্ডার  ");
+            question.setText("উপকরণের ছবি থেকে নীচের প্রশ্নের উত্তর দিতে পারে কি? ");
             adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
 
@@ -189,6 +193,8 @@ public class WordListActivity2017_7_31 extends Activity {
 //           // lv.setAdapter(adapter_single);
 //        }
         else if(flag_next == 2) {
+            group.setText(" সাবলীলতা");
+            question.setText("উপকরণের ছবি থেকে নীচের প্রশ্নের উত্তর দিতে পারে কি? ");
             adapter = new StateAdapter(this);
             lv.setAdapter(adapter);
 

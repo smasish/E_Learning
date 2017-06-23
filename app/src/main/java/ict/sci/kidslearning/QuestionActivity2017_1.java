@@ -43,7 +43,7 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
         indexArray=0;
 
         group = (TextView)findViewById(R.id.group1);
-        group.setText("বর্ণজ্ঞান");
+
 
         question = (TextView)findViewById(R.id.question_id);
 
@@ -70,7 +70,9 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
 
         indexArray = 6;
 
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+      //  question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+        group.setText("বর্ণজ্ঞান");
+        question.setText("১.২  শিক্ষার্থী  কি এলোমেলো ১৫টি ব্যঞ্জনবর্ণের সবগুলো চিনতে পারে?  ");
         question_ind++;
     }
 
@@ -124,10 +126,11 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
 
         Log.d("next-----", "start===="+indexArray);
        // for(int i=indexArray;i<imageArray.length;i+=6){
-
+        group.setText("বর্ণজ্ঞান");
+        question.setText("১.২  শিক্ষার্থী  কি এলোমেলো ১৫টি ব্যঞ্জনবর্ণের সবগুলো চিনতে পারে?  ");
 
         int i = indexArray;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+    //    question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         question_ind++;
 
         if(question_ind == 3){
@@ -175,11 +178,14 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
     public void back(View v){
 
         Log.d("back-----", "start===="+indexArray);
+        group.setText("বর্ণজ্ঞান");
+        question.setText("১.২  শিক্ষার্থী  কি এলোমেলো ১৫টি ব্যঞ্জনবর্ণের সবগুলো চিনতে পারে?  ");
+
         int i = indexArray;
 
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+     //   question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
 
         //for(int i = indexArray;i>6;i-=6) {

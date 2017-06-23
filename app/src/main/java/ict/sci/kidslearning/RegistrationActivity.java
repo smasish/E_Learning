@@ -130,18 +130,18 @@ public class RegistrationActivity extends AppCompatActivity {
         str_class=class_name.getText().toString();
         str_roll=roll.getText().toString();
 
-        if(code_flag == 0){
-            AlertMessage.showMessage(con, "Sorry", "Wrong school name.");
-        }else if(str_stud.length()<3){
-            AlertMessage.showMessage(con, "Sorry", "Wrong student name.");
-        }
-        else if(str_class.length()<1){
-            AlertMessage.showMessage(con, "Sorry", "Wrong class name.");
-        }
-        else if(str_roll.length()<2 && str_roll.length()>3){
-            AlertMessage.showMessage(con, "Sorry", "Wrong roll no.");
-        }
-        else {
+//        if(code_flag == 0){
+//            AlertMessage.showMessage(con, "Sorry", "Wrong school name.");
+//        }else if(str_stud.length()<3){
+//            AlertMessage.showMessage(con, "Sorry", "Wrong student name.");
+//        }
+//        else if(str_class.length()<1){
+//            AlertMessage.showMessage(con, "Sorry", "Wrong class name.");
+//        }
+//        else if(str_roll.length()<2 && str_roll.length()>3){
+//            AlertMessage.showMessage(con, "Sorry", "Wrong roll no.");
+//        }
+//        else {
 
         final Calendar c = Calendar.getInstance();
         mYear = c.get(Calendar.YEAR);
@@ -166,7 +166,7 @@ public class RegistrationActivity extends AppCompatActivity {
             startActivity(i);
             this.finish();
 
-        }
+//        }
     }
 
 

@@ -52,12 +52,15 @@ public class WordListActivity2017_1_13 extends Activity {
         counter =9;
 
         group = (TextView)findViewById(R.id.group1);
-        group.setText("সাবলীলতা");
+
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
+     //   question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
         //question_ind++;
+
+        group.setText("বর্ণজ্ঞান");
+        question.setText("১.৩. শিক্ষার্থী  নির্দিষ্ট শব্দের বর্ণগুলো সনাক্ত করতে পারে কি? ");
 
         lv = (ListView) findViewById(R.id.listView1);
 
@@ -117,10 +120,10 @@ public class WordListActivity2017_1_13 extends Activity {
             flag_next--;
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
+      //  question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
 
         if(flag_next == 1) {
-            group.setText("সাবলীলতা");
+            group.setText("বর্ণজ্ঞান");
          //   adapter = new StateAdapter(this);
         //    lv.setAdapter(adapter);
         }

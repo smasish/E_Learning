@@ -21,7 +21,7 @@ public class Activity_Onepic_2017_4 extends Activity {
     int indexArray=0,question_ind=0;
     int counter =21;
     private ImageButton img;
-
+    private TextView group;
 
 
     @Override
@@ -47,7 +47,12 @@ public class Activity_Onepic_2017_4 extends Activity {
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+        group = (TextView)findViewById(R.id.group1);
+
+        group.setText("শব্দভা-ার");
+        question.setText("৩.১ শিক্ষার্থী ছবি দেখে শব্দ এবং ঐ শব্দগুলো দিয়ে বাক্য  বলতে পারে কি ? ");
+
+    //    question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
 
  //       story = (TextView)findViewById(R.id.des_id);
 

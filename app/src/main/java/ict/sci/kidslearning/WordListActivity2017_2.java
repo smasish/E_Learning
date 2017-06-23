@@ -28,7 +28,7 @@ public class WordListActivity2017_2 extends Activity {
 
     int flag_next = 0;
     private CommentsDataSource datasource;
-    private TextView question;
+    private TextView question,group;
     int indexArray=0,question_ind=0;
 int counter =20;
     @Override
@@ -49,7 +49,12 @@ int counter =20;
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+        group = (TextView)findViewById(R.id.group1);
+
+        group.setText("বর্ণজ্ঞান  ");
+        question.setText("১.২শিক্ষার্থী কি বর্ণের সঙ্গে কার-চিহ্ন যুক্ত করে শুদ্ধভাবে পড়তে পারে? ");
+
+  //      question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -114,7 +119,8 @@ int counter =20;
         question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
         if(flag_next == 1) {
-
+            group.setText("বর্ণজ্ঞান  ");
+            question.setText("১.২শিক্ষার্থী কি বর্ণের সঙ্গে কার-চিহ্ন যুক্ত করে শুদ্ধভাবে পড়তে পারে? ");
             adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
 
@@ -132,7 +138,7 @@ int counter =20;
         flag_next++;
         Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
         question_ind++;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+     //   question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
         if(flag_next==3){
           //  String id = "" + datasource.getAllComments().get(0).getId();
@@ -156,6 +162,8 @@ int counter =20;
        }
 
         else if(flag_next == 2) {
+            group.setText("বর্ণজ্ঞান  ");
+            question.setText("১.৩শিক্ষার্থী কি কার-চিহ্ন যুক্ত বর্ণ দিয়ে শব্দ  বলতে পারে ? ");
             adapter = new StateAdapter(this);
             lv.setAdapter(adapter);
 

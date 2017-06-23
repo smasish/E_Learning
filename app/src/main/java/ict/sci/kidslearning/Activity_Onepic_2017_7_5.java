@@ -13,7 +13,7 @@ public class Activity_Onepic_2017_7_5 extends Activity {
 
     Context context;
 
-    private TextView story;
+    private TextView story,group;
     private TextView question;
     int indexArray=0,question_ind=0;
     int counter =5;
@@ -41,7 +41,13 @@ public class Activity_Onepic_2017_7_5 extends Activity {
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+
+        group = (TextView)findViewById(R.id.group1);
+
+        group.setText(" বোধগম্যতা");
+        question.setText("উপকরণের ছবি থেকে নীচের প্রশ্নের উত্তর দিতে পারে কি? ");
+
+     //   question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
 
     }

@@ -45,12 +45,15 @@ public class Activity_Onepic_2017_8 extends Activity {
         counter =6;
 
         group = (TextView)findViewById(R.id.group1);
-        group.setText("সাবলীলতা");
+
 
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+        group.setText("সাবলীলতা");
+        question.setText("শিক্ষার্থীকে নিচের গল্পটি পড়তে দিন। ");
+
+   //     question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
 
         story = (TextView)findViewById(R.id.des_id);
 

@@ -41,7 +41,7 @@ public class WordListActivity2017_4_31 extends Activity {
     private int[] imageArray2 = {
             R.drawable.dabkai, R.drawable.maskini, R.drawable.fishing, R.drawable.noukaychori, R.drawable.basibajai,
     };
-
+    private TextView group;
 
 
     @Override
@@ -62,7 +62,13 @@ public class WordListActivity2017_4_31 extends Activity {
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+
+        group = (TextView)findViewById(R.id.group1);
+
+        group.setText("শব্দভা-ার");
+        question.setText("৩.১ শিক্ষার্থী ছবি দেখে শব্দ এবং ঐ শব্দগুলো দিয়ে বাক্য  বলতে পারে কি ? ");
+
+   //     question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -122,7 +128,7 @@ public class WordListActivity2017_4_31 extends Activity {
             flag_next--;
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+  //      question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
 
       if(flag_next==0){
@@ -142,7 +148,7 @@ public class WordListActivity2017_4_31 extends Activity {
 
         Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
         question_ind++;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+    //    question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
 
       if(flag_next==2){

@@ -64,11 +64,15 @@ public class WordListActivity2017_8 extends Activity {
         counter =6;
 
         group = (TextView)findViewById(R.id.group1);
-        group.setText("সাবলীলতা");
+
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+
+        group.setText("সাবলীলতা");
+        question.setText("৪. ১.: শিক্ষার্থী অধিকাংশ শব্দ শুদ্ধ উচ্চারণে পড়তে পারে");
+
+     //   question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -128,7 +132,7 @@ public class WordListActivity2017_8 extends Activity {
             flag_next--;
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+  //      question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
 
       if(flag_next==0){
@@ -138,7 +142,8 @@ public class WordListActivity2017_8 extends Activity {
 
         }
         else if(flag_next == 1) {
-          group.setText("সাবলীলতা");
+          group.setText("বোধগম্যতা");
+          question.setText("গল্পটি পড়ার পর শিক্ষার্থীকে নিচের তিনটি প্রশ্ন জিজ্ঞেস করুন");
           adapter_single = new StateAdapter_single(this);
           lv.setAdapter(adapter_single);
 
@@ -153,10 +158,12 @@ public class WordListActivity2017_8 extends Activity {
 
         Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
         question_ind++;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+    //    question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
         if(flag_next == 2) {
             group.setText("বোধগম্যতা");
+            question.setText("গল্পটি পড়ার পর শিক্ষার্থীকে নিচের তিনটি প্রশ্ন জিজ্ঞেস করুন");
+
             adapter_second = new StateAdapter_second(this);
             lv.setAdapter(adapter_second);
 

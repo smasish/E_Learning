@@ -29,7 +29,7 @@ public class WordListActivity2017_7_5 extends Activity {
 
     int flag_next = 0;
     private CommentsDataSource datasource;
-    private TextView question;
+    private TextView question,group;
     int indexArray=0,question_ind=0;
     int counter =3;
 
@@ -60,8 +60,12 @@ public class WordListActivity2017_7_5 extends Activity {
         counter =3;
 
         question = (TextView)findViewById(R.id.question_id);
+        group = (TextView)findViewById(R.id.group1);
 
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+        group.setText(" বোধগম্যতা");
+        question.setText("উপকরণের ছবি থেকে নীচের প্রশ্নের উত্তর দিতে পারে কি? ");
+
+   //     question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
