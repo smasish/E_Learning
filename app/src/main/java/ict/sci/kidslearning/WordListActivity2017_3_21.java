@@ -30,7 +30,7 @@ public class WordListActivity2017_3_21 extends Activity {
     int flag_next = 0;
     private CommentsDataSource datasource;
     Context con;
-    private TextView question;
+    private TextView question,group;
     int indexArray=0,question_ind=0;
     int counter =3;
 
@@ -62,7 +62,12 @@ public class WordListActivity2017_3_21 extends Activity {
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+        group = (TextView)findViewById(R.id.group1);
+
+        group.setText("বোধগম্যতা  ");
+        question.setText("২.১.শিক্ষার্থী  গল্প থেকে সাধারণ প্রশ্নের উত্তর দিতে পারে।");
+
+   //     question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -121,7 +126,7 @@ public class WordListActivity2017_3_21 extends Activity {
             flag_next--;
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+ ///       question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
 
       if(flag_next==0){
@@ -141,7 +146,7 @@ public class WordListActivity2017_3_21 extends Activity {
 
         Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
         question_ind++;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+     //   question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
 
       if(flag_next==2){

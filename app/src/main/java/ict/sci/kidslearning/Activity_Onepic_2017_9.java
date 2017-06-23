@@ -38,7 +38,7 @@ public class Activity_Onepic_2017_9 extends Activity {
 
 
         group = (TextView)findViewById(R.id.group1);
-        group.setText("সাবলীলতা");
+
 
         story = (TextView)findViewById(R.id.des_id);
 
@@ -51,7 +51,10 @@ public class Activity_Onepic_2017_9 extends Activity {
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_6)[question_ind]);
+        group.setText("সাবলীলতা  ");
+        question.setText("শিক্ষার্থী অধিকাংশ শব্দ শুদ্ধ উচ্চারণে পড়তে পারে।");
+
+     //   question.setText(""+getResources().getStringArray(R.array.word_list_2016_6)[question_ind]);
 
     }
 

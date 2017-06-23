@@ -934,13 +934,14 @@
 
     </string-array>
 
+
     <string-array name="word_list_2017_3_13">
 
-        <item name="set1"> গাছ</item>
-        <item name="set1">ঘড়ি </item>
-        <item name="set1">ফুল </item>
-        <item name="set1">  ঢোল</item>
-        <item name="set1"> ময়ূর</item>
+        <item name="set1"> গাছ | া </item>
+        <item name="set1">ঘড়ি  | ি  </item>
+        <item name="set1">ফুল |  ু </item>
+        <item name="set1">  ঢোল  | ে া </item>
+        <item name="set1"> ময়ূর | ূ </item>
     </string-array>
 
 

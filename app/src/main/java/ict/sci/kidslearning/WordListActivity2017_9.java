@@ -61,11 +61,14 @@ public class WordListActivity2017_9 extends Activity {
         counter =6;
 
         group = (TextView)findViewById(R.id.group1);
-        group.setText("সাবলীলতা");
+
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
+        group.setText("সাবলীলতা  ");
+        question.setText("শিক্ষার্থী অধিকাংশ শব্দ শুদ্ধ উচ্চারণে পড়তে পারে।");
+
+       // question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -125,7 +128,7 @@ public class WordListActivity2017_9 extends Activity {
             flag_next--;
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
+  //      question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
 
         if(flag_next == 1) {
             group.setText("সাবলীলতা");
@@ -147,7 +150,7 @@ public class WordListActivity2017_9 extends Activity {
 
         Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
         question_ind++;
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
+    //    question.setText(""+getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
 
         if(flag_next == 2) {
             group.setText("বোধগম্যতা");

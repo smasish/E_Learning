@@ -17,7 +17,7 @@ public class Activity_Onepic_2017_3 extends Activity {
 
     private TextView story;
     Context con;
-    private TextView question;
+    private TextView question,group;
     int indexArray=0,question_ind=0;
     int counter =3;
     private ImageButton img;
@@ -45,7 +45,13 @@ public class Activity_Onepic_2017_3 extends Activity {
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+
+        group = (TextView)findViewById(R.id.group1);
+
+        group.setText("বোধগম্যতা  ");
+        question.setText("শিক্ষার্থীকে উপরের গল্পটি পড়তে দিন। ");
+
+      //  question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
 
         story = (TextView)findViewById(R.id.des_id);
 

@@ -29,7 +29,7 @@ public class WordListActivity2017_3 extends Activity {
 
     int flag_next = 0;
     private CommentsDataSource datasource;
-    private TextView question;
+    private TextView question,group;
     int indexArray=0,question_ind=0;
 int counter =20;
 
@@ -56,7 +56,12 @@ int counter =20;
 
         question = (TextView)findViewById(R.id.question_id);
 
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+        group = (TextView)findViewById(R.id.group1);
+
+        group.setText("বর্ণজ্ঞান  ");
+        question.setText("১.২ শিক্ষার্থী কি ব্যঞ্জনবর্ণের সঙ্গে ব্যঞ্জনবর্ণ (যুক্তবর্ণ) যুক্ত করে পড়তে পারে?  ");
+
+    //    question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -117,9 +122,11 @@ int counter =20;
 
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+  //      question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
         if(flag_next == 1) {
+            group.setText("বর্ণজ্ঞান  ");
+            question.setText("১.২ শিক্ষার্থী কি ব্যঞ্জনবর্ণের সঙ্গে ব্যঞ্জনবর্ণ (যুক্তবর্ণ) যুক্ত করে পড়তে পারে?  ");
             adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
 
@@ -137,7 +144,7 @@ int counter =20;
         flag_next++;
         Log.d("=k=size=="+datasource.getAllComments().size(), "...id..>>"+flag_next );
         question_ind++;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+   //     question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
         if(flag_next==3){
           //  String id = "" + datasource.getAllComments().get(0).getId();
@@ -162,6 +169,8 @@ int counter =20;
 
 
         else if(flag_next == 2) {
+            group.setText("বর্ণজ্ঞান  ");
+            question.setText("১.৩  শিক্ষার্থী কি ছবি দেখে ছবি সংশ্লিষ্ট শব্দে কী কী কার-চিহ্ন আছে তা পড়তে পারে? ");
             adapter_last = new StateAdapter_last(this);
             lv.setAdapter(adapter_last);
 

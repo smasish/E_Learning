@@ -17,7 +17,7 @@ public class Activity_Onepic_2017_6 extends Activity {
 
     private TextView story;
     Context con;
-    private TextView question;
+    private TextView question,group;
     int indexArray=0,question_ind=0;
     int counter =20;
     private ImageButton img;
@@ -45,8 +45,12 @@ public class Activity_Onepic_2017_6 extends Activity {
         counter =6;
 
         question = (TextView)findViewById(R.id.question_id);
+        group = (TextView)findViewById(R.id.group1);
 
-        question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+        group.setText("সাবলীলতা  ");
+        question.setText("শিক্ষার্থী অধিকাংশ শব্দ শুদ্ধ উচ্চারণে পড়তে পারে ");
+
+    //    question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
 
         story = (TextView)findViewById(R.id.des_id);
 

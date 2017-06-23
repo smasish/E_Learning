@@ -46,7 +46,7 @@ public class QuestionActivity2017_3 extends AppCompatActivity {
         indexArray=0;
 
         group = (TextView)findViewById(R.id.group1);
-        group.setText("বর্ণজ্ঞান");
+
 
         question = (TextView)findViewById(R.id.question_id);
 
@@ -73,7 +73,10 @@ public class QuestionActivity2017_3 extends AppCompatActivity {
 
         indexArray = 6;
 
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+        group.setText("বর্ণজ্ঞান");
+        question.setText("১.১ শিক্ষার্থী কি এলোমেলো ৩০টি বর্ণ স্পষ্ট ও শুদ্ধ উচ্চারণে পড়তে পারে?");
+
+   //     question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         question_ind++;
     }
 
@@ -130,8 +133,11 @@ public class QuestionActivity2017_3 extends AppCompatActivity {
 
 
         int i = indexArray;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+     //   question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         question_ind++;
+
+        group.setText("বর্ণজ্ঞান");
+        question.setText("১.১ শিক্ষার্থী কি এলোমেলো ৩০টি বর্ণ স্পষ্ট ও শুদ্ধ উচ্চারণে পড়তে পারে?");
 
         if(question_ind == 3){
             lettersor = counter;
@@ -182,8 +188,10 @@ public class QuestionActivity2017_3 extends AppCompatActivity {
 
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
+   //     question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
 
+        group.setText("বর্ণজ্ঞান");
+        question.setText("১.১ শিক্ষার্থী কি এলোমেলো ৩০টি বর্ণ স্পষ্ট ও শুদ্ধ উচ্চারণে পড়তে পারে?");
 
         //for(int i = indexArray;i>6;i-=6) {
         if(i>5){
