@@ -37,6 +37,7 @@ int counter =20;
             R.drawable.tree, R.drawable.gori, R.drawable.ful, R.drawable.dul, R.drawable.moyur
     };
 
+    String instr = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,13 +97,14 @@ int counter =20;
 
             }
         });
+       instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে  উপরের বক্সে থাকা শব্দগুলোর পাশাপাশি পাশের বক্সে থাকা যুক্তবর্ণগুলোও পড়তে বলুন। শিক্ষার্থী যদি ব্যঞ্জনবর্ণের সাথে ব্যঞ্জনবর্ণ যুক্ত করে  শুদ্ধভাবে পড়তে পারে, তবে প্রদত্ত বক্সে টিকচিহ্ন দিন। না পারলে ক্রসচিহ্ন দিন। ";
 
     }
 
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
+      //  String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 
@@ -127,6 +129,8 @@ int counter =20;
         if(flag_next == 1) {
             group.setText("বর্ণজ্ঞান  ");
             question.setText("১.২ শিক্ষার্থী কি ব্যঞ্জনবর্ণের সঙ্গে ব্যঞ্জনবর্ণ (যুক্তবর্ণ) যুক্ত করে পড়তে পারে?  ");
+            instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে  উপরের বক্সে থাকা শব্দগুলোর পাশাপাশি পাশের বক্সে থাকা যুক্তবর্ণগুলোও পড়তে বলুন। শিক্ষার্থী যদি ব্যঞ্জনবর্ণের সাথে ব্যঞ্জনবর্ণ যুক্ত করে  শুদ্ধভাবে পড়তে পারে, তবে প্রদত্ত বক্সে টিকচিহ্ন দিন। না পারলে ক্রসচিহ্ন দিন। ";
+
             adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
 
@@ -171,6 +175,8 @@ int counter =20;
         else if(flag_next == 2) {
             group.setText("বর্ণজ্ঞান  ");
             question.setText("১.৩  শিক্ষার্থী কি ছবি দেখে ছবি সংশ্লিষ্ট শব্দে কী কী কার-চিহ্ন আছে তা পড়তে পারে? ");
+            instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে বাম পাশের টেবিলে থাকা  ছবি দেখে ছবিটির নাম/শব্দ বলতে বলুন এবং শব্দে কী কী কার-চিহ্ন আছে জিজ্ঞেস করুন। শিক্ষার্থী যদি ছবি সংশ্লিষ্ট শব্দের কার-চিহ্নগুলো  শুদ্ধভাবে বলতে পারে তবে প্রদত্ত টেবিলের ‘হ্যাঁ’ কলামে টিকচিহ্ন দিন। না পারলে ‘না’ কলামে টিকচিহ্ন দিন।  ";
+
             adapter_last = new StateAdapter_last(this);
             lv.setAdapter(adapter_last);
 

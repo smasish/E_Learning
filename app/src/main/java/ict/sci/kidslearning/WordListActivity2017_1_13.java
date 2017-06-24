@@ -35,6 +35,8 @@ public class WordListActivity2017_1_13 extends Activity {
     int counter =9;
 
 
+    String instr = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -96,12 +98,14 @@ public class WordListActivity2017_1_13 extends Activity {
             }
         });
 
+        instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে বলুন যেমন ধর মই, এখানে প্রথম বর্ণ আছে ম এবং শেষ বর্ণ হলো ই। এখন প্রদত্ত টেবিল থেকে ৫টি শব্দের বর্ণগুলো সনাক্ত করে বলতে বলুন। শব্দের যে বর্ণগুলো শিক্ষার্থী সঠিক উচ্চারণে  পড়তে পেরেছে, প্রদত্ত টেবিলের দ্বিতীয় কলামে থাকা সেই বর্ণগুলোতে  টিকচিহ্ন দিন।";
+
     }
 
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instructions_16_9)[question_ind];
+     //   String instr = ""+getResources().getStringArray(R.array.instructions_16_9)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 

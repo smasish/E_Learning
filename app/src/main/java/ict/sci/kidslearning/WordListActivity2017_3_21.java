@@ -42,7 +42,7 @@ public class WordListActivity2017_3_21 extends Activity {
             R.drawable.dabkai, R.drawable.maskini, R.drawable.fishing, R.drawable.noukaychori, R.drawable.basibajai,
     };
 
-
+    String instr = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,12 +103,15 @@ public class WordListActivity2017_3_21 extends Activity {
             }
         });
 
+        instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে উপরের গল্পটি পড়তে দিন। তারপর তাকে  ২.১, ২.২ এবং ২.৩ নং প্রশ্ন তিনটি জিজ্ঞেস করুন ।  প্রশ্নের সঠিক উত্তর দিতে পারলে প্রদত্ত টেবিলের ‘হ্যাঁ’ কলামে এবং না পারলে ‘না’ কলামে টিকচিহ্ন দিন।";
+
+
     }
 
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
+      //  String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 

@@ -31,6 +31,9 @@ public class WordListActivity2017_2 extends Activity {
     private TextView question,group;
     int indexArray=0,question_ind=0;
 int counter =20;
+    String instr = "";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -53,6 +56,8 @@ int counter =20;
 
         group.setText("বর্ণজ্ঞান  ");
         question.setText("১.২শিক্ষার্থী কি বর্ণের সঙ্গে কার-চিহ্ন যুক্ত করে শুদ্ধভাবে পড়তে পারে? ");
+
+        instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে বাম পাশে টেবিলে থাকা কার-চিহ্নযুক্ত বর্ণগুলো পড়তে দিন। শিক্ষার্থী যেসব কার-চিহ্ন যুক্ত বর্ণ শুদ্ধ উচ্চারণে পড়তে পেরেছে,  প্রদত্ত টেবিলের হ্যাঁ কলামে টিকচিহ্ন দিন। না পারলে না কলামে টিকচিহ্ন দিন। ";
 
   //      question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         //question_ind++;
@@ -95,7 +100,7 @@ int counter =20;
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
+      //  String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 
@@ -121,6 +126,8 @@ int counter =20;
         if(flag_next == 1) {
             group.setText("বর্ণজ্ঞান  ");
             question.setText("১.২শিক্ষার্থী কি বর্ণের সঙ্গে কার-চিহ্ন যুক্ত করে শুদ্ধভাবে পড়তে পারে? ");
+            instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে বাম পাশে টেবিলে থাকা কার-চিহ্নযুক্ত বর্ণগুলো পড়তে দিন। শিক্ষার্থী যেসব কার-চিহ্ন যুক্ত বর্ণ শুদ্ধ উচ্চারণে পড়তে পেরেছে,  প্রদত্ত টেবিলের হ্যাঁ কলামে টিকচিহ্ন দিন। না পারলে না কলামে টিকচিহ্ন দিন। ";
+
             adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
 
@@ -164,6 +171,7 @@ int counter =20;
         else if(flag_next == 2) {
             group.setText("বর্ণজ্ঞান  ");
             question.setText("১.৩শিক্ষার্থী কি কার-চিহ্ন যুক্ত বর্ণ দিয়ে শব্দ  বলতে পারে ? ");
+            instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে বাম পাশে টেবিলে থাকা কার-চিহ্নযুক্ত বর্ণের সাথে কার-চিহ্ন যুক্ত বর্ণ যোগ করে পড়তে দিন। শিক্ষার্থী যে শব্দগুলো পড়তে পেরেছে,  প্রদত্ত টেবিলের ‘হ্যাঁ’ কলামে টিকচিহ্ন দিন। না পারলে ‘না’ কলামে টিকচিহ্ন দিন। ";
             adapter = new StateAdapter(this);
             lv.setAdapter(adapter);
 

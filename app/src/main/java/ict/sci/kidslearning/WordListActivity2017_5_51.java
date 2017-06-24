@@ -42,7 +42,7 @@ public class WordListActivity2017_5_51 extends Activity {
             R.drawable.dabkai, R.drawable.maskini, R.drawable.fishing, R.drawable.noukaychori, R.drawable.basibajai,
     };
 
-
+    String instr = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +66,10 @@ public class WordListActivity2017_5_51 extends Activity {
 
         group.setText("শব্দভাণ্ডার  ");
         question.setText("উপকরণের ছবি থেকে নীচের প্রশ্নের উত্তর দিতে পারে কি? ");
+         instr = "যেভাবে সম্পাদন করতে হবে :\n" +
+                 "শিক্ষার্থীকে উপরের গল্পটি পড়তে দিন। শিক্ষার্থী গল্পটি পড়ে বুঝতে পেড়েছে কি না তা নিচের তিনটি প্রশ্নের আলোকে যাচাই করুন। প্রশ্নের উত্তর দিতে পারলে ‘হ্যাঁ’ তে টিক চিহ্ন দিন না পারলে ‘না’ তে টিকচিহ্ন দিন।    \n";
 
-  //      question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+        //      question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -108,7 +110,7 @@ public class WordListActivity2017_5_51 extends Activity {
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
+     //   String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 

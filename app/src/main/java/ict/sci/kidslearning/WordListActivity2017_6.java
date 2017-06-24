@@ -41,7 +41,7 @@ public class WordListActivity2017_6 extends Activity {
     private int[] imageArray2 = {
             R.drawable.dabkai, R.drawable.maskini, R.drawable.fishing, R.drawable.noukaychori, R.drawable.basibajai,
     };
-
+    String instr = "";
 
 
     @Override
@@ -102,12 +102,15 @@ public class WordListActivity2017_6 extends Activity {
             }
         });
 
+        instr = "  যেভাবে সম্পাদন করতে হবে : শিক্ষার্থীকে উপরোক্ত গল্পটি পড়তে দিন।  নিচের তিনটি সামর্থ্যরে আলোকে পড়তে পারলে হ্যাঁ তে টিক চিহ্ন দিন না পারলে না তে টিকচিহ্ন দিন।    ";
+
+
     }
 
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
+        instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 
@@ -153,6 +156,7 @@ public class WordListActivity2017_6 extends Activity {
         question_ind++;
     //    question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         if(flag_next==2){
+            instr = " যেভাবে সম্পাদন করতে হবে : শিক্ষার্থীকে উপরোক্ত গল্পটি পড়তে দিন।  নিচের তিনটি প্রশ্নের সঠিক উত্তর দিতে পারলে হ্যাঁ তে টিক চিহ্ন দিন না পারলে না তে টিকচিহ্ন দিন।    ";
             adapter_second = new StateAdapter_second(this);
             lv.setAdapter(adapter_second);
         }

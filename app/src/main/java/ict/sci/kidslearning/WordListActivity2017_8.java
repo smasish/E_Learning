@@ -44,7 +44,7 @@ public class WordListActivity2017_8 extends Activity {
             R.drawable.dabkai, R.drawable.maskini, R.drawable.fishing, R.drawable.noukaychori, R.drawable.basibajai,
     };
 
-
+    String instr = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,8 +71,10 @@ public class WordListActivity2017_8 extends Activity {
 
         group.setText("সাবলীলতা");
         question.setText("৪. ১.: শিক্ষার্থী অধিকাংশ শব্দ শুদ্ধ উচ্চারণে পড়তে পারে");
+        instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে নিচের গল্পটি পড়তে দিন। শিক্ষার্থী গল্পটি পড়বে, শিক্ষক তার উপর ভিত্তি করে নিচের সামর্থ্যগুলো যাচাই করবেন। পারলে “হ্যাঁ” না পারলে “না”তে টিক দিন।";
 
-     //   question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
+
+        //   question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
         //question_ind++;
 
         lv = (ListView) findViewById(R.id.listView1);
@@ -113,7 +115,7 @@ public class WordListActivity2017_8 extends Activity {
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
+    //    String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 

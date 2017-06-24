@@ -39,6 +39,7 @@ int counter =20;
             R.drawable.pepe, R.drawable.beli_ful, R.drawable.anaros, R.drawable.rail, R.drawable.angul
     };
 
+    String instr = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,7 @@ int counter =20;
 
         group.setText("শব্দভাণ্ডার  ");
         question.setText("৩.১  শিক্ষার্থী  নিচের যুক্তবর্ণ যুক্ত শব্দ পড়তে পারে কি ?  ");
+        instr = "যেভাবে সম্পাদন করতে হবে : শিক্ষার্থীকে প্রদত্ত টেবিল থেকে  যুক্তবর্ণ যুক্ত শব্দগুলো পড়তে দিন।  পড়তে পারলে হ্যাঁ তে টিক চিহ্ন দিন না পারলে না তে টিকচিহ্ন দিন। ";
 
     //    question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         //question_ind++;
@@ -104,7 +106,7 @@ int counter =20;
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
+      //  String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 
@@ -173,6 +175,9 @@ int counter =20;
         else if(flag_next == 2) {
             group.setText("শব্দভাণ্ডার  ");
             question.setText("৩.২/৩.৩ শিক্ষার্থী ছবির নাম ও ঐ শব্দ দিয়ে বাক্য বলতে পারে কি ? ");
+            instr = "  যেভাবে সম্পাদন করতে হবে :\n" +
+                    "শিক্ষার্থীদের  টেবিলে প্রদত্ত ছবির নাম বলতে বলুন। যদি বলতে পারে ‘হ্যাঁ’ তে টিক চিহ্ন দিন না পারলে ‘না’ তে টিক চিহ্ন দিন। এরপর ঐ শব্দ দিয়ে  বাক্য তৈরি করতে বলুন। যদি বাক্য তৈরি করতে পারে ‘হ্যাঁ’ তে টিক চিহ্ন দিন না পারলে ‘না’ তে টিক চিহ্ন দিন।\n";
+
             adapter_last = new StateAdapter_last(this);
             lv.setAdapter(adapter_last);
 

@@ -30,7 +30,7 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
 
     };
 
-
+    String instr ="";
     private CommentsDataSource datasource;
 
     @Override
@@ -74,6 +74,8 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
         group.setText("বর্ণজ্ঞান");
         question.setText("১.২  শিক্ষার্থী  কি এলোমেলো ১৫টি ব্যঞ্জনবর্ণের সবগুলো চিনতে পারে?  ");
         question_ind++;
+
+        instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে নিচের এলোমেলোভাবে সাজানো বর্ণমালার চার্টটি পড়তে দিন। শিক্ষার্থী যে বর্ণগুলো চিনে পড়তে পেরেছে সেগুলোতে টিকচিহ্ন দিন।  ";
     }
 
 
@@ -118,7 +120,7 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
+       // String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 

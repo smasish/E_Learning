@@ -21,6 +21,7 @@ public class Activity_Onepic_2017_3 extends Activity {
     int indexArray=0,question_ind=0;
     int counter =3;
     private ImageButton img;
+    String instr = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,13 +58,13 @@ public class Activity_Onepic_2017_3 extends Activity {
 
         story.setText(R.string.story_2017_3);
 
-
+      instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে উপরের গল্পটি পড়তে দিন। তারপর তাকে  ২.১, ২.২ এবং ২.৩ নং প্রশ্ন তিনটি জিজ্ঞেস করুন ।  প্রশ্নের সঠিক উত্তর দিতে পারলে প্রদত্ত টেবিলের ‘হ্যাঁ’ কলামে এবং না পারলে ‘না’ কলামে টিকচিহ্ন দিন।";
 
     }
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
+    //    String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 

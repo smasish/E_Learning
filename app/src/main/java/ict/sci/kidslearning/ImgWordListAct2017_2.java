@@ -45,6 +45,8 @@ int counter =20;
             R.drawable.dabkai, R.drawable.maskini, R.drawable.fishing, R.drawable.noukaychori, R.drawable.basibajai,
     };
 
+    String instr = "" ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -68,6 +70,7 @@ int counter =20;
 
         group.setText("শব্দভাণ্ডার  ");
         question.setText("২.১ শিক্ষার্থী কি ছবি দেখে নাম /শব্দ বলতে পারে ?");
+        instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে বাম পাশে টেবিলে থাকা ছবি দেখে নাম/শব্দ বলতে বলুন। শিক্ষার্থী ছবি দেখে সঠিক শব্দটি বলতে পারলে  প্রদত্ত টেবিলের ‘হ্যাঁ’ কলামে টিকচিহ্ন দিন। না পারলে ‘না’ কলামে টিকচিহ্ন দিন। " ;
 
    //     question.setText(""+getResources().getStringArray(R.array.question_set_2016_3)[question_ind]);
         //question_ind++;
@@ -110,7 +113,7 @@ int counter =20;
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_3)[question_ind];
+     //   String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_3)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 
@@ -135,6 +138,7 @@ int counter =20;
         if(flag_next == 2) {
             group.setText("শব্দভাণ্ডার  ");
             question.setText("২.২ শিক্ষার্থী পাঠে ও সমমানের বইয়ে ব্যবহৃত শব্দ শুদ্ধভাবে পড়তে পারে ?");
+            instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে বাম পাশে টেবিলে থাকা শব্দগুলো পড়তে দিন। শিক্ষার্থী যে শব্দটি শুদ্ধভাবে পড়তে পারবে, প্রদত্ত টেবিলের ‘হ্যাঁ’ কলামে টিকচিহ্ন দিন। না পারলে ‘না’ কলামে টিকচিহ্ন দিন। ";
             adapter = new StateAdapter(this);
             lv.setAdapter(adapter);
 
@@ -149,6 +153,8 @@ int counter =20;
         else if(flag_next == 1) {
             group.setText("শব্দভাণ্ডার  ");
             question.setText("২.১ শিক্ষার্থী কি ছবি দেখে নাম /শব্দ বলতে পারে ?");
+            instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে বাম পাশে টেবিলে থাকা ছবি দেখে নাম/শব্দ বলতে বলুন। শিক্ষার্থী ছবি দেখে সঠিক শব্দটি বলতে পারলে  প্রদত্ত টেবিলের ‘হ্যাঁ’ কলামে টিকচিহ্ন দিন। না পারলে ‘না’ কলামে টিকচিহ্ন দিন। " ;
+
             adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
 
@@ -187,6 +193,8 @@ int counter =20;
             group.setText("শব্দভাণ্ডার  ");
             question.setText("২.৩ শিক্ষার্থী কি ছবি দেখে ছবি সংশ্লিষ্ট শব্দ দিয়ে বাক্য বলতে পারে ?");
 
+            instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে বাম পাশে টেবিলে থাকা ছবিগুলো দেখে ছবি সংশ্লিষ্ট শব্দটি বলতে বলুন এবং প্রদত্ত টেবিলের বাক্য কলামের শব্দের সাথে মিলিয়ে একটি বাক্য বলতে বলুন। শিক্ষার্থী বাক্য তৈরি করে বলতে পারলে, টেবিলের ‘হ্যাঁ’ কলামে টিকচিহ্ন দিন। না পারলে ‘না’ কলামে টিকচিহ্ন দিন। ";
+
                     adapter_last = new StateAdapter_last(this);
             lv.setAdapter(adapter_last);
 
@@ -196,6 +204,7 @@ int counter =20;
 
             group.setText("শব্দভাণ্ডার  ");
             question.setText("২.২ শিক্ষার্থী পাঠে ও সমমানের বইয়ে ব্যবহৃত শব্দ শুদ্ধভাবে পড়তে পারে ?");
+            instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে বাম পাশে টেবিলে থাকা শব্দগুলো পড়তে দিন। শিক্ষার্থী যে শব্দটি শুদ্ধভাবে পড়তে পারবে, প্রদত্ত টেবিলের ‘হ্যাঁ’ কলামে টিকচিহ্ন দিন। না পারলে ‘না’ কলামে টিকচিহ্ন দিন। ";
             adapter = new StateAdapter(this);
             lv.setAdapter(adapter);
 

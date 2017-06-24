@@ -21,6 +21,7 @@ public class Activity_Onepic_2017_6 extends Activity {
     int indexArray=0,question_ind=0;
     int counter =20;
     private ImageButton img;
+    String instr = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,13 +57,13 @@ public class Activity_Onepic_2017_6 extends Activity {
 
         story.setText(R.string.story_2017_6);
 
-
+       instr = "  যেভাবে সম্পাদন করতে হবে : শিক্ষার্থীকে উপরোক্ত গল্পটি পড়তে দিন।  নিচের তিনটি সামর্থ্যরে আলোকে পড়তে পারলে হ্যাঁ তে টিক চিহ্ন দিন না পারলে না তে টিকচিহ্ন দিন।    ";
 
     }
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
+       // String instr = ""+getResources().getStringArray(R.array.instructions_16_8)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 

@@ -35,6 +35,7 @@ public class QuestionActivity2017_3 extends AppCompatActivity {
 
 
     private CommentsDataSource datasource;
+    String instr = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +76,7 @@ public class QuestionActivity2017_3 extends AppCompatActivity {
 
         group.setText("বর্ণজ্ঞান");
         question.setText("১.১ শিক্ষার্থী কি এলোমেলো ৩০টি বর্ণ স্পষ্ট ও শুদ্ধ উচ্চারণে পড়তে পারে?");
+        instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে বাম পাশের টেবিলে থাকা এলোমেলো বর্ণগুলো পড়তে দিন। শিক্ষার্থী যে বর্ণগুলো চিনে পড়তে পেরেছে, সেগুলোতে টিকচিহ্ন দিন। ";
 
    //     question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         question_ind++;
@@ -122,7 +124,7 @@ public class QuestionActivity2017_3 extends AppCompatActivity {
 
     public void showbox(View v){
 
-        String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
+     //   String instr = ""+getResources().getStringArray(R.array.instruction_set_2016_1)[question_ind];
         AlertMessage.showMessage(con,"Instruction",instr);
     }
 
