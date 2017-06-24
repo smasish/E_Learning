@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -25,7 +26,7 @@ public class RegistrationActivity extends AppCompatActivity {
     String str_school="",str_stud="",str_class="",str_roll="";
     private Context con;
 
-    private Spinner school_code;
+    private Spinner school_code,jila_code;
 
 //    String code[] = { "নির্বাচন করুন",
 //            "55495217003",
@@ -50,7 +51,53 @@ public class RegistrationActivity extends AppCompatActivity {
 //            "55495285001",
 //    };
 
-    String code[] = { "নির্বাচন করুন",
+    String dis_code[] = { "নির্বাচন করুন","Barguna","Kurigram","Naogaon"};
+
+
+    String code_naog[] = { "নির্বাচন করুন",
+            "Palsha Krishnopur GPS",
+            "Trimohoni GPS",
+            "Lohachura GPS",
+            "Mokimpur GPS",
+            "HatNaogaon GPS",
+            "Gangjoar GPS",
+            "Jaboi GPS",
+            "Sapahar Model GPS",
+            "Aihai GPS",
+            "Nitpur Diyarapara  Model GPS",
+            "Pahariapukur  GPS",
+            "Moshidpur  GPS",
+            "Mohadevpur Model GPS",
+            "Chalkgouri GPS",
+            "Chandas GPS",
+            "Dhamoirhat Model GPS",
+            "Chakmoyrom GPS",
+            "Horitaki Danga GPS",};
+
+    String code_bar[] = { "নির্বাচন করুন",
+            "Amtali AK High GPS",
+            "Amtali Bandor madel GPS",
+            "Cila H B GPS",
+            "E. Cawra GPS",
+            "kukua Hat GPS",
+            "kukua Goskhali GPS",
+            "S. Kawabunia GPS",
+            "Gajipur bandor GPS",
+            "Cawra Calitabunia GPS",
+            "Ghatkhali GPS",
+            "Dibuapur Model GPS",
+            "Botolbunia GPS",
+            "Matherbunia GPS",
+            "Pachim Marichbunia GPS",
+            "Kalikapur GPS",
+            "Pachim Awliapur GPS",
+            "Ballovpur GPS",
+            "Pachim Kalikapur GPS",
+            "Pasuribunia GPS",
+            "Golachipa GPS",
+    };
+
+    String code_kuri[] = { "নির্বাচন করুন",
             "Belgacha",
             "Kashiabari ModhoPara",
             "Kharija Kamal GPS",
@@ -77,7 +124,9 @@ public class RegistrationActivity extends AppCompatActivity {
     List<String> categories;
     ArrayAdapter<String> dataAdapter;
 
-    int code_flag = 0;
+    ArrayAdapter<String> districtadapter;
+
+    int code_flag = 0,dis_index=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,13 +144,46 @@ public class RegistrationActivity extends AppCompatActivity {
         roll = (EditText) findViewById(R.id.roll_id);
 
         school_code = (Spinner)findViewById(R.id.school_id);
+
+        jila_code = (Spinner)findViewById(R.id.dist_id);
       //  categories = new ArrayList<String>();
         code_flag = 0;
 
-        dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, code);
-        school_code.setAdapter(dataAdapter);
+
         code_flag = school_code.getSelectedItemPosition();
 
+
+        districtadapter  = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, dis_code);
+        jila_code.setAdapter(districtadapter);
+
+        jila_code.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                // your code here
+                if(position == 1) {
+                    dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_naog);
+                    school_code.setAdapter(dataAdapter);
+                    dis_index=0;
+                }
+                if(position == 2) {
+                    dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_bar);
+                    school_code.setAdapter(dataAdapter);
+                    dis_index=1;
+                }
+                if(position == 3) {
+                    dis_index=2;
+                    dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_kuri);
+                    school_code.setAdapter(dataAdapter);
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+
+        });
 
         if(SharedPreferencesHelper.getName(con).length()>2){
            // school.setText(""+SharedPreferencesHelper.getName(con));
@@ -125,7 +207,13 @@ public class RegistrationActivity extends AppCompatActivity {
       //  str_school=school.getText().toString();
         code_flag = school_code.getSelectedItemPosition();
 
-        str_school = code[code_flag];
+        if(dis_index==0)
+            str_school = code_naog[code_flag];
+        else  if(dis_index==1)
+            str_school = code_bar[code_flag];
+        else  if(dis_index==2)
+            str_school = code_kuri[code_flag];
+
         str_stud=student.getText().toString();
         str_class=class_name.getText().toString();
         str_roll=roll.getText().toString();

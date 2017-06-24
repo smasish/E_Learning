@@ -146,6 +146,8 @@ public class WordListActivity2017_8 extends Activity {
         else if(flag_next == 1) {
           group.setText("বোধগম্যতা");
           question.setText("গল্পটি পড়ার পর শিক্ষার্থীকে নিচের তিনটি প্রশ্ন জিজ্ঞেস করুন");
+          instr = "যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে নিচের গল্পটি পড়তে দিন। শিক্ষার্থী গল্পটি পড়বে, শিক্ষক তার উপর ভিত্তি করে নিচের সামর্থ্যগুলো যাচাই করবেন। পারলে “হ্যাঁ” না পারলে “না”তে টিক দিন।";
+
           adapter_single = new StateAdapter_single(this);
           lv.setAdapter(adapter_single);
 
@@ -165,7 +167,7 @@ public class WordListActivity2017_8 extends Activity {
         if(flag_next == 2) {
             group.setText("বোধগম্যতা");
             question.setText("গল্পটি পড়ার পর শিক্ষার্থীকে নিচের তিনটি প্রশ্ন জিজ্ঞেস করুন");
-
+            instr = "\tযেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে গল্পটি পড়তে দিন । গল্পটি পড়ার পর শিক্ষার্থীকে নিচের তিনটি প্রশ্ন জিজ্ঞেস করুন। পারলে “হ্যাঁ” না পারলে “না”তে টিক দিন। (উত্তরগুলো কাছাকাছি হলেও সঠিক বলে ধরে নিন)।";
             adapter_second = new StateAdapter_second(this);
             lv.setAdapter(adapter_second);
 
