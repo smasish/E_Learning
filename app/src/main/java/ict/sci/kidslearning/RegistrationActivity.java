@@ -51,7 +51,7 @@ public class RegistrationActivity extends AppCompatActivity {
 //            "55495285001",
 //    };
 
-    String dis_code[] = { "নির্বাচন করুন","Barguna","Kurigram","Naogaon"};
+    String dis_code[] = { "নির্বাচন করুন","Barguna","Kurigram","Naogaon","Patuakhali"};
 
 
     String code_naog[] = { "নির্বাচন করুন",
@@ -74,6 +74,19 @@ public class RegistrationActivity extends AppCompatActivity {
             "Chakmoyrom GPS",
             "Horitaki Danga GPS",};
 
+    String code_patu[] = { "নির্বাচন করুন",
+            "Dibuapur Model GPS",
+            "Botolbunia GPS",
+            "Matherbunia GPS",
+            "Pachim Marichbunia GPS",
+            "Kalikapur GPS",
+            "Pachim Awliapur GPS",
+            "Ballovpur GPS",
+            "Pachim Kalikapur GPS",
+            "Pasuribunia GPS",
+            "Golachipa GPS"
+    };
+
     String code_bar[] = { "নির্বাচন করুন",
             "Amtali AK High GPS",
             "Amtali Bandor madel GPS",
@@ -84,17 +97,8 @@ public class RegistrationActivity extends AppCompatActivity {
             "S. Kawabunia GPS",
             "Gajipur bandor GPS",
             "Cawra Calitabunia GPS",
-            "Ghatkhali GPS",
-            "Dibuapur Model GPS",
-            "Botolbunia GPS",
-            "Matherbunia GPS",
-            "Pachim Marichbunia GPS",
-            "Kalikapur GPS",
-            "Pachim Awliapur GPS",
-            "Ballovpur GPS",
-            "Pachim Kalikapur GPS",
-            "Pasuribunia GPS",
-            "Golachipa GPS",
+            "Ghatkhali GPS"
+
     };
 
     String code_kuri[] = { "নির্বাচন করুন",
@@ -161,18 +165,23 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 // your code here
                 if(position == 1) {
-                    dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_naog);
+                    dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_bar);
                     school_code.setAdapter(dataAdapter);
                     dis_index=0;
                 }
-                if(position == 2) {
-                    dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_bar);
+                else if(position == 2) {
+                    dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_kuri);
                     school_code.setAdapter(dataAdapter);
                     dis_index=1;
                 }
-                if(position == 3) {
+                else if(position == 3) {
                     dis_index=2;
-                    dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_kuri);
+                    dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_naog);
+                    school_code.setAdapter(dataAdapter);
+                }
+                else if(position == 4) {
+                    dis_index=3;
+                    dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_patu);
                     school_code.setAdapter(dataAdapter);
                 }
 
@@ -213,23 +222,25 @@ public class RegistrationActivity extends AppCompatActivity {
             str_school = code_bar[code_flag];
         else  if(dis_index==2)
             str_school = code_kuri[code_flag];
+        else  if(dis_index==3)
+            str_school = code_patu[code_flag];
 
         str_stud=student.getText().toString();
         str_class=class_name.getText().toString();
         str_roll=roll.getText().toString();
 
-//        if(code_flag == 0){
-//            AlertMessage.showMessage(con, "Sorry", "Wrong school name.");
-//        }else if(str_stud.length()<3){
-//            AlertMessage.showMessage(con, "Sorry", "Wrong student name.");
-//        }
-//        else if(str_class.length()<1){
-//            AlertMessage.showMessage(con, "Sorry", "Wrong class name.");
-//        }
-//        else if(str_roll.length()<2 && str_roll.length()>3){
-//            AlertMessage.showMessage(con, "Sorry", "Wrong roll no.");
-//        }
-//        else {
+        if(code_flag == 0){
+            AlertMessage.showMessage(con, "Sorry", "Wrong school name.");
+        }else if(str_stud.length()<3){
+            AlertMessage.showMessage(con, "Sorry", "Wrong student name.");
+        }
+        else if(str_class.length()<1){
+            AlertMessage.showMessage(con, "Sorry", "Wrong class name.");
+        }
+        else if(str_roll.length()<2 && str_roll.length()>3){
+            AlertMessage.showMessage(con, "Sorry", "Wrong roll no.");
+        }
+        else {
 
         final Calendar c = Calendar.getInstance();
         mYear = c.get(Calendar.YEAR);
@@ -254,7 +265,7 @@ public class RegistrationActivity extends AppCompatActivity {
             startActivity(i);
             this.finish();
 
-//        }
+        }
     }
 
 
