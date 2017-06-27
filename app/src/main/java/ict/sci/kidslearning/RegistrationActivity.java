@@ -154,8 +154,8 @@ public class RegistrationActivity extends AppCompatActivity {
         code_flag = 0;
 
 
-        code_flag = school_code.getSelectedItemPosition();
-
+       // code_flag = school_code.getSelectedItemPosition();
+        dis_index=0;
 
         districtadapter  = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, dis_code);
         jila_code.setAdapter(districtadapter);
@@ -167,23 +167,25 @@ public class RegistrationActivity extends AppCompatActivity {
                 if(position == 1) {
                     dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_bar);
                     school_code.setAdapter(dataAdapter);
-                    dis_index=0;
+                    dis_index=1;
                 }
                 else if(position == 2) {
                     dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_kuri);
                     school_code.setAdapter(dataAdapter);
-                    dis_index=1;
+                    dis_index=2;
                 }
                 else if(position == 3) {
-                    dis_index=2;
+                    dis_index=3;
                     dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_naog);
                     school_code.setAdapter(dataAdapter);
                 }
                 else if(position == 4) {
-                    dis_index=3;
+                    dis_index=4;
                     dataAdapter = new ArrayAdapter<String>(con, android.R.layout.simple_spinner_item, code_patu);
                     school_code.setAdapter(dataAdapter);
                 }
+
+                //code_flag = school_code.getSelectedItemPosition();
 
             }
 
@@ -214,8 +216,12 @@ public class RegistrationActivity extends AppCompatActivity {
     public void next(View v){
 
       //  str_school=school.getText().toString();
+        if(dis_index == 0)
+            AlertMessage.showMessage(con, "Sorry", "Wrong school name.");
+        else
         code_flag = school_code.getSelectedItemPosition();
 
+        Log.d("=k=size=="+str_school, ".." +code_flag);
         if(dis_index==0)
             str_school = code_naog[code_flag];
         else  if(dis_index==1)

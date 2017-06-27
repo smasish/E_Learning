@@ -57,7 +57,7 @@ public class WordListActivity2017_7_31 extends Activity {
 
         indexArray=0;
         question_ind = 7;
-        counter =30;
+        counter =27;
 
         question = (TextView)findViewById(R.id.question_id);
 
@@ -146,6 +146,7 @@ public class WordListActivity2017_7_31 extends Activity {
             question.setText("উপকরণের ছবি থেকে নীচের প্রশ্নের উত্তর দিতে পারে কি? ");
             adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
+            counter = 27;
 
         }
 
@@ -166,12 +167,12 @@ public class WordListActivity2017_7_31 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=18)
-                datasource.updatevocabulary(id, "Mastery");
-            else  if(counter>=12)
-                datasource.updatevocabulary(id, "Developed");
+            if(counter>=2)
+                datasource.updatePhonetics(id, "Mastery-sab");
+            else  if(counter>=1)
+                datasource.updatePhonetics(id, "Developed-sab");
             else
-                datasource.updatevocabulary(id, "Need \nImprovement");
+                datasource.updatePhonetics(id, "Need \nImprovement-sab");
 
             Log.d("=k=size==", ".flaginnggggggg." +flag_next);
 
@@ -180,23 +181,23 @@ public class WordListActivity2017_7_31 extends Activity {
             startActivity(img);
             this.finish();
         }
-//        if(flag_next==1){
-//            adapter_last = new StateAdapter_last(this);
-//            lv.setAdapter(adapter_last);
-//
-//        }else if(flag_next==0){
-//
-//            spell_adapter  = new Adapter_spelling(this);
-//            lv.setAdapter(spell_adapter);
-//           // adapter_single = new StateAdapter_single(this);
-//
-//           // lv.setAdapter(adapter_single);
-//        }
+
         else if(flag_next == 2) {
             group.setText(" সাবলীলতা");
             question.setText("উপকরণের ছবি থেকে নীচের প্রশ্নের উত্তর দিতে পারে কি? ");
             adapter = new StateAdapter(this);
             lv.setAdapter(adapter);
+
+            int arr= datasource.getAllComments().size()-1;
+            String id = "" + datasource.getAllComments().get(arr).getId();
+            Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
+            if(counter>=16)
+                datasource.updateOrderItems(id, "Mastery-sob");
+            else  if(counter>=11)
+                datasource.updateOrderItems(id, "Developed-sob");
+            else
+                datasource.updateOrderItems(id, "Need \nImprovement-sob");
+            counter = 3;
 
         }
 

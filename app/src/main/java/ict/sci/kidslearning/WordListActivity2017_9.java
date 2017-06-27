@@ -58,7 +58,7 @@ public class WordListActivity2017_9 extends Activity {
 
         indexArray=0;
         question_ind = 0;
-        counter =6;
+        counter =3;
 
         group = (TextView)findViewById(R.id.group1);
 
@@ -159,6 +159,17 @@ public class WordListActivity2017_9 extends Activity {
 
             stateAdapter_second = new StateAdapter_second(this);
             lv.setAdapter(stateAdapter_second);
+            int arr= datasource.getAllComments().size()-1;
+            String id = "" + datasource.getAllComments().get(arr).getId();
+            Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
+            if(counter>=2)
+                datasource.updatePhonetics(id, "Mastery-sab");
+            else  if(counter>=1)
+                datasource.updatePhonetics(id, "Developed-sab");
+            else
+                datasource.updatePhonetics(id, "Need \nImprovement-sab");
+
+            counter = 3;
 
         }
         else if(flag_next==3){
@@ -167,12 +178,12 @@ public class WordListActivity2017_9 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=4)
-                datasource.updatevocabulary(id, "Mastery");
-            else  if(counter>=3)
-                datasource.updatevocabulary(id, "Developed");
+            if(counter>=2)
+                datasource.updatevocabulary(id, "Mastery-bud");
+            else  if(counter>=1)
+                datasource.updatevocabulary(id, "Developed-bud");
             else
-                datasource.updatevocabulary(id, "Need \nImprovement");
+                datasource.updatevocabulary(id, "Need \nImprovement-bud");
 
             Log.d("=k=size==", ".flaginnggggggg." +flag_next);
 
