@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
 
 import ict.sci.kidslearning.utils.AlertMessage;
 
@@ -80,6 +90,67 @@ public class ResultListActivity extends Activity {
 
             }
         });
+
+        db();
+
+    }
+
+    public void db(){
+
+        String APP_FILES_PATH = "/sdcard/Kid/Kids/";
+       // private static String DB_PATH = "/sdcard/Android/data/com.myawesomeapp.app/";
+     //   File folder =new File(Environment.getExternalStorageDirectory()+APP_FILES_PATH);
+        File folder =new File(APP_FILES_PATH);
+      //  File folder = new File(Environment.getExternalStorageDirectory().toString()+"/Kids/Images");
+        Log.d("=k=size==", ".flaginnggggggg." +folder);
+        if(!folder.exists())
+        {
+            folder.mkdir();
+        }
+
+
+        HSSFWorkbook hwb = new HSSFWorkbook();
+        HSSFSheet sheet = hwb.createSheet("IAT_RESULT");
+//        for(int x = 0; x < exts.size(); x++)
+//        {
+//            String[] arr = exts.get(x);
+//            HSSFRow row = sheet.createRow(x);
+//            for(int i = 0; i< arr.length; i++)
+//            {
+//                HSSFCell cell = row.createCell(i);
+//                String data = arr[i];
+//                cell.setCellValue(data);
+//
+//            }
+//        }
+        String[] schoolbag = new String[datasource.getAllComments().size()];
+
+        for(int x = 0; x < datasource.getAllComments().size(); x++)
+                schoolbag[x] = datasource.getAllComments().get(x).getPhone();
+
+        for(int x = 0; x < datasource.getAllComments().size(); x++)
+        {
+         //   String[] arr = schoolbag[x];
+            HSSFRow row = sheet.createRow(x);
+            for(int i = 0; i< schoolbag.length; i++)
+            {
+                HSSFCell cell = row.createCell(i);
+                String data = schoolbag[i];
+                cell.setCellValue(data);
+
+            }
+        }
+        try {
+           // FileOutputStream fileOut = new FileOutputStream(Environment.getExternalStorageDirectory() + APP_FILES_PATH + "file.xls");
+            FileOutputStream fileOut = new FileOutputStream("/sdcard/Download/" + "file.xls");
+
+
+            Log.d("=k=size==", ".flaginnggggggg." +fileOut);
+            hwb.write(fileOut);
+            fileOut.close();
+        }catch (Exception e){
+
+        }
 
     }
 

@@ -168,11 +168,11 @@ public class WordListActivity2017_7_31 extends Activity {
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
             if(counter>=2)
-                datasource.updatePhonetics(id, "Mastery-sab");
+                datasource.updatePhonetics(id, "Mastery-FLU");
             else  if(counter>=1)
-                datasource.updatePhonetics(id, "Developed-sab");
+                datasource.updatePhonetics(id, "Developed-FLU");
             else
-                datasource.updatePhonetics(id, "Need \nImprovement-sab");
+                datasource.updatePhonetics(id, "Need \nImprovement-FLU");
 
             Log.d("=k=size==", ".flaginnggggggg." +flag_next);
 
@@ -192,11 +192,11 @@ public class WordListActivity2017_7_31 extends Activity {
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
             if(counter>=16)
-                datasource.updateOrderItems(id, "Mastery-sob");
+                datasource.updateOrderItems(id, "Mastery-VOCA");
             else  if(counter>=11)
-                datasource.updateOrderItems(id, "Developed-sob");
+                datasource.updateOrderItems(id, "Developed-VOCA");
             else
-                datasource.updateOrderItems(id, "Need \nImprovement-sob");
+                datasource.updateOrderItems(id, "Need \nImprovement-VOCA");
             counter = 3;
 
         }
