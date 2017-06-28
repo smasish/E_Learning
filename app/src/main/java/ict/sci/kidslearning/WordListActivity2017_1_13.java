@@ -51,7 +51,10 @@ public class WordListActivity2017_1_13 extends Activity {
 
         indexArray=0;
         question_ind = 0;
-        counter =9;
+
+        int a = getIntent().getIntExtra("val",5);
+        counter =5+a;
+      //  counter =9;
 
         group = (TextView)findViewById(R.id.group1);
 
@@ -150,15 +153,16 @@ public class WordListActivity2017_1_13 extends Activity {
 
             //  String id = "" + datasource.getAllComments().get(0).getId();
 
-            int arr = datasource.getAllComments().size() - 1;
-            String id = "" + datasource.getAllComments().get(arr).getId();
-            Log.d("=k=size==" + datasource.getAllComments().size(), "..");
-            if (counter >= 5)
-                datasource.updatevocabulary(id, "Mastery");
-            else if (counter >= 4)
-                datasource.updatevocabulary(id, "Developed");
-            else
-                datasource.updatevocabulary(id, "Need \nImprovement");
+             int arr= datasource.getAllComments().size()-1;
+             String id = "" + datasource.getAllComments().get(arr).getId();
+            
+
+             if( counter >=15)
+                 datasource.updateOrderItems(id, "Mastery-LK");
+             else if( counter >=10)
+                 datasource.updateOrderItems(id, "Developed-LK");
+             else
+                 datasource.updateOrderItems(id, "Not yet \nDeveloped-LK");
 
             Log.d("=k=size==", ".flaginnggggggg." + flag_next);
 

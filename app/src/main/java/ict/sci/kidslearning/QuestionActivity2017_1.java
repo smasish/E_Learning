@@ -42,13 +42,18 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
         con = this;
         indexArray=0;
 
+
+
+
         group = (TextView)findViewById(R.id.group1);
 
 
         question = (TextView)findViewById(R.id.question_id);
 
+        int a = getIntent().getIntExtra("val",5);
+        counter =15+a;
 
-        counter =11;
+        Log.d("next-----"+a, "start===="+counter);
 
         imb1 = (ImageButton)findViewById(R.id.x1);
         imb2 = (ImageButton)findViewById(R.id.x2);
@@ -138,7 +143,7 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
         if(question_ind == 3){
             lettersor = counter;
 
-            counter = 25;
+           // counter = 25;
         }
 
 
@@ -158,19 +163,27 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
 
 
 
-            int arr= datasource.getAllComments().size()-1;
-            String id = "" + datasource.getAllComments().get(arr).getId();
-            Log.d("lettersor-----"+lettersor, "counter===="+counter);
+//            int arr= datasource.getAllComments().size()-1;
+//            String id = "" + datasource.getAllComments().get(arr).getId();
+//            Log.d("lettersor-----"+lettersor, "counter===="+counter);
+//
+//            if( counter >=15)
+//                datasource.updateOrderItems(id, "Mastery-LK");
+//            else if( counter >=10)
+//                datasource.updateOrderItems(id, "Developed-LK");
+//            else
+//                datasource.updateOrderItems(id, "Not yet \nDeveloped-LK");
 
-            if(lettersor>=7 && counter >=13)
-                datasource.updateOrderItems(id, "Mastery");
-            else if(lettersor>=5 && counter >=10)
-                datasource.updateOrderItems(id, "Developed");
-            else
-                datasource.updateOrderItems(id, "Need \nImprovement");
+//            if(lettersor>=7 && counter >=13)
+//                datasource.updateOrderItems(id, "Mastery-LK");
+//            else if(lettersor>=5 && counter >=10)
+//                datasource.updateOrderItems(id, "Developed-LK");
+//            else
+//                datasource.updateOrderItems(id, "Not yet \nDeveloped-LK");
 
            // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
             Intent img = new Intent(QuestionActivity2017_1.this, WordListActivity2017_1_13.class);
+            img.putExtra("val",counter);
             startActivity(img);
             this.finish();
         }

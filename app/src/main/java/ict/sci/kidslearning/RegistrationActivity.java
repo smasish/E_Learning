@@ -257,9 +257,9 @@ public class RegistrationActivity extends AppCompatActivity {
         }else if(str_stud.length()<3){
             AlertMessage.showMessage(con, "Sorry", "Wrong student name.");
         }
-        else if(str_class.length()<1){
-            AlertMessage.showMessage(con, "Sorry", "Wrong class name.");
-        }
+//        else if(str_class.length()<1){
+//            AlertMessage.showMessage(con, "Sorry", "Wrong class name.");
+//        }
         else if(str_roll.length()<1 || str_roll.length()>3){
             AlertMessage.showMessage(con, "Sorry", "Wrong roll no.");
         }

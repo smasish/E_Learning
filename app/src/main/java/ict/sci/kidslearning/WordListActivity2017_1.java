@@ -61,7 +61,7 @@ public class WordListActivity2017_1 extends Activity {
 
         indexArray=0;
         question_ind = 0;
-        counter =9;
+        counter =15;
 
         group = (TextView)findViewById(R.id.group1);
 
@@ -196,30 +196,34 @@ public class WordListActivity2017_1 extends Activity {
             instr ="যেভাবে সম্পাদন করতে হবে: শিক্ষার্থীকে বাম পাশের টেবিলে থাকা বর্ণসহ পরের বর্ণটি কী; সেটি জিজ্ঞেস করে পড়তে বলুন। শিক্ষার্থী যে বর্ণগুলো পড়তে পেরেছে, সেগুলো ডানপাশের টেবিলে থাকা বর্ণগুলোতে টিকচিহ্ন দিন ।";
             stateAdapter_shobdo = new StateAdapter_shobdo(this);
             lv.setAdapter(stateAdapter_shobdo);
+
+            int arr = datasource.getAllComments().size() - 1;
+            String id = "" + datasource.getAllComments().get(arr).getId();
+            Log.d("=k=size==" + datasource.getAllComments().size(), "..");
+            if (counter >= 9)
+                datasource.updatePhonetics(id, "Mastery-PA");
+            else if (counter >= 6)
+                datasource.updatePhonetics(id, "Developed-PA");
+            else
+                datasource.updatePhonetics(id, "Not yet \nDeveloped-PA");
+
+            Log.d("=k=size==", ".flaginnggggggg." + flag_next);
+            counter = 5;
         }
 
 
         else if(flag_next == 5) {
             Log.d("=k=size==" + datasource.getAllComments().size(), "...id..>>" + flag_next);
             question_ind++;
-            question.setText("" + getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
+       //     question.setText("" + getResources().getStringArray(R.array.word_list_2016_9)[question_ind]);
 
             //  String id = "" + datasource.getAllComments().get(0).getId();
 
-            int arr = datasource.getAllComments().size() - 1;
-            String id = "" + datasource.getAllComments().get(arr).getId();
-            Log.d("=k=size==" + datasource.getAllComments().size(), "..");
-            if (counter >= 5)
-                datasource.updatevocabulary(id, "Mastery");
-            else if (counter >= 4)
-                datasource.updatevocabulary(id, "Developed");
-            else
-                datasource.updatevocabulary(id, "Need \nImprovement");
 
-            Log.d("=k=size==", ".flaginnggggggg." + flag_next);
 
             // Intent img = new Intent(WordListActivity.this, AboutActivity.class);
             Intent img = new Intent(WordListActivity2017_1.this, QuestionActivity2017_1.class);
+            img.putExtra("val",counter);
             startActivity(img);
             this.finish();
 
