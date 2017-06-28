@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -20,25 +21,34 @@ import ict.sci.kidslearning.utils.AlertMessage;
 public class HomeActivity extends AppCompatActivity {
 
 
-    private Spinner year;
-    List<String> categories;
-    ArrayAdapter<String> dataAdapter;
+    private Spinner year,class_sp,period;
+    List<String> categories,class_category,period_category;
+    ArrayAdapter<String> dataAdapter,classAdapter,peirodAdapter;
 
     private Button gone1,gone2,gone3,gtwo1,gtwo2,gtwo3,gthree1,gthree2,gthree3;
     private Context con;
 
     int year_flag = 0;
 
+    LinearLayout l1,l2,l3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.test);
-        setContentView(R.layout.test);
+        setContentView(R.layout.testgrade);
 
 
         con = this;
         year = (Spinner)findViewById(R.id.spinner);
+
+        class_sp = (Spinner)findViewById(R.id.spinner_class);
+        period = (Spinner)findViewById(R.id.spinner_period);
+
+        l1 = (LinearLayout)findViewById(R.id.g1);
+        l2 = (LinearLayout)findViewById(R.id.g2);
+        l3 = (LinearLayout)findViewById(R.id.g3);
 
         categories = new ArrayList<String>();
         categories.add(" বছর  নির্বাচন করুন");
@@ -53,6 +63,58 @@ public class HomeActivity extends AppCompatActivity {
         dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
         year.setAdapter(dataAdapter);
         year_flag = year.getSelectedItemPosition();
+
+        class_category = new ArrayList<String>();
+        class_category.add(" শ্রেণী নির্বাচন করুন");
+        class_category.add("One");
+        class_category.add("Two");
+        class_category.add("Three");
+
+
+        classAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, class_category);
+        class_sp.setAdapter(classAdapter);
+
+        period_category = new ArrayList<String>();
+        period_category.add(" পিরিয়ড নির্বাচন করুন");
+        period_category.add("One");
+        period_category.add("Two");
+        period_category.add("Three");
+
+
+        peirodAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, period_category);
+        period.setAdapter(peirodAdapter);
+
+
+        period.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                // your code here
+                if(position == 1) {
+                   l1.setVisibility(View.VISIBLE);
+                    l2.setVisibility(View.GONE);
+                    l3.setVisibility(View.GONE);
+                }
+                else  if(position == 2) {
+                    l2.setVisibility(View.VISIBLE);
+                    l1.setVisibility(View.GONE);
+                    l3.setVisibility(View.GONE);
+                }
+                else if(position == 3) {
+                    l3.setVisibility(View.VISIBLE);
+                    l1.setVisibility(View.GONE);
+                    l2.setVisibility(View.GONE);
+                }
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+
+        });
+
 //        year.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //
 //            @Override
@@ -85,12 +147,14 @@ public class HomeActivity extends AppCompatActivity {
             Intent i = new Intent(HomeActivity.this, WordListActivity2017_1.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
 
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, QuestionActivity2016_1.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
     }
 
@@ -101,11 +165,13 @@ public class HomeActivity extends AppCompatActivity {
             Intent i = new Intent(HomeActivity.this, QuestionActivity2017_2.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, QuestionActivity2016_2.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
     }
 
@@ -116,11 +182,13 @@ public class HomeActivity extends AppCompatActivity {
             Intent i = new Intent(HomeActivity.this, QuestionActivity2017_3.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, QuestionActivity2016_3.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
     }
 
@@ -132,12 +200,14 @@ public class HomeActivity extends AppCompatActivity {
             Intent i = new Intent(HomeActivity.this, WordListActivity2017_4.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
 
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, QuestionActivity2016_4.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
     }
     public void g2b2(View v){
@@ -148,12 +218,14 @@ public class HomeActivity extends AppCompatActivity {
             Intent i = new Intent(HomeActivity.this, WordListActivity2017_5.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
 
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_5.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
     }
     public void g2b3(View v){
@@ -164,12 +236,14 @@ public class HomeActivity extends AppCompatActivity {
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2017_6.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
 
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_6.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
     }
 
@@ -181,11 +255,13 @@ public class HomeActivity extends AppCompatActivity {
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2017_7.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_7.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
     }
 
@@ -200,11 +276,13 @@ public class HomeActivity extends AppCompatActivity {
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2017_8.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_8.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
 
     }
@@ -219,23 +297,25 @@ public class HomeActivity extends AppCompatActivity {
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2017_9.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
         else if(year_flag == 2){
             Intent i = new Intent(HomeActivity.this, Activity_Onepic_2016_9.class);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             startActivity(i);
+            this.finish();
         }
 
     }
 
-    public void next(View v){
-//        Intent i = new Intent(HomeActivity.this, AboutActivity.class);
-//        startActivity(i);
-
-            Intent i = new Intent(HomeActivity.this, ResultListActivity.class);
-            startActivity(i);
-       // }
-    }
+//    public void next(View v){
+////        Intent i = new Intent(HomeActivity.this, AboutActivity.class);
+////        startActivity(i);
+//
+//            Intent i = new Intent(HomeActivity.this, ResultListActivity.class);
+//            startActivity(i);
+//       // }
+//    }
 
 
 }

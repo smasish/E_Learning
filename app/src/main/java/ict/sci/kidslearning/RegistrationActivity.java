@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -203,8 +204,21 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
     }
+//    public void next(View v){
+////        Intent i = new Intent(HomeActivity.this, AboutActivity.class);
+////        startActivity(i);
+//
+//        Intent i = new Intent(HomeActivity.this, ResultListActivity.class);
+//        startActivity(i);
+//        // }
+//    }
 
 
+    public void export(View v){
+
+        Toast.makeText(RegistrationActivity.this, "Exported result into \nMyfile > Downloads > IAT RESULT 2017", Toast.LENGTH_SHORT).show();
+
+    }
 
     public void result(View v){
 
@@ -235,6 +249,9 @@ public class RegistrationActivity extends AppCompatActivity {
         str_class=class_name.getText().toString();
         str_roll=roll.getText().toString();
 
+        Log.d("====str_roll===="+str_roll, "...id..>>" + str_roll);
+
+
         if(code_flag == 0){
             AlertMessage.showMessage(con, "Sorry", "Wrong school name.");
         }else if(str_stud.length()<3){
@@ -243,7 +260,7 @@ public class RegistrationActivity extends AppCompatActivity {
         else if(str_class.length()<1){
             AlertMessage.showMessage(con, "Sorry", "Wrong class name.");
         }
-        else if(str_roll.length()<2 && str_roll.length()>3){
+        else if(str_roll.length()<1 || str_roll.length()>3){
             AlertMessage.showMessage(con, "Sorry", "Wrong roll no.");
         }
         else {
@@ -269,7 +286,7 @@ public class RegistrationActivity extends AppCompatActivity {
             Intent i = new Intent(RegistrationActivity.this, HomeActivity.class);
             //Intent i = new Intent(MainActivity.this, WordListActivity.class);
             startActivity(i);
-            this.finish();
+           // this.finish();
 
         }
     }

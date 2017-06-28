@@ -5,6 +5,10 @@
     <string name="right"> সঠিক  </string>
     <string name="wrong"> ভুল </string>
 
+    <string name="cash_mode">Male</string>
+    <string name="cash_mode2">Female</string>
+
+
     <string name="nextpage">পরবর্তী  পাতা</string>
     <string name="savenextpage">জমা করুন এবং \Nপরবর্তী  পাতায় যান</string>
 
@@ -15,6 +19,7 @@
     <string name="next"> পরবর্তী </string>
 
     <string name="res"> ফলাফল </string>
+    <string name="export"> ফলাফল </string>
 
     <string name="grade1"> গ্রেড এক </string>
     <string name="grade2"> গ্রেড দুই </string>
@@ -25,6 +30,8 @@
     শিক্ষার্থীকে উদাহরণ দিয়ে বুঝিয়ে দিন।
     শিক্ষার্থীকে উদাহরণ দিয়ে বুঝিয়ে দিন।
     </string>
+
+
 
     <string name="btn_title0">Name &amp; Roll</string>
     <!--<string name="btn_title1">Letters</string>-->

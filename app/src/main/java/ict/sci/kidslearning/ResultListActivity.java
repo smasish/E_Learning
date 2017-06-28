@@ -124,9 +124,13 @@ public class ResultListActivity extends Activity {
 //            }
 //        }
         String[] schoolbag = new String[datasource.getAllComments().size()];
+        String[] name = new String[datasource.getAllComments().size()];
 
-        for(int x = 0; x < datasource.getAllComments().size(); x++)
-                schoolbag[x] = datasource.getAllComments().get(x).getPhone();
+        for(int x = 0; x < datasource.getAllComments().size(); x++) {
+            schoolbag[x] = datasource.getAllComments().get(x).getPhone();
+            Log.d("=----schoolbag==", ".schoolbag[x]." +schoolbag[x]);
+            name[x] = datasource.getAllComments().get(x).getStudent();
+        }
 
         for(int x = 0; x < datasource.getAllComments().size(); x++)
         {
@@ -136,6 +140,7 @@ public class ResultListActivity extends Activity {
             {
                 HSSFCell cell = row.createCell(i);
                 String data = schoolbag[i];
+                Log.d("=-i---schoolbag==", ".schoolbag[x]." +schoolbag[i]);
                 cell.setCellValue(data);
 
             }

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ict.sci.kidslearning.HomeActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/row1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+
+            android:layout_gravity="center_vertical"
+            android:text="বছর  নির্বাচন করুনঃ "
+            android:textStyle="bold"
+            android:id="@+id/textView3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:textSize="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/spinner_border"
+            android:layout_toRightOf="@+id/textView3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/row1_class"
+        android:layout_below="@+id/row1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+
+            android:layout_gravity="center_vertical"
+            android:text="শ্রেণী নির্বাচন করুনঃ "
+            android:textStyle="bold"
+            android:id="@+id/clas"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_class"
+            android:textSize="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/spinner_border"
+            android:layout_toRightOf="@+id/textView3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/row1_period"
+        android:layout_below="@+id/row1_class"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+
+            android:layout_gravity="center_vertical"
+            android:text=" পিরিয়ড নির্বাচন করুনঃ "
+            android:textStyle="bold"
+            android:id="@+id/period"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_period"
+            android:textSize="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/spinner_border"
+            android:layout_toRightOf="@+id/textView3" />
+
+    </LinearLayout>
+
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/res"-->
+        <!--android:background="@drawable/buttoncolor"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:id="@+id/button2"-->
+        <!--android:textSize="28sp"-->
+        <!--android:onClick="next"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/row3"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:id="@+id/g1"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_weight=".6"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolor"
+                android:textColor="@color/white"
+                android:id="@+id/btn1"
+                android:text="@string/first"
+                android:textSize="@dimen/btn_text_size"
+                android:onClick="g1b1"
+
+
+                />
+            <Button
+                android:layout_weight=".6"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolor"
+                android:text="@string/second"
+                android:textSize="@dimen/btn_text_size"
+                android:textColor="@color/white"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/btn2"
+                android:onClick="g1b2"
+
+                />
+            <Button
+                android:layout_weight=".7"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolor"
+                android:text="@string/third"
+                android:textSize="@dimen/btn_text_size"
+                android:textColor="@color/white"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/btn3"
+                android:onClick="g1b3"
+
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/g2"
+android:layout_toRightOf="@+id/g1"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolor"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/btn4"
+                android:text="@string/first"
+                android:textSize="@dimen/btn_text_size"
+                android:textColor="@color/white"
+                android:onClick="g2b1"
+                />
+            <Button
+                android:layout_weight="1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolor"
+                android:text="@string/second"
+                android:textSize="@dimen/btn_text_size"
+                android:textColor="@color/white"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/btn5"
+                android:onClick="g2b2"
+                />
+            <Button
+                android:layout_weight="1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolor"
+                android:text="@string/third"
+                android:textSize="@dimen/btn_text_size"
+                android:textColor="@color/white"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/btn6"
+                android:onClick="g2b3"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/g3"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/g2"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_weight="1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolor"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/btn7"
+                android:text="@string/first"
+                android:textSize="@dimen/btn_text_size"
+                android:textColor="@color/white"
+                android:onClick="g3b1"
+                />
+            <Button
+                android:layout_weight="1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolor"
+                android:text="@string/second"
+                android:textSize="@dimen/btn_text_size"
+                android:textColor="@color/white"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/btn8"
+                android:onClick="g3b2"
+
+                />
+            <Button
+                android:layout_weight="1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttoncolor"
+                android:textColor="@color/white"
+                android:text="@string/third"
+                android:textSize="@dimen/btn_text_size"
+
+                android:layout_marginLeft="2dp"
+                android:id="@+id/btn9"
+                android:onClick="g3b3"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
