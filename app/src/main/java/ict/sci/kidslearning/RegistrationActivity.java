@@ -22,7 +22,7 @@ import ict.sci.kidslearning.utils.SharedPreferencesHelper;
 public class RegistrationActivity extends AppCompatActivity {
 
     private CommentsDataSource datasource;
-    private EditText school,student,class_name,roll;
+    private EditText school,student,roll; //class_name
     private int mYear, mMonth, mDay, mHour, mMinute,ampm;
     String str_school="",str_stud="",str_class="",str_roll="";
     private Context con;
@@ -145,7 +145,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
       //  school = (EditText) findViewById(R.id.school_id);
         student = (EditText) findViewById(R.id.student_id);
-        class_name = (EditText) findViewById(R.id.class_id);
+      //  class_name = (EditText) findViewById(R.id.class_id);
         roll = (EditText) findViewById(R.id.roll_id);
 
         school_code = (Spinner)findViewById(R.id.school_id);
@@ -197,10 +197,10 @@ public class RegistrationActivity extends AppCompatActivity {
 
         });
 
-        if(SharedPreferencesHelper.getName(con).length()>2){
-           // school.setText(""+SharedPreferencesHelper.getName(con));
-            class_name.setText(""+SharedPreferencesHelper.getClass(con));
-        }
+//        if(SharedPreferencesHelper.getName(con).length()>2){
+//           // school.setText(""+SharedPreferencesHelper.getName(con));
+//            class_name.setText(""+SharedPreferencesHelper.getClass(con));
+//        }
 
 
     }
@@ -246,7 +246,7 @@ public class RegistrationActivity extends AppCompatActivity {
             str_school = code_patu[code_flag];
 
         str_stud=student.getText().toString();
-        str_class=class_name.getText().toString();
+        //str_class=class_name.getText().toString();
         str_roll=roll.getText().toString();
 
         Log.d("====str_roll===="+str_roll, "...id..>>" + str_roll);

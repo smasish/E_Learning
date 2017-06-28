@@ -72,21 +72,21 @@
         android:textColor="@color/red"
         android:hint="ছাত্র/ ছাত্রীর নামঃ" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="@color/red"
-        android:text="ক্লাসের নামঃ " />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="20dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textColor="@color/red"-->
+        <!--android:text="ক্লাসের নামঃ " />-->
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:id="@+id/class_id"
-        android:textColor="@color/red"
-        android:hint="ক্লাসের নামঃ" />
+    <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="20dp"-->
+        <!--android:id="@+id/class_id"-->
+        <!--android:textColor="@color/red"-->
+        <!--android:hint="ক্লাসের নামঃ" />-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -101,7 +101,7 @@
 
             android:layout_marginLeft="5dp"
 
-            android:text="Gender: "
+            android:text="লিঙ্গ নির্বাচন করুন: "
             android:textColor="#000000"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -150,6 +150,8 @@
         android:text="@string/savenextpage"
         android:background="@drawable/buttoncolor"
         android:textColor="@color/white"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:id="@+id/button2"
         android:onClick="next"
         android:layout_alignParentBottom="true"
@@ -161,7 +163,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginLeft="500dp"
-        android:layout_marginTop="15dip"
+        android:layout_marginTop="30dip"
         >
 
 
@@ -191,7 +193,8 @@
         android:textColor="@color/white"
         android:id="@+id/export_id"
         android:onClick="export"
-
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
 
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
