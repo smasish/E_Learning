@@ -48,7 +48,10 @@ int counter =20;
 
         indexArray=0;
         question_ind = 7;
-        counter =20;
+
+        int a = getIntent().getIntExtra("val",5);
+        counter =10+a;
+       // counter =20;
 
         question = (TextView)findViewById(R.id.question_id);
 
@@ -153,12 +156,12 @@ int counter =20;
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=16)
-                datasource.updatevocabulary(id, "Mastery");
-            else  if(counter>=10)
-                datasource.updatevocabulary(id, "Developed");
+            if(counter>=18)
+                datasource.updateOrderItems(id, "Mastery-LK");
+            else  if(counter>=12)
+                datasource.updateOrderItems(id, "Developed-LK");
             else
-                datasource.updatevocabulary(id, "Need \nImprovement");
+                datasource.updateOrderItems(id, "Not yet \nDeveloped-LK");
 
 
 

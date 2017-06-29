@@ -155,7 +155,7 @@ public class WordListActivity2017_1_13 extends Activity {
 
              int arr= datasource.getAllComments().size()-1;
              String id = "" + datasource.getAllComments().get(arr).getId();
-            
+
 
              if( counter >=15)
                  datasource.updateOrderItems(id, "Mastery-LK");
