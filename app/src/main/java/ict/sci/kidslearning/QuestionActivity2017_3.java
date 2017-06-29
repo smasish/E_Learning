@@ -52,7 +52,7 @@ public class QuestionActivity2017_3 extends AppCompatActivity {
         question = (TextView)findViewById(R.id.question_id);
 
 
-        counter =11;
+        counter =30;
 
         imb1 = (ImageButton)findViewById(R.id.x1);
         imb2 = (ImageButton)findViewById(R.id.x2);
@@ -142,9 +142,9 @@ public class QuestionActivity2017_3 extends AppCompatActivity {
         question.setText("১.১ শিক্ষার্থী কি এলোমেলো ৩০টি বর্ণ স্পষ্ট ও শুদ্ধ উচ্চারণে পড়তে পারে?");
 
         if(question_ind == 3){
-            lettersor = counter;
+          //  lettersor = counter;
 
-            counter = 25;
+          //  counter = 25;
         }
 
 
@@ -168,15 +168,16 @@ public class QuestionActivity2017_3 extends AppCompatActivity {
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("lettersor-----"+lettersor, "counter===="+counter);
 
-            if(lettersor>=7 && counter >=13)
-                datasource.updateOrderItems(id, "Mastery");
-            else if(lettersor>=5 && counter >=10)
-                datasource.updateOrderItems(id, "Developed");
-            else
-                datasource.updateOrderItems(id, "Need \nImprovement");
+//            if(lettersor>=7 && counter >=13)
+//                datasource.updateOrderItems(id, "Mastery");
+//            else if(lettersor>=5 && counter >=10)
+//                datasource.updateOrderItems(id, "Developed");
+//            else
+//                datasource.updateOrderItems(id, "Need \nImprovement");
 
            // Intent img = new Intent(QuestionActivity.this, AboutActivity.class);
             Intent img = new Intent(QuestionActivity2017_3.this, WordListActivity2017_3.class);
+            img.putExtra("val",counter);
             startActivity(img);
             this.finish();
         }

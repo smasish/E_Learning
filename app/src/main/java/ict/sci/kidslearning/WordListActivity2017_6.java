@@ -159,6 +159,16 @@ public class WordListActivity2017_6 extends Activity {
             instr = " যেভাবে সম্পাদন করতে হবে : শিক্ষার্থীকে উপরোক্ত গল্পটি পড়তে দিন।  নিচের তিনটি প্রশ্নের সঠিক উত্তর দিতে পারলে হ্যাঁ তে টিক চিহ্ন দিন না পারলে না তে টিকচিহ্ন দিন।    ";
             adapter_second = new StateAdapter_second(this);
             lv.setAdapter(adapter_second);
+            int arr= datasource.getAllComments().size()-1;
+            String id = "" + datasource.getAllComments().get(arr).getId();
+            Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
+            if(counter>=2)
+                datasource.updatePhonetics(id, "Mastery-FLU");
+            else  if(counter>=1)
+                datasource.updatePhonetics(id, "Developed-FLU");
+            else
+                datasource.updatePhonetics(id, "Not yet \nDeveloped-FLU");
+            counter = 3;
         }
 
       else if(flag_next==3){
@@ -167,12 +177,12 @@ public class WordListActivity2017_6 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=4)
-                datasource.updatevocabulary(id, "Mastery");
-            else  if(counter>=3)
-                datasource.updatevocabulary(id, "Developed");
+            if(counter>=2)
+                datasource.updatevocabulary(id, "Mastery-COMP");
+            else  if(counter>=1)
+                datasource.updatevocabulary(id, "Developed-COMP");
             else
-                datasource.updatevocabulary(id, "Need \nImprovement");
+                datasource.updatevocabulary(id, "Not yet \nDeveloped-COMP");
 
             Log.d("=k=size==", ".flaginnggggggg." +flag_next);
 

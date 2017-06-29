@@ -158,11 +158,11 @@ public class WordListActivity2017_5_51 extends Activity {
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
             if(counter>=2)
-                datasource.updatevocabulary(id, "Mastery");
+                datasource.updatevocabulary(id, "Mastery-COMP");
             else  if(counter>=1)
-                datasource.updatevocabulary(id, "Developed");
+                datasource.updatevocabulary(id, "Developed-COMP");
             else
-                datasource.updatevocabulary(id, "Need \nImprovement");
+                datasource.updatevocabulary(id, "Not yet \nDeveloped-COMP");
 
             Log.d("=k=size==", ".flaginnggggggg." +flag_next);
 
