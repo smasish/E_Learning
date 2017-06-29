@@ -28,7 +28,7 @@ public class Comment  {
 		this.id = id;
 	}
 
-	public String getComment() {
+	public String getSchool() {
 		return comment;
 	}
 

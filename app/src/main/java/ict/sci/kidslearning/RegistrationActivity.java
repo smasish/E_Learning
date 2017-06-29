@@ -9,9 +9,17 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -132,6 +140,9 @@ public class RegistrationActivity extends AppCompatActivity {
     ArrayAdapter<String> districtadapter;
 
     int code_flag = 0,dis_index=0;
+    private RadioGroup radioGroup;
+    private RadioButton radioButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -218,6 +229,82 @@ public class RegistrationActivity extends AppCompatActivity {
 
         Toast.makeText(RegistrationActivity.this, "Exported result into \nMyfile > Downloads > IAT RESULT 2017", Toast.LENGTH_SHORT).show();
 
+
+        HSSFWorkbook hwb = new HSSFWorkbook();
+        HSSFSheet sheet = hwb.createSheet("IAT_RESULT");
+
+        String[] schoolbag = new String[datasource.getAllComments().size()];
+        String[] name = new String[datasource.getAllComments().size()];
+
+        for(int x = 0; x < datasource.getAllComments().size(); x++) {
+            schoolbag[x] = datasource.getAllComments().get(x).getPhone();
+            Log.d("=----schoolbag==", ".schoolbag[x]." +schoolbag[x]);
+            name[x] = datasource.getAllComments().get(x).getStudent();
+        }
+
+        for(int x = 0; x < datasource.getAllComments().size(); x++)
+        {
+            //   String[] arr = schoolbag[x];
+            HSSFRow row = sheet.createRow(x);
+            int i =0;
+//            for(int i = 0; i< schoolbag.length; i++)
+//            {
+//                HSSFCell cell = row.createCell(i);
+//                String data = schoolbag[i];
+//                Log.d("=-i---schoolbag==", ".schoolbag[x]." +schoolbag[i]);
+//                cell.setCellValue(data);
+//
+//            }
+            HSSFCell cell = row.createCell(i);
+            cell.setCellValue("Name");
+            String data = datasource.getAllComments().get(x).getStudent();
+            cell.setCellValue(data);
+            i++;
+            cell = row.createCell(i);
+            cell.setCellValue("Roll No");
+            data = datasource.getAllComments().get(x).getRoll();
+            cell.setCellValue(data);
+            i++;
+
+            cell = row.createCell(i);
+            cell.setCellValue("School Name");
+            data = datasource.getAllComments().get(x).getSchool();
+            cell.setCellValue(data);
+            i++;
+
+             cell = row.createCell(i);
+             data = datasource.getAllComments().get(x).getLetter();
+            cell.setCellValue(data);
+            i++;
+            cell = row.createCell(i);
+             data = datasource.getAllComments().get(x).get_vocabulary();
+            cell.setCellValue(data);
+            i++;
+            cell = row.createCell(i);
+            data = datasource.getAllComments().get(x).getPhone();
+            cell.setCellValue(data);
+            i++;
+
+            cell = row.createCell(i);
+            data = datasource.getAllComments().get(x).getDat();
+            cell.setCellValue(data);
+
+
+           // i++;
+
+
+        }
+        try {
+            // FileOutputStream fileOut = new FileOutputStream(Environment.getExternalStorageDirectory() + APP_FILES_PATH + "file.xls");
+            FileOutputStream fileOut = new FileOutputStream("/sdcard/Download/" + "IAT2017.xls");
+
+
+            Log.d("=k=size==", ".flaginnggggggg." +fileOut);
+            hwb.write(fileOut);
+            fileOut.close();
+        }catch (Exception e){
+
+        }
     }
 
     public void result(View v){
@@ -230,6 +317,19 @@ public class RegistrationActivity extends AppCompatActivity {
     public void next(View v){
 
       //  str_school=school.getText().toString();
+
+
+        RadioGroup  group= (RadioGroup) findViewById(R.id.radiotype);
+        group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                View radioButton = radioGroup.findViewById(i);
+                int index = radioGroup.indexOfChild(radioButton);
+
+                Log.d("=----=index=="+index, ".." +index);
+            }
+        });
+
         if(dis_index == 0)
             AlertMessage.showMessage(con, "Sorry", "Wrong school name.");
         else
@@ -278,7 +378,7 @@ public class RegistrationActivity extends AppCompatActivity {
             datasource.createComment(str_school,str_stud,str_class,dat,"-","-","-",0,str_roll);
             List<Comment> values = datasource.getAllComments();
 
-            Log.d("====k===="+values.get(0).getScore(), "...id..>>" + values.get(0).getComment());
+            Log.d("====k===="+values.get(0).getScore(), "...id..>>" + values.get(0).getSchool());
 
         SharedPreferencesHelper.setName(con,str_school);
         SharedPreferencesHelper.setClass(con,str_class);
