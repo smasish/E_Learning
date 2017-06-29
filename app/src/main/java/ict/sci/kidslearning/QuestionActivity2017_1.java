@@ -91,20 +91,20 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
     }
     public void onetwo(View v){
 
-        if(counter>1)
+        if(counter>=1)
             counter--;
         Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
 
     }
     public void onethree(View v){
 
-
+        if(counter>=1)
         counter--;
         Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
     }
     public void twoone(View v){
 
-        if(counter>1)
+        if(counter>=1)
             counter--;
         Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
 
@@ -113,13 +113,13 @@ public class QuestionActivity2017_1 extends AppCompatActivity {
 
         Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
 
-        if(counter>1)
+        if(counter>=1)
             counter--;
     }
     public void twothree(View v){
 
         Toast.makeText(con,"Counted"+counter,Toast.LENGTH_LONG).show();
-        if(counter>1)
+        if(counter>=1)
             counter--;
     }
 

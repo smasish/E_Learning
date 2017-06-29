@@ -119,7 +119,7 @@ public class WordListActivity2017_9 extends Activity {
     public void single_toggle(View v){
 
         Toast.makeText(con,"Wrong",Toast.LENGTH_LONG).show();
-        if(counter>1)
+        if(counter>=1)
             counter--;
 
     }
@@ -183,7 +183,7 @@ public class WordListActivity2017_9 extends Activity {
             else  if(counter>=1)
                 datasource.updatevocabulary(id, "Developed-COMP");
             else
-                datasource.updatevocabulary(id, "Need \nImprovement-COMP");
+                datasource.updatevocabulary(id, "Not yet \nDeveloped-COMP");
 
             Log.d("=k=size==", ".flaginnggggggg." +flag_next);
 

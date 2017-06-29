@@ -118,6 +118,7 @@ public class WordListActivity2017_5_51 extends Activity {
     public void single_toggle(View v){
 
         Toast.makeText(con,"Wrong",Toast.LENGTH_LONG).show();
+        if(counter>=1)
         counter--;
 
     }

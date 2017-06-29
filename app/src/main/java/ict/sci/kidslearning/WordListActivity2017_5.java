@@ -114,6 +114,7 @@ int counter =20;
     public void single_toggle(View v){
 
         Toast.makeText(con,"Wrong",Toast.LENGTH_LONG).show();
+        if(counter>=1)
         counter--;
 
     }

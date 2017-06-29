@@ -275,7 +275,7 @@ public class RegistrationActivity extends AppCompatActivity {
         Log.d("=str_school==="+str_school, "..year..>>"+mYear+"---day: "+mDay );
 
         Comment comment = null;
-            datasource.createComment(str_school,str_stud,str_class,dat,"Developed","Need \nImprovement","Developed",0,str_roll);
+            datasource.createComment(str_school,str_stud,str_class,dat,"-","-","-",0,str_roll);
             List<Comment> values = datasource.getAllComments();
 
             Log.d("====k===="+values.get(0).getScore(), "...id..>>" + values.get(0).getComment());
