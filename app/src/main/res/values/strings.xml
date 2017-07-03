@@ -824,9 +824,10 @@
 
 </string-array>
 
+    <!--<item name="set1"> শব্দ	|প্রথম ধ্বনি	 | প্রথম ধ্বনির মিলযুক্ত অন্যান্য শব্দ</item>-->
 
     <string-array name="word_list_2017_23">
-        <item name="set1"> শব্দ	|প্রথম ধ্বনি	 | প্রথম ধ্বনির মিলযুক্ত অন্যান্য শব্দ</item>
+
         <item name="set1"> চাকা 	| চা |	চাচা, চাচি, চাল, চালা, চামুচ</item>
         <item name="set1"> কাক	| কা |	কাকা, কাকি, কাঁচি,কাজ, কাঠ </item>
         <item name="set1"> পানি	| পা |	পাতা, পাখি, পাকা, পাই, পাল</item>
@@ -844,7 +845,7 @@
     </string-array>
 
     <string-array name="word_list_2017_1_3">
-        <item name="set1">শব্দ	  |  বর্ণ</item>
+        <!--<item name="set1">শব্দ	  |  বর্ণ</item>-->
         <item name="set1">জগ | জ-গ</item>
         <item name="set1">চক  |চ-ক</item>
         <item name="set1"> ইট | ই-ট</item>
@@ -892,7 +893,7 @@
 
 
     <string-array name="word_list_2017_2_12">
-        <item name="set1">বর্ণের সঙ্গে কার-চিহ্ন যুক্ত করে পড়ি </item>
+        <!--<item name="set1">বর্ণের সঙ্গে কার-চিহ্ন যুক্ত করে পড়ি </item>-->
         <item name="set1"> বা</item>
         <item name="set1"> কি</item>
         <item name="set1">ফু </item>
@@ -997,7 +998,7 @@
     </string-array>
 
     <string-array name="word_list_2017_4_23">
-        <item name="set1"> যুক্তবর্ণ   | শব্দ </item>
+        <!--<item name="set1"> যুক্তবর্ণ   | শব্দ </item>-->
         <item name="set1">ন্দ | আনন্দ </item>
         <item name="set1"> ান্ডা   | ঠান্ডা</item>
         <item name="set1"> য্য  | সূয্যি </item>
@@ -1023,7 +1024,7 @@
     <string-array name="word_list_2017_5_31">
         <item name="set1">শান্ত </item>
         <item name="set1"> উষ্ণ</item>
-        <item name="set1">”ঞ্চল </item>
+        <item name="set1"> চঞ্চল  </item>
         <item name="set1">দুগ্ধ </item>
         <item name="set1">  জ্ঞান</item>
 

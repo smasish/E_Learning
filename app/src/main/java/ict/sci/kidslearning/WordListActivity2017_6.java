@@ -64,7 +64,9 @@ public class WordListActivity2017_6 extends Activity {
         group = (TextView)findViewById(R.id.group1);
 
         group.setText("সাবলীলতা  ");
-        question.setText("শিক্ষার্থী অধিকাংশ শব্দ শুদ্ধ উচ্চারণে পড়তে পারে ");
+      //  question.setText("শিক্ষার্থী অধিকাংশ শব্দ শুদ্ধ উচ্চারণে পড়তে পারে ");
+
+        question.setText("");
 
    //     question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
         //question_ind++;
