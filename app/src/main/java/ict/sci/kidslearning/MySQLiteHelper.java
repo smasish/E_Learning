@@ -17,6 +17,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 	public static final String COLUMN_student = "student";
 	public static final String COLUMN_CLASS = "class";
 	public static final String COLUMN_ROLL = "roll";
+	public static final String COLUMN_GEN = "gen";
 
 	public static final String COLUMN_LEVEL1 = "phonetics";
 	public static final String COLUMN_LEVEL2 = "letter";
@@ -39,6 +40,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 			+ " text not null, " + COLUMN_LEVEL3
 			+ " text not null, " + COLUMN_SCORE
 			+ " integer, " + COLUMN_ROLL
+			+ " text not null, " + COLUMN_GEN
 			+ " text not null);";
 
 	public MySQLiteHelper(Context context) {

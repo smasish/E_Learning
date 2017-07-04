@@ -139,7 +139,8 @@ public class RegistrationActivity extends AppCompatActivity {
 
     ArrayAdapter<String> districtadapter;
 
-    int code_flag = 0,dis_index=0;
+    int code_flag = 0,dis_index=0,gender_ind=0;
+    String gen="";
     private RadioGroup radioGroup;
     private RadioButton radioButton;
 
@@ -165,7 +166,7 @@ public class RegistrationActivity extends AppCompatActivity {
       //  categories = new ArrayList<String>();
         code_flag = 0;
 
-
+        gender_ind=0;
        // code_flag = school_code.getSelectedItemPosition();
         dis_index=0;
 
@@ -267,6 +268,18 @@ public class RegistrationActivity extends AppCompatActivity {
             i++;
 
             cell = row.createCell(i);
+            cell.setCellValue("Gender");
+            data = datasource.getAllComments().get(x).getGen();
+            cell.setCellValue(data);
+            i++;
+
+            cell = row.createCell(i);
+            cell.setCellValue("Class Name");
+            data = datasource.getAllComments().get(x).getClas();
+            cell.setCellValue(data);
+            i++;
+
+            cell = row.createCell(i);
             cell.setCellValue("School Name");
             data = datasource.getAllComments().get(x).getSchool();
             cell.setCellValue(data);
@@ -325,7 +338,7 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 View radioButton = radioGroup.findViewById(i);
                 int index = radioGroup.indexOfChild(radioButton);
-
+                gender_ind=index;
                 Log.d("=----=index=="+index, ".." +index);
             }
         });
@@ -374,8 +387,14 @@ public class RegistrationActivity extends AppCompatActivity {
 
         Log.d("=str_school==="+str_school, "..year..>>"+mYear+"---day: "+mDay );
 
+            if(gender_ind == 0)
+                gen = "Male";
+            else
+                gen = "Female";
+
+
         Comment comment = null;
-            datasource.createComment(str_school,str_stud,str_class,dat,"-","-","-",0,str_roll);
+            datasource.createComment(str_school,str_stud,str_class,dat,"-","-","-",0,str_roll,gen);
             List<Comment> values = datasource.getAllComments();
 
             Log.d("====k===="+values.get(0).getScore(), "...id..>>" + values.get(0).getSchool());

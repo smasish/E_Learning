@@ -19,7 +19,7 @@ public class CommentsDataSource  {
 	private String[] allColumns = { MySQLiteHelper.COLUMN_ID,
 			MySQLiteHelper.COLUMN_SCHOOL,MySQLiteHelper.COLUMN_student,MySQLiteHelper.COLUMN_CLASS,MySQLiteHelper.COLUMN_DATE,
 			MySQLiteHelper.COLUMN_LEVEL1,MySQLiteHelper.COLUMN_LEVEL2,MySQLiteHelper.COLUMN_LEVEL3,
-			""+MySQLiteHelper.COLUMN_SCORE, MySQLiteHelper.COLUMN_ROLL };
+			""+MySQLiteHelper.COLUMN_SCORE, MySQLiteHelper.COLUMN_ROLL,MySQLiteHelper.COLUMN_GEN };
 
 	public CommentsDataSource(Context context) {
 		dbHelper = new MySQLiteHelper(context);
@@ -33,7 +33,7 @@ public class CommentsDataSource  {
 		dbHelper.close();
 	}
 
-	public Comment createComment(String school,String student,String clas,String dat,String phonet,String letter,String vocabulary,int score,String roll) {
+	public Comment createComment(String school,String student,String clas,String dat,String phonet,String letter,String vocabulary,int score,String roll,String gen) {
 		ContentValues values = new ContentValues();
 		values.put(MySQLiteHelper.COLUMN_SCHOOL, school);
 		values.put(MySQLiteHelper.COLUMN_student, student);
@@ -44,6 +44,7 @@ public class CommentsDataSource  {
 		values.put(MySQLiteHelper.COLUMN_LEVEL3, vocabulary);
 		values.put(MySQLiteHelper.COLUMN_SCORE, score);
 		values.put(MySQLiteHelper.COLUMN_ROLL, roll);
+		values.put(MySQLiteHelper.COLUMN_GEN, gen);
 
 		long insertId = database.insert(MySQLiteHelper.TABLE_COMMENTS, null,
 				values);
@@ -215,6 +216,7 @@ public class CommentsDataSource  {
 		comment.set_vocabulary(cursor.getString(7));
 		comment.setScore(cursor.getInt(8));
 		comment.setRoll(cursor.getString(9));
+		comment.setGen(cursor.getString(10));
 		return comment;
 	}
 }

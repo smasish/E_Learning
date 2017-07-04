@@ -13,6 +13,7 @@ public class Comment  {
 	private String dat;
 	private int score;
 	private String roll;
+	private String gen;
 
 	private String _phone;
 	private String _letter;
@@ -100,6 +101,15 @@ public class Comment  {
 
 	public void setRoll(String rol) {
 		this.roll = rol;
+	}
+
+
+	public String getGen() {
+		return gen;
+	}
+
+	public void setGen(String gen) {
+		this.gen = gen;
 	}
 
 

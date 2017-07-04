@@ -31,6 +31,10 @@ public class HomeActivity extends AppCompatActivity {
     int year_flag = 0;
 
     LinearLayout l1,l2,l3;
+    private CommentsDataSource datasource;
+
+    int class_in = 0;
+
 
 
     @Override
@@ -43,7 +47,7 @@ public class HomeActivity extends AppCompatActivity {
         con = this;
         year = (Spinner)findViewById(R.id.spinner);
 
-        class_sp = (Spinner)findViewById(R.id.spinner_class);
+     //   class_sp = (Spinner)findViewById(R.id.spinner_class);
         period = (Spinner)findViewById(R.id.spinner_period);
 
         l1 = (LinearLayout)findViewById(R.id.g1);
@@ -64,22 +68,24 @@ public class HomeActivity extends AppCompatActivity {
         year.setAdapter(dataAdapter);
         year_flag = year.getSelectedItemPosition();
 
-        class_category = new ArrayList<String>();
-        class_category.add(" শ্রেণী নির্বাচন করুন");
-        class_category.add("One");
-        class_category.add("Two");
-        class_category.add("Three");
+//        class_category = new ArrayList<String>();
+//        class_category.add(" শ্রেণী নির্বাচন করুন");
+//        class_category.add("One");
+//        class_category.add("Two");
+//        class_category.add("Three");
 
 
-        classAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, class_category);
-        class_sp.setAdapter(classAdapter);
+     //   classAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, class_category);
+      //  class_sp.setAdapter(classAdapter);
 
         period_category = new ArrayList<String>();
-        period_category.add(" পিরিয়ড নির্বাচন করুন");
+      //  period_category.add(" পিরিয়ড নির্বাচন করুন");
+        period_category.add(" শ্রেণী নির্বাচন করুন");
         period_category.add("One");
         period_category.add("Two");
         period_category.add("Three");
 
+        class_in = 0;
 
         peirodAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, period_category);
         period.setAdapter(peirodAdapter);
@@ -104,7 +110,7 @@ public class HomeActivity extends AppCompatActivity {
                     l1.setVisibility(View.GONE);
                     l2.setVisibility(View.GONE);
                 }
-
+                class_in = position;
 
             }
 
@@ -136,12 +142,31 @@ public class HomeActivity extends AppCompatActivity {
 
         gone1 = (Button)findViewById(R.id.button3);
 
+        datasource = new CommentsDataSource(this);
+        datasource.open();
+
+
+    }
+
+    public void updateDB(int k){
+        int arr = datasource.getAllComments().size() - 1;
+        String id = "" + datasource.getAllComments().get(arr).getId();
+        Log.d("=k=size==" + datasource.getAllComments().size(), "..");
+
+        if(k==1)
+            datasource.updateClass(id, "One");
+        else if(k==2)
+            datasource.updateClass(id, "Two");
+        else if(k==3)
+            datasource.updateClass(id, "Three");
     }
 
 
     public void g1b1(View v){
         year_flag = year.getSelectedItemPosition();
         Log.d("=year===", "..year..>>"+year_flag );
+
+        updateDB(class_in);
 
         if(year_flag == 1){
             Intent i = new Intent(HomeActivity.this, WordListActivity2017_1.class);
@@ -160,6 +185,7 @@ public class HomeActivity extends AppCompatActivity {
 
     public void g1b2(View v){
         year_flag = year.getSelectedItemPosition();
+        updateDB(class_in);
         Log.d("=year===", "..year..>>"+year_flag );
         if(year_flag == 1) {
             Intent i = new Intent(HomeActivity.this, QuestionActivity2017_2.class);
@@ -177,6 +203,7 @@ public class HomeActivity extends AppCompatActivity {
 
     public void g1b3(View v){
         year_flag = year.getSelectedItemPosition();
+        updateDB(class_in);
         Log.d("=year===", "..year..>>"+year_flag );
         if(year_flag == 1) {
             Intent i = new Intent(HomeActivity.this, QuestionActivity2017_3.class);
@@ -194,6 +221,7 @@ public class HomeActivity extends AppCompatActivity {
 
     public void g2b1(View v){
         year_flag = year.getSelectedItemPosition();
+        updateDB(class_in);
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
@@ -212,6 +240,7 @@ public class HomeActivity extends AppCompatActivity {
     }
     public void g2b2(View v){
         year_flag = year.getSelectedItemPosition();
+        updateDB(class_in);
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
@@ -230,6 +259,7 @@ public class HomeActivity extends AppCompatActivity {
     }
     public void g2b3(View v){
         year_flag = year.getSelectedItemPosition();
+        updateDB(class_in);
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
@@ -249,6 +279,7 @@ public class HomeActivity extends AppCompatActivity {
 
     public void g3b1(View v){
         year_flag = year.getSelectedItemPosition();
+        updateDB(class_in);
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
@@ -270,6 +301,7 @@ public class HomeActivity extends AppCompatActivity {
     public void g3b2(View v){
 
         year_flag = year.getSelectedItemPosition();
+        updateDB(class_in);
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){
@@ -291,6 +323,7 @@ public class HomeActivity extends AppCompatActivity {
     public void g3b3(View v){
 
         year_flag = year.getSelectedItemPosition();
+        updateDB(class_in);
         Log.d("=year===", "..year..>>"+year_flag );
 
         if(year_flag == 1){

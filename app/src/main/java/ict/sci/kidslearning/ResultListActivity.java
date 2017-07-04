@@ -82,7 +82,7 @@ public class ResultListActivity extends Activity {
 //				Toast.makeText(getApplicationContext(),
 //						String.valueOf(position), Toast.LENGTH_LONG).show();
 
-                Toast.makeText(con,"Coming soon.",Toast.LENGTH_LONG).show();
+         //       Toast.makeText(con,"Coming soon.",Toast.LENGTH_LONG).show();
 //				final Intent imageshow = new Intent(SecondActivity.this,
 //						GalleryActivity.class);
 
@@ -115,7 +115,7 @@ public class ResultListActivity extends Activity {
 
         if(question_ind>0)
             question_ind--;
-        question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
+     //   question.setText(""+getResources().getStringArray(R.array.question_set)[question_ind]);
 
         if(flag_next==3){
             String id = "" + datasource.getAllComments().get(0).getId();

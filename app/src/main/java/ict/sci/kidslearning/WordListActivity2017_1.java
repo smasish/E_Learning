@@ -165,7 +165,6 @@ public class WordListActivity2017_1 extends Activity {
           //  Intent img = new Intent(WordListActivity2017_1.this, HomeActivity.class);
          //   startActivity(img);
            this.finish();
-
         }
 
     }
