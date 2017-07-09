@@ -65,7 +65,7 @@ public class WordListActivity2017_3_21 extends Activity {
         group = (TextView)findViewById(R.id.group1);
 
         group.setText("বোধগম্যতা  ");
-        question.setText("২.১.শিক্ষার্থী  গল্প থেকে সাধারণ প্রশ্নের উত্তর দিতে পারে।");
+        question.setText("২.শিক্ষার্থী  গল্প থেকে সাধারণ প্রশ্নের উত্তর দিতে পারে।");
 
    //     question.setText(""+getResources().getStringArray(R.array.word_list_2016_8)[question_ind]);
         //question_ind++;

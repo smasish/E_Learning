@@ -135,6 +135,7 @@ public class WordListActivity2017_6 extends Activity {
 
 
         if(flag_next==1){
+            group.setText("সাবলীলতা  ");
             adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
 
@@ -160,6 +161,8 @@ public class WordListActivity2017_6 extends Activity {
     //    question.setText(""+getResources().getStringArray(R.array.question_set_2016_1)[question_ind]);
         if(flag_next==2){
             instr = " যেভাবে সম্পাদন করতে হবে : শিক্ষার্থীকে উপরোক্ত গল্পটি পড়তে দিন।  নিচের তিনটি প্রশ্নের সঠিক উত্তর দিতে পারলে হ্যাঁ তে টিক চিহ্ন দিন না পারলে না তে টিকচিহ্ন দিন।    ";
+            group.setText("বোধগম্যতা  ");
+
             adapter_second = new StateAdapter_second(this);
             lv.setAdapter(adapter_second);
             int arr= datasource.getAllComments().size()-1;
@@ -243,6 +246,7 @@ public class WordListActivity2017_6 extends Activity {
         public StateAdapter_second(final Context c) {
             super(c, R.layout.word_singleletter, getResources().getStringArray(R.array.word_list_2017_6_5));
             con = c;
+
             //flag_next = 1;
             // TODO Auto-generated constructor stub
         }
