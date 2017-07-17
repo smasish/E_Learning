@@ -58,7 +58,7 @@ public class WordListActivity2017_6 extends Activity {
 
         indexArray=0;
         question_ind = 0;
-        counter =6;
+        counter =3;
 
         question = (TextView)findViewById(R.id.question_id);
         group = (TextView)findViewById(R.id.group1);
@@ -138,6 +138,7 @@ public class WordListActivity2017_6 extends Activity {
             group.setText("সাবলীলতা  ");
             adapter_single = new StateAdapter_single(this);
             lv.setAdapter(adapter_single);
+            counter = 3;
 
         }
 

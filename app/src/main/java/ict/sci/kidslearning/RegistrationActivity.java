@@ -170,6 +170,20 @@ public class RegistrationActivity extends AppCompatActivity {
        // code_flag = school_code.getSelectedItemPosition();
         dis_index=0;
 
+
+        RadioGroup  group= (RadioGroup) findViewById(R.id.radiotype);
+        group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                View radioButton = radioGroup.findViewById(i);
+                int index = radioGroup.indexOfChild(radioButton);
+                gender_ind=index;
+                Log.d("=----=index=="+index, ".." +index);
+            }
+        });
+
+        Log.d("=----=gender_ind=="+gender_ind, ".." +gender_ind);
+
         districtadapter  = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, dis_code);
         jila_code.setAdapter(districtadapter);
 
@@ -331,17 +345,19 @@ public class RegistrationActivity extends AppCompatActivity {
 
       //  str_school=school.getText().toString();
 
-
-        RadioGroup  group= (RadioGroup) findViewById(R.id.radiotype);
-        group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                View radioButton = radioGroup.findViewById(i);
-                int index = radioGroup.indexOfChild(radioButton);
-                gender_ind=index;
-                Log.d("=----=index=="+index, ".." +index);
-            }
-        });
+//
+//        RadioGroup  group= (RadioGroup) findViewById(R.id.radiotype);
+//        group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+//                View radioButton = radioGroup.findViewById(i);
+//                int index = radioGroup.indexOfChild(radioButton);
+//                gender_ind=index;
+//                Log.d("=----=index=="+index, ".." +index);
+//            }
+//        });
+//
+        Log.d("=----=gender_ind=="+gender_ind, ".." +gender_ind);
 
         if(dis_index == 0)
             AlertMessage.showMessage(con, "Sorry", "Wrong school name.");
@@ -406,6 +422,9 @@ public class RegistrationActivity extends AppCompatActivity {
             //Intent i = new Intent(MainActivity.this, WordListActivity.class);
             startActivity(i);
            // this.finish();
+
+            student.setText("");
+            roll.setText("");
 
         }
     }
