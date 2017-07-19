@@ -158,9 +158,9 @@ public class WordListActivity2017_5_51 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=2)
+            if(counter>=3)
                 datasource.updateOrderItems(id, "Mastery-COMP");
-            else  if(counter>=1)
+            else  if(counter>=2)
                 datasource.updateOrderItems(id, "Developed-COMP");
             else
                 datasource.updateOrderItems(id, "Not yet \nDeveloped-COMP");

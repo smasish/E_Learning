@@ -117,7 +117,7 @@ public class RegistrationActivity extends AppCompatActivity {
             "Daldalia GPS",
             "Dhamserni Baraibari GPS",
             "Malatibari Dighor GPS",
-            "Durgapur GPS",
+            "Arjundara GPS",
             "Jamuna Beparipara GPS",
             "Rasulpur",
             "Suvarkuthi GPS",

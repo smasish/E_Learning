@@ -156,9 +156,9 @@ public class WordListActivity2017_7_5 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=2)
+            if(counter>=3)
                 datasource.updatevocabulary(id, "Mastery-bud");
-            else  if(counter>=1)
+            else  if(counter>=2)
                 datasource.updatevocabulary(id, "Developed-bud");
             else
                 datasource.updatevocabulary(id, "Need \nImprovement-bud");

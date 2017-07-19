@@ -174,9 +174,9 @@ public class WordListActivity2017_8 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=2)
+            if(counter>=3)
                 datasource.updatePhonetics(id, "Mastery-FLU");
-            else  if(counter>=1)
+            else  if(counter>=2)
                 datasource.updatePhonetics(id, "Developed-FLU");
             else
                 datasource.updatePhonetics(id, "Not yet \nDeveloped-FLU");
@@ -189,9 +189,9 @@ public class WordListActivity2017_8 extends Activity {
             int arr= datasource.getAllComments().size()-1;
             String id = "" + datasource.getAllComments().get(arr).getId();
             Log.d("=k=size=="+datasource.getAllComments().size(), ".." );
-            if(counter>=2)
+            if(counter>=3)
                 datasource.updatevocabulary(id, "Mastery-COMP");
-            else  if(counter>=1)
+            else  if(counter>=2)
                 datasource.updatevocabulary(id, "Developed-COMP");
             else
                 datasource.updatevocabulary(id, "Not yet \nDeveloped-COMP");
