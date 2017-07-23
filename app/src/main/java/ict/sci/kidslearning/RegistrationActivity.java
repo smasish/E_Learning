@@ -64,20 +64,10 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
     String code_naog[] = { "নির্বাচন করুন",
-            "Palsha Krishnopur GPS",
-            "Trimohoni GPS",
-            "Lohachura GPS",
-            "Mokimpur GPS",
-            "HatNaogaon GPS",
-            "Gangjoar GPS",
-            "Jaboi GPS",
+            "Chakmoyrom GPS",
             "Horitaki Danga GPS",
             "Rangamati GPS",
-            "Vupendronath Sishu Niketon GPS",
-            "Krittipur (2) GPS",
-            "Gohelapur GPS",
-            "Bahadurpur GPS",
-            "Tebaria GPS",
+            "Jaboi GPS",
             "Sapahar Model GPS",
             "Aihai GPS",
             "Nitpur Diyarapara  Model GPS",
@@ -86,9 +76,13 @@ public class RegistrationActivity extends AppCompatActivity {
             "Mohadevpur Model GPS",
             "Chalkgouri GPS",
             "Chandas GPS",
-            "Dhamoirhat Model GPS",
-            "Chakmoyrom GPS",
-            "Horitaki Danga GPS",};
+            "Vupendronath Sishu Niketon GPS",
+            "Gangjoar GPS",
+            "Krittipur (2) GPS",
+            "Gohelapur GPS",
+            "Bahadurpur GPS",
+            "Tebaria GPS"
+    };
 
     String code_patu[] = { "নির্বাচন করুন",
             "Dibuapur Model GPS",
